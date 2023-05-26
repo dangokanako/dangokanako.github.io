@@ -30,13 +30,13 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1685106865607">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1685109057909">
     
-    <link rel="stylesheet" href="/css/style.css?v=1685106865607">
+    <link rel="stylesheet" href="/css/style.css?v=1685109057909">
 
     
         
-            <link rel="stylesheet" href="/custom.css?v=1685106865607">
+            <link rel="stylesheet" href="/custom.css?v=1685109057909">
         
     
 
@@ -45,7 +45,7 @@
 <script src="/lib/fancybox/fancybox.umd.js" async></script>
 
 
-    <script async src="/js/app.js?v=1685106865607"></script>
+    <script async src="/js/app.js?v=1685109057909"></script>
     
      
 
@@ -608,7 +608,7 @@ https://bangumi.tv/subject/354414
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1685106865535"></script>
+    <script async src="/js/copy-codeblock.js?v=1685109057840"></script>
   
 
   
@@ -616,6 +616,7 @@ https://bangumi.tv/subject/354414
           <div id="gitalk-container"></div>
 <link rel="stylesheet" href="/asset/css/gitalk.css">
 <script src="/asset/js/gitalk.min.js"></script>
+<script src="/asset/js/md5.min.js"></script>
 <script>
   var gitalk = new Gitalk({
     clientID: '07d3e0012bca1490f751',
@@ -623,7 +624,7 @@ https://bangumi.tv/subject/354414
     repo: 'blog-comments-gitalk',
     owner: 'dangokanako',
     admin: 'dangokanako',
-    id: location.pathname,
+    id: decodeURI(location.pathname).substring(0, 50) + md5(location.pathname),
     distractionFreeMode: false
   })
   gitalk.render('gitalk-container')

@@ -20,7 +20,7 @@
 <meta property="og:image" content="https://dangokanako.github.io/images/article/孤独摇滚/001.jpg">
 <meta property="og:image" content="https://dangokanako.github.io/images/article/孤独摇滚/002.jpg">
 <meta property="article:published_time" content="2023-03-03T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-05-20T08:03:48.406Z">
+<meta property="article:modified_time" content="2023-05-26T13:42:47.940Z">
 <meta property="article:author" content="坂上河南子">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://dangokanako.github.io/images/article/孤独摇滚/001.jpg">
@@ -29,13 +29,13 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1685106865606">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1685109057908">
     
-    <link rel="stylesheet" href="/css/style.css?v=1685106865606">
+    <link rel="stylesheet" href="/css/style.css?v=1685109057908">
 
     
         
-            <link rel="stylesheet" href="/custom.css?v=1685106865606">
+            <link rel="stylesheet" href="/custom.css?v=1685109057908">
         
     
 
@@ -44,7 +44,7 @@
 <script src="/lib/fancybox/fancybox.umd.js" async></script>
 
 
-    <script async src="/js/app.js?v=1685106865606"></script>
+    <script async src="/js/app.js?v=1685109057908"></script>
     
      
 
@@ -575,7 +575,7 @@
 <h2 id="尾声"><a href="#尾声" class="headerlink" title="尾声"></a>尾声</h2><p>如果说《Chaos;Child》是用恐怖猎奇的黑暗故事描述了一个社会格格不入者自我成长的故事，那《孤独摇滚》则用童话般的平易近人讲述了一个社恐被他人拯救的故事。</p>
 <p>虽然宫代拓留也会屡屡开始进行妄想，进入一个人的世界，但那个想象力对于普通级别的社恐阿宅们来说，实在是有点过于超前了。孤独摇滚的波奇酱的自白，正是社恐们在现实中所想的，一切是那样真实却又充满着二次元童话的不可思议。</p>
 <p>我在波奇酱身上看得到自己，却又看不到自己。<br>我也想触碰那未曾拥有的闪耀。</p>
-<p>2023/03/03<del>2023/03/04<br><a target="_blank" rel="noopener" href="https://bgm.tv/subject/328609">https://bgm.tv/subject/328609</a><br>8.2</del>9.4</p>
+<p>2023/03/03~2023/03/04<br><a target="_blank" rel="noopener" href="https://bgm.tv/subject/328609">https://bgm.tv/subject/328609</a><br>8.2~9.4</p>
 
     
   </article>
@@ -600,7 +600,7 @@
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1685106865535"></script>
+    <script async src="/js/copy-codeblock.js?v=1685109057839"></script>
   
 
   
@@ -608,6 +608,7 @@
           <div id="gitalk-container"></div>
 <link rel="stylesheet" href="/asset/css/gitalk.css">
 <script src="/asset/js/gitalk.min.js"></script>
+<script src="/asset/js/md5.min.js"></script>
 <script>
   var gitalk = new Gitalk({
     clientID: '07d3e0012bca1490f751',
@@ -615,7 +616,7 @@
     repo: 'blog-comments-gitalk',
     owner: 'dangokanako',
     admin: 'dangokanako',
-    id: location.pathname,
+    id: decodeURI(location.pathname).substring(0, 50) + md5(location.pathname),
     distractionFreeMode: false
   })
   gitalk.render('gitalk-container')
