@@ -28,13 +28,13 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1685109057880">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1685111442063">
     
-    <link rel="stylesheet" href="/css/style.css?v=1685109057880">
+    <link rel="stylesheet" href="/css/style.css?v=1685111442063">
 
     
         
-            <link rel="stylesheet" href="/custom.css?v=1685109057880">
+            <link rel="stylesheet" href="/custom.css?v=1685111442063">
         
     
 
@@ -43,7 +43,7 @@
 <script src="/lib/fancybox/fancybox.umd.js" async></script>
 
 
-    <script async src="/js/app.js?v=1685109057880"></script>
+    <script async src="/js/app.js?v=1685111442063"></script>
     
      
 
@@ -570,7 +570,7 @@
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1685109057833"></script>
+    <script async src="/js/copy-codeblock.js?v=1685111442020"></script>
   
 
   
@@ -586,7 +586,7 @@
     repo: 'blog-comments-gitalk',
     owner: 'dangokanako',
     admin: 'dangokanako',
-    id: decodeURI(location.pathname).substring(0, 50) + md5(location.pathname),
+    id: md5(location.pathname),
     distractionFreeMode: false
   })
   gitalk.render('gitalk-container')
