@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html>
 
 <head> 
     <meta charset="utf-8"> 
-    <title>从1开始的异世界生活</title> 
+    <title>从1开始的前端生活</title> 
 </head>
 
 <style>
@@ -124,6 +123,75 @@
         text-align: center;
         width: 100%;
     }
+
+    .equip {
+        width: 320px;
+        height: 220px;
+    }
+
+    .equiptext {
+        display: inline-block;
+        font-family: "lolita", sans-serif;
+        display: inline;
+        white-space: pre;
+    }
+
+    .grid-equip {
+        display: grid;
+        grid-template-columns: repeat(5, 54px);
+        /* 定义列数和每列的宽度 */
+        grid-template-rows: repeat(1, 54px);
+        /* 定义行数和每行的高度 */
+        gap: 4px;
+        padding: 4px;
+    }
+
+    .grid-item {
+        display: grid;
+        /* 将 display 属性设置为 grid */
+        grid-template-columns: repeat(5, 54px);
+        /* 定义列数和每列的宽度 */
+        grid-template-rows: repeat(2, 54px);
+        /* 定义行数和每行的高度 */
+        gap: 4px;
+        /* 设置网格项目之间的间隔 */
+        padding: 4px;
+    }
+
+    .equipment {
+        display: inline-block;
+        margin-top: 2px;
+        width: 50px;
+        height: 50px;
+        padding: 0px;
+        display: inline-block;
+        border-radius: 5px;
+        background-color: white;
+        border: 2px solid black;
+        box-shadow: 4px 4px 4px #ddd;
+    }
+
+    .draggable {
+        position: relative;
+        cursor: move;
+        /* 其他样式 */
+    }
+
+    .tooltip {
+        position: absolute;
+        display: none;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        left: 100%;
+        margin-left: 5px;
+        white-space: nowrap;
+    }
+
+    .draggable:hover .tooltip {
+        display: block;
+    }
 </style>
 
 <script>
@@ -210,6 +278,25 @@
         // 示例：更新角色属性
         InitStats(40, 7, 5, 1, 12, 200, 200);
     };
+
+    function allowDrop(event) {
+        event.preventDefault();
+        event.stopPropagation();
+    }
+
+    function drag(event) {
+
+        event.dataTransfer.setData("text/plain", event.target.id);
+        event.dataTransfer.effectAllowed = "move";
+        event.stopPropagation();
+    }
+
+    function drop(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        var data = event.dataTransfer.getData("text");
+        event.target.appendChild(document.getElementById(data));
+    }
 </script>
 
 
@@ -218,30 +305,136 @@
         <div class="game-panel">
             <div class="map"></div>
         </div>
+
         <div class="character-portrait character-head-left"></div>
         <div class="character-portrait character-head-right"></div>
         <div class="text-display" id="text-display"></div>
 
         <div class="control-plane">
+            <div class="display-plane">
+                <div class="bar-container">
+                    <div id="health-bar" class="health-bar"></div>
+                    <div id="health-text" class="stat bar-text"></div>
+                </div>
 
-            <div class="bar-container">
-                <div id="health-bar" class="health-bar"></div>
-                <div id="health-text" class="stat bar-text"></div>
+                <div class="stats-container">
+                    <span id="attack" class="stat"></span><br>
+                    <span id="defense" class="stat"></span><br>
+                    <span id="initpower" class="stat"></span><br>
+                    <span id="increasepower" class="stat"></span><br>
+                    <span id="maxpower" class="stat"></span><br>
+                    <span id="money" class="stat">金钱：100</span>
+                </div>
             </div>
+            <hr align="center" right=10px width=330px color=#987cb9 size=1>
+            <div class="equip">
+                <div class="grid-equip">
+                    <p class="equiptext">亚特姆</p>
 
-            <div class="stats-container">
-                <div id="attack" class="stat"></div>
-                <div id="defense" class="stat"></div>
-                <div id="initpower" class="stat"></div>
-                <div id="increasepower" class="stat"></div>
-                <div id="maxpower" class="stat"></div>
+                    <li class="equipment" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <p class="equiptext ">武器</p>
+                    </li>
+                    <li class="equipment" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <p class="equiptext ">防具</p>
+                    </li>
+                    <li class="equipment">
+                        <p class="equiptext ">饰品</p>
+                    </li>
+                    <li class="equipment">
+                        <p class="equiptext ">宝珠</p>
+                    </li>
+                </div>
+                <div class="grid-equip">
+                    <p class="equiptext">露娜</p>
+                    <li class="equipment">
+                        <p class="equiptext">武器</p>
+                    </li>
+                    <li class="equipment">
+                        <p class="equiptext">防具</p>
+                    </li>
+                    <li class="equipment">
+                        <p class="equiptext">饰品</p>
+                    </li>
+                    <li class="equipment">
+                        <p class="equiptext">宝珠</p>
+                    </li>
+                </div>
+                <div class="grid-equip" style="display: none;">
+                    <p class="equiptext">预留</p>
+                    <li class="equipment">
+                        <p class="equiptext">武器</p>
+                    </li>
+                    <li class="equipment">
+                        <p class="equiptext">防具</p>
+                    </li>
+                    <li class="equipment">
+                        <p class="equiptext">饰品</p>
+                    </li>
+                    <li class="equipment">
+                        <p class="equiptext">宝珠</p>
+                    </li>
+                </div>
+                <div class="grid-equip" style="display: none;">
+                    <p class="equiptext">预留2</p>
+                    <li class="equipment">
+                        <p class="equiptext">武器</p>
+                    </li>
+                    <li class="equipment">
+                        <p class="equiptext">防具</p>
+                    </li>
+                    <li class="equipment">
+                        <p class="equiptext">饰品</p>
+                    </li>
+                    <li class="equipment">
+                        <p class="equiptext">宝珠</p>
+                    </li>
+                </div>
             </div>
+            <hr align="center" right=10px width=330px color=#987cb9 size=1>
+            <div class="grid-item">
+                <li class="equipment" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <p class="equiptext">空位</p>
+                </li>
+                <li class="equipment" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <p class="equiptext">空位</p>
+                </li>
+                <li class="equipment">
+                    <p class="equiptext">空位</p>
+                </li>
+                <li class="equipment">
+                    <p class="equiptext">空位</p>
+                </li>
+                <li class="equipment">
+                    <p class="equiptext">空位</p>
+                </li>
+                <li class="equipment">
+                    <p class="equiptext">空位</p>
+                </li>
+                <li class="equipment">
+                    <p class="equiptext">空位</p>
+                </li>
+                <li class="equipment">
+                    <p class="equiptext">空位</p>
+                </li>
+                <li class="equipment">
+                    <p class="equiptext">空位</p>
+                </li>
+                <li class="equipment">
+                    <p class="equiptext">空位</p>
+                </li>
 
-
+            </div>
+            <div class="draggable" id="item1" draggable="true" ondragstart="drag(event)">铁剑<span
+                    class="tooltip">攻击力+1。新手冒险者经常使用的武器。</span>
+            </div>
+            <div class="draggable" id="item1" draggable="true" ondragstart="drag(event)">皮甲
+                <span class="tooltip">防御力+1。新手冒险者经常使用的防具。</span>
+            </div>
             <button class="btn" data-reactid=".0.1.1.1.0.0.0.1.0">出门</button>
             <button onclick="updateTextDisplay(0,'【露娜】','『咳咳~测试测试~怎么样，喂~看得清楚吗』')">点击执行函数</button>
             <button onclick="updateTextDisplay(1,'【亚特姆】','『好，我在右边，这边看得清吗？』')">点击执行函数2</button>
         </div>
+
 
     </div>
 
