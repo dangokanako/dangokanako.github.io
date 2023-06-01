@@ -281,15 +281,17 @@
         healthBar.style.width = (currentHealth / maxHealth * 100) + "%";
     }
 
+    //页面加载初始化
     window.onload = function () {
         OnClickAll();
         // 示例：更新角色属性
         InitStats(40, 7, 5, 1, 12, 200, 200);
+        item_init();
     };
 </script>
 
 
-<body style="font-family:lolita,sans-serif; user-select: none;" ondragover="onDragOverHandler(event)">
+<body style="font-family:lolita,sans-serif; user-select: none;" ondragover="allowDrop(event)">
     <div class="container" onclick="OnClickAll()">
         <div class="game-panel">
             <div class="map"></div>
@@ -299,7 +301,7 @@
         <div class="character-portrait character-head-right"></div>
         <div class="text-display" id="text-display"></div>
 
-        <div class="control-plane">
+        <div class="control-plane" ondragover="allowDrop(event)">
             <div class="display-plane">
                 <div class="bar-container">
                     <div id="health-bar" class="health-bar"></div>
@@ -320,32 +322,32 @@
                 <div class="grid-equip">
                     <p class="equiptext">亚特姆</p>
 
-                    <li class="equipment" allow-person="one" allow-item="weapon" ondragstart="dragstart(event)"
-                        ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <li class="equipment" allow-person="one" allow-item="weapon" id="persononeweapon"
+                        ondragstart="dragstart(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
                     </li>
-                    <li class="equipment" allow-person="one" allow-item="armor" ondragstart="dragstart(event)"
-                        ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <li class="equipment" allow-person="one" allow-item="armor" id="persononearmor"
+                        ondragstart="dragstart(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
                     </li>
-                    <li class="equipment" allow-person="one" allow-item="jewelry" ondragstart="dragstart(event)"
-                        ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <li class="equipment" allow-person="one" allow-item="jewelry" id="persononejewelry"
+                        ondragstart="dragstart(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
                     </li>
-                    <li class="equipment" allow-person="one" allow-item="jewelry2" ondragstart="dragstart(event)"
-                        ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <li class="equipment" allow-person="one" allow-item="jewelry2" id="persononejewelry2"
+                        ondragstart="dragstart(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
                     </li>
                 </div>
                 <div class="grid-equip">
                     <p class="equiptext">露娜</p>
-                    <li class="equipment" allow-person="two" allow-item="weapon" ondragstart="dragstart(event)"
-                        ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <li class="equipment" allow-person="two" allow-item="weapon" id="persontwoweapon"
+                        ondragstart="dragstart(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
                     </li>
-                    <li class="equipment" allow-person="two" allow-item="armor" ondragstart="dragstart(event)"
-                        ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <li class="equipment" allow-person="two" allow-item="armor" id="persontwoarmor"
+                        ondragstart="dragstart(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
                     </li>
-                    <li class="equipment" allow-person="two" allow-item="jewelry" ondragstart="dragstart(event)"
-                        ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <li class="equipment" allow-person="two" allow-item="jewelry" id="persontwojewelry"
+                        ondragstart="dragstart(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
                     </li>
-                    <li class="equipment" allow-person="two" allow-item="jewelry2" ondragstart="dragstart(event)"
-                        ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <li class="equipment" allow-person="two" allow-item="jewelry2" id="persontwojewelry2"
+                        ondragstart="dragstart(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
                     </li>
                 </div>
                 <div class="grid-equip" style="display: none;">
@@ -381,49 +383,45 @@
             </div>
             <hr align="center" right=10px width=330px color=#987cb9 size=1>
             <div class="grid-item">
-                <li class="bag" ondragstart="dragstart(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <li class="bag" id="bag1" ondragstart="dragstart(event)" ondrop="drop(event)"
+                    ondragover="allowDrop(event)">
                 </li>
-                <li class="bag" ondragstart="dragstart(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <li class="bag" id="bag2" ondragstart="dragstart(event)" ondrop="drop(event)"
+                    ondragover="allowDrop(event)">
                 </li>
-                <li class="bag" ondragstart="dragstart(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <li class="bag" id="bag3" ondragstart="dragstart(event)" ondrop="drop(event)"
+                    ondragover="allowDrop(event)">
                 </li>
-                <li class="bag" ondragstart="dragstart(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <li class="bag" id="bag4" ondragstart="dragstart(event)" ondrop="drop(event)"
+                    ondragover="allowDrop(event)">
                 </li>
-                <li class="bag" ondragstart="dragstart(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <li class="bag" id="bag5" ondragstart="dragstart(event)" ondrop="drop(event)"
+                    ondragover="allowDrop(event)">
                 </li>
-                <li class="bag" ondragstart="dragstart(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <li class="bag" id="bag6" ondragstart="dragstart(event)" ondrop="drop(event)"
+                    ondragover="allowDrop(event)">
                 </li>
-                <li class="bag" ondragstart="dragstart(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <li class="bag" id="bag7" ondragstart="dragstart(event)" ondrop="drop(event)"
+                    ondragover="allowDrop(event)">
                 </li>
-                <li class="bag" ondragstart="dragstart(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <li class="bag" id="bag8" ondragstart="dragstart(event)" ondrop="drop(event)"
+                    ondragover="allowDrop(event)">
                 </li>
-                <li class="bag" ondragstart="dragstart(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <li class="bag" id="bag9" ondragstart="dragstart(event)" ondrop="drop(event)"
+                    ondragover="allowDrop(event)">
                 </li>
-                <li class="bag" ondragstart="dragstart(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <li class="bag" id="bag10" ondragstart="dragstart(event)" ondrop="drop(event)"
+                    ondragover="allowDrop(event)">
                 </li>
 
             </div>
-            <div class="item" allow-item="weapon" allow-person="one" id="item-weapon-1" draggable="true"
-                ondragstart="drag(event)">铁剑<span class="tooltip">攻击力+6。<br>新手冒险者经常使用的武器。</span>
-            </div>
 
 
-            <div class="item" id="item-cloth-1" draggable="true" ondragstart="drag(event)">皮甲
-                <span class="tooltip">最大HP+100。防御力+3。<br>新手冒险者经常使用的防具。</span>
-            </div>
-            <div class="item" id="item-weapon-2" allow-item="weapon" allow-person="two" draggable="true"
-                ondragstart="drag(event)">学院法杖
-                <span class="tooltip">初始锑能+2。最大锑能+3。<br>赫兹拉德魔法学院统一发放的魔杖。<br>露娜选择了火属性风格的。</span>
-            </div>
-            <div class="item" id="item-cloth-2" allow-item="armor" allow-person="two" draggable="true"
-                ondragstart="drag(event)">学院制服
-                <span class="tooltip">初始锑能+2。防御力+3。<br>赫兹拉德魔法学院统一发放的制服。<br>露娜是白色款。</span>
-            </div>
 
             <button class="btn" data-reactid=".0.1.1.1.0.0.0.1.0">出门</button>
             <button onclick="updateTextDisplay(0,'【露娜】','『咳咳~测试测试~怎么样，喂~看得清楚吗』')">点击执行函数</button>
-            <button onclick="updateTextDisplay(1,'【亚特姆】','『好，我在右边，这边看得清吗？』')">点击执行函数2</button>
-            <button onclick="updateTextDisplay(1,'【亚特姆】','『好，我在右边，这边看得清吗？』')">增加一个道具</button>
+            <button onclick="item_init()">初始化</button>
+            <button onclick="createItem_Test()">增加一个道具</button>
         </div>
 
 
