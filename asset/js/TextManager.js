@@ -1,5 +1,7 @@
-//剧情锁，用于是否能触发剧情
-var StroyLock = false;
+// TODO 把章节名也做成动态的 
+
+//剧情锁，用于是否能触发剧情 true是正在剧情，false是没剧情
+var StroyLock = true;
 var chapter = 0;
 var paragraph = 0;
 var sentence = 0;
@@ -72,26 +74,30 @@ function clearText() {
 
 // 剧情推进
 function OnClickAll() {
-    if (!StroyLock) {
-        if (chapter === 0 && paragraph === 0) {
-            if (sentence < Chapter0Paragraph0.length) {
-                UpdateTextDisplayByArray(Chapter0Paragraph0, sentence++);
-            } else { StroyLock = true; clearText(); sentence = 0; }
-        } else if (chapter === 0 && paragraph === 1) {
-            if (sentence < Chapter0Paragraph1.length) {
-                if (sentence === 8) {
-                    createItem_Temp();
-                }
-                if (sentence === 22) {
-                    Money -= 500;
-                    Stat_Init();
-                }
-                UpdateTextDisplayByArray(Chapter0Paragraph1, sentence++);
-            } else { StroyLock = true; clearText(); sentence = 0; }
+    if (StroyLock) {
+        if (Chapter00Story[`C${chapter}P${paragraph}`] !== null) {
+            var temp = Chapter00Story[`C${chapter}P${paragraph}`];
+            if (sentence < Chapter00Story[`C${chapter}P${paragraph}`].length) {
+                UpdateTextDisplayByArray(Chapter00Story[`C${chapter}P${paragraph}`], sentence++);
+            } else { StroyLock = false; clearText(); sentence = 0; }
+        } else {
+            alert(`获取章节文本失败，究竟是为什么呢？C${chapter}P${paragraph}`);
         }
 
+        // 额外剧情操作
+        if (chapter === 0 && paragraph === 1) {
+            if (sentence === 8) {
+                createItem_Temp();
+            }
+            if (sentence === 22) {
+                Money -= 500;
+                Stat_Init();
+            }
+        }
     }
+
 }
+
 
 // 根据参数显示剧情
 function UpdateTextDisplayByArray(array, sentence) {
@@ -99,4 +105,11 @@ function UpdateTextDisplayByArray(array, sentence) {
         UpdateTextDisplay({ pos: array[sentence][0], line1: array[sentence][1], line2: array[sentence][2], headleft: array[sentence][3], headright: array[sentence][4] });
     if (array[sentence].length === 3)
         UpdateTextDisplay({ pos: array[sentence][0], line1: array[sentence][1], line2: array[sentence][2] });
+}
+
+// 开始剧情
+function StartStory(chapter_in, paragraph_in) {
+    StroyLock = true;
+    chapter = chapter_in;
+    paragraph = paragraph_in;
 }

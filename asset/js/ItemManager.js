@@ -1,3 +1,5 @@
+// TODO 创建道具需要封装
+
 //背包
 var bagContainers = [];
 //装备栏
@@ -193,11 +195,6 @@ function drag(event) {
     event.stopPropagation();
     event.dataTransfer.setData("text/plain", event.target.id);
     event.dataTransfer.effectAllowed = "move";
-}
-
-function onDragOverHandler(event) {
-    event.preventDefault();
-    event.stopPropagation();
 }
 
 

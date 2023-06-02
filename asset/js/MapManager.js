@@ -1,6 +1,10 @@
+// TODO 地图初始化需要封装
+// TODO 是否已阅读过
+// TODO 地图逻辑
 // 别数像素了，#map用这个https://imagemap.org/
 
-// ☆ 地图初始化需要封装
+// 当前位置
+var CurrentLocation = 0;
 
 function MapTest() {
     alert("Yoshi");
@@ -46,7 +50,7 @@ function Init_Map() {
 };
 
 function Aldor_Move(id) {
-    if (!StroyLock) return;
+    if (StroyLock) return;
 
     if (id == 1) {
         Aldor_Weapon_Shop()
@@ -56,10 +60,7 @@ function Aldor_Move(id) {
 function Aldor_Weapon_Shop() {
     ClearMap();
     Aldor_Weapon_Shop_Create();
-    // ☆ 封装
-    StroyLock = false;
-    chapter = 0;
-    paragraph = 1;
+    StartStory(0, 1)
 }
 
 function Aldor_Weapon_Shop_Create() {
