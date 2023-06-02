@@ -5,6 +5,7 @@ var PersonOneEquip = [];
 var PersonTwoEquip = [];
 
 //初始化函数，包括背包数组和装备栏的初始化
+//旧代码，别他妈从这复制拿去改了
 function item_init() {
     for (var i = 1; i <= 10; i++) {
         bagContainers.push(document.getElementById("bag" + i));
@@ -52,7 +53,6 @@ function item_init() {
     newItem2.style.height = "50px";
     newItem2.setAttribute("draggable", "true");
     newItem2.setAttribute("allow-item", "armor");
-    newItem2.setAttribute("allow-person", "two");
     newItem2.setAttribute("def", "3");
     newItem2.setAttribute("maxhp", "100");
 
@@ -121,8 +121,13 @@ function item_init() {
 
     newItem5.setAttribute("draggable", "true");
     newItem5.setAttribute("use-hp", "50");
-
     newItem5.addEventListener("dragstart", drag);
+    newItem5.addEventListener("contextmenu", function (event) {
+        event.preventDefault(); // 阻止浏览器默认的右键菜单
+        //待开发
+        alert("HP是满的喔");
+    });
+
 
     var Tips = document.createElement("span");
     Tips.innerHTML = '使用后HP+50<br>阿瓦隆制药最新科技结晶。<br>可以迅速为冒险者或者士兵恢复伤口。<br>此为一般<span style="color: #888888;">民用型</span>。<br>至于为什么是喷雾型至今仍是个谜。'
@@ -132,13 +137,22 @@ function item_init() {
     bagContainers[0].appendChild(newItem5);
 }
 
+function IfBagEmpty() {
+    var firstEmpty = bagContainers.findIndex(function (element) {
+        return element.childElementCount === 0;
+    })
+
+    if (firstEmpty === -1) {
+        return false;
+    } else { return true; }
+}
+
 //在道具栏创建道具
 function createItem_Test() {
     //选取空位
     var firstEmpty = bagContainers.findIndex(function (element) {
         return element.childElementCount === 0;
     })
-
 
     // 创建新元素
     var newItem = document.createElement("div");
@@ -210,15 +224,20 @@ function drop(event) {
                     sourceElement.getAttribute('allow-person') === event.target.getAttribute('allow-person'))
             ) {
                 event.target.appendChild(sourceElement);
+                //更新装备之后需要更新状态
+                CalStats();
             }
             else {
-                alert("无法装备，请确认装备位置或者角色是否匹配");
+                alert("该角色的这个位置，无法装备这件物品喔");
                 return;
             }
         } else {
             //道具栏无所谓了
             event.target.appendChild(sourceElement);
+            //更新装备之后需要更新状态
+            CalStats();
         }
+
 
     } else {
         // 如果目标位置有物品，则不能拖放
@@ -230,3 +249,35 @@ function drop(event) {
     var itemType = sourceElement.getAttribute('equipment');
 }
 
+
+//这个模块好他妈难做，先这样吧
+function createItem_Temp() {
+    //选取空位
+    var firstEmpty = bagContainers.findIndex(function (element) {
+        return element.childElementCount === 0;
+    })
+
+    // 创建新元素
+    var newItem = document.createElement("div");
+
+    // 为新元素设置属性和内容
+    newItem.className = "item";
+    newItem.innerHTML = `<span style="color:#BA55D3 ; display: inline-block; background-image:url('/asset/game/image/backgroud.gif');">希格斯粒子剑</span>`;
+    newItem.id = "item-weapon-003";
+
+    newItem.setAttribute("draggable", "true");
+    newItem.setAttribute("allow-item", "weapon");
+    newItem.setAttribute("allow-person", "one");
+    newItem.setAttribute("atk", "20");
+    newItem.setAttribute("AddMana", "2");
+
+    newItem.addEventListener("dragstart", drag);
+
+    var Tips = document.createElement("span");
+    Tips.innerHTML = `攻击力+20<br>每回合锑能+2<br>北方联盟普通士兵批量使用的武器。<br>亚特姆这把只做了最低限度的能量供给，但即使如此，<br>也是<span style="color:red">军用级</span>装备。`
+    Tips.className = "tooltip";
+
+    newItem.appendChild(Tips);
+    // 将新元素添加到道具栏容器中
+    bagContainers[firstEmpty].appendChild(newItem);
+}

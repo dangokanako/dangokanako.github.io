@@ -41,12 +41,10 @@
     }
 
     .character-head-left {
-        background-image: url('/asset/game/head/runa1.png');
         left: 0;
     }
 
     .character-head-right {
-        background-image: url('/asset/game/head/atom1.png');
         left: 700px;
     }
 
@@ -74,7 +72,8 @@
     }
 
     .map {
-        background-image: url('/asset/game/image/test.png');
+        margin-top: 2px;
+        margin-left: 2px;
         width: 845px;
         height: 500px;
         border-radius: 10px;
@@ -202,71 +201,15 @@
 
 
 <script src="/asset/js/ItemManager.js"></script>
+<script src="/asset/js/StatManager.js"></script>
+<script src="/asset/js/TextManager.js"></script>
+<script src="/asset/js/MapManager.js"></script>
+<script src="/asset/js/chapter00.js"></script>
+
 <script>
     document.addEventListener('contextmenu', function (event) {
         event.preventDefault();
     });
-
-    EventText = 0;
-    function OnClickAll() {
-        switch (EventText) {
-            case 0:
-                updateTextDisplay(0, '【露娜】', '『好的，游戏最开始先要说一下，很多时候这个对话框的剧情结束才能继续游戏喔』');
-                break;
-            case 1:
-                updateTextDisplay(0, '【露娜】', '『由于没有文本回顾功能，所以注意力要放在这个对话框喔』');
-                break;
-            case 2:
-                updateTextDisplay(1, '【亚特姆】', '『露娜，你在跟谁说话啊？快点出发了』');
-                break;
-            case 3:
-                updateTextDisplay(0, '【露娜】', '『作为新手教程，首先讲解一下地图移动。亚特姆，你一定正好忘记了如何在这个世界怎么走路。接下来我们一起复习如何像正常人类一样走路。』');
-                break;
-            case 4:
-                updateTextDisplay(1, '【亚特姆】', '『那种事情忘不掉的吧……（恼）』');
-                break;
-            case 5:
-                updateTextDisplay(0, '【露娜】', '『我们在地图上直接点击想要去的地方就可以了。如果是可以移动的地方，鼠标会从小箭头变成小手喔』');
-                break;
-            case 6:
-                updateTextDisplay(0, '【露娜】', '『而且说不定城镇里会有意外的隐藏宝箱发现喔？』');
-                break;
-            case 7:
-                updateTextDisplay(1, '【亚特姆】', '『我已经受够那些JRPG里的隐藏宝箱了……』');
-                break;
-            case 8:
-                updateTextDisplay(0, '【露娜】', '『地图左上角的话，可以移动上一级地图，也就是世界地图和城镇地图的关系。怎么样，对亚特姆是不是特别有帮助？』');
-                break;
-            case 9:
-                updateTextDisplay(1, '【亚特姆】', '『好好（敷衍），谢谢你（敷衍），对我非常有帮助（敷衍），我们快走吧』');
-                break;
-            case 10:
-                updateTextDisplay(1, '【亚特姆】', '『话说回来，这个地图不是夜○城的吗？！我们是住在这么危险的城市里的吗？！我要用这把铁剑去夜○城冒险吗？！』');
-                break;
-            case 11:
-                updateTextDisplay(0, '【露娜】', '『作者说以后会换掉的，嗯嗯，换成很祥和的那种剑与魔法，有公主和勇者故事的中世纪小镇……』');
-                break;
-            case 12:
-                updateTextDisplay(1, '【亚特姆】', '『但愿吧……』');
-                break;
-            case 13:
-                updateTextDisplay(1, ' ', ' ');
-                break;
-            default:
-                break;
-        }
-        EventText++;
-    }
-
-    function updateTextDisplay(pos, line1, line2) {
-        const textDisplayElement = document.getElementById('text-display');
-        if (pos == 1) {
-            textDisplayElement.style.textAlign = 'right';
-        } else {
-            textDisplayElement.style.textAlign = 'left';
-        }
-        textDisplayElement.innerHTML = `<p>${line1}</p><p>${line2}</p>`;
-    }
 
     function InitStats(att, def, initpower, increasepower, maxpower, currentHealth, maxHealth) {
         document.getElementById('attack').innerText = "攻击力：" + att;
@@ -284,21 +227,25 @@
     //页面加载初始化
     window.onload = function () {
         OnClickAll();
-        // 示例：更新角色属性
-        InitStats(40, 7, 5, 1, 12, 200, 200);
+        // 道具栏、背包初始化
         item_init();
+        // 属性初始化
+        Stat_Init();
+        CalStats();
+        // 地图初始化
+        Init_Map()
+
     };
 </script>
 
 
 <body style="font-family:lolita,sans-serif; user-select: none;" ondragover="allowDrop(event)">
     <div class="container" onclick="OnClickAll()">
-        <div class="game-panel">
-            <div class="map"></div>
+        <div class="game-panel" id="game-panel">
         </div>
 
-        <div class="character-portrait character-head-left"></div>
-        <div class="character-portrait character-head-right"></div>
+        <div class="character-portrait character-head-left" id="character-head-left"></div>
+        <div id="character-head-right" class="character-portrait character-head-right"></div>
         <div class="text-display" id="text-display"></div>
 
         <div class="control-plane" ondragover="allowDrop(event)">
@@ -314,7 +261,7 @@
                     <span id="initpower" class="stat"></span><br>
                     <span id="increasepower" class="stat"></span><br>
                     <span id="maxpower" class="stat"></span><br>
-                    <span id="money" class="stat">金钱：100</span>
+                    <span id="money" class="stat"></span>
                 </div>
             </div>
             <hr align="center" right=10px width=330px color=#987cb9 size=1>
@@ -415,13 +362,7 @@
                 </li>
 
             </div>
-
-
-
-            <button class="btn" data-reactid=".0.1.1.1.0.0.0.1.0">出门</button>
-            <button onclick="updateTextDisplay(0,'【露娜】','『咳咳~测试测试~怎么样，喂~看得清楚吗』')">点击执行函数</button>
-            <button onclick="item_init()">初始化</button>
-            <button onclick="createItem_Test()">增加一个道具</button>
+            <button onclick="createItem_Temp()">直接挑选一个幸运路人开始战斗教程</button>
         </div>
 
 
