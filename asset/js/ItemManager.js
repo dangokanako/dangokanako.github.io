@@ -127,7 +127,7 @@ function item_init() {
     newItem5.addEventListener("contextmenu", function (event) {
         event.preventDefault(); // 阻止浏览器默认的右键菜单
         //待开发
-        alert("HP是满的喔");
+        toastr.info('HP是满的喔');
     });
 
 
@@ -192,6 +192,11 @@ function dragstart(event) {
     event.stopPropagation();
 }
 function drag(event) {
+
+    if (OnBattle) {
+        toastr.info("战斗中没有空闲去更换装备！");
+        return;
+    }
     event.stopPropagation();
     event.dataTransfer.setData("text/plain", event.target.id);
     event.dataTransfer.effectAllowed = "move";
@@ -225,7 +230,7 @@ function drop(event) {
                 CalStats();
             }
             else {
-                alert("该角色的这个位置，无法装备这件物品喔");
+                toastr.info('该角色的这个位置，无法装备这件物品喔');
                 return;
             }
         } else {

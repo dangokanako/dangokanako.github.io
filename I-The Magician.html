@@ -4,6 +4,15 @@
 <head> 
     <meta charset="utf-8"> 
     <title>从1开始的前端生活</title> 
+
+    <!-- jQuery！引入！ -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!--  Toastr！引入！  -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+
 </head>
 
 <style>
@@ -165,9 +174,8 @@
     }
 
     .startturn {
+        font-size: 30px;
         border-radius: 5px;
-        position: absolute;
-        right: 0;
         border: 2px solid black;
     }
 
@@ -209,6 +217,7 @@
         left: 100%;
         margin-left: 5px;
         white-space: nowrap;
+        z-index: 11;
     }
 
     .item:hover .tooltip {
@@ -269,6 +278,7 @@
 <script src="/asset/js/MapManager.js"></script>
 <script src="/asset/js/BattleManager.js"></script>
 <script src="/asset/js/SaveManager.js"></script>
+<script src="/asset/js/AudioManager.js"></script>
 <script src="/asset/js/chapter00.js"></script>
 <script src="/asset/js/SkillData.js"></script>
 
@@ -327,9 +337,9 @@
 
 <body style="font-family:lolita,sans-serif; user-select: none;">
     <div class=" container" onclick="OnClickAll()">
-        <div id="game-panel" style="display: none;">
+        <div id="game-panel" style="display: block  ;">
         </div>
-        <div id="battle-container" style="display: block;">
+        <div id="battle-container" style="display: none;">
             <div id="enemy-container"
                 style="background-repeat: no-repeat; background-position: center center; background-image: url(/asset/game/image/enemies/Rogue.png);">
             </div>
@@ -368,11 +378,11 @@
 
                 <div class="grid-skill-queue" style="bottom: 0;position: absolute;">
                     <!-- 我觉得这里做成雀魂风格的回合开始比较帅气 -->
-                    <span class="startturn">回合开始！</span>
+                    <p class="startturn" onclick="StartTurn()">回合开始！</p>
                     <span id="CurrentMana_Battle">可用锑能：0</span>
-                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <br>
                     <span>肾上腺素：10</span><br>
-
+                    <!-- 关于我突然意识到根本没必要做排序这件事
                     <li class="skillslot" ondragstart="dragstart(event)">
                     </li>
                     <li class="skillslot" ondragstart="dragstart(event)">
@@ -388,7 +398,8 @@
                     <li class="skillslot" ondragstart="dragstart(event)">
                     </li>
                     <li class="skillslot" ondragstart="dragstart(event)">
-                    </li>
+                    </li>  
+                    -->
                 </div>
             </div>
 
@@ -514,7 +525,6 @@
                 </li>
 
             </div>
-            <button onclick="Battle_Test()">直接挑选一个幸运路人开始战斗教程</button>
         </div>
 
 

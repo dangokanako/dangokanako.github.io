@@ -83,17 +83,6 @@ function OnClickAll() {
         } else {
             alert(`获取章节文本失败，究竟是为什么呢？C${chapter}P${paragraph}`);
         }
-
-        // 额外剧情操作
-        if (chapter === 0 && paragraph === 1) {
-            if (sentence === 8) {
-                createItem_Temp();
-            }
-            if (sentence === 22) {
-                Money -= 500;
-                Stat_Init();
-            }
-        }
     }
 
 }
@@ -101,6 +90,11 @@ function OnClickAll() {
 
 // 根据参数显示剧情
 function UpdateTextDisplayByArray(array, sentence) {
+    if (typeof array[sentence] === 'function') {
+        array[sentence]();
+        return;
+    }
+
     if (array[sentence].length === 5)
         UpdateTextDisplay({ pos: array[sentence][0], line1: array[sentence][1], line2: array[sentence][2], headleft: array[sentence][3], headright: array[sentence][4] });
     if (array[sentence].length === 3)
