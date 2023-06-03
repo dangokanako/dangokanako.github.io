@@ -128,7 +128,7 @@ function Init_Chapter00() {
     Chapter00Story[C0P2] = [
         [1, '【荷取】', '『嗯…可能是最近生意太红火了，其他店主眼红的原因吧…』', 'runa1.png', 'nitori.png'],
         [0, '【露娜】', '『再怎么说也不至于这样吧』', 'runa1.png', 'nitori.png'],
-        [0, '【露娜】', '『说起来你摆弄的那个是啥』', 'runa1.png', 'nitori.png'],
+        [0, '【露娜】', '『说起来你摆弄的那个是什么』', 'runa1.png', 'nitori.png'],
         [1, '【荷取】', '『自动转轮机枪塔』', 'runa1.png', 'nitori.png'],
         [0, '【露娜】', '『听起来就好危险的感觉…那种东西能合法存在的吗…』', 'runa1.png', 'nitori.png'],
         [1, '【荷取】', '『反正这城市都乱成这样了，我稍微搞点自卫武器也不成什么大问题吧』', 'runa1.png', 'nitori.png'],
@@ -146,6 +146,7 @@ function Init_Chapter00() {
         [0, '【露娜】', '『之后我们去哪里？』', 'runa1.png', 'atom1.png'],
         [1, '【亚特姆】', '『刚才打算去公会的吧，接个委托，就该到迷宫探索教学篇了』', 'runa1.png', 'atom1.png'],
         [0, '【露娜】', '『嗯…好吧』', 'runa1.png', 'atom1.png'],
+        [0, '', '亚特姆和露娜收拾好了物品，准备离开', 'null', 'null'],
         [0, '【露娜】', '『老板你也要多保重』', 'runa1.png', 'nitori.png'],
         [1, '【荷取】', '『嗯嗯，再见』', 'runa1.png', 'nitori.png'],
         [1, '【荷取】', '『哦对了，等一下』', 'runa1.png', 'nitori.png'],

@@ -303,11 +303,11 @@
     //页面加载初始化
     window.onload = function () {
         // 禁止F12  
-        //document.addEventListener('keydown', (event) => {
-        //    if ((event.keyCode === 123 /* F12 */) || (event.ctrlKey && event.shiftKey && event.keyCode === 73 /* Ctrl + Shift + I */) || (event.ctrlKey && event.keyCode === 85 /* Ctrl + U */)) {
-        //        event.preventDefault();
-        //    }
-        //});
+        document.addEventListener('keydown', (event) => {
+            if ((event.keyCode === 123 /* F12 */) || (event.ctrlKey && event.shiftKey && event.keyCode === 73 /* Ctrl + Shift + I */) || (event.ctrlKey && event.keyCode === 85 /* Ctrl + U */)) {
+                event.preventDefault();
+            }
+        });
 
         //全局禁止拖动
         ['dragstart', 'dragover', 'dragend', 'drop'].forEach(function (eventName) {
