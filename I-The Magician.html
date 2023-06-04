@@ -21,6 +21,23 @@
         src: url('/asset/game/font/lolita.ttf') format('truetype');
     }
 
+    #progress-bar {
+        width: 100%;
+        height: 30px;
+        background-color: #f3f3f3;
+        position: relative;
+        border-radius: 15px;
+        box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+    }
+
+    #progress-bar-inner {
+        height: 100%;
+        background-color: #4caf50;
+        width: 0;
+        position: absolute;
+        transition: width 0.3s ease-in-out;
+    }
 
     body {
         background-color: #707070;
@@ -303,11 +320,11 @@
     //页面加载初始化
     window.onload = function () {
         // 禁止F12  
-        document.addEventListener('keydown', (event) => {
-            if ((event.keyCode === 123 /* F12 */) || (event.ctrlKey && event.shiftKey && event.keyCode === 73 /* Ctrl + Shift + I */) || (event.ctrlKey && event.keyCode === 85 /* Ctrl + U */)) {
-                event.preventDefault();
-            }
-        });
+        // document.addEventListener('keydown', (event) => {
+        //     if ((event.keyCode === 123 /* F12 */) || (event.ctrlKey && event.shiftKey && event.keyCode === 73 /* Ctrl + Shift + I */) || (event.ctrlKey && event.keyCode === 85 /* Ctrl + U */)) {
+        //         event.preventDefault();
+        //     }
+        // });
 
         //全局禁止拖动
         ['dragstart', 'dragover', 'dragend', 'drop'].forEach(function (eventName) {
@@ -315,6 +332,16 @@
                 event.preventDefault();
             });
         });
+
+        // 资源初始化
+        Promise.all([
+            preloadImages(LoadAssets)
+        ])
+            .then(function () {
+                console.log("所有图像已加载。");
+                var element = document.getElementById("progress-bar");
+                element.style.display = "none";
+            })
 
         // 文本初始化
         Init_Chapter00();
@@ -325,8 +352,9 @@
         // 属性初始化
         Stat_Init();
         CalStats();
-        // 地图初始化
-        Init_Map();
+        // 地图创建初始化
+        // Init_Map();
+        General_Map_Create("Aldor");
         // 战斗模块初始化
         Init_Battle_Panel()
         // 我帮你按第一下
@@ -337,6 +365,7 @@
 
 <body style="font-family:lolita,sans-serif; user-select: none;">
     <div class=" container" onclick="OnClickAll()">
+
         <div id="game-panel" style="display: block  ;">
         </div>
         <div id="battle-container" style="display: none;">
@@ -404,6 +433,11 @@
             </div>
 
         </div>>
+
+        <!-- 加載進度條 -->
+        <div id="progress-bar">
+            <div id="progress-bar-inner"></div>
+        </div>
 
         <div class="character-portrait character-head-left" id="character-head-left"></div>
         <div id="character-head-right" class="character-portrait character-head-right"></div>
@@ -523,7 +557,7 @@
                 <li class="bag" id="bag10" ondragstart="dragstart(event)" ondrop="drop(event)"
                     ondragover="allowDrop(event)">
                 </li>
-
+                <button onclick='General_Map_Create("Aldor")'>1111 </button>
             </div>
         </div>
 
