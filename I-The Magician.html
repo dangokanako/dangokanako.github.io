@@ -32,10 +32,9 @@
     }
 
     #progress-bar-inner {
-        width: 845px;
+        width: 0;
         height: 100%;
         background-color: #4caf50;
-        width: 0;
         position: absolute;
         transition: width 0.3s ease-in-out;
     }
@@ -333,17 +332,24 @@
                 event.preventDefault();
             });
         });
-
+        console.log("开始");
         // 资源初始化
         Promise.all([
             preloadImages(LoadAssets)
         ])
             .then(function () {
                 console.log("所有图像已加载。");
-                var element = document.getElementById("progress-bar");
+                let element = document.getElementById("progress-bar");
                 element.style.display = "none";
+                console.log("清除加载框");
             })
-
+            .catch(function (event) {
+                console.error("加载图像时发生错误：", event);
+                if (event.target && event.target.src) {
+                    console.error("无法加载图像：", event.target.src);
+                }
+            });
+        console.log("结束");
         // 文本初始化
         Init_Chapter00();
         // 技能表初始化
@@ -366,6 +372,10 @@
 
 <body style="font-family:lolita,sans-serif; user-select: none;">
     <div class=" container" onclick="OnClickAll()">
+        <!-- 加載進度條 -->
+        <div id="progress-bar">
+            <div id="progress-bar-inner"></div>
+        </div>
 
         <div id="game-panel" style="display: block  ;">
         </div>
@@ -435,10 +445,7 @@
 
         </div>>
 
-        <!-- 加載進度條 -->
-        <div id="progress-bar">
-            <div id="progress-bar-inner"></div>
-        </div>
+
 
         <div class="character-portrait character-head-left" id="character-head-left"></div>
         <div id="character-head-right" class="character-portrait character-head-right"></div>

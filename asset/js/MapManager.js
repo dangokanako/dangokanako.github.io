@@ -32,22 +32,37 @@ var LoadAssets = [
     "/asset/game/audio/Open2.m4a",
     "/asset/game/audio/Sword5.m4a",
 ]
-var progressBarInner = document.getElementById("progress-bar-inner");
 
 function updateProgressBar(percentage) {
+    var progressBarInner = document.getElementById("progress-bar-inner");
     progressBarInner.style.width = percentage + "%";
 }
 
 function preloadImage(url, onProgress) {
     return new Promise(function (resolve, reject) {
-        var img = new Image();
-        img.src = url;
+        console.log("资源加载中");
 
-        img.onload = function () {
-            resolve(img);
-        };
+        const fileType = url.split(".").pop().toLowerCase();
+        let asset;
 
-        img.onerror = function (err) {
+        if (fileType === "m4a") {
+            asset = new Audio();
+            asset.oncanplaythrough = function () {
+                resolve(asset);
+            };
+        } else if (fileType === "png" || fileType === "jpg" || fileType === "jpeg" || fileType === "gif") {
+            asset = new Image();
+            asset.onload = function () {
+                resolve(asset);
+            };
+        } else {
+            console.error("未知资源类型：", url);
+            reject(null);
+            return;
+        }
+
+        asset.src = url;
+        asset.onerror = function (err) {
             reject(err);
         };
 
@@ -58,7 +73,7 @@ function preloadImage(url, onProgress) {
 function preloadImages(images) {
     var promises = [];
     var loadedCount = 0;
-
+    console.log("图像预加载启动");
     for (var i = 0; i < images.length; i++) {
         promises.push(preloadImage(images[i], function () {
             loadedCount++;
