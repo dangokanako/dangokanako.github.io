@@ -90,6 +90,7 @@ function OnClickAll() {
 
 // 根据参数显示剧情
 function UpdateTextDisplayByArray(array, sentence) {
+    // 如果对象里是函数，那么执行这个函数
     if (typeof array[sentence] === 'function') {
         array[sentence]();
         return;

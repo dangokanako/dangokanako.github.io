@@ -4,13 +4,91 @@
 // 别数像素了，#map用这个https://imagemap.org/
 
 // 当前位置
-var CurrentLocation = 0;
+let CurrentLocation = 0;
+let HasRead = {
+    AldorWeaponShop: 0,
+    AldorHome: 0,
+    AldorHome_Bed: 0,
+    AldorItemShop: 0,
+    AldorAlley: 0,
+}
 
 
 
-var LoadAssets = [
+// 动态创建地图
+function General_Map_Create(map) {
+    var dataArrayName = 'MapData_' + map;
+    var dataArray = window[dataArrayName];
+    if (dataArray === null || dataArray === undefined) {
+        alert(map + "地图信息未找到");
+    }
+
+    if (Array.isArray(dataArray)) {
+        var mapName = dataArray[0];
+        var imageElement = document.createElement("img");
+        imageElement.src = '/asset/game/image/' + dataArray[1];
+        imageElement.useMap = "#" + mapName;
+        imageElement.className = "map";
+
+        // 创建 map 元素
+        var mapElement = document.createElement("map");
+        mapElement.name = mapName;
+
+        for (i = 2; i < dataArray.length; i++) {
+            var areaElement = document.createElement("area");
+            areaElement.shape = dataArray[i].shape;
+            areaElement.coords = dataArray[i].coords;
+            areaElement.alt = dataArray[i].alt;
+            areaElement.style.cursor = dataArray[i].cursor;
+            areaElement.addEventListener("click", (function (data) {
+                return function () {
+                    if (StroyLock)
+                        return;
+
+                    // 检查是否有事件，有的话执行
+                    let funcname = "Event_" + data.id;
+                    if (typeof window[funcname] === 'function') {
+                        window[funcname]();
+                    }
+
+                    //如果是地图的话，跳转
+                    if (data.alt === "map") {
+                        ClearMap();
+                        General_Map_Create(data.id)
+                    }
+                };
+            })(dataArray[i]));
+
+            // 将 area 元素追加到 map 元素中
+            mapElement.appendChild(areaElement);
+        }
+
+        var container = document.getElementById("game-panel");
+        container.appendChild(imageElement);
+        container.appendChild(mapElement);
+    }
+}
+
+
+// 地图清理
+function ClearMap() {
+    var cleaner = document.getElementById("game-panel");
+    if (cleaner.firstChild !== null)
+        cleaner.firstChild.remove();
+    if (cleaner.firstChild !== null)
+        cleaner.firstChild.remove();
+}
+
+
+
+
+
+// 预加载图片模块
+let LoadAssets = [
     "/asset/game/image/Aldor.png",
+    "/asset/game/image/AldorHome.png",
     "/asset/game/image/AldorWeaponShop.png",
+    "/asset/game/image/AldorItemShop.png",
     "/asset/game/image/1.png",
     "/asset/game/image/2.png",
     "/asset/game/image/3.png",
@@ -25,12 +103,14 @@ var LoadAssets = [
     "/asset/game/head/evil2.png",
     "/asset/game/head/nitori.png",
     "/asset/game/head/runa1.png",
+    "/asset/game/head/yuri.png",
     "/asset/game/audio/Break.m4a",
     "/asset/game/audio/Coin.m4a",
     "/asset/game/audio/Damage1.m4a",
     "/asset/game/audio/Flash2.m4a",
     "/asset/game/audio/Open2.m4a",
     "/asset/game/audio/Sword5.m4a",
+    "/asset/game/audio/Heal3.m4a",
 ]
 
 function updateProgressBar(percentage) {
@@ -85,96 +165,115 @@ function preloadImages(images) {
 }
 
 
-var AreasData_Aldor = [
-    "test.png",
-    { id: "test", shape: "rect", coords: "326,433,463,485", alt: "Area 1" },
-    { id: 2, shape: "rect", coords: "526,365,605,410", alt: "Area 2" },
-    { id: 3, shape: "rect", coords: "58,222,268,283", alt: "Area 3" },
-];
 
-
-var MapData_AldorWeaponShop = [
-    "AldorWeaponShop",
-    "AldorWeaponShop.png",
-    { id: "Aldor", shape: "rect", coords: "326,433,463,485", alt: "Area 1", cursor: "pointer" },
-    { id: "Aldor", shape: "rect", coords: "526,365,605,410", alt: "Area 2", cursor: "pointer" },
-    { id: "Aldor", shape: "rect", coords: "58,222,268,283", alt: "Area 3", cursor: "pointer" },
-]
-function Event_AldorWeaponShop() {
-    StartStory(0, 1)
-}
-
-
+//// Aldor地图数据
+// MapData为地图数据我，包含了地图名字，地图图片文件，地图可点击模块
+// id为跳转地图或者事件名
+// Event为触发事件
+// cyberpunk,aerial view,daytime,lights,neon lights,sky
 var MapData_Aldor = [
     "Aldor",
     "Aldor.png",
-    { id: "AldorWeaponShop", shape: "rect", coords: "326,433,463,485", alt: "Map", cursor: "pointer" },
-    { id: "AldorWeaponShop", shape: "rect", coords: "526,365,605,410", alt: "Map", cursor: "pointer" },
-    { id: "AldorWeaponShop", shape: "rect", coords: "58,222,268,283", alt: "Map", cursor: "pointer" },
+    { id: "AldorOuter", cursor: "pointer", alt: "event", coords: "0,0,95,83", shape: "rect" },
+    { id: "AldorLockheed", cursor: "pointer", alt: "event", coords: "106,144,241,222", shape: "rect" },
+    { id: "AldorGov", cursor: "pointer", alt: "event", coords: "312,111,443,191", shape: "rect" },
+    { id: "AldorMercenary", cursor: "pointer", alt: "event", coords: "592,186,725,261", shape: "rect" },
+    { id: "AldorAlley", cursor: "pointer", alt: "event", coords: "617,389,725,454", shape: "rect" },
+    { id: "AldorHome", cursor: "pointer", alt: "map", coords: "472,332,586,394", shape: "rect" },
+    { id: "AldorItemShop", cursor: "pointer", alt: "event", coords: "337,296,453,373", shape: "rect" },
+    { id: "AldorWeaponShop", cursor: "pointer", alt: "map", coords: "267,399,403,477", shape: "rect" }
 ];
-
-function General_Map_Create(map) {
-    var dataArrayName = 'MapData_' + map;
-    var dataArray = window[dataArrayName];
-    if (dataArray === null || dataArray === undefined) {
-        alert(map + "地图信息未找到");
-    }
-
-    if (Array.isArray(dataArray)) {
-        var mapName = dataArray[0];
-        var imageElement = document.createElement("img");
-        imageElement.src = '/asset/game/image/' + dataArray[1];
-        imageElement.useMap = "#" + mapName;
-        imageElement.className = "map";
-
-        // 创建 map 元素
-        var mapElement = document.createElement("map");
-        mapElement.name = mapName;
-
-        for (i = 2; i < dataArray.length; i++) {
-            var areaElement = document.createElement("area");
-            areaElement.shape = dataArray[i].shape;
-            areaElement.coords = dataArray[i].coords;
-            areaElement.alt = dataArray[i].alt;
-            areaElement.style.cursor = dataArray[i].cursor;
-            areaElement.addEventListener("click", (function (data) {
-                return function () {
-                    if (StroyLock)
-                        return;
-
-                    const funcname = "Event_" + data.id;
-                    if (typeof window[funcname] === 'function') {
-                        window[funcname]();
-                    }
-                    //如果是地图的话，跳转，如果是事件的话，调用
-                    //等一下，地图好像也有事件啊，必须得做一个是否看过剧情的了……还不能是布尔型
-                    if (data.alt === "Map") {
-                        General_Map_Create(data.id)
-                        ClearMap();
-                    }
-
-
-                    // 明天做一下动态调用故事函数
-                };
-            })(dataArray[i]));
-
-            // 将 area 元素追加到 map 元素中
-            mapElement.appendChild(areaElement);
+// 武器店
+var MapData_AldorWeaponShop = [
+    "AldorWeaponShop",
+    "AldorWeaponShop.png",
+    { id: "Aldor", shape: "rect", coords: "0,0,90,90", alt: "map", cursor: "pointer" },
+]
+function Event_AldorWeaponShop() {
+    switch (HasRead.AldorWeaponShop) {
+        case 0: {
+            StartStory(0, 1);
+            HasRead.AldorWeaponShop++;
+            break;
         }
-
-        var container = document.getElementById("game-panel");
-        container.appendChild(imageElement);
-        container.appendChild(mapElement);
+        case 1: {
+            StartStory(0, 3);
+            break;
+        }
     }
 }
-
-
-// 地图清理
-function ClearMap() {
-    var cleaner = document.getElementById("game-panel");
-    if (cleaner.firstChild !== null)
-        cleaner.firstChild.remove();
-    if (cleaner.firstChild !== null)
-        cleaner.firstChild.remove();
+function Event_AldorGov() {
+    StartStory(0, 4);
 }
+function Event_AldorLockheed() {
+    StartStory(0, 5);
+}
+// 家
+var MapData_AldorHome = [
+    "AldorHome",
+    "AldorHome.png",
+    { id: "Aldor", shape: "rect", coords: "0,0,90,90", alt: "map", cursor: "pointer" },
+    { id: "AldorHome_Bed", shape: "rect", coords: "169,253,597,446", alt: "event", cursor: "pointer" },
+]
+function Event_AldorHome() {
+    switch (HasRead.AldorHome) {
+        case 0: {
+            StartStory(0, 6);
+            break;
+        }
+    }
+}
+function Event_AldorHome_Bed() {
+    playAudio("Heal3.m4a");
+    switch (HasRead.AldorHome_Bed) {
+        case 0: {
+            StartStory(0, 7);
+            HasRead.AldorHome_Bed++;
+            break;
+        }
+        case 1: {
+            StartStory(0, 8);
+            break;
+        }
+    }
+}
+// 道具店
+var MapData_AldorItemShop = [
+    "AldorItemShop",
+    "AldorItemShop.png",
+    { id: "Aldor", shape: "rect", coords: "0,0,90,90", alt: "map", cursor: "pointer" },
+]
+function Event_AldorItemShop() {
+    if (HasRead.AldorWeaponShop == 0) {
+        StartStory(0, 9);
+        return;
+    }
 
+    switch (HasRead.AldorItemShop) {
+        case 0: {
+            StartStory(0, 10);
+            break;
+        }
+    }
+}
+// 佣兵工会
+function Event_AldorMercenary() {
+    if (HasRead.AldorWeaponShop == 0) {
+        StartStory(0, 9);
+        return;
+    }
+}
+// 小巷
+function Event_AldorAlley() {
+    switch (HasRead.AldorAlley) {
+        case 0: {
+            StartStory(0, 11);
+            break;
+        }
+    }
+}
+// 奥尔多尔外部
+function Event_AldorOuter() {
+    StartStory(0, 12);
+
+}

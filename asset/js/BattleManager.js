@@ -248,12 +248,14 @@ function CreateSkill_Test() {
     newSkill5.style.height = "50px";
     newSkill5.setAttribute("draggable", "true");
     newSkill5.setAttribute("InvestedMana", "0");
+    newSkill4.setAttribute("MinInvestedMana", "2");
+    newSkill4.setAttribute("MaxInvestedMana", "2");
     newSkill5.addEventListener('mouseup', function (event) {
         Skill_AddSb(event);
     });
     newSkill5.addEventListener("dragstart", drag);
     var Tips = document.createElement("span");
-    Tips.innerHTML = '2sb<br>造成攻击力150%的<span style="color:yellow;">圣属性伤害</span><br>向敌人照射一道80,000勒克斯亮度的光。'
+    Tips.innerHTML = '能量不足，请供能。'
     Tips.className = "tooltip";
     newSkill5.appendChild(Tips);
     SkillContainers_2[2].appendChild(newSkill5);

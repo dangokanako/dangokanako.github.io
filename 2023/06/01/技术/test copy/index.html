@@ -10,15 +10,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
     
     <link rel="shortcut icon" href="/images/base/favicon.ico" type="image/x-icon" />
-    <meta name="description" content="开发计划☆ 要重构一下地图生成，现在生成太复杂了。☆ 道具生成重构也要思考一下了。 ☆ 技能……正在做 已经推迟到下辈子的开发计划☆ 用jQuery重构部分功能☆ 存档读档功能 完成不了的开发计划我想改一下回合开始的那个按钮UI咋改啊表情差分 开发日记 2023&#x2F;05&#x2F;31装备栏道具栏设计完成了。目前拖曳也没什么问题。装备的数值计算也完成了，可喜可贺。  2023&#x2F;06&#x2F;01地图制作了两个测试，跳">
+    <meta name="description" content="开发计划☆ 要重构一下地图生成，现在生成太复杂了。 √ 已完成☆ 道具生成重构也要思考一下了。☆ 预加载进度条 √ 已完成☆ 技能……正在做 已经推迟到下辈子的开发计划☆ 用jQuery重构部分功能☆ 存档读档功能 完成不了的开发计划我想改一下回合开始的那个按钮UI咋改啊表情差分 开发日记 2023&#x2F;05&#x2F;31装备栏道具栏设计完成了。目前拖曳也没什么问题。装备的数值计算也完成了，可喜可贺。  20">
 <meta property="og:type" content="article">
 <meta property="og:title" content="从1开始的前端生活">
 <meta property="og:url" content="https://dangokanako.github.io/2023/06/01/%E6%8A%80%E6%9C%AF/test%20copy/index.html">
 <meta property="og:site_name" content="小鸟的风祭森林">
-<meta property="og:description" content="开发计划☆ 要重构一下地图生成，现在生成太复杂了。☆ 道具生成重构也要思考一下了。 ☆ 技能……正在做 已经推迟到下辈子的开发计划☆ 用jQuery重构部分功能☆ 存档读档功能 完成不了的开发计划我想改一下回合开始的那个按钮UI咋改啊表情差分 开发日记 2023&#x2F;05&#x2F;31装备栏道具栏设计完成了。目前拖曳也没什么问题。装备的数值计算也完成了，可喜可贺。  2023&#x2F;06&#x2F;01地图制作了两个测试，跳">
+<meta property="og:description" content="开发计划☆ 要重构一下地图生成，现在生成太复杂了。 √ 已完成☆ 道具生成重构也要思考一下了。☆ 预加载进度条 √ 已完成☆ 技能……正在做 已经推迟到下辈子的开发计划☆ 用jQuery重构部分功能☆ 存档读档功能 完成不了的开发计划我想改一下回合开始的那个按钮UI咋改啊表情差分 开发日记 2023&#x2F;05&#x2F;31装备栏道具栏设计完成了。目前拖曳也没什么问题。装备的数值计算也完成了，可喜可贺。  20">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-05-31T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-06-04T05:57:56.799Z">
+<meta property="article:modified_time" content="2023-06-04T19:56:27.352Z">
 <meta property="article:author" content="坂上河南子">
 <meta name="twitter:card" content="summary">
     
@@ -26,13 +26,13 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1685861221472">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1685908642369">
     
-    <link rel="stylesheet" href="/css/style.css?v=1685861221472">
+    <link rel="stylesheet" href="/css/style.css?v=1685908642369">
 
     
         
-            <link rel="stylesheet" href="/custom.css?v=1685861221472">
+            <link rel="stylesheet" href="/custom.css?v=1685908642369">
         
     
 
@@ -41,7 +41,7 @@
 <script src="/lib/fancybox/fancybox.umd.js" async></script>
 
 
-    <script async src="/js/app.js?v=1685861221472"></script>
+    <script async src="/js/app.js?v=1685908642369"></script>
     
      
 
@@ -82,7 +82,7 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>47</div>
+        <div><span>文章</span>48</div>
         <div><span>标签</span>0</div>
         <div><span>分类</span>16</div>
     </div>
@@ -323,7 +323,7 @@
 
         <li class="category-list-item">
           <a class="category-list-link" href="/categories/★/">★</a>
-          <span class="category-list-count">18</span>
+          <span class="category-list-count">19</span>
         </li>
 
         
@@ -358,7 +358,7 @@
 
         <li class="category-list-item">
           <a class="category-list-link" href="/categories/二次元/一般动画/">一般动画</a>
-          <span class="category-list-count">9</span>
+          <span class="category-list-count">10</span>
         </li>
 
         
@@ -386,7 +386,7 @@
 
         <li class="category-list-item">
           <a class="category-list-link" href="/categories/二次元/">二次元</a>
-          <span class="category-list-count">43</span>
+          <span class="category-list-count">44</span>
         </li>
 
         
@@ -414,7 +414,7 @@
 
         <li class="category-list-item">
           <a class="category-list-link" href="/categories/二次元/碎碎念/">碎碎念</a>
-          <span class="category-list-count">20</span>
+          <span class="category-list-count">21</span>
         </li>
 
         
@@ -448,7 +448,7 @@
   <div class="nexmoe-widget-wrap">
     <h3 class="nexmoe-widget-title">文章归档</h3>
     <div class="nexmoe-widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a><span class="archive-list-count">23</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1918/">1918</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">23</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a><span class="archive-list-count">23</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1918/">1918</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -467,6 +467,10 @@
           </li>
         
           <li>
+            <a href="/2023/06/01/%E6%9C%88%E5%B8%B8%E5%90%88%E9%9B%86/2023%E8%A1%A5%E7%95%AA%E5%90%88%E9%9B%8606/">2023补番合集06</a>
+          </li>
+        
+          <li>
             <a href="/2023/05/12/%E9%94%90%E8%AF%84/%E8%A3%85%E7%94%B2%E6%82%AA%E9%AC%BC%E6%9D%91%E6%AD%A3/">《装甲悪鬼村正》无解的电车难题</a>
           </li>
         
@@ -476,10 +480,6 @@
         
           <li>
             <a href="/2023/04/29/%E6%8A%80%E6%9C%AF/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">Hexo博客搭建中</a>
-          </li>
-        
-          <li>
-            <a href="/2023/04/15/%E7%AE%80%E8%AF%84/%E6%B5%B7%E5%B8%82%E8%9C%83%E6%A5%BC%E4%B9%8B%E9%A6%86/">海市蜃楼之馆</a>
           </li>
         
       </ul>
@@ -557,8 +557,7 @@
     
 </div>
 
-    <h3 id="开发计划"><a href="#开发计划" class="headerlink" title="开发计划"></a>开发计划</h3><p>☆ 要重构一下地图生成，现在生成太复杂了。<br>☆ 道具生成重构也要思考一下了。</p>
-<p>☆ 技能……正在做</p>
+    <h3 id="开发计划"><a href="#开发计划" class="headerlink" title="开发计划"></a>开发计划</h3><p>☆ 要重构一下地图生成，现在生成太复杂了。 √ 已完成<br>☆ 道具生成重构也要思考一下了。<br>☆ 预加载进度条 √ 已完成<br>☆ 技能……正在做</p>
 <h4 id="已经推迟到下辈子的开发计划"><a href="#已经推迟到下辈子的开发计划" class="headerlink" title="已经推迟到下辈子的开发计划"></a>已经推迟到下辈子的开发计划</h4><p>☆ 用jQuery重构部分功能<br>☆ 存档读档功能</p>
 <h4 id="完成不了的开发计划"><a href="#完成不了的开发计划" class="headerlink" title="完成不了的开发计划"></a>完成不了的开发计划</h4><p>我想改一下回合开始的那个按钮<br>UI咋改啊<br>表情差分</p>
 <h3 id="开发日记"><a href="#开发日记" class="headerlink" title="开发日记"></a>开发日记</h3><hr>
@@ -580,7 +579,11 @@
 <p>♢渐变效果</p>
 <p>函数名也能动态调用，太自由了，JS真他妈奇妙啊……<br>地图逻辑想了非常好的办法。现在生成只写了一个动态生成函数。跳转也方便多了。<br>动态调用了函数，意外的简单。睡了，明天起来空手搓地图。</p>
 <hr>
-<p>2023/06/04<br>打算做个资源加载进度条。<br>进度条和加载十分钟做完了，<br>怎么把加载完的进度条隐藏掉研究了一下午。</p>
+<p>2023/06/04<br>打算做个资源加载进度条。<br>进度条和加载十分钟做完了，<br>怎么把加载完的进度条隐藏掉研究了一下午。<br>直接手搓一个Promise出来<br>Promise.all([<br>            preloadImages(LoadAssets)<br>        ])<br>            .then(function () {<br>                console.log(“所有图像已加载。”);<br>            })<br>            .catch(function (event) {<br>                console.error(“加载图像时发生错误：”, event);<br>            });</p>
+<p>开始写事件跳转。RNM，写了半天发现昨天自己写了。</p>
+<p>然后开始搞美工<br><a target="_blank" rel="noopener" href="https://www.canva.cn/">https://www.canva.cn/</a></p>
+<p>今日主要工作：<br>美工，文本。</p>
+<p>看看在睡梦中能不能有战斗实现的灵感吧。</p>
 
     
   </article>
@@ -605,7 +608,7 @@
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1685861221407"></script>
+    <script async src="/js/copy-codeblock.js?v=1685908642302"></script>
   
 
   
