@@ -319,12 +319,12 @@
 
     //页面加载初始化
     window.onload = function () {
-        // 禁止F12  
-        // document.addEventListener('keydown', (event) => {
-        //     if ((event.keyCode === 123 /* F12 */) || (event.ctrlKey && event.shiftKey && event.keyCode === 73 /* Ctrl + Shift + I */) || (event.ctrlKey && event.keyCode === 85 /* Ctrl + U */)) {
-        //         event.preventDefault();
-        //     }
-        // });
+        //禁止F12  
+        document.addEventListener('keydown', (event) => {
+            if ((event.keyCode === 123 /* F12 */) || (event.ctrlKey && event.shiftKey && event.keyCode === 73 /* Ctrl + Shift + I */) || (event.ctrlKey && event.keyCode === 85 /* Ctrl + U */)) {
+                event.preventDefault();
+            }
+        });
 
         // CTRL加速文本
         document.addEventListener('keydown', (event) => {
@@ -571,7 +571,7 @@
                 <li class="bag" id="bag10" ondragstart="dragstart(event)" ondrop="drop(event)"
                     ondragover="allowDrop(event)">
                 </li>
-                <button id="testButton">按钮</button>
+                <!--<button id="testButton">按钮</button>-->
             </div>
         </div>
 
