@@ -11,6 +11,8 @@ let HasRead = {
     AldorHome_Bed: 0,
     AldorItemShop: 0,
     AldorAlley: 0,
+    AldorMercenary: 0,
+    AldorOuter: 0,
 }
 
 
@@ -48,13 +50,22 @@ function General_Map_Create(map) {
                     // 检查是否有事件，有的话执行
                     let funcname = "Event_" + data.id;
                     if (typeof window[funcname] === 'function') {
-                        window[funcname]();
+                        if (window[funcname]() === false)
+                            // 如果事件返回false，则直接跳出，不进行地图跳转
+                            return;
                     }
 
                     //如果是地图的话，跳转
                     if (data.alt === "map") {
-                        ClearMap();
-                        General_Map_Create(data.id)
+
+                        $("#game-panel").fadeOut(350, function () {
+                            $("#game-panel").fadeIn(350);
+                            ClearMap()
+                            General_Map_Create(data.id)
+                        });
+
+                        // ClearMap();
+                        // General_Map_Create(data.id)
                     }
                 };
             })(dataArray[i]));
@@ -77,6 +88,8 @@ function ClearMap() {
         cleaner.firstChild.remove();
     if (cleaner.firstChild !== null)
         cleaner.firstChild.remove();
+    if (cleaner.firstChild !== null)
+        cleaner.firstChild.remove();
 }
 
 
@@ -89,6 +102,8 @@ let LoadAssets = [
     "/asset/game/image/AldorHome.png",
     "/asset/game/image/AldorWeaponShop.png",
     "/asset/game/image/AldorItemShop.png",
+    "/asset/game/image/AldorOuter.png",
+    "/asset/game/image/AldorMercenary.png",
     "/asset/game/image/1.png",
     "/asset/game/image/2.png",
     "/asset/game/image/3.png",
@@ -104,6 +119,8 @@ let LoadAssets = [
     "/asset/game/head/nitori.png",
     "/asset/game/head/runa1.png",
     "/asset/game/head/yuri.png",
+    "/asset/game/head/Misaki.png",
+    "/asset/game/head/albert.png",
     "/asset/game/audio/Break.m4a",
     "/asset/game/audio/Coin.m4a",
     "/asset/game/audio/Damage1.m4a",
@@ -174,13 +191,13 @@ function preloadImages(images) {
 var MapData_Aldor = [
     "Aldor",
     "Aldor.png",
-    { id: "AldorOuter", cursor: "pointer", alt: "event", coords: "0,0,95,83", shape: "rect" },
+    { id: "AldorOuter", cursor: "pointer", alt: "map", coords: "0,0,95,83", shape: "rect" },
     { id: "AldorLockheed", cursor: "pointer", alt: "event", coords: "106,144,241,222", shape: "rect" },
     { id: "AldorGov", cursor: "pointer", alt: "event", coords: "312,111,443,191", shape: "rect" },
-    { id: "AldorMercenary", cursor: "pointer", alt: "event", coords: "592,186,725,261", shape: "rect" },
+    { id: "AldorMercenary", cursor: "pointer", alt: "map", coords: "592,186,725,261", shape: "rect" },
     { id: "AldorAlley", cursor: "pointer", alt: "event", coords: "617,389,725,454", shape: "rect" },
     { id: "AldorHome", cursor: "pointer", alt: "map", coords: "472,332,586,394", shape: "rect" },
-    { id: "AldorItemShop", cursor: "pointer", alt: "event", coords: "337,296,453,373", shape: "rect" },
+    { id: "AldorItemShop", cursor: "pointer", alt: "map", coords: "337,296,453,373", shape: "rect" },
     { id: "AldorWeaponShop", cursor: "pointer", alt: "map", coords: "267,399,403,477", shape: "rect" }
 ];
 // 武器店
@@ -213,12 +230,15 @@ var MapData_AldorHome = [
     "AldorHome",
     "AldorHome.png",
     { id: "Aldor", shape: "rect", coords: "0,0,90,90", alt: "map", cursor: "pointer" },
-    { id: "AldorHome_Bed", shape: "rect", coords: "169,253,597,446", alt: "event", cursor: "pointer" },
+    { id: "AldorHome_Bed", shape: "rect", coords: "220,239,597,446", alt: "event", cursor: "pointer" },
+    { id: "AldorHome_Nigthstand", shape: "rect", coords: "100,307,227,479", alt: "event", cursor: "pointer" },
+
 ]
 function Event_AldorHome() {
     switch (HasRead.AldorHome) {
         case 0: {
             StartStory(0, 6);
+            HasRead.AldorHome++;
             break;
         }
     }
@@ -237,6 +257,9 @@ function Event_AldorHome_Bed() {
         }
     }
 }
+function Event_AldorHome_Nigthstand() {
+    StartStory(0, 13);
+}
 // 道具店
 var MapData_AldorItemShop = [
     "AldorItemShop",
@@ -246,21 +269,39 @@ var MapData_AldorItemShop = [
 function Event_AldorItemShop() {
     if (HasRead.AldorWeaponShop == 0) {
         StartStory(0, 9);
-        return;
+        return false;
     }
 
     switch (HasRead.AldorItemShop) {
         case 0: {
             StartStory(0, 10);
+            HasRead.AldorItemShop++;
+            break;
+        }
+        case 1: {
+            StartStory(0, 17);
             break;
         }
     }
 }
 // 佣兵工会
+var MapData_AldorMercenary = [
+    "AldorMercenary",
+    "AldorMercenary.png",
+    { id: "Aldor", shape: "rect", coords: "0,0,90,90", alt: "map", cursor: "pointer" },
+]
 function Event_AldorMercenary() {
     if (HasRead.AldorWeaponShop == 0) {
         StartStory(0, 9);
-        return;
+        return false;
+    }
+
+    switch (HasRead.AldorMercenary) {
+        case 0: {
+            StartStory(0, 14);
+            HasRead.AldorMercenary++;
+            break;
+        }
     }
 }
 // 小巷
@@ -273,7 +314,28 @@ function Event_AldorAlley() {
     }
 }
 // 奥尔多尔外部
+var MapData_AldorOuter = [
+    "AldorOuter",
+    "AldorOuter.png",
+    { id: "Aldor", shape: "rect", coords: "283,169,625,317", alt: "map", cursor: "pointer" },
+    // ☆ 这里记得改成map
+    { id: "AldorTower", shape: "rect", coords: "221,338,473,487", alt: "event", cursor: "pointer" },
+]
 function Event_AldorOuter() {
-    StartStory(0, 12);
+    if (HasRead.AldorMercenary == 0) {
+        StartStory(0, 12);
+        return false;
+    }
 
+    switch (HasRead.AldorOuter) {
+        case 0: {
+            StartStory(0, 15);
+            HasRead.AldorOuter++;
+            break;
+        }
+    }
+}
+// 奥尔多尔塔
+function Event_AldorTower() {
+    StartStory(0, 16);
 }

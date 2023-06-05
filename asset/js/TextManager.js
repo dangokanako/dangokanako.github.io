@@ -10,9 +10,21 @@ var sentence = 0;
 function lefthead_control(imagepath) {
     var sourceElement = document.getElementById("character-head-left");
     if (imagepath === "" || imagepath === null || imagepath === undefined) {
-        sourceElement.style.backgroundImage = '';
+        if (sourceElement.style.backgroundImage != `url("${imagepath}")`) {
+            $("#character-head-left").fadeOut(150);
+            sourceElement.style.backgroundImage = '';
+            $("#character-head-left").fadeIn(150);
+        } else {
+            sourceElement.style.backgroundImage = '';
+        }
     } else {
-        sourceElement.style.backgroundImage = `url("${imagepath}")`;
+        if (sourceElement.style.backgroundImage != `url("${imagepath}")`) {
+            $("#character-head-left").fadeOut(150);
+            sourceElement.style.backgroundImage = `url("${imagepath}")`;
+            $("#character-head-left").fadeIn(150);
+        } else {
+            sourceElement.style.backgroundImage = `url("${imagepath}")`;
+        }
     }
 }
 
@@ -20,9 +32,21 @@ function lefthead_control(imagepath) {
 function righthead_control(imagepath) {
     var sourceElement = document.getElementById("character-head-right");
     if (imagepath === "" || imagepath === null || imagepath === undefined) {
-        sourceElement.style.backgroundImage = '';
+        if (sourceElement.style.backgroundImage != `url("${imagepath}")`) {
+            $("#character-head-right").fadeOut(150);
+            sourceElement.style.backgroundImage = '';
+            $("#character-head-right").fadeIn(150);
+        } else {
+            sourceElement.style.backgroundImage = '';
+        }
     } else {
-        sourceElement.style.backgroundImage = `url("${imagepath}")`;
+        if (sourceElement.style.backgroundImage != `url("${imagepath}")`) {
+            $("#character-head-right").fadeOut(150);
+            sourceElement.style.backgroundImage = `url("${imagepath}")`;
+            $("#character-head-right").fadeIn(150);
+        } else {
+            sourceElement.style.backgroundImage = `url("${imagepath}")`;
+        }
     }
 }
 
@@ -82,6 +106,7 @@ function OnClickAll() {
             } else { StroyLock = false; clearText(); sentence = 0; }
         } else {
             alert(`获取章节文本失败，究竟是为什么呢？C${chapter}P${paragraph}`);
+            console.error(`获取章节文本失败，究竟是为什么呢？C${chapter}P${paragraph}`);
         }
     }
 
@@ -100,6 +125,10 @@ function UpdateTextDisplayByArray(array, sentence) {
         UpdateTextDisplay({ pos: array[sentence][0], line1: array[sentence][1], line2: array[sentence][2], headleft: array[sentence][3], headright: array[sentence][4] });
     if (array[sentence].length === 3)
         UpdateTextDisplay({ pos: array[sentence][0], line1: array[sentence][1], line2: array[sentence][2] });
+    //容错
+    if (array[sentence].length === 4)
+        UpdateTextDisplay({ pos: array[sentence][0], line1: array[sentence][1], line2: array[sentence][2], headleft: array[sentence][3] });
+
 }
 
 // 开始剧情

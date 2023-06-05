@@ -248,8 +248,8 @@ function CreateSkill_Test() {
     newSkill5.style.height = "50px";
     newSkill5.setAttribute("draggable", "true");
     newSkill5.setAttribute("InvestedMana", "0");
-    newSkill4.setAttribute("MinInvestedMana", "2");
-    newSkill4.setAttribute("MaxInvestedMana", "2");
+    newSkill5.setAttribute("MinInvestedMana", "2");
+    newSkill5.setAttribute("MaxInvestedMana", "2");
     newSkill5.addEventListener('mouseup', function (event) {
         Skill_AddSb(event);
     });
@@ -279,8 +279,9 @@ function CreateSkill_Test() {
 
 // 战斗初始化（战斗开始时执行）
 function Init_Battle() {
-    GetBattleElement = document.getElementById("battle-container");
-    GetBattleElement.style.display = "block";
+    $("#battle-container").fadeIn(350);
+    // GetBattleElement = document.getElementById("battle-container");
+    // GetBattleElement.style.display = "block";
 
     CurrentMana_Battle = CurrentInitMana;
     GetCurrentManaElement = document.getElementById("CurrentMana_Battle");
@@ -292,9 +293,9 @@ function Init_Battle() {
 
 
 function End_Battle() {
-    GetBattleElement = document.getElementById("battle-container");
-    GetBattleElement.style.display = "none";
-
+    $("#battle-container").fadeOut(350);
+    // GetBattleElement = document.getElementById("battle-container");
+    // GetBattleElement.style.display = "none";
     OnBattle = false;
 
     StartStory(0, 2)

@@ -300,22 +300,22 @@
 <script src="/asset/js/SkillData.js"></script>
 
 <script>
+    // 测试用
+    $(document).ready(function () {
+        $("#testButton").click(function () {
+            $("#game-panel").fadeOut(500, function () {
+                $("#battle-container").fadeIn(500);
+            });
+        });
+    });
+
+
+    //全局禁用右键菜单
     document.addEventListener('contextmenu', function (event) {
         event.preventDefault();
     });
 
-    function InitStats(att, def, initpower, increasepower, maxpower, currentHealth, maxHealth) {
-        document.getElementById('attack').innerText = "攻击力：" + att;
-        document.getElementById('defense').innerText = "防御力：" + def;
-        document.getElementById('initpower').innerText = "初始锑能：" + initpower;
-        document.getElementById('increasepower').innerText = "增长锑能：" + increasepower;
-        document.getElementById('maxpower').innerText = "最大锑能：" + maxpower;
 
-        let healthBar = document.getElementById('health-bar');
-
-        document.getElementById('health-text').innerText = currentHealth + '/' + maxHealth;
-        healthBar.style.width = (currentHealth / maxHealth * 100) + "%";
-    }
 
     //页面加载初始化
     window.onload = function () {
@@ -325,6 +325,13 @@
         //         event.preventDefault();
         //     }
         // });
+
+        // CTRL加速文本
+        document.addEventListener('keydown', (event) => {
+            if (event.ctrlKey) {
+                OnClickAll();
+            }
+        });
 
         //全局禁止拖动
         ['dragstart', 'dragover', 'dragend', 'drop'].forEach(function (eventName) {
@@ -374,9 +381,10 @@
     <!-- 加載進度條 -->
     <div id="progress-bar">
         <div id="progress-bar-inner"></div>
+        <span>加载中：如果进度条纹丝不动，请考虑科学上网</span>
     </div>
-    <div class=" container" onclick="OnClickAll()">
-        <div id="game-panel" style="display: block  ;">
+    <div class="container" onclick="OnClickAll()">
+        <div id="game-panel" style="display: block;">
         </div>
         <div id="battle-container" style="display: none;">
             <div id="enemy-container"
@@ -441,7 +449,6 @@
                     -->
                 </div>
             </div>
-
         </div>>
 
 
@@ -564,7 +571,7 @@
                 <li class="bag" id="bag10" ondragstart="dragstart(event)" ondrop="drop(event)"
                     ondragover="allowDrop(event)">
                 </li>
-                <button onclick='General_Map_Create("Aldor")'>1111 </button>
+                <button id="testButton">按钮</button>
             </div>
         </div>
 
