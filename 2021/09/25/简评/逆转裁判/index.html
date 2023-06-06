@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+        <head>
+    
+    <title>逆转裁判 - 小鸟的风祭森林</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    
+    <link rel="shortcut icon" href="/images/base/favicon.ico" type="image/x-icon" />
+    <meta name="description" content="逆转裁判移植前的碎碎念202306移植。嘛，在两年前的胡言乱语里，算是工整的了。 前言逆转裁判是一个我非常推荐的游戏。我认为逆转裁判系列达到了文字AVG一个相当高的境界，他之所以能有那么多种其他作品演绎，也是因为他的成功，诸如TV动画版、真人版、以及源源不断的系列以及源源不断的新炒冷饭平台。 不过，如果今天再打开GBA来玩逆转裁判会觉得画质很差。但这终究是载体的不同，千百年来刻在石板上或者各种植物">
+<meta property="og:type" content="article">
+<meta property="og:title" content="逆转裁判">
+<meta property="og:url" content="https://dangokanako.github.io/2021/09/25/%E7%AE%80%E8%AF%84/%E9%80%86%E8%BD%AC%E8%A3%81%E5%88%A4/index.html">
+<meta property="og:site_name" content="小鸟的风祭森林">
+<meta property="og:description" content="逆转裁判移植前的碎碎念202306移植。嘛，在两年前的胡言乱语里，算是工整的了。 前言逆转裁判是一个我非常推荐的游戏。我认为逆转裁判系列达到了文字AVG一个相当高的境界，他之所以能有那么多种其他作品演绎，也是因为他的成功，诸如TV动画版、真人版、以及源源不断的系列以及源源不断的新炒冷饭平台。 不过，如果今天再打开GBA来玩逆转裁判会觉得画质很差。但这终究是载体的不同，千百年来刻在石板上或者各种植物">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://dangokanako.github.io/images/article/2021/001.jpg">
+<meta property="og:image" content="https://dangokanako.github.io/images/article/2021/002.jpg">
+<meta property="og:image" content="https://dangokanako.github.io/images/article/2021/003.jpg">
+<meta property="article:published_time" content="2021-09-24T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-06-05T18:42:23.649Z">
+<meta property="article:author" content="坂上河南子">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://dangokanako.github.io/images/article/2021/001.jpg">
+    
+<link rel="stylesheet" href="/lib/fancybox/fancybox.css">
+<link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
+
+
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1686058499328">
+    
+    <link rel="stylesheet" href="/css/style.css?v=1686058499328">
+
+    
+        
+            <link rel="stylesheet" href="/custom.css?v=1686058499328">
+        
+    
+
+    
+<script src="/lib/mdui_043tiny/mdui.js" async></script>
+<script src="/lib/fancybox/fancybox.umd.js" async></script>
+
+
+    <script async src="/js/app.js?v=1686058499328"></script>
+    
+     
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4D4ZJ9G024"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+
+  gtag("config", "G-4D4ZJ9G024");
+</script>
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+            <body class="mdui-drawer-body-left">
+                <div id="nexmoe-background">
+                    <div class="nexmoe-bg" style="background-image: url(/images/base/chaoschild.jpg)" 
+                        ></div>
+                    <div class="mdui-appbar mdui-shadow-0">
+                        <div class="mdui-toolbar">
+                            <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu"
+                                class="mdui-btn mdui-btn-icon mdui-ripple"><i
+                                    class="mdui-icon nexmoefont icon-menu"></i></a>
+                            <div class="mdui-toolbar-spacer"></div>
+                            <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+                            <a href="/" title="坂上河南子"
+                                class="mdui-btn mdui-btn-icon"><img src="/images/base/icon.png"
+                                    alt="坂上河南子"></a>
+                        </div>
+                    </div>
+                </div>
+                <div id="nexmoe-header">
+                    <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="坂上河南子">
+            <img src="/images/base/icon.png" alt="坂上河南子" alt="坂上河南子">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>文章</span>65</div>
+        <div><span>标签</span>0</div>
+        <div><span>分类</span>18</div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/archive.html" title="文章归档">
+            <i class="mdui-list-item-icon nexmoefont icon-container"></i>
+            <div class="mdui-list-item-content">
+                文章归档
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/tools3.html" title="三次元工具">
+            <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
+            <div class="mdui-list-item-content">
+                三次元工具
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/tools2.html" title="二次元工具">
+            <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
+            <div class="mdui-list-item-content">
+                二次元工具
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/tools1.html" title="技术类工具">
+            <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
+            <div class="mdui-list-item-content">
+                技术类工具
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/donate.html" title="V我50">
+            <i class="mdui-list-item-icon nexmoefont icon-coffee"></i>
+            <div class="mdui-list-item-content">
+                V我50
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/about.html" title="关于博主">
+            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+            <div class="mdui-list-item-content">
+                关于博主
+            </div>
+        </a>
+        
+    </div>
+    <aside id="nexmoe-sidebar">
+        
+            
+            <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search">
+         
+            <form id="search_form" action_e="https://cn.bing.com/search?q=site:nexmoe.com" onsubmit="return search();">
+                <label><input id="search_value" name="q" type="search" placeholder="搜索"></label>
+            </form>
+         
+    </div>
+</div>
+
+
+
+
+        
+            
+            <div class="nexmoe-widget-wrap">
+	<div class="nexmoe-widget nexmoe-social">
+		<a
+			class="mdui-ripple"
+			href="/images/base/forbidden.png"
+			target="_blank"
+			mdui-tooltip="{content: 'QQ群'}"
+			style="
+				color: rgb(249, 174, 8);
+				background-color: rgba(249, 174, 8, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-QQ"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="/images/base/forbidden.png"
+			target="_blank"
+			mdui-tooltip="{content: '哔哩哔哩'}"
+			style="
+				color: rgb(231, 106, 141);
+				background-color: rgba(231, 106, 141, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-bilibili"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="/images/base/forbidden.png"
+			target="_blank"
+			mdui-tooltip="{content: 'GitHub'}"
+			style="
+				color: rgb(25, 23, 23);
+				background-color: rgba(25, 23, 23, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-github"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="/images/base/forbidden.png"
+			target="_blank"
+			mdui-tooltip="{content: '知乎'}"
+			style="
+				color: rgb(30, 136, 229);
+				background-color: rgba(30, 136, 229, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-zhihu"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="/images/base/forbidden.png"
+			target="_blank"
+			mdui-tooltip="{content: '微博'}"
+			style="
+				color: rgb(213, 44, 43);
+				background-color: rgba(213, 44, 43, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-weibo"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="/images/base/forbidden.png"
+			target="_blank"
+			mdui-tooltip="{content: 'steam'}"
+			style="
+				color: rgb(14, 65, 113);
+				background-color: rgba(14, 65, 113, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-steam"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="/images/base/forbidden.png"
+			target="_blank"
+			mdui-tooltip="{content: 'tg'}"
+			style="
+				color: rgb(25, 144, 203);
+				background-color: rgba(25, 144, 203, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-telegram"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="/images/base/forbidden.png"
+			target="_blank"
+			mdui-tooltip="{content: '豆瓣'}"
+			style="
+				color: rgb(8, 190, 21);
+				background-color: rgba(8, 190, 21, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-douban-fill"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="/images/base/forbidden.png"
+			target="_blank"
+			mdui-tooltip="{content: 'Twitter'}"
+			style="
+				color: rgb(59, 151, 239);
+				background-color: rgba(59, 151, 239, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-twitter"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="/images/base/forbidden.png"
+			target="_blank"
+			mdui-tooltip="{content: 'RSS'}"
+			style="
+				color: rgb(247, 132, 34);
+				background-color: rgba(247, 132, 34, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-rss"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="/images/base/forbidden.png"
+			target="_blank"
+			mdui-tooltip="{content: 'bangumi'}"
+			style="
+				color: rgb(231, 106, 141);
+				background-color: rgba(231, 106, 141, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-bilibili"
+			></i> </a
+		>
+	</div>
+</div>
+
+        
+            
+            
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章分类</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/★/">★</a>
+          <span class="category-list-count">34</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/★★/">★★</a>
+          <span class="category-list-count">10</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/★★★/">★★★</a>
+          <span class="category-list-count">6</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/★★★★/">★★★★</a>
+          <span class="category-list-count">5</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/★★★★★/">★★★★★</a>
+          <span class="category-list-count">5</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/二次元/一般动画/">一般动画</a>
+          <span class="category-list-count">15</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/二次元/一般游戏/">一般游戏</a>
+          <span class="category-list-count">17</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/三次元/">三次元</a>
+          <span class="category-list-count">3</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/三次元/书籍/">书籍</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/二次元/">二次元</a>
+          <span class="category-list-count">61</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/二次元/动画/">动画</a>
+          <span class="category-list-count">5</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/技术/">技术</a>
+          <span class="category-list-count">4</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/未完成/">未完成</a>
+          <span class="category-list-count">4</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/二次元/游戏/">游戏</a>
+          <span class="category-list-count">20</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/三次元/电影/">电影</a>
+          <span class="category-list-count">2</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/二次元/碎碎念/">碎碎念</a>
+          <span class="category-list-count">36</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/踩坑/">踩坑</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/二次元/随笔/">随笔</a>
+          <span class="category-list-count">25</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+
+        
+            
+            
+        
+            
+            
+            
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章归档</h3>
+    <div class="nexmoe-widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">25</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a><span class="archive-list-count">31</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1918/">1918</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+
+        
+            
+            
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">最新文章</h3>
+    <div class="nexmoe-widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/06/01/%E6%9C%88%E5%B8%B8%E5%90%88%E9%9B%86/2023%E8%A1%A5%E7%95%AA%E5%90%88%E9%9B%8606/">2023补番合集06</a>
+          </li>
+        
+          <li>
+            <a href="/2023/06/01/%E6%8A%80%E6%9C%AF/test%20copy/">从1开始的前端生活</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/12/%E9%94%90%E8%AF%84/%E8%A3%85%E7%94%B2%E6%82%AA%E9%AC%BC%E6%9D%91%E6%AD%A3/">《装甲悪鬼村正》无解的电车难题</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/01/%E6%9C%88%E5%B8%B8%E5%90%88%E9%9B%86/2023%E8%A1%A5%E7%95%AA%E5%90%88%E9%9B%8605/">2023补番合集05</a>
+          </li>
+        
+          <li>
+            <a href="/2023/04/29/%E6%8A%80%E6%9C%AF/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">Hexo博客搭建中</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+        
+            
+            <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-link">
+		<ul>
+        
+            <li>
+                <a href="http://www.zwcsm.com/" target="_blank" >
+                    <img src="/images/base/Mio.png" alt="中午吃什么"></img>
+                    <p>中午吃什么</p>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.bing.com" target="_blank" >
+                    <img src="/images/base/favicon.ico" alt="还没想好"></img>
+                    <p>还没想好</p>
+                </a>
+            </li>
+        
+		</ul>
+    </div>
+</div>
+<style>
+.nexmoe-widget-wrap .nexmoe-link ul li a {
+    text-align : center;
+}
+.nexmoe-widget-wrap .nexmoe-link ul li a img {
+    max-width : 100%;
+}
+.nexmoe-widget-wrap .nexmoe-link ul li a p {
+    margin: 10px 0;
+}
+</style>
+
+        
+    </aside>
+    <div class="nexmoe-copyright">
+        &copy; 2023 坂上河南子
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
+        
+    </div>
+</div><!-- .nexmoe-drawer -->
+                </div>
+                <div id="nexmoe-content">
+                    <div class="nexmoe-primary">
+    <div class="nexmoe-post">
+  <article>
+    
+        <div class="nexmoe-post-cover absolute" style="padding-top: 41.66666666666667%;"> 
+            <img src="/images/gallery/018.jpg" alt="逆转裁判" loading="lazy">
+            <h1>逆转裁判</h1>
+        </div>
+    
+    
+    <div class="nexmoe-post-meta">
+    <div class="nexmoe-rainbow">
+        <a class="nexmoefont icon-calendar-fill">2021年09月25日</a>
+        
+            <a class="nexmoefont icon-appstore-fill -link" href="/categories/%E2%98%85%E2%98%85/">★★</a><a class="nexmoefont icon-appstore-fill -link" href="/categories/%E4%BA%8C%E6%AC%A1%E5%85%83/">二次元</a><a class="nexmoefont icon-appstore-fill -link" href="/categories/%E4%BA%8C%E6%AC%A1%E5%85%83/%E6%B8%B8%E6%88%8F/">游戏</a><a class="nexmoefont icon-appstore-fill -link" href="/categories/%E4%BA%8C%E6%AC%A1%E5%85%83/%E9%9A%8F%E7%AC%94/">随笔</a>
+        
+        
+    </div>
+    
+    
+    
+    
+    
+</div>
+
+    <h1 id="逆转裁判"><a href="#逆转裁判" class="headerlink" title="逆转裁判"></a>逆转裁判</h1><h2 id="移植前的碎碎念"><a href="#移植前的碎碎念" class="headerlink" title="移植前的碎碎念"></a>移植前的碎碎念</h2><p>202306移植。嘛，在两年前的胡言乱语里，算是工整的了。</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>逆转裁判是一个我非常推荐的游戏。我认为逆转裁判系列达到了文字AVG一个相当高的境界，他之所以能有那么多种其他作品演绎，也是因为他的成功，诸如TV动画版、真人版、以及源源不断的系列以及源源不断的新炒冷饭平台。</p>
+<p>不过，如果今天再打开GBA来玩逆转裁判会觉得画质很差。但这终究是载体的不同，千百年来刻在石板上或者各种植物纸类上的荷马史诗，亦或是春秋左传，或者就近的国内外文学名著，和他们的所用的纸无关，而是他们在作品中所表达的内容能够流芳百世。</p>
+<p>游戏的题材是律师辩护的故事，当然巧舟在里面加入了很多要素使得游戏不是枯燥无味，比如浮夸的人物性格，调查时的各种吐槽笑点，一些莫名其妙的超能力，以及一个架空虚构的国家的法庭。这些都使得原先可能是一个枯燥无味的审理游戏变得惊心动魄了起来。</p>
+<p>而123的剧情连贯也令人惊叹不已。最后的高潮关3-5解释了几乎一切，并且画上了一个圆满的句号。同时额外的1-5跌宕起伏的同时结局也让人暖心。故事只要用心去玩感受剧情便没有那么难。</p>
+<p>比较唏嘘的是巧舟离开了逆转裁判。随后巧舟的幽灵诡计也是巨大成功，同时我们的冷饭王卡普空在复刻的同时也在一点点做逆转检事 逆转裁判主线 大逆转裁判等。</p>
+<p>希望这个系列越做越好。<br>完。</p>
+<p>PC版优点：自带中文。背景和梗也会汉化。有成就。<br>GBA版优点：语音日文。能加速加到飞起。免费入手。</p>
+<p>其实以前用GBA模拟器已经翻来覆去打了好几遍了。如今STEAM补票了逆转裁判123，又购入了大逆转裁判12，决定先来补一下逆转裁判123的回忆。以下为游玩时的体感。</p>
+<p>成就攻略见：<br><a target="_blank" rel="noopener" href="http://psnine.com/psngame/15169#29">http://psnine.com/psngame/15169#29</a><br>(3-3那个最难搞了)</p>
+<p>高清之后的画风,据说这个是原画<br>日语异议ari才是灵魂。不过中文的也不错。背景也汉化了。<br><del>你们天天这么非法取证早枪毙了</del><br>——————游玩中涉及严重剧透</p>
+<p>逆转裁判：<br>教学关<br>一开始的时候就把凶手给画出来了……GBA的时候这里没有。不过这个细节无足轻重啦。<br>1-1的要点就在于，凶手为什么会知道这个奇怪的时间？为什么会差两个小时？（十二小时制害人，但凡搞个24小时制的时钟(bgm38)）</p>
+<p>PC版有一个非常棒优化的点，就是调查的时候鼠标光标会提示这个地方有调查，或者是已经调查过。</p>
+<p>1-2 教学关之后威慑就没有直球提示了。小中大这个名字还挺有意思的。但是我觉得这一话并不好，塑造起来小中大是一个最终BOSS一样的形象，能随便凌驾于法律，以至于最后全作品、包括复苏的逆转的BOSS都没有达到这个地步，结果最后他自己点投了。我认为这是没想到逆转裁判竟然能这么天才还有续作才做的角色形象。</p>
+<p>1-3 要点倒是很神秘。这次我玩的时候都差点忘了，第一场所和第二场所的路堵了，第一场所的尸体，但是并不能说明第二场所的人没有嫌疑啊！案发居然在第一场所！而且他妈的被害人居然他妈的假装成被告人！<br>以及多余的情感这句话是在1-3结尾。（当然不是BL情感）</p>
+<p>1-4 12月26日<br>这个栽赃过程和1-3差不多。雪夫这里，注意是让被告人装精神病最后获得了无罪，后被告未婚妻自杀，导致了动机。<br>不过你们法庭程序还真厉害啊，能判今天的案子同庭又自首结果又判15年前的案子<br>DL-6的话，其实很短，主要点还是在讨论第二发子弹的问题，这是人能想出来的？不过已经给了非常明显的提示了，这种可能确实有意思。而且灵媒那边也很有意思，御剑信并不知道谁是凶手，包庇儿子于是指证了灰根。<br>其实逆转裁判1（其实无印，也就是没有这个数字1的）的1234就能形成一个完美的闭环，情节也非常完整。正如1-4的标题，逆转，然后再见。在这里画上了句号。以及成步堂小学四年级成为律师的契机也是形成了闭环。（你妈的失张偷的）</p>
+<p>难度的话，用心阅读剧情的话并不难。音乐不足，场景切换仓促。逆转的经典音乐还不错。画质123都一样，不再赘评。1-2的人物形象不好。<br>本作  8.4~9.0<br><img src="/images/article/2021/001.jpg"></p>
+<p>逆转裁判2：<br>2只有四章。但是本作可以指正人物了。御剑加新表情了，感觉不错喔。<br>2-1 教学关。9月8日，应该是1-5后七个月吧。但是有个问题，不过不是制作的问题，也就是棒球手套并不是惯用手戴的，这一点国内玩家或者初见玩家不清楚。（不过给了提示）。本教学关同比1-1还是略难的。不过并没有明显的要素指向最后的名片证物，相较其他教学关显得莫名其妙。</p>
+<p>2-2 2-1前两个月真宵重逢。这关开始魔幻了，灵媒杀人算谁的，你们搁这做法还喊我们律师干嘛。<br>御剑已经不在了。什么意思啊？之后不还活蹦乱跳的吗，之前不也活蹦乱跳的吗。<br>还行，相较难度和长度都上升了。和2-1一个问题，日本是他妈的靠右行驶的，驾驶座在右边的，不过这个问题不是游戏的问题。</p>
+<p>2-3 2-2后半年。12月28日<del>（DL-6十六周年纪念日）</del><br>难度很大，虽然给提示了但是盲点还是很大，谁会知道这种事啊。此外阿克罗感谢冥没有搜查轮椅，但是冥看起来没这个打算…（没想到是御剑的命令）（御剑一年没见都升官了哈）（动画效果……本身就是文字AVG，就当我没看见吧）<br>故事也很悲剧。怎么会有这么愚蠢的事情。<br>但是披风那事儿就挺扯。</p>
+<p>2-4 3月20日。虽然2的难度很大，但是掌握节奏了就不难，提示也可以（其实遇到新事件或者对话就说明走对了）<br>难度超大。又很长。尤其2-4的机制已经需要前提威慑一次再威慑。指正由于人物和证物超多也变得难度超大。剧情…其实犯案手法完全没讨论，倒是私下里为了真宵一直在争执私事拖时间。<br>真宵：我死掉的话 让小美把我叫出来不就好了吗<br>我：？<br>难度颇大但是对于我来说反而会加分，但是剧情有点扯。123三个盲点也挺有意思，如果不知道永远想不出来。<br>8.4-8.8</p>
+<p>逆转裁判3<br><del>指人证可以指自己了</del><br>3-1:五年前（根据后面叙事 是1-4的12月28日的五年前）<br>千寻的等等这句话中配很差。<br>成步堂求求你不要再做梦了。作为教学关依旧偏难，但是吸引人。</p>
+<p>3-2:<br>9月11日。根据HW的说法是2-4半年后。<br>为什么抓怪盗也要上刑警……你们刑事科这么闲吗<br>跌宕起伏！这一章很长同时也很棒。<br>但是怪盗他妈赚大了啊！居然不用刑法</p>
+<p>3-3:<br>这里有最王八蛋的成就，终于弹成就拉<br>1月6日。又过年了，好快。有个问题，案件是12月3号发生的，结果到1月还没收拾现场啊。<br>最后的证物指证有点意思。其他的槽点太多了……<br>不过3-3开始和最后的给3-5的伏笔也非常震撼……（即戈多没看见番茄酱和关灯时的情况）</p>
+<p>3-4:<br>成步堂和千寻相遇一年前。应该是3-1一年前？2月16日<br>御剑第一案就是-4级。<br>我草？这个绑架案…我直接震撼你妈一整年。红颜祸水3-1 3-4<br>该案中止，无结果宣判。<br>该案不长，为3-5做伏笔的。</p>
+<p>3-5:<br>连打五个小时，很厉害。<br>2月6日。<br>草一上来我就想吐槽你们怎么还要修炼灵力的…而且这地方真吉利……3-4事发地 3-4前案事发地<br>但是贯彻整个逆转裁判123主线最漏洞的地方居然是最开始的DL-6，检方和法院意见一致为什么会名声扫地？DL-6导致了名声扫地，就导致了绫里千寻出来当律师以及久美子，久美子他丈夫就导致了3-4，3-4就导致了戈多，就导致了3-1，就导致了1-1，就导致了1-5，同时久美子又导致了2-2和3-5<br>为什么你们这个国家死刑执行这么慢啊。3-1后六年执行死刑，3-4后五年都没有执行死刑。<br>？？？死人出来杀死人被死人杀了最后死了一个活人 应该地府管……吗？<br>此外绫里舞子召唤千奈美也不合理啊…然后去杀真宵，结果…</p>
+<p>以及他妈的神乃木发现了惊天巨大犯案计划书之后….(bgm38)(bgm38)(bgm38)<br>拿走计划书破坏计划 ×<br>找几个人商量最后抄家伙杀几个人然后还通过非常离谱的方法制作现场和被害人以及召唤来召唤去灵魂还在法庭上打了三天三夜官司忙来忙去最后把自己抓进去了 √<br>(该点在最后有解释)<br>千奈美杀的人有点多啊。</p>
+<p>虽然整个手法掺了不少魔幻要素，不过幽灵诡计整个就是超自然的超强剧本，只要逻辑严密设定严谨，超现实要素并不能阻碍这一章的华丽逆转。<br>本作流程超长，难度也徒增，3-2，3-3都很长，3-1，3-4更是和3-5一起组成了华丽的逆转。为逆转裁判123画上了一个圆满的句号。<br>8.7-9.3</p>
+<p><img src="/images/article/2021/002.jpg"></p>
+<p>等等！<br>复苏的逆转：（本作发生在1-4后两个月，即2月（葫芦岛御剑事件在12月，也就是冬天））<br>该章由于后面做的，所以画质细腻了很多。篇幅很长。承上启下。2-1234御剑已死也描述明白了。<br>摆逮捕君愁死我了，判定太TM严了我日。<br>最后那个证物，百密一疏，最后的BOSS居然会犯下这种小错。<br>虽然剧情很长，当时深受震撼，但是实际玩下来却没有当年的震撼了。<br>结局很温馨。<br>其他：成步堂你身边妹子好多。真宵春美春芽茜，到后面还收养女儿去了<br>8.3~9.0</p>
+<p><img src="/images/article/2021/003.jpg"></p>
+<h1 id="大逆转裁判"><a href="#大逆转裁判" class="headerlink" title="大逆转裁判"></a>大逆转裁判</h1><h2 id="前言-1"><a href="#前言-1" class="headerlink" title="前言"></a>前言</h2><p>大逆转12为巧舟企划，设定是19世纪末的日本律师在英国的故事。玩下来主要感觉就是伏笔特别多。整个游戏全都是2-5的伏笔，关于这点不得不佩服一下。此外人物的建模动作都不错，角色形象塑造比如福尔摩斯，形象相当突出。关键的几个地方会有语音。UI上也做了很多调整，比如自动播放，快速跳过（并不好用），键盘完全操作，存档问题，对话记录。整个日常生活也很温馨，在贝克街221B号喝茶还真是悠闲。吐槽笑点也很有意思，尤其福尔摩斯这个逼…</p>
+<p>此外让我在这个游戏里深刻的感受到了民族传统文化，日本文化与英国文化的交融与冲突。不知是否是刻意的展现了民族文化，但是着实我们值得借鉴学习。</p>
+<p>缺点的话，就是太拖沓了，不知道为什么玩出来50个小时的游戏时长。明明已经彻底解决探案卡关问题了。整个第二部所有篇幅都巨长无比。整个逆转裁判123复苏才花了我40H。有的时候明明感觉出来了但是还是拖沓了很久</p>
+<p>大逆转裁判反而不是架空国家了。但是主角也姓成步堂，总不能推理出来成步堂龙一也是日本人最后锁国区了吧。此外亚双义的刀叫狩魔欸。</p>
+<p>每一话开头引用的福尔摩斯探案集我挺喜欢的。整个作品引用了很多福尔摩斯探案集的作品，当然他又自己改造了下。《红发会》，《四个名字》，《斑点带子》，《巴斯卡维尔的猎犬》，《五个桔核》，《跳舞的小人》，《波西米亚丑闻》，《博斯科姆比溪谷秘案》什么什么什么的手法或者典故或者引用或多或少都有出现。如果有阅读过福尔摩斯探案集肯定会很熟悉。</p>
+<p>全成就攻略：<a target="_blank" rel="noopener" href="https://keylol.com/t742210-1-2">https://keylol.com/t742210-1-2</a></p>
+<p>1-1 11月22日 《伟大起航的冒险》<br>教学关 死者华生即10年前解剖医生 凶手萨沙<br>1-1这个剧情我不会被抓起来吧。外国人在你们土地上杀人在法庭上毁灭证物最后还治不了(bgm38)<br>你们这也太昭和哦不太大正了 哦不太明治了<br>怀念逆转裁判的现代科学搜查了(bgm38)(bgm38)(bgm38)指纹也没有，血液是不是人血检测都费劲</p>
+<p>1-2 1月29日 《好友与斑点带子的冒险》<br>确实，这里没有解剖记录…也是我玩到2也一直好奇的一点，唯独这里没有上过法庭<br>？传统艺能？<br>这把不是稳了，又是斑点带子又是福尔摩斯，还好我看过福尔摩斯探案集。<br>不长。</p>
+<p>1-3 2月18日 《疾走之密室的冒险》<br>死者其实在卖1-5的情报，情报的四个人名和这个有关<br>你们怎么英国人都说日语异议ARI的<br>这个陪审团制度…其实只说游戏性还可以<br>最后没有得到真相<br>但是看起来是谁杀的…倾向于被告但是……不好说啊这个</p>
+<p>1-4 2月19日 《吾辈与雾之夜的冒险》<br>（工作密度还挺大的）<br>嗯…公寓案。事故。但是被插的在2-2又解释了<br>说实话觉得游戏难度很低，即使1-4在法庭上给出的提示也滔滔不绝，包括逆转裁判123的卡关不知道哪里调查的问题也被直接根除，直接提示哪里需要调查，彻底展明了线性剧情。</p>
+<p>1-5 4月15日 《不可说之故事的冒险》<br>就是卖碟，就知道四个人名<br>1-3凶手是被告<br>你们他妈的英国人真能死缠烂打，我都以为最后的证物十次了。<br>好长的案件。堪比逆转1-5或者3-5<br>说起来最后居然不是摩斯电码，那到底是什么情况？纳尼搜类，KIMO？</p>
+<p>好，爱丽丝·华生。日本人没救了(Iris，不是常见的Alice)<br>留下了非常多的伏笔。<br>太拖沓了。</p>
+<p>总的来说还行 7.8-8.4</p>
+<p>2-1 8月11日 《辩护少女的觉醒与冒险》<br>回国后两个月，大概1-5后50天+60天<br>中规中矩的新手教程<br>死者萨沙，应该是计划外的事情。</p>
+<p>2-2 8月30日 《吾辈与雾夜的回想》<br>死囚犯偷的珠宝实际上是猎犬的项圈，不过你们怕啥啊<br>但是成步堂你怎么半年不开张 开张吃半年啊<br>回忆1-4第二天的第二个案子 果然1-4整个都是一个伏笔<br>但是作为-2，也太长了…</p>
+<p>2-3 10月22日 《未来科学与亡灵的归还》<br>目击到目的诡异的情况？十年前教授的复活？<br>很长，太他妈长了，第三话就这么长。<br>还TM能有这种事。人还活了CNM。<br>谜团还越打越多了，要看看巧舟在最后两话要干什么了。</p>
+<p>2-4 10月30日 《扭曲男人的最后问候》<br>福尔摩斯笑死我了<br>是2-5的前奏。<br>怎么死去活来关系错综复杂的</p>
+<p>2-5 11月3日 《成步堂龙之介的觉悟》<br>还行。很长。彻底回收所有伏笔。包括爱丽丝的爸爸，等一系列事情。<br>7.9-8.9</p>
+<p>逆转裁判123复苏<br>44H<br>大逆转裁判12<br>50H<br><a target="_blank" rel="noopener" href="https://bangumi.tv/subject/1111">https://bangumi.tv/subject/1111</a><br><a target="_blank" rel="noopener" href="https://bangumi.tv/subject/940">https://bangumi.tv/subject/940</a><br><a target="_blank" rel="noopener" href="https://bangumi.tv/subject/943">https://bangumi.tv/subject/943</a><br><a target="_blank" rel="noopener" href="https://bangumi.tv/subject/939">https://bangumi.tv/subject/939</a><br><a target="_blank" rel="noopener" href="https://bangumi.tv/subject/102690">https://bangumi.tv/subject/102690</a><br><a target="_blank" rel="noopener" href="https://bangumi.tv/subject/192977">https://bangumi.tv/subject/192977</a></p>
+
+    
+  </article>
+
+  
+      
+    <div class="nexmoe-post-copyright">
+        <strong>本文作者：</strong>坂上河南子<br>
+        <strong>本文链接：</strong><a href="https://dangokanako.github.io/2021/09/25/%E7%AE%80%E8%AF%84/%E9%80%86%E8%BD%AC%E8%A3%81%E5%88%A4/" title="https:&#x2F;&#x2F;dangokanako.github.io&#x2F;2021&#x2F;09&#x2F;25&#x2F;%E7%AE%80%E8%AF%84&#x2F;%E9%80%86%E8%BD%AC%E8%A3%81%E5%88%A4&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;dangokanako.github.io&#x2F;2021&#x2F;09&#x2F;25&#x2F;%E7%AE%80%E8%AF%84&#x2F;%E9%80%86%E8%BD%AC%E8%A3%81%E5%88%A4&#x2F;</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+
+        
+    </div>
+
+
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+   
+    
+</div>
+  
+  
+    <script async src="/js/copy-codeblock.js?v=1686058499206"></script>
+  
+
+  
+      <div class="nexmoe-post-footer">
+          <div id="gitalk-container"></div>
+<link rel="stylesheet" href="/asset/css/gitalk.css">
+<script src="/asset/js/gitalk.min.js"></script>
+<script src="/asset/js/md5.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+    clientID: '07d3e0012bca1490f751',
+    clientSecret: '39f09000e69cd0617f0264437e8fdf0bf81c134d',
+    repo: 'blog-comments-gitalk',
+    owner: 'dangokanako',
+    admin: ['dangokanako'],
+    id: md5(location.pathname),
+    distractionFreeMode: false
+  })
+  gitalk.render('gitalk-container')
+</script>
+
+      </div>
+  
+</div>
+</div>
+                        <div class="nexmoe-post-right">
+                            <div class="nexmoe-fixed">
+                                <div class="nexmoe-tool">
+
+                                    
+
+                                        
+                                            
+                                                <button class="mdui-fab catalog" style="overflow:unset;">
+                                                    <i class="nexmoefont icon-i-catalog"></i>
+                                                    <div class="nexmoe-toc">
+                                                        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%80%86%E8%BD%AC%E8%A3%81%E5%88%A4"><span class="toc-number">1.</span> <span class="toc-text">逆转裁判</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A7%BB%E6%A4%8D%E5%89%8D%E7%9A%84%E7%A2%8E%E7%A2%8E%E5%BF%B5"><span class="toc-number">1.1.</span> <span class="toc-text">移植前的碎碎念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.2.</span> <span class="toc-text">前言</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A4%A7%E9%80%86%E8%BD%AC%E8%A3%81%E5%88%A4"><span class="toc-number">2.</span> <span class="toc-text">大逆转裁判</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80-1"><span class="toc-number">2.1.</span> <span class="toc-text">前言</span></a></li></ol></li></ol>
+                                                    </div>
+                                                </button>
+                                                
+
+                                                    
+
+                                                        <a href="#nexmoe-content" class="toc-link"
+                                                            aria-label="Back To Top" title="top"><button
+                                                                class="mdui-fab mdui-ripple"><i
+                                                                    class="nexmoefont icon-caret-top"></i></button></a>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <div id="nexmoe-search-space">
+	<div class="search-container">
+		<div class="search-header">
+			<div class="search-input-container">
+				<input
+					class="search-input"
+					type="text"
+					placeholder="搜索"
+					oninput="sinput();"
+				/>
+			</div>
+			<a class="search-close" onclick="sclose();">×</a>
+		</div>
+		<div class="search-body"></div>
+	</div>
+</div>
+
+
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2058306854838448" crossorigin="anonymous"></script>
+
+            </body>
+
+</html>

@@ -125,7 +125,7 @@ function Init_Chapter00() {
 
         function () {
             playAudio("Flash2.m4a");
-            Init_Battle();
+            //            Init_Battle();
         },
 
         [1, '【露娜】', '『亚特姆，不要忘了游戏战斗机制！』', 'atom1.png', 'runa1.png',],

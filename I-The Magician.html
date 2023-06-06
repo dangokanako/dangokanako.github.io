@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>从1开始的前端生活</title>
-
+    <link rel="icon" href="/images/base/favicon.ico" type="image/x-icon">
     <!-- jQuery！引入！ -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!--  Toastr！引入！  -->
@@ -102,13 +102,10 @@
         width: 300px;
     }
 
-    .stat {
-        margin-bottom: 10px;
-    }
-
     .bar-container {
         display: flex;
         margin-bottom: 5px;
+        width: 320px;
     }
 
     .bar {
@@ -118,25 +115,14 @@
     .health-bar {
         height: 5px;
         right: 5px;
-        width: 100px;
         border-radius: 5px;
         background-color: red;
-    }
-
-    .stat {
-        font-family: "lolita", sans-serif;
-    }
-
-    .bar-container {
-        width: 320px;
+        transition: width 0.3s ease-in-out;
     }
 
     .bar-text {
         position: absolute;
         top: 7px;
-        left: 0;
-        height: 20px;
-        line-height: 20px;
         color: #000000;
         text-align: center;
         width: 100%;
@@ -150,6 +136,16 @@
     .grid-skill {
         display: grid;
         grid-template-columns: repeat(8, 54px);
+        /* 定义列数和每列的宽度 */
+        grid-template-rows: repeat(1, 54px);
+        /* 定义行数和每行的高度 */
+        gap: 4px;
+        padding: 4px;
+    }
+
+    .grid-enemy-skill {
+        display: grid;
+        grid-template-columns: repeat(5, 54px);
         /* 定义列数和每列的宽度 */
         grid-template-rows: repeat(1, 54px);
         /* 定义行数和每行的高度 */
@@ -243,6 +239,8 @@
 
     .skill {
         position: relative;
+        width: 50px;
+        height: 50px;
     }
 
     .skill:hover .tooltip {
@@ -271,12 +269,14 @@
     }
 
     #enemy-container {
+        padding: 20px;
         width: 340px;
         height: 500px;
         border-radius: 10px;
     }
 
     #skill-container {
+        padding-left: 10px;
         position: absolute;
         left: 345px;
         top: 0px;
@@ -298,16 +298,17 @@
 <script src="/asset/js/AudioManager.js"></script>
 <script src="/asset/js/chapter00.js"></script>
 <script src="/asset/js/SkillData.js"></script>
+<script src="/asset/js/EnemyData.js"></script>
 
 <script>
     // 测试用
     $(document).ready(function () {
         $("#testButton").click(function () {
-            $("#game-panel").fadeOut(500, function () {
-                $("#battle-container").fadeIn(500);
-            });
+
+            //$("#battle-container").fadeIn(500);
         });
     });
+
 
 
     //全局禁用右键菜单
@@ -315,16 +316,26 @@
         event.preventDefault();
     });
 
+    // 检查本地环境
+    function isLocalhost() {
+        const { protocol, hostname } = window.location;
+        return (
+            (protocol === "http:" || protocol === "https:") &&
+            (hostname === "localhost" || hostname === "127.0.0.1")
+        );
+    }
 
 
     //页面加载初始化
     window.onload = function () {
-        //禁止F12  
-        document.addEventListener('keydown', (event) => {
-            if ((event.keyCode === 123 /* F12 */) || (event.ctrlKey && event.shiftKey && event.keyCode === 73 /* Ctrl + Shift + I */) || (event.ctrlKey && event.keyCode === 85 /* Ctrl + U */)) {
-                event.preventDefault();
-            }
-        });
+        if (!isLocalhost()) {
+            //禁止F12  
+            document.addEventListener('keydown', (event) => {
+                if ((event.keyCode === 123 /* F12 */) || (event.ctrlKey && event.shiftKey && event.keyCode === 73 /* Ctrl + Shift + I */) || (event.ctrlKey && event.keyCode === 85 /* Ctrl + U */)) {
+                    event.preventDefault();
+                }
+            });
+        }
 
         // CTRL加速文本
         document.addEventListener('keydown', (event) => {
@@ -373,6 +384,9 @@
         Init_Battle_Panel()
         // 我帮你按第一下
         OnClickAll();
+
+        //测试20230606
+        Init_Battle(Enemy_Rogue, Enemy_Rogue_Skill);
     };
 </script>
 
@@ -381,51 +395,67 @@
     <!-- 加載進度條 -->
     <div id="progress-bar">
         <div id="progress-bar-inner"></div>
-        <span>加载中：如果进度条纹丝不动，请考虑科学上网</span>
+        <span>加载中：如果进度条纹丝不动，请考虑科学上网。最好使用火狐或者谷歌浏览器。</span>
     </div>
     <div class="container" onclick="OnClickAll()">
         <div id="game-panel" style="display: block;">
         </div>
         <div id="battle-container" style="display: none;">
-            <div id="enemy-container"
-                style="background-repeat: no-repeat; background-position: center center; background-image: url(/asset/game/image/enemies/Rogue.png);">
+            <div id="enemy-container">
+                <div class="grid-enemy-skill">
+                    <li class="skillslot" id="enemyskill1"></li>
+                    <li class="skillslot" id="enemyskill2"></li>
+                    <li class="skillslot" id="enemyskill3"></li>
+                    <li class="skillslot" id="enemyskill4"></li>
+                    <li class="skillslot" id="enemyskill5"></li>
+                    <li class="skillslot" id="enemyskill6"></li>
+                    <li class="skillslot" id="enemyskill7"></li>
+                    <li class="skillslot" id="enemyskill8"></li>
+                    <li class="skillslot" id="enemyskill9"></li>
+                    <li class="skillslot" id="enemyskill10"></li>
+                </div>
+                <div style="position: absolute;bottom:30px;" id="enemy-stat">攻击力：20 防御力：5</div>
+                <div class="bar-container" style="position: absolute;bottom:20px;">
+                    <div id="enemy-health-text" class="bar-text">50/50</div>
+                    <div id="enemy-health-bar" style="width: 340px;" class="health-bar"></div>
+                </div>
             </div>
 
             <div id="skill-container">
                 <div class="grid-skill">
                     <p class="equiptext">亚特姆</p>
-                    <li class="skillslot" id="persononeskill1" ondragstart="dragstart(event)"></li>
-                    <li class="skillslot" id="persononeskill2" ondragstart="dragstart(event)"></li>
-                    <li class="skillslot" id="persononeskill3" ondragstart="dragstart(event)"></li>
-                    <li class="skillslot" id="persononeskill4" ondragstart="dragstart(event)"></li>
-                    <li class="skillslot" id="persononeskill5" ondragstart="dragstart(event)"></li>
-                    <li class="skillslot" id="persononeskill6" ondragstart="dragstart(event)"></li>
-                    <li class="skillslot" id="persononeskill7" ondragstart="dragstart(event)"></li>
+                    <li class="skillslot" id="persononeskill1"></li>
+                    <li class="skillslot" id="persononeskill2"></li>
+                    <li class="skillslot" id="persononeskill3"></li>
+                    <li class="skillslot" id="persononeskill4"></li>
+                    <li class="skillslot" id="persononeskill5"></li>
+                    <li class="skillslot" id="persononeskill6"></li>
+                    <li class="skillslot" id="persononeskill7"></li>
                 </div>
                 <div class="grid-skill">
                     <p class="equiptext">露娜</p>
-                    <li class="skillslot" id="persontwoskill1" ondragstart="dragstart(event)"></li>
-                    <li class="skillslot" id="persontwoskill2" ondragstart="dragstart(event)"></li>
-                    <li class="skillslot" id="persontwoskill3" ondragstart="dragstart(event)"></li>
-                    <li class="skillslot" id="persontwoskill4" ondragstart="dragstart(event)"></li>
-                    <li class="skillslot" id="persontwoskill5" ondragstart="dragstart(event)"></li>
-                    <li class="skillslot" id="persontwoskill6" ondragstart="dragstart(event)"></li>
-                    <li class="skillslot" id="persontwoskill7" ondragstart="dragstart(event)"></li>
+                    <li class="skillslot" id="persontwoskill1"></li>
+                    <li class="skillslot" id="persontwoskill2"></li>
+                    <li class="skillslot" id="persontwoskill3"></li>
+                    <li class="skillslot" id="persontwoskill4"></li>
+                    <li class="skillslot" id="persontwoskill5"></li>
+                    <li class="skillslot" id="persontwoskill6"></li>
+                    <li class="skillslot" id="persontwoskill7"></li>
                 </div>
                 <div class="grid-skill">
                     <p class="equiptext">被动</p>
-                    <li class="skillslot" id="personzeroskill1" ondragstart="dragstart(event)"></li>
-                    <li class="skillslot" id="personzeroskill2" ondragstart="dragstart(event)"></li>
-                    <li class="skillslot" id="personzeroskill3" ondragstart="dragstart(event)"></li>
-                    <li class="skillslot" id="personzeroskill4" ondragstart="dragstart(event)"></li>
-                    <li class="skillslot" id="personzeroskill5" ondragstart="dragstart(event)"></li>
-                    <li class="skillslot" id="personzeroskill6" ondragstart="dragstart(event)"></li>
-                    <li class="skillslot" id="personzeroskill7" ondragstart="dragstart(event)"></li>
+                    <li class="skillslot" id="personzeroskill1"></li>
+                    <li class="skillslot" id="personzeroskill2"></li>
+                    <li class="skillslot" id="personzeroskill3"></li>
+                    <li class="skillslot" id="personzeroskill4"></li>
+                    <li class="skillslot" id="personzeroskill5"></li>
+                    <li class="skillslot" id="personzeroskill6"></li>
+                    <li class="skillslot" id="personzeroskill7"></li>
                 </div>
 
                 <div class="grid-skill-queue" style="bottom: 0;position: absolute;">
                     <!-- 我觉得这里做成雀魂风格的回合开始比较帅气 -->
-                    <p class="startturn" onclick="StartTurn()">回合开始！</p>
+                    <p class="startturn" id="startturn" onclick="StartTurn()">回合开始！</p>
                     <span id="CurrentMana_Battle">可用锑能：0</span>
                     <br>
                     <span>肾上腺素：10</span><br>
@@ -461,7 +491,7 @@
             <div class="display-plane">
                 <div class="bar-container">
                     <div id="health-bar" class="health-bar"></div>
-                    <div id="health-text" class="stat bar-text"></div>
+                    <div id="health-text" class="bar-text"></div>
                 </div>
 
                 <div class="stats-container">
@@ -470,6 +500,7 @@
                     <span id="initpower" class="stat"></span><br>
                     <span id="increasepower" class="stat"></span><br>
                     <span id="maxpower" class="stat"></span><br>
+                    <span id="critrate" class="stat"></span><br>
                     <span id="money" class="stat"></span>
                 </div>
             </div>
@@ -572,6 +603,9 @@
                     ondragover="allowDrop(event)">
                 </li>
                 <!--<button id="testButton">按钮</button>-->
+                <button id="testButton">按钮</button>
+
+
             </div>
         </div>
 

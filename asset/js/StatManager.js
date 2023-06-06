@@ -7,7 +7,7 @@ var OrigDEF = 0;
 var OrigInitMana = 2;
 var OrigAddMana = 1;
 var OrigMaxMana = 5;
-
+var OrigCritRate = 5;
 
 // 装备加成
 var EquipMaxHp = 0;
@@ -17,6 +17,7 @@ var EquipDEF = 0;
 var EquipInitMana = 0;
 var EquipAddMana = 0;
 var EquipMaxMana = 0;
+var EquipCritRate = 0;
 
 // 当前值 
 var CurrentMaxHp = 0;
@@ -26,6 +27,7 @@ var CurrentDEF = 0;
 var CurrentInitMana = 0;
 var CurrentAddMana = 0;
 var CurrentMaxMana = 0;
+var CurrentCritRate = 0;
 // 金钱 
 var Money = 100;
 
@@ -40,7 +42,7 @@ function Stat_Init() {
     CurrentInitMana = OrigInitMana + EquipInitMana;
     CurrentAddMana = OrigAddMana + EquipAddMana;
     CurrentMaxMana = OrigMaxMana + EquipMaxMana;
-
+    CurrentCritRate = OrigCritRate + EquipCritRate;
     UpdateStats(CurrentMaxHp,
         CurrentHp,
         CurrentATK,
@@ -48,17 +50,19 @@ function Stat_Init() {
         CurrentInitMana,
         CurrentAddMana,
         CurrentMaxMana,
+        CurrentCritRate,
         Money);
 }
 
 
 //在界面上更新数据
-function UpdateStats(MaxHp, CurrentHp, ATK, DEF, InitMana, AddMana, MaxMana, Money) {
+function UpdateStats(MaxHp, CurrentHp, ATK, DEF, InitMana, AddMana, MaxMana, CritRate, Money) {
     document.getElementById('attack').innerText = "攻击力：" + ATK;
     document.getElementById('defense').innerText = "防御力：" + DEF;
     document.getElementById('initpower').innerText = "初始锑能：" + InitMana;
     document.getElementById('increasepower').innerText = "增长锑能：" + AddMana;
     document.getElementById('maxpower').innerText = "最大锑能：" + MaxMana;
+    document.getElementById('critrate').innerText = "暴击率：" + CritRate + "%";
     document.getElementById('money').innerText = "金钱：" + Money;
 
     let healthBar = document.getElementById('health-bar');
@@ -135,4 +139,29 @@ function CalStats() {
     });
 
     Stat_Init();
+}
+
+
+function ChangeHp(hp) {
+    if (hp < 0) {
+        CurrentHp += hp;
+        if (CurrentHp < 0) {
+            // TODO 嗝屁了
+            toastr.info('啊，挂了');
+        }
+    }
+    if (hp > 0) {
+        if (CurrentHp >= CurrentMaxHp) {
+            toastr.info('HP是满的喔');
+            return false;
+        } else {
+            CurrentHp += hp;
+            if (CurrentHp > CurrentMaxHp)
+                CurrentHp = CurrentMaxHp;
+        }
+    }
+
+    let healthBar = document.getElementById('health-bar');
+    document.getElementById('health-text').innerText = CurrentHp + '/' + CurrentMaxHp;
+    healthBar.style.width = (CurrentHp / CurrentMaxHp * 100) + "%";
 }

@@ -126,8 +126,10 @@ function item_init() {
     newItem5.addEventListener("dragstart", drag);
     newItem5.addEventListener("contextmenu", function (event) {
         event.preventDefault(); // 阻止浏览器默认的右键菜单
-        //待开发
-        toastr.info('HP是满的喔');
+        let ret = ChangeHp(50);
+        if (ret != false) {
+            this.remove();
+        }
     });
 
 

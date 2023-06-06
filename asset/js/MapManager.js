@@ -239,7 +239,7 @@ function Event_AldorHome() {
         case 0: {
             StartStory(0, 6);
             HasRead.AldorHome++;
-            break;
+            break;  
         }
     }
 }
