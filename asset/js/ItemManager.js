@@ -117,15 +117,13 @@ function item_init() {
     newItem5.className = "item";
     newItem5.textContent = "好伤药";
     newItem5.id = "item-001";
-    newItem5.style.width = "50px";
-    newItem5.style.height = "50px";
     newItem5.setAttribute("allow-item", "item");
-
     newItem5.setAttribute("draggable", "true");
-    newItem5.setAttribute("use-hp", "50");
+    newItem5.style.backgroundImage = 'url("/asset/game/image/icon/haoshangyao.png")'
+    newItem5.style.backgroundRepeat = 'no-repeat'
+    newItem5.style.backgroundPosition = 'center center'
     newItem5.addEventListener("dragstart", drag);
     newItem5.addEventListener("contextmenu", function (event) {
-        event.preventDefault(); // 阻止浏览器默认的右键菜单
         let ret = ChangeHp(50);
         if (ret != false) {
             this.remove();
@@ -151,33 +149,75 @@ function IfBagEmpty() {
     } else { return true; }
 }
 
+
+
+//好伤药 道具示例
+const ItemData_Haoshangyao = {
+    // 名字
+    name: "好伤药",
+    // 小图标
+    backgroundimage: "haoshangyao.png",
+    // tips
+    tips: '使用后HP+50<br>阿瓦隆制药最新科技结晶。<br>可以迅速为冒险者或者士兵恢复伤口。<br>此为一般<span style="color: #888888;">民用型</span>。<br>至于为什么是喷雾型至今仍是个谜。',
+    // 如果是装备，要设置给谁才能装备
+    allowitem: 'item',
+    allowperson: '',
+    // 右键执行函数
+    RightClickFunc: function (event) {
+        let ret = ChangeHp(50);
+        if (ret != false) {
+            this.remove();
+        }
+    },
+
+}
+
 //在道具栏创建道具
-function createItem_Test() {
+function createItem(item) {
     //选取空位
     var firstEmpty = bagContainers.findIndex(function (element) {
         return element.childElementCount === 0;
     })
+
+    if (firstEmpty == -1) {
+        return false;
+    }
 
     // 创建新元素
     var newItem = document.createElement("div");
 
     // 为新元素设置属性和内容
     newItem.className = "item";
-    newItem.textContent = "铁剑";
-    newItem.id = "item-weapon-005";
+    newItem.textContent = item.name;
+    newItem.id = `temp-id-${Date.now()}-${Math.random().toString(10)}`;
 
+    // 背景图片设置
+    if (item.backgroundimage != '' && item.backgroundimage != undefined) {
+        newItem.style.backgroundImage = `url("/asset/game/image/icon/${item.backgroundimage}")`;
+        newItem.style.backgroundRepeat = 'no-repeat';
+        newItem.style.backgroundPosition = 'center center';
+    }
+
+    // 必填项
     newItem.setAttribute("draggable", "true");
-    newItem.setAttribute("allow-item", "weapon");
-    newItem.setAttribute("allow-person", "one");
-    newItem.setAttribute("atk", "6");
+    if (item.allowitem != '' && item.allowitem != undefined) {
+        newItem.setAttribute("allow-item", item.allowitem)
+    }
+    if (item.allowperson != '' && item.allowitem != allowperson) {
+        newItem.setAttribute("allow-person", item.allowitem)
+    }
 
-    newItem.addEventListener("dragstart", drag);
-
+    // 浮动提示
     var Tips = document.createElement("span");
-    Tips.innerHTML = "攻击力+6。<br>新手冒险者经常使用的武器。"
+    Tips.innerHTML = item.tips;
     Tips.className = "tooltip";
-
     newItem.appendChild(Tips);
+
+    // 增加右键执行函数    
+    if (item.RightClickFunc != '' && item.RightClickFunc != undefined) {
+        newItem.addEventListener("contextmenu", item.RightClickFunc);
+    }
+
     // 将新元素添加到道具栏容器中
     bagContainers[firstEmpty].appendChild(newItem);
 }
@@ -192,6 +232,9 @@ function allowDrop(event) {
 function dragstart(event) {
     event.preventDefault();
     event.stopPropagation();
+
+
+    //event.dataTransfer.setData("text", event.target.id);
 }
 function drag(event) {
 
@@ -200,7 +243,11 @@ function drag(event) {
         return;
     }
     event.stopPropagation();
-    event.dataTransfer.setData("text/plain", event.target.id);
+    if (!event.target.id) {
+        event.target.id = `temp-id-${Date.now()}-${Math.random().toString(10)}`;
+    }
+
+    event.dataTransfer.setData("text", event.target.id);
     event.dataTransfer.effectAllowed = "move";
 }
 
@@ -214,7 +261,6 @@ function drop(event) {
 
     var itemId = event.dataTransfer.getData("text");
     var sourceElement = document.getElementById(itemId);
-
     if (event.target.childElementCount === 0) {
 
         //如果拖放到装备栏，则需要判断是否能装备
@@ -237,6 +283,7 @@ function drop(event) {
             }
         } else {
             //道具栏无所谓了
+            // TODO 0607 操你妈，有BUG了
             event.target.appendChild(sourceElement);
             //更新装备之后需要更新状态
             CalStats();
@@ -250,7 +297,7 @@ function drop(event) {
     }
 
     // 获取源元素的信息
-    var itemType = sourceElement.getAttribute('equipment');
+    //var itemType = sourceElement.getAttribute('equipment');
 }
 
 

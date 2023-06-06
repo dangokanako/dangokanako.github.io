@@ -101,17 +101,18 @@ function StartTurn() {
     }
     //回合结算中标志
     OnTurn = true;
-    toastr.info('回合开始！');
+    //toastr.info('回合开始！');
 
     // 结算我方BUFF
-    toastr.info('结算BUFF！');
+    //toastr.info('结算BUFF！');
 
     // 结算我方伤害
 
     // 结算敌人伤害
-    toastr.info('敌人的回合！');
+    //toastr.info('敌人的回合！');
     CalculateEneryDamage();
 
+    OnTurn = false;
     //End_Battle();
 }
 
@@ -164,14 +165,24 @@ async function CalculateEneryDamage() {
             if (type == "passive")
                 continue;
 
+            // 伤害计算 
             let damage = element.firstElementChild.getAttribute("damagepower");
             damage *= Enemy_Stat_Atk;
             damage /= 100;
+            damage -= CurrentDEF;
 
+
+            $(`#${element.id}`).animate({
+                backgroundColor: "#ff3f4a" // 目标颜色值
+            }, 1000); // 动画持续时间（毫秒）
             DamageToPlayer(type, damage, element.firstElementChild.innerHTML);
-            $(`#${element.id}`).slideUp(500);
             await sleep(1000);
-            $(`#${element.id}`).slideDown(500);
+            $(`#${element.id}`).animate({
+                backgroundColor: "#ffffff" // 目标颜色值
+            }, 1000);
+
+            // $(`#${element.id}`).slideUp(500);
+            // $(`#${element.id}`).slideDown(500);
         }
     }
 }
@@ -188,8 +199,10 @@ function DamageToPlayer(type, damage, name) {
         case "none": type = "无属性"; break;
     }
     ChangeHp(-damage);
-
-    toastr.info('敌人使用' + name + '，造成了' + damage + '点' + type + '伤害');
+    let toastrBottomRight = toastr;
+    toastrBottomRight.options.positionClass = "toast-top-center";
+    toastrBottomRight.error('敌人使用' + name + '，造成了' + damage + '点' + type + '伤害');
+    //toastr.info('敌人使用' + name + '，造成了' + damage + '点' + type + '伤害');
 }
 
 // 界面初始化（仅执行一次）

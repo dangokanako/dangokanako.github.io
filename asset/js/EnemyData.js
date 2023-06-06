@@ -35,31 +35,64 @@ const Enemy_Rogue_Skill = [
         name: '普通攻击',
         tips: '最基础的一击。造成100%攻击力的无属性伤害。',
         type: "none",
-        power: "100"
+        power: "100",
+        pic: "Com_attack.png",
     }, {
         rate: 500,
         name: '普通攻击',
         tips: '最基础的一击。造成100%攻击力的无属性伤害。',
         type: "none",
-        power: "100"
+        power: "100",
+        pic: "Com_attack.png",
     }, {
         rate: 500,
         name: '普通攻击',
         tips: '最基础的一击。造成100%攻击力的无属性伤害。',
         type: "none",
-        power: "100"
+        power: "100",
+        pic: "Com_attack.png",
     }, {
         rate: 500,
         name: '普通攻击',
         tips: '最基础的一击。造成100%攻击力的无属性伤害。',
         type: "none",
-        power: "100"
+        power: "100",
+        pic: "Com_attack.png",
     }, {
         rate: 500,
         name: '普通攻击',
         tips: '最基础的一击。造成100%攻击力的无属性伤害。',
         type: "none",
-        power: "100"
+        power: "100",
+        pic: "Com_attack.png",
+    }, {
+        rate: 500,
+        name: '普通攻击',
+        tips: '最基础的一击。造成100%攻击力的无属性伤害。',
+        type: "none",
+        power: "100",
+        pic: "Com_attack.png",
+    }, {
+        rate: 500,
+        name: '普通攻击',
+        tips: '最基础的一击。造成100%攻击力的无属性伤害。',
+        type: "none",
+        power: "100",
+        pic: "Com_attack.png",
+    }, {
+        rate: 500,
+        name: '普通攻击',
+        tips: '最基础的一击。造成100%攻击力的无属性伤害。',
+        type: "none",
+        power: "100",
+        pic: "Com_attack.png",
+    }, {
+        rate: 500,
+        name: '普通攻击',
+        tips: '最基础的一击。造成100%攻击力的无属性伤害。',
+        type: "none",
+        power: "100",
+        pic: "Com_attack.png",
     },
 ]
 
@@ -78,6 +111,12 @@ function CreateEnemySkill(enemySkill) {
             enemyskill.className = "skill";
             enemyskill.innerHTML = element.name;
 
+            //TODO 设置背景图片，发现效果很差，在考虑要不要修改
+            // if (element.pic != '' && element.pic != undefined) {
+            //     enemyskill.style.backgroundImage = `url("/asset/game/image/icon/${element.pic}")`;;
+            //     enemyskill.style.backgroundPosition = 'center center';
+            //     enemyskill.style.backgroundRepeat = 'no-repeat';
+            // }
             // 增加威力
             enemyskill.setAttribute("damageType", element.type);
             if (element.type != "passive") {

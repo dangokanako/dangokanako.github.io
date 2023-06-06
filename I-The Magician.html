@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.min.js"></script>
 
 
 </head>
@@ -176,6 +177,7 @@
     }
 
     .skillslot {
+        position: relative;
         display: inline-block;
         width: 50px;
         height: 50px;
@@ -184,6 +186,14 @@
         background-color: white;
         border: 2px solid black;
         box-shadow: 4px 4px 4px #ddd;
+    }
+
+    .skillslot::before {
+        position: absolute;
+        background-image: url("path/to/your/image");
+        opacity: 0.5;
+        z-index: -1;
+        /* 将伪元素置于目标元素的内容之下 */
     }
 
     .startturn {
@@ -215,6 +225,8 @@
     }
 
     .item {
+        width: 50px;
+        height: 50px;
         position: relative;
         cursor: move;
         /* 其他样式 */
@@ -304,8 +316,7 @@
     // 测试用
     $(document).ready(function () {
         $("#testButton").click(function () {
-
-            //$("#battle-container").fadeIn(500);
+            createItem(ItemData_Haoshangyao);
         });
     });
 
@@ -602,7 +613,6 @@
                 <li class="bag" id="bag10" ondragstart="dragstart(event)" ondrop="drop(event)"
                     ondragover="allowDrop(event)">
                 </li>
-                <!--<button id="testButton">按钮</button>-->
                 <button id="testButton">按钮</button>
 
 
