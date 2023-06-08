@@ -45,6 +45,9 @@ function Init_Battle(enemy) {
     UpdateEnemySata(Enemy_Stat_Atk, Enemy_Stat_Def, Enemy_Stat_Maxhp, Enemy_Stat_Hp);
 
     // 读取敌人技能框，开始创建敌人技能
+    Enemy_SkillContainers.forEach(element => {
+        element.innerHTML = '';
+    });
     CreateEnemySkill(enemySkillData);
 
     // 隐藏掉空白格子
