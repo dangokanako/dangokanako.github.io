@@ -36,7 +36,10 @@ function Stat_Init() {
     // 直接把HP加上增加的最大HP就完事儿了
 
     CurrentMaxHp = OrigMaxHp + EquipMaxHp;
-    CurrentHp = OrigHp + EquipMaxHp;
+    if (!OnBattle) {
+        CurrentHp = OrigHp + EquipMaxHp;
+    }
+
     CurrentATK = OrigATK + EquipATK;
     CurrentDEF = OrigDEF + EquipDEF;
     CurrentInitMana = OrigInitMana + EquipInitMana;
@@ -147,7 +150,8 @@ function ChangeHp(hp) {
         CurrentHp += hp;
         if (CurrentHp < 0) {
             // TODO 嗝屁了
-            toastr.info('啊，挂了');
+            //toastr.info('啊，挂了');
+            StartStory(0, 999);
         }
     }
     if (hp > 0) {
@@ -161,7 +165,15 @@ function ChangeHp(hp) {
         }
     }
 
+    // Thanks for inventing JavaScript  
+    CurrentHp = Number(CurrentHp.toFixed(2));
+
     let healthBar = document.getElementById('health-bar');
     document.getElementById('health-text').innerText = CurrentHp + '/' + CurrentMaxHp;
     healthBar.style.width = (CurrentHp / CurrentMaxHp * 100) + "%";
+}
+function ChangeMoney(money) {
+    Money += money;
+    playAudio("Coin.m4a");
+    document.getElementById('money').innerText = "金钱：" + Money;
 }

@@ -1,11 +1,14 @@
 // TODO 把章节名也做成动态的 
 
 //剧情锁，用于是否能触发剧情 true是正在剧情，false是没剧情
+// TODO 准备弃用StroyLock
 var StroyLock = true;
 var chapter = 0;
 var paragraph = 0;
 var sentence = 0;
-
+var AfterBattle = {
+    func: null,
+};
 // 头像控制
 function lefthead_control(imagepath) {
     var sourceElement = document.getElementById("character-head-left");
@@ -103,7 +106,7 @@ function OnClickAll() {
             var temp = Chapter00Story[`C${chapter}P${paragraph}`];
             if (sentence < Chapter00Story[`C${chapter}P${paragraph}`].length) {
                 UpdateTextDisplayByArray(Chapter00Story[`C${chapter}P${paragraph}`], sentence++);
-            } else { StroyLock = false; clearText(); sentence = 0; }
+            } else { StroyLock = false; ForceInput(false); clearText(); sentence = 0; }
         } else {
             alert(`获取章节文本失败，究竟是为什么呢？C${chapter}P${paragraph}`);
             console.error(`获取章节文本失败，究竟是为什么呢？C${chapter}P${paragraph}`);
@@ -133,6 +136,7 @@ function UpdateTextDisplayByArray(array, sentence) {
 
 // 开始剧情
 function StartStory(chapter_in, paragraph_in) {
+    ForceInput(true);
     StroyLock = true;
     chapter = chapter_in;
     paragraph = paragraph_in;

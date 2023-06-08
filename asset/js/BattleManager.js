@@ -11,6 +11,9 @@ var SkillContainers_0 = [];
 var SkillContainers_1 = [];
 var SkillContainers_2 = [];
 var Enemy_SkillContainers = [];
+// 敌人技能和敌人掉落
+var enemySkillData = [];
+var EnemyDrop = [];
 
 
 
@@ -18,7 +21,7 @@ var Enemy_SkillContainers = [];
 // 战斗初始化（战斗开始时执行）
 // param1 敌人数据，为一个对象。
 // param2 敌人技能列表，为一个数组。
-function Init_Battle(enemy, enemySkill) {
+function Init_Battle(enemy) {
     // 在战斗标志
     OnBattle = true;
 
@@ -27,6 +30,8 @@ function Init_Battle(enemy, enemySkill) {
         console.error("获取敌人图片失败");
         return;
     }
+    EnemyDrop = enemy.Drop;
+    enemySkillData = enemy.Skill;
     let enemypic = document.getElementById("enemy-container");
     enemypic.style.backgroundRepeat = "no-repeat";
     enemypic.style.backgroundPosition = "center center";
@@ -40,7 +45,7 @@ function Init_Battle(enemy, enemySkill) {
     UpdateEnemySata(Enemy_Stat_Atk, Enemy_Stat_Def, Enemy_Stat_Maxhp, Enemy_Stat_Hp);
 
     // 读取敌人技能框，开始创建敌人技能
-    CreateEnemySkill(enemySkill);
+    CreateEnemySkill(enemySkillData);
 
     // 隐藏掉空白格子
     SkillContainers_0.forEach(element => {
@@ -83,74 +88,174 @@ function Init_Battle(enemy, enemySkill) {
 }
 
 
+// 结束战斗
 function End_Battle() {
-    // 结束战斗
     OnBattle = false;
+    OnTrun = false;
+
+    // 根据敌人，开始计算掉落
+    if (EnemyDrop) {
+        CreateShop(2, EnemyDrop);
+    }
 
     // 隐藏战斗框
     $("#battle-container").fadeOut(350);
 
-    StartStory(0, 2)
+    // 战斗结束事件
+    if (AfterBattle.func != null) {
+        AfterBattle.func();
+        AfterBattle.func = null;
+    }
 }
 
 
+// 禁止输入，在地图/战斗面板上贴上一层透明的区域，禁止点击
+function ForceInput(ifforce) {
+    let element = document.getElementById("force-input");
+    if (ifforce == true)
+        element.style.display = "block";
+    else
+        element.style.display = "none";
+
+}
+
 // 开始计算回合
-function StartTurn() {
-    if (OnTurn) {
-        return;
-    }
+async function StartTurn() {
+    ForceInput(true);
+    // if (OnTurn == true) {
+    //     return;
+    // }
     //回合结算中标志
-    OnTurn = true;
-    //toastr.info('回合开始！');
+    //OnTurn = true;
+
+    // 回合开始重新计算状态
+    Stat_Init()
 
     // 结算我方BUFF
+    if (OnBattle)
+        CalculateBuff();
+    // 结算我方伤害
+    if (OnBattle)
+        await CalculateDamage();
     //toastr.info('结算BUFF！');
 
-    // 结算我方伤害
 
     // 结算敌人伤害
     //toastr.info('敌人的回合！');
-    CalculateEneryDamage();
+    if (OnBattle)
+        await CalculateEneryDamage();
+    await sleep(700);
 
-    OnTurn = false;
-    //End_Battle();
+
+
+    // 更新可用值
+    CurrentMana_Battle += CurrentAddMana;
+    GetCurrentManaElement = document.getElementById("CurrentMana_Battle");
+    GetCurrentManaElement.innerText = "可用锑能：" + CurrentMana_Battle;
+
+
+
+    //TODO 我觉得这个方法不可靠
+    // 读取敌人技能框，重新创建敌人技能
+    Enemy_SkillContainers.forEach(element => {
+        $(`#${element.id}`).slideUp(500);
+        element.innerHTML = '';
+    });
+    CreateEnemySkill(enemySkillData);
+    // 再显示出来
+    Enemy_SkillContainers.forEach(element => {
+        if (element.children.length !== 0) {
+            $(`#${element.id}`).slideDown(500);
+        }
+    });
+
+    // 读取自己技能框，重新创建技能，再显示出来
+    SkillContainers_0.forEach(element => {
+        $(`#${element.id}`).slideUp(500);
+        element.innerHTML = '';
+    });
+    SkillContainers_1.forEach(element => {
+        $(`#${element.id}`).slideUp(500);
+        element.innerHTML = '';
+    });
+    SkillContainers_2.forEach(element => {
+        $(`#${element.id}`).slideUp(500);
+        element.innerHTML = '';
+    });
+    CreateSkill_Test();
+    SkillContainers_0.forEach(element => {
+        if (element.innerHTML != '')
+            $(`#${element.id}`).slideDown(500);
+    });
+    SkillContainers_1.forEach(element => {
+        if (element.innerHTML != '')
+            $(`#${element.id}`).slideDown(500);
+    });
+    SkillContainers_2.forEach(element => {
+        if (element.innerHTML != '')
+            $(`#${element.id}`).slideDown(500);
+    });
+    ForceInput(false);
+
+    //OnTurn = false;
 }
 
 // 好累，我突然想写死。
 function CalculateBuff() {
-    // skill002 
-    let skill002 = getElementById("skill_002");
-    let invert = skill002.getAttribute("InvestedMana");
-    if (invert >= 1) {
-        toastr.info('亚特姆使用了抱头蹲防，防御力上升5点');
+    for (let element of SkillContainers_1) {
+        if (element.firstElementChild) {
+            if (element.firstElementChild.getAttribute("damagetype") == "buff") {
+                CurrentDEF += Number(element.firstElementChild.getAttribute("adddef"));
+            }
+        }
+    }
+    for (let element of SkillContainers_2) {
+        if (element.firstElementChild) {
+            if (element.firstElementChild.getAttribute("damagetype") == "buff") {
+                CurrentDEF += Number(element.firstElementChild.getAttribute("adddef"));
+            }
+        }
     }
 
+    UpdateStats(CurrentMaxHp,
+        CurrentHp,
+        CurrentATK,
+        CurrentDEF,
+        CurrentInitMana,
+        CurrentAddMana,
+        CurrentMaxMana,
+        CurrentCritRate,
+        Money);
 }
 
-function CalculateDamage() {
-    // 结算亚特姆技能
-    SkillContainers_1.forEach(element => {
-        if (element.children.length === 0) {
-            element.style.display = "none";
-        } else {
-            element.style.display = "block";
+// 计算我方伤害
+async function CalculateDamage() {
+    for (let element of SkillContainers_1) {
+        if (element.firstElementChild) {
+            if (element.firstElementChild.getAttribute("damagetype") && element.firstElementChild.getAttribute("damagepower")) {
+
+                //TODO 好写！大脑严重缺氧写出来的吧？
+                if (element.firstElementChild.getAttribute("damagenumber")) {
+                    DamageToEnemy(element.firstElementChild.getAttribute("damagetype"), element.firstElementChild.getAttribute("damagepower"), element.firstElementChild.innerHTML);
+                }
+                // 伤害计算 
+                DamageToEnemy(element.firstElementChild.getAttribute("damagetype"), element.firstElementChild.getAttribute("damagepower"), element.firstElementChild.innerHTML);
+                await sleep(300);
+
+            }
         }
-    });
+    }
 
+    for (let element of SkillContainers_2) {
+        if (element.firstElementChild) {
+            if (element.firstElementChild.getAttribute("damagetype") && element.firstElementChild.getAttribute("damagepower")) {
+                // 伤害计算 
+                DamageToEnemy(element.firstElementChild.getAttribute("damagetype"), element.firstElementChild.getAttribute("damagepower"), element.firstElementChild.innerHTML);
+                await sleep(300);
+            }
+        }
+    }
 }
-
-// function CalculateEneryDamage() {
-//     Enemy_SkillContainers.forEach(element => {
-//         // 如果不是空
-//         if (element.style.display != "none") {
-//             $(`#${element.id}`).slideUp(500);
-//             setTimeout($(`#${element.id}`).slideDown(500), 500);
-//             ;
-//             //if (element.getAttribute(""));
-//         }
-//     });
-// }
-
 
 
 // 结算敌人技能 
@@ -161,26 +266,29 @@ async function CalculateEneryDamage() {
 
             let type = element.firstElementChild.getAttribute("damagetype");
 
-            //部分技能不结算
+            // //部分技能不结算
             if (type == "passive")
                 continue;
 
-            // 伤害计算 
-            let damage = element.firstElementChild.getAttribute("damagepower");
-            damage *= Enemy_Stat_Atk;
-            damage /= 100;
-            damage -= CurrentDEF;
+            // // 伤害计算 
+            // let damage = ;
+            // damage *= Enemy_Stat_Atk;
+            // damage /= 100;
+            // damage -= CurrentDEF;
 
+            // if (damage < 0)
+            //     damage = 0;
 
             $(`#${element.id}`).animate({
                 backgroundColor: "#ff3f4a" // 目标颜色值
-            }, 1000); // 动画持续时间（毫秒）
-            DamageToPlayer(type, damage, element.firstElementChild.innerHTML);
-            await sleep(1000);
+            }, 700); // 动画持续时间（毫秒）
+            DamageToPlayer(element.firstElementChild.getAttribute("damagetype"), element.firstElementChild.getAttribute("damagepower"), element.firstElementChild.innerHTML);
+
+            await sleep(700);
+
             $(`#${element.id}`).animate({
                 backgroundColor: "#ffffff" // 目标颜色值
-            }, 1000);
-
+            }, 700);
             // $(`#${element.id}`).slideUp(500);
             // $(`#${element.id}`).slideDown(500);
         }
@@ -194,15 +302,66 @@ function sleep(ms) {
 // param2 伤害
 // param3 技能名
 function DamageToPlayer(type, damage, name) {
+    let toastrBottomRight = toastr;
+    toastrBottomRight.options.timeOut = 500;
+    toastrBottomRight.options.positionClass = "toast-top-center";
+
+    damage *= Enemy_Stat_Atk;
+    damage /= 100;
 
     switch (type) {
         case "none": type = "无属性"; break;
+        case "fire": type = "火属性"; break;
+        case "holy": type = "圣属性"; break;
     }
-    ChangeHp(-damage);
-    let toastrBottomRight = toastr;
-    toastrBottomRight.options.positionClass = "toast-top-center";
+
+    // 减去防御
+    damage -= CurrentDEF;
+    if ((damage - CurrentDEF) < damage * 0.05) {
+        damage = damage * 0.05;
+    }
+
     toastrBottomRight.error('敌人使用' + name + '，造成了' + damage + '点' + type + '伤害');
-    //toastr.info('敌人使用' + name + '，造成了' + damage + '点' + type + '伤害');
+    ChangeHp(-damage);
+}
+
+function DamageToEnemy(type, damage, name) {
+    let toastrBottomRight = toastr;
+    toastrBottomRight.options.timeOut = 500;
+    toastrBottomRight.options.positionClass = "toast-top-center";
+
+    damage *= CurrentATK;
+    damage /= 100;
+
+    // 暴击，先计算攻击再计算防御
+    if (CurrentCritRate >= getRandomInt(1, 100)) {
+        toastrBottomRight.success("会心一击！")
+        damage *= 2;
+    }
+
+    // 减去敌人防御
+    damage -= Enemy_Stat_Def;
+    if ((damage - Enemy_Stat_Def) < damage * 0.05) {
+        damage = damage * 0.05;
+    }
+
+    switch (type) {
+        case "heal": {
+            // 我能怎么办，我也很绝望啊
+            ChangeHp(damage);
+            toastrBottomRight.success('我方使用' + name + '，回复量为' + damage + '点HP');
+            return;
+            break;
+        }
+        case "none": type = "无属性"; break;
+        case "fire": type = "火属性"; break;
+        case "holy": type = "圣属性"; break;
+    }
+
+    toastrBottomRight.success('我方使用' + name + '，造成了' + damage + '点' + type + '伤害');
+    if (ChangeEnemyHp(-damage) == true) {
+        End_Battle();
+    }
 }
 
 // 界面初始化（仅执行一次）
@@ -297,15 +456,14 @@ function Skill_AddSb(event) {
 
 
                     // 颜色设置
-                    if (element[3] !== null || element[3] !== '' || element[3] !== undefined)
+                    if (element[3])
                         event.target.style.backgroundColor = element[3];
 
-                    // 设置威力、属性的属性
-                    if (element[4] != '') {
-                        event.target.setAttribute("damagetype", element[4]);
-                    }
-                    if (element[5] != '') {
-                        event.target.setAttribute("damagepower", element[5]);
+                    // 设置威力、属性等战斗属性
+                    for (var key in element[4]) {
+                        if (element[4].hasOwnProperty(key)) {
+                            event.target.setAttribute(key, element[4][key]);
+                        }
                     }
 
                 }

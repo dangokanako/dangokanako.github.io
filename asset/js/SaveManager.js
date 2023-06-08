@@ -1,3 +1,39 @@
+
+
+var loopers = 0;
+
+function SaveGame() {
+    const gameData = {
+        Loopers: loopers
+    };
+    // 将游戏数据对象转换为JSON字符串
+    const gameDataString = JSON.stringify(gameData);
+
+    // 使用 localStorage 保存游戏数据
+    localStorage.setItem('gameData', gameDataString);
+
+}
+
+function loadGame() {
+    // 使用 localStorage 获取游戏数据
+    const gameDataString = localStorage.getItem('gameData');
+
+    if (gameDataString) {
+        // 将JSON字符串解析为游戏数据对象
+        const gameData = JSON.parse(gameDataString);
+
+        if (gameData.Loopers != 0) {
+            paragraph = 998;
+
+        }
+
+    } else {
+        console.log('No saved game data found.');
+    }
+}
+
+
+
 // //对于基于HTML, CSS和JavaScript的简单网页游戏，您可以使用Web浏览器提供的 localStorage API来实现存档功能。localStorage 是一个持久化的键值存储，它允许您在用户的浏览器中保存和读取数据。
 
 // 以下是一个简单示例，说明如何使用 localStorage 保存和读取游戏进度：

@@ -17,84 +17,109 @@ function UpdateEnemySata(atk, def, maxhp, hp) {
 const Enemy_Rogue = {
     //图片路径
     pic: "Rogue.png",
-    hp: 170,
-    atk: 30,
+    hp: 70,
+    atk: 13,
     def: 0,
+    Skill: [
+        {
+            // 概率 ： 1000为100%触发，1为0.1%触发
+            rate: 1000,
+            name: '锁链连击',
+            tips: '被动。普通攻击有50%的概率再产生一个普通攻击技能。',
+            type: "passive",
+        },
+        {
+            // 概率 ： 1000为100%触发，1为0.1%触发
+            rate: 1000,
+            name: '普通攻击',
+            tips: '最基础的一击。造成100%攻击力的无属性伤害。',
+            type: "none",
+            power: "100",
+            pic: "Com_attack.png",
+        }, {
+            rate: 500,
+            name: '普通攻击',
+            tips: '最基础的一击。造成100%攻击力的无属性伤害。',
+            type: "none",
+            power: "100",
+            pic: "Com_attack.png",
+        }, {
+            rate: 500,
+            name: '普通攻击',
+            tips: '最基础的一击。造成100%攻击力的无属性伤害。',
+            type: "none",
+            power: "100",
+            pic: "Com_attack.png",
+        }
+    ],
+    Drop: [
+        {
+            rate: 1000,
+            item: ItemData_Haoshangyao,
+        },
+        {
+            rate: 1000,
+            item: ItemData_Xiaoqiandai,
+        }
+    ]
 }
-const Enemy_Rogue_Skill = [
-    {
-        // 概率 ： 1000为100%触发，1为0.1%触发
-        rate: 1000,
-        name: '锁链连击',
-        tips: '被动。普通攻击有50%的概率再产生一个普通攻击技能。',
-        type: "passive",
-    },
-    {
-        // 概率 ： 1000为100%触发，1为0.1%触发
-        rate: 1000,
-        name: '普通攻击',
-        tips: '最基础的一击。造成100%攻击力的无属性伤害。',
-        type: "none",
-        power: "100",
-        pic: "Com_attack.png",
-    }, {
-        rate: 500,
-        name: '普通攻击',
-        tips: '最基础的一击。造成100%攻击力的无属性伤害。',
-        type: "none",
-        power: "100",
-        pic: "Com_attack.png",
-    }, {
-        rate: 500,
-        name: '普通攻击',
-        tips: '最基础的一击。造成100%攻击力的无属性伤害。',
-        type: "none",
-        power: "100",
-        pic: "Com_attack.png",
-    }, {
-        rate: 500,
-        name: '普通攻击',
-        tips: '最基础的一击。造成100%攻击力的无属性伤害。',
-        type: "none",
-        power: "100",
-        pic: "Com_attack.png",
-    }, {
-        rate: 500,
-        name: '普通攻击',
-        tips: '最基础的一击。造成100%攻击力的无属性伤害。',
-        type: "none",
-        power: "100",
-        pic: "Com_attack.png",
-    }, {
-        rate: 500,
-        name: '普通攻击',
-        tips: '最基础的一击。造成100%攻击力的无属性伤害。',
-        type: "none",
-        power: "100",
-        pic: "Com_attack.png",
-    }, {
-        rate: 500,
-        name: '普通攻击',
-        tips: '最基础的一击。造成100%攻击力的无属性伤害。',
-        type: "none",
-        power: "100",
-        pic: "Com_attack.png",
-    }, {
-        rate: 500,
-        name: '普通攻击',
-        tips: '最基础的一击。造成100%攻击力的无属性伤害。',
-        type: "none",
-        power: "100",
-        pic: "Com_attack.png",
-    }, {
-        rate: 500,
-        name: '普通攻击',
-        tips: '最基础的一击。造成100%攻击力的无属性伤害。',
-        type: "none",
-        power: "100",
-        pic: "Com_attack.png",
-    },
-]
+
+// Swordsman
+const Enemy_Swordsman = {
+    //图片路径
+    pic: "Swordsman.png",
+    hp: 90,
+    atk: 15,
+    def: 2,
+    Skill: [
+        {
+            // 概率 ： 1000为100%触发，1为0.1%触发
+            rate: 1000,
+            name: '锁链连击',
+            tips: '被动。普通攻击有50%的概率再产生一个普通攻击技能。',
+            type: "passive",
+        },
+        {
+            // 概率 ： 1000为100%触发，1为0.1%触发
+            rate: 1000,
+            name: '普通攻击',
+            tips: '最基础的一击。造成100%攻击力的无属性伤害。',
+            type: "none",
+            power: "100",
+            pic: "Com_attack.png",
+        }, {
+            rate: 500,
+            name: '普通攻击',
+            tips: '最基础的一击。造成100%攻击力的无属性伤害。',
+            type: "none",
+            power: "100",
+            pic: "Com_attack.png",
+        }, {
+            rate: 500,
+            name: '普通攻击',
+            tips: '最基础的一击。造成100%攻击力的无属性伤害。',
+            type: "none",
+            power: "100",
+            pic: "Com_attack.png",
+        }
+    ],
+    Drop: [
+        {
+            rate: 1000,
+            item: ItemData_Haoshangyao,
+        },
+        {
+            rate: 1000,
+            item: ItemData_Xiaoqiandai,
+        }
+        ,
+        {
+            rate: 500,
+            item: ItemData_Xiaoqiandai,
+        }
+    ]
+}
+
 
 function CreateEnemySkill(enemySkill) {
     enemySkill.forEach(element => {
@@ -118,9 +143,9 @@ function CreateEnemySkill(enemySkill) {
             //     enemyskill.style.backgroundRepeat = 'no-repeat';
             // }
             // 增加威力
-            enemyskill.setAttribute("damageType", element.type);
+            enemyskill.setAttribute("damagetype", element.type);
             if (element.type != "passive") {
-                enemyskill.setAttribute("damagePower", element.power);
+                enemyskill.setAttribute("damagepower", element.power);
             }
             // 创建提示条
             var Tips = document.createElement("span");
@@ -136,4 +161,30 @@ function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function ChangeEnemyHp(hp) {
+    if (hp < 0) {
+        Enemy_Stat_Hp += hp;
+        if (Enemy_Stat_Hp < 0) {
+            // TODO 敌人嗝屁了
+            return true;
+        }
+    }
+    if (hp > 0) {
+        if (Enemy_Stat_Hp >= CurrentMaxHp) {
+            return false;
+        } else {
+            Enemy_Stat_Hp += hp;
+            if (Enemy_Stat_Hp > CurrentMaxHp)
+                Enemy_Stat_Hp = CurrentMaxHp;
+        }
+    }
+
+    // Thanks for inventing JavaScript  
+    Enemy_Stat_Hp = Number(Enemy_Stat_Hp.toFixed(2));
+
+    let healthBar = document.getElementById('enemy-health-bar');
+    document.getElementById('enemy-health-text').innerText = Enemy_Stat_Hp + '/' + Enemy_Stat_Maxhp;
+    healthBar.style.width = (Enemy_Stat_Hp / Enemy_Stat_Maxhp * 100) + "%";
 }

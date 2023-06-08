@@ -176,6 +176,8 @@
         padding: 4px;
     }
 
+
+
     .skillslot {
         position: relative;
         display: inline-block;
@@ -276,6 +278,41 @@
         background-color: #f4f4f4;
     }
 
+    #shop-panel {
+        position: absolute;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        width: 845px;
+        height: 500px;
+        border-radius: 10px;
+        z-index: 12;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    #grid-shop {
+        display: grid;
+        place-items: center;
+        /* 将 display 属性设置为 grid */
+        grid-template-columns: repeat(5, 54px);
+        /* 定义列数和每列的宽度 */
+        grid-template-rows: repeat(2, 54px);
+        /* 定义行数和每行的高度 */
+        gap: 4px;
+        /* 设置网格项目之间的间隔 */
+        padding: 4px;
+    }
+
+    #force-input {
+        position: absolute;
+        width: 845px;
+        height: 500px;
+        border-radius: 10px;
+        z-index: 20;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+
     #game-panel {
         position: relative;
     }
@@ -298,6 +335,12 @@
         background-color: #e2d0f2;
 
     }
+
+    #shop-quit {
+        width: 85px;
+        height: 94px;
+        background-image: url(/asset/game/image/buyaole.png);
+    }
 </style>
 
 
@@ -316,7 +359,7 @@
     // 测试用
     $(document).ready(function () {
         $("#testButton").click(function () {
-            createItem(ItemData_Haoshangyao);
+            createItem(ItemData_Haoshangyao, "bag");
         });
     });
 
@@ -392,12 +435,14 @@
         // Init_Map();
         General_Map_Create("Aldor");
         // 战斗模块初始化
-        Init_Battle_Panel()
+        Init_Battle_Panel();
+        // 读取游戏数据
+        loadGame();
+
         // 我帮你按第一下
         OnClickAll();
 
         //测试20230606
-        Init_Battle(Enemy_Rogue, Enemy_Rogue_Skill);
     };
 </script>
 
@@ -470,28 +515,49 @@
                     <span id="CurrentMana_Battle">可用锑能：0</span>
                     <br>
                     <span>肾上腺素：10</span><br>
-                    <!-- 关于我突然意识到根本没必要做排序这件事
-                    <li class="skillslot" ondragstart="dragstart(event)">
-                    </li>
-                    <li class="skillslot" ondragstart="dragstart(event)">
-                    </li>
-                    <li class="skillslot" ondragstart="dragstart(event)">
-                    </li>
-                    <li class="skillslot" ondragstart="dragstart(event)">
-                    </li>
-                    <li class="skillslot" ondragstart="dragstart(event)">
-                    </li>
-                    <li class="skillslot" ondragstart="dragstart(event)">
-                    </li>
-                    <li class="skillslot" ondragstart="dragstart(event)">
-                    </li>
-                    <li class="skillslot" ondragstart="dragstart(event)">
-                    </li>  
-                    -->
                 </div>
             </div>
-        </div>>
+        </div>
+        <!-- 20230608 TODO  写这个-->
+        <div id="shop-panel">
+            <div id="shop-quit" onclick="QuitShop()"></div>
+            <div id="grid-shop">
+                <li class=" bag" id="shop1" onmouseup="ShopBuy(event)" ondragstart="dragstart(event)"
+                    style="display: none;">
+                </li>
+                <li class=" bag" id="shop2" onmouseup="ShopBuy(event)" ondragstart="dragstart(event)"
+                    style="display: none;">
+                </li>
+                <li class=" bag" id="shop3" onmouseup="ShopBuy(event)" ondragstart="dragstart(event)"
+                    style="display: none;">
+                </li>
+                <li class=" bag" id="shop4" onmouseup="ShopBuy(event)" ondragstart="dragstart(event)"
+                    style="display: none;">
+                </li>
+                <li class=" bag" id="shop5" onmouseup="ShopBuy(event)" ondragstart="dragstart(event)"
+                    style="display: none;">
+                </li>
+                <li class=" bag" id="shop6" onmouseup="ShopBuy(event)" ondragstart="dragstart(event)"
+                    style="display: none;">
+                </li>
+                <li class=" bag" id="shop7" onmouseup="ShopBuy(event)" ondragstart="dragstart(event)"
+                    style="display: none;">
+                </li>
+                <li class=" bag" id="shop8" onmouseup="ShopBuy(event)" ondragstart="dragstart(event)"
+                    style="display: none;">
+                </li>
+                <li class=" bag" id="shop9" onmouseup="ShopBuy(event)" ondragstart="dragstart(event)"
+                    style="display: none;">
+                </li>
+                <li class=" bag" id="shop10" onmouseup="ShopBuy(event)" ondragstart="dragstart(event)"
+                    style="display: none;">
+                </li>
 
+            </div>
+
+        </div>
+        <div id="force-input" style="display: none;">
+        </div>
 
 
         <div class="character-portrait character-head-left" id="character-head-left"></div>
@@ -522,31 +588,31 @@
                 <div class="grid-equip">
                     <p class="equiptext">亚特姆</p>
 
-                    <li class="equipment" allow-person="one" allow-item="weapon" id="persononeweapon"
+                    <li class="equipment" allowperson="one" allowitem="weapon" id="persononeweapon"
                         ondragstart="dragstart(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
                     </li>
-                    <li class="equipment" allow-person="one" allow-item="armor" id="persononearmor"
+                    <li class="equipment" allowperson="one" allowitem="armor" id="persononearmor"
                         ondragstart="dragstart(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
                     </li>
-                    <li class="equipment" allow-person="one" allow-item="jewelry" id="persononejewelry"
+                    <li class="equipment" allowperson="one" allowitem="jewelry" id="persononejewelry"
                         ondragstart="dragstart(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
                     </li>
-                    <li class="equipment" allow-person="one" allow-item="jewelry2" id="persononejewelry2"
+                    <li class="equipment" allowperson="one" allowitem="jewelry2" id="persononejewelry2"
                         ondragstart="dragstart(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
                     </li>
                 </div>
                 <div class="grid-equip">
                     <p class="equiptext">露娜</p>
-                    <li class="equipment" allow-person="two" allow-item="weapon" id="persontwoweapon"
+                    <li class="equipment" allowperson="two" allowitem="weapon" id="persontwoweapon"
                         ondragstart="dragstart(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
                     </li>
-                    <li class="equipment" allow-person="two" allow-item="armor" id="persontwoarmor"
+                    <li class="equipment" allowperson="two" allowitem="armor" id="persontwoarmor"
                         ondragstart="dragstart(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
                     </li>
-                    <li class="equipment" allow-person="two" allow-item="jewelry" id="persontwojewelry"
+                    <li class="equipment" allowperson="two" allowitem="jewelry" id="persontwojewelry"
                         ondragstart="dragstart(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
                     </li>
-                    <li class="equipment" allow-person="two" allow-item="jewelry2" id="persontwojewelry2"
+                    <li class="equipment" allowperson="two" allowitem="jewelry2" id="persontwojewelry2"
                         ondragstart="dragstart(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
                     </li>
                 </div>
