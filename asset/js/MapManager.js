@@ -320,7 +320,7 @@ var MapData_AldorOuter = [
     "AldorOuter.png",
     { id: "Aldor", shape: "rect", coords: "283,169,625,317", alt: "map", cursor: "pointer" },
     // ☆ 这里记得改成map
-    { id: "AldorTower1F", shape: "rect", coords: "221,338,473,487", alt: "event", cursor: "map" },
+    { id: "AldorTower1F", shape: "rect", coords: "221,338,473,487", alt: "map", cursor: "pointer" },
 ]
 function Event_AldorOuter() {
     if (HasRead.AldorMercenary == 0) {
@@ -337,7 +337,7 @@ function Event_AldorOuter() {
     }
 }
 // 奥尔多尔塔
-var MapData_AldorMercenary = [
+var MapData_AldorTower1F = [
     "AldorTower1F",
     "AldorTower1F.png",
     { id: "AldorOuter", shape: "rect", coords: "0,0,90,90", alt: "map", cursor: "pointer" },
@@ -351,12 +351,15 @@ var MapData_AldorMercenary = [
 function Event_AldorTower1F() {
     StartStory(0, 16);
 }
-function AldorTower1F_lefttop() {
+function Event_AldorTower1F_lefttop() {
     StartStory(0, 20);
 }
-function AldorTower1F_leftbuttom() {
+function Event_AldorTower1F_leftbuttom() {
     StartStory(0, 21);
 }
-function AldorTower1F_righttop() {
+function Event_AldorTower1F_righttop() {
     StartStory(0, 22);
+}
+function Event_AldorTower1F_Damen() {
+    StartStory(0, 24);
 }

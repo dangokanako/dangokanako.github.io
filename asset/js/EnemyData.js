@@ -117,6 +117,52 @@ const Enemy_Swordsman = {
     ]
 }
 
+// slime
+const Enemy_Slime = {
+    //图片路径
+    pic: "Slime.png",
+    hp: 40,
+    atk: 20,
+    def: 0,
+    Skill: [
+        {
+            // 概率 ： 1000为100%触发，1为0.1%触发
+            rate: 1000,
+            name: '粘液攻击',
+            tips: '被动。攻击造成水属性伤害。',
+            type: "passive",
+        },
+        {
+            // 概率 ： 1000为100%触发，1为0.1%触发
+            rate: 1000,
+            name: '普通攻击',
+            tips: '最基础的一击。造成100%攻击力的无属性伤害。',
+            type: "none",
+            power: "100",
+            pic: "Com_attack.png",
+        }, {
+            rate: 500,
+            name: '普通攻击',
+            tips: '最基础的一击。造成100%攻击力的无属性伤害。',
+            type: "none",
+            power: "100",
+            pic: "Com_attack.png",
+        }
+    ],
+    Drop: [
+        {
+            rate: 1000,
+            item: ItemData_Haoshangyao,
+        },
+        {
+            rate: 500,
+            item: ItemData_Xiaoqiandai,
+        }
+        ,
+
+    ]
+}
+
 
 function CreateEnemySkill(enemySkill) {
     enemySkill.forEach(element => {
