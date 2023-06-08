@@ -59,7 +59,7 @@ function Init_SkillData() {
             damagetype: "fire",
             damagepower: 150,
         }],
-        [4, "火球连射", '4sb<br>造成两次攻击力160%的<span style="color:red;">火属性伤害</span><br>向敌人丢出两团局部温度500℃的正在燃烧的可燃物。', '#FAA307DD', {
+        [4, "炎之矢", '4sb<br>造成两次攻击力160%的<span style="color:red;">火属性伤害</span><br>向敌人丢出两团局部温度500℃的正在燃烧的可燃物。', '#FAA307DD', {
             damagetype: "fire",
             damagepower: 160,
             damagenumber: 2

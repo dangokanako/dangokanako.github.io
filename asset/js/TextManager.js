@@ -106,7 +106,7 @@ function OnClickAll() {
             var temp = Chapter00Story[`C${chapter}P${paragraph}`];
             if (sentence < Chapter00Story[`C${chapter}P${paragraph}`].length) {
                 UpdateTextDisplayByArray(Chapter00Story[`C${chapter}P${paragraph}`], sentence++);
-            } else { StroyLock = false; ForceInput(false); clearText(); sentence = 0; }
+            } else { StroyLock = false; ForceInput(false); clearText(); paragraph = -1; sentence = 0; }
         } else {
             alert(`获取章节文本失败，究竟是为什么呢？C${chapter}P${paragraph}`);
             console.error(`获取章节文本失败，究竟是为什么呢？C${chapter}P${paragraph}`);

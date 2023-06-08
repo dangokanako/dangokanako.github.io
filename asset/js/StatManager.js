@@ -36,9 +36,10 @@ function Stat_Init() {
     // 直接把HP加上增加的最大HP就完事儿了
 
     CurrentMaxHp = OrigMaxHp + EquipMaxHp;
-    if (!OnBattle) {
-        CurrentHp = OrigHp + EquipMaxHp;
-    }
+    // TODO 猪脑过载
+    // if (!OnBattle) {
+    //     CurrentHp = OrigHp + EquipMaxHp;
+    // }
 
     CurrentATK = OrigATK + EquipATK;
     CurrentDEF = OrigDEF + EquipDEF;

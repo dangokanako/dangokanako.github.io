@@ -68,8 +68,8 @@ const Enemy_Rogue = {
 const Enemy_Swordsman = {
     //图片路径
     pic: "Swordsman.png",
-    hp: 90,
-    atk: 15,
+    hp: 60,
+    atk: 10,
     def: 2,
     Skill: [
         {
@@ -109,14 +109,11 @@ const Enemy_Swordsman = {
             item: ItemData_Haoshangyao,
         },
         {
-            rate: 1000,
-            item: ItemData_Xiaoqiandai,
-        }
-        ,
-        {
             rate: 500,
             item: ItemData_Xiaoqiandai,
         }
+        ,
+
     ]
 }
 

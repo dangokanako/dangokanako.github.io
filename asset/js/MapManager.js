@@ -113,6 +113,7 @@ let LoadAssets = [
     "/asset/game/image/7.png",
     "/asset/game/image/8.png",
     "/asset/game/image/9.png",
+    "/asset/game/image/buyaole.png",
     "/asset/game/head/atom1.png",
     "/asset/game/head/evil1.png",
     "/asset/game/head/evil2.png",
@@ -239,7 +240,7 @@ function Event_AldorHome() {
         case 0: {
             StartStory(0, 6);
             HasRead.AldorHome++;
-            break;  
+            break;
         }
     }
 }
@@ -319,7 +320,7 @@ var MapData_AldorOuter = [
     "AldorOuter.png",
     { id: "Aldor", shape: "rect", coords: "283,169,625,317", alt: "map", cursor: "pointer" },
     // ☆ 这里记得改成map
-    { id: "AldorTower", shape: "rect", coords: "221,338,473,487", alt: "event", cursor: "pointer" },
+    { id: "AldorTower1F", shape: "rect", coords: "221,338,473,487", alt: "event", cursor: "map" },
 ]
 function Event_AldorOuter() {
     if (HasRead.AldorMercenary == 0) {
@@ -336,6 +337,26 @@ function Event_AldorOuter() {
     }
 }
 // 奥尔多尔塔
-function Event_AldorTower() {
+var MapData_AldorMercenary = [
+    "AldorTower1F",
+    "AldorTower1F.png",
+    { id: "AldorOuter", shape: "rect", coords: "0,0,90,90", alt: "map", cursor: "pointer" },
+    { id: "AldorTower1F_InDoor", shape: "rect", coords: "311,384,417,447", alt: "event", cursor: "pointer" },
+    { id: "AldorTower1F_leftbuttom", shape: "rect", coords: "143,330,226,383", alt: "event", cursor: "pointer" },
+    { id: "AldorTower1F_lefttop", shape: "rect", coords: "143,269,228,329", alt: "event", cursor: "pointer" },
+    { id: "AldorTower1F_righttop", shape: "rect", coords: "504,270,589,326", alt: "event", cursor: "pointer" },
+    { id: "AldorTower1F_rightbuttom", shape: "rect", coords: "501,330,585,387", alt: "event", cursor: "pointer" },
+    { id: "AldorTower1F_Damen", shape: "rect", coords: "320,208,412,270", alt: "event", cursor: "pointer" },
+]
+function Event_AldorTower1F() {
     StartStory(0, 16);
+}
+function AldorTower1F_lefttop() {
+    StartStory(0, 20);
+}
+function AldorTower1F_leftbuttom() {
+    StartStory(0, 21);
+}
+function AldorTower1F_righttop() {
+    StartStory(0, 22);
 }

@@ -436,11 +436,14 @@
         General_Map_Create("Aldor");
         // 战斗模块初始化
         Init_Battle_Panel();
+
+
         // 读取游戏数据
         loadGame();
-
-        // 我帮你按第一下
-        OnClickAll();
+        if (chapter == 0 && paragraph == 0) {
+            // 我帮你按第一下
+            OnClickAll();
+        }
 
         //测试20230606
     };
