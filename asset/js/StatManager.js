@@ -37,9 +37,9 @@ function Stat_Init() {
 
     CurrentMaxHp = OrigMaxHp + EquipMaxHp;
     // TODO 猪脑过载
-    // if (!OnBattle) {
-    //     CurrentHp = OrigHp + EquipMaxHp;
-    // }
+    if (!OnBattle) {
+        CurrentHp = OrigHp + EquipMaxHp;
+    }
 
     CurrentATK = OrigATK + EquipATK;
     CurrentDEF = OrigDEF + EquipDEF;
