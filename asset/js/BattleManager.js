@@ -328,7 +328,7 @@ function DamageToPlayer(type, damage, name) {
     ChangeHp(-damage);
 }
 
-function DamageToEnemy(type, damage, name) {
+async function DamageToEnemy(type, damage, name) {
     let toastrBottomRight = toastr;
     toastrBottomRight.options.timeOut = 500;
     toastrBottomRight.options.positionClass = "toast-top-center";
@@ -363,6 +363,7 @@ function DamageToEnemy(type, damage, name) {
 
     toastrBottomRight.success('我方使用' + name + '，造成了' + damage + '点' + type + '伤害');
     if (ChangeEnemyHp(-damage) == true) {
+        await sleep(1000);
         End_Battle();
     }
 }
