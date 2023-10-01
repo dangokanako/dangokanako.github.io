@@ -1,3 +1,7 @@
 body {
-  cursor: url('ichijio.png'), auto;
+  cursor: url('ichijio_1.png'), default;
+}
+
+a:hover {
+  cursor: url('ichijio_2.png'), pointer;
 }
