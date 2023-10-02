@@ -1,5 +1,14 @@
 (function () {
     window.onclick = function (event) {
+        //禁止F12  
+        if (!isLocalhost()) {
+            document.addEventListener('keydown', (event) => {
+                if ((event.code === 'F12') || (event.ctrlKey && event.shiftKey && event.code === 'KeyI') || (event.ctrlKey && event.code === 'KeyU')) {
+                    event.preventDefault();
+                }
+            });
+        }
+
         var texts = [
             "浮生梦雪零落",
             "真爱激荡时空",
