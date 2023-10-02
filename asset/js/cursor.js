@@ -2,7 +2,7 @@
     window.onclick = function (event) {
         var texts = [
             "浮生梦雪飘零",
-            "梦里不知身是客，<br/>一晌贪欢",
+            "梦里不知身是客，<br/>一晌贪欢。",
             "世事漫随流水，<br/>算来一梦浮生。",
             "『那是非常渺小的、非常壯大的、非常重要的、<br/>愛與勇氣的童話故事──』",
             "『今日、海を見た。もう怖くない』",
@@ -13,11 +13,12 @@
             "「晚安，诗音」",
             "「晚安，太一」",
             "「晚安，兰斯」",
+            "我们的情人，不过是随便借个名字，用幻想吹出来的肥皂泡。",
             "異議あり！！",
             "你是一个有价值、有能力、有潜力的人，<br/>你的生活是充满意义、充满可能、充满希望的。<br/>你只需要相信自己，继续努力，继续学习，继续探索，继续成长。",
-            "世间甲子须臾事，逢着仙人莫看棋。",
-            "人世几回伤往事，<br/>山形依旧枕寒流",
-            "往者不可谏，<br/>来者犹可追",
+            "世间甲子须臾事，<br/>逢着仙人莫看棋。",
+            "人世几回伤往事，<br/>山形依旧枕寒流。",
+            "往者不可谏，<br/>来者犹可追。",
             "憎者唯见其恶，爱者止见其善。<br/>爱憎之间，所宜详慎。",
             "向之所欣，俯仰之间，已为陈迹，<br/>犹不能不以之兴怀。",
             "已识乾坤大，<br/>犹怜草木青。",
@@ -32,7 +33,8 @@
         var text = texts[Math.floor(Math.random() * texts.length)]; // 随机选择一段文本
         var fontSize = 16; // 字体大小
         var duration = text.length * 65; // 根据字数计算持续时间，每个字符50毫秒
-
+        if (duration < 600)
+            duration = 600;
         var heart = document.createElement("b");
         heart.onselectstart = new Function('event.returnValue=false');
         document.body.appendChild(heart).innerHTML = text;
