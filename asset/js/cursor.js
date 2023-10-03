@@ -1,5 +1,14 @@
 (function () {
     window.onclick = function (event) {
+        // 检查本地环境
+        function isLocalhost() {
+            const { protocol, hostname } = window.location;
+            return (
+                (protocol === "http:" || protocol === "https:") &&
+                (hostname === "localhost" || hostname === "127.0.0.1")
+            );
+        }
+
         //禁止F12  
         if (!isLocalhost()) {
             document.addEventListener('keydown', (event) => {
