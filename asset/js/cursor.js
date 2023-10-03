@@ -55,12 +55,12 @@
             "♪おお 神の刃は 人類の愛♪",
             "♪さよなら　愛しい　大切な人　どうか“幸せに”♪",
             "♪寄予真实的光斑从木叶间洒落的那一日♪",
-            "♪But I need one last time I want to tell you ♪<br/> ♪ how I feel inside for you ♪<br/>♪ I want you to know...♪"
+            "♪ But I need one last time I want to tell you ♪<br/> ♪ how I feel inside for you ♪<br/>♪ I want you to know...♪"
         ];
 
         var text = texts[Math.floor(Math.random() * texts.length)]; // 随机选择一段文本
         var fontSize = 16; // 字体大小
-        var duration = text.length * 65; // 根据字数计算持续时间，每个字符50毫秒
+        var duration = text.length * 80; // 根据字数计算持续时间，每个字符50毫秒
         if (duration < 600)
             duration = 600;
         var heart = document.createElement("b");
