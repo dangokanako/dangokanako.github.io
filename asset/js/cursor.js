@@ -61,8 +61,8 @@
         var text = texts[Math.floor(Math.random() * texts.length)]; // 随机选择一段文本
         var fontSize = 16; // 字体大小
         var duration = text.length * 80; // 根据字数计算持续时间，每个字符50毫秒
-        if (duration < 600)
-            duration = 600;
+        if (duration < 750)
+            duration = 750;
         var heart = document.createElement("b");
         heart.onselectstart = new Function('event.returnValue=false');
         document.body.appendChild(heart).innerHTML = text;
