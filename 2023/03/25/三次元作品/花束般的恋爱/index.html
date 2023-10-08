@@ -29,13 +29,13 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1696744985208">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1696750518652">
     
-    <link rel="stylesheet" href="/css/style.css?v=1696744985208">
+    <link rel="stylesheet" href="/css/style.css?v=1696750518652">
 
     
         
-            <link rel="stylesheet" href="/custom.css?v=1696744985208">
+            <link rel="stylesheet" href="/custom.css?v=1696750518652">
         
     
 
@@ -44,7 +44,7 @@
 <script src="/lib/fancybox/fancybox.umd.js" async></script>
 
 
-    <script async src="/js/app.js?v=1696744985208"></script>
+    <script async src="/js/app.js?v=1696750518652"></script>
     
      
 
@@ -148,34 +148,79 @@
             
             <link rel="stylesheet" href="/asset/css/APlayer.min.css">
 <script src="/asset/js/APlayer.min.js"></script>
+
+
+
+
+
+
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const ap = new APlayer({
+      mini: false,
+      autoplay: false,
       theme: '#FADFA3',
-      container: document.getElementById('my-aplayer1'),
+      order: 'random',
+      preload: 'none',
+      volume: 0.7,
+      mutex: true,
+      listFolded: false,
+      listMaxHeight: 90,
+      // lrcType: 3, 歌词设置。还挺麻烦的。https://aplayer.js.org/#/zh-Hans/
+      container: document.getElementById('aplayer'),
       audio: [{
         name: '願い',
         artist: '飯塚昌明 ',
         url: '/asset/music/飯塚昌明 - 願い.mp3',
         cover: '/images/article/MUVLUV/001.jpg',
-      }]
-    });
-    const ap2 = new APlayer({
-      theme: '#FADFA3',
-      container: document.getElementById('my-aplayer2'),
-      audio: [{
+      },
+      {
         name: '未来への咆哮',
         artist: 'JAM Project',
         url: '/asset/music/JAM Project - 未来への咆哮(GAME size).mp3',
         cover: '/images/article/MUVLUV/014.jpg',
-      }]
+      },
+      {
+        name: 'あなたへ',
+        artist: 'KANA',
+        url: '/asset/music/KANA - あなたへ.mp3',
+        cover: '/images/music/003.png',
+      },
+      {
+        name: '同じ空の下で',
+        artist: 'KOTOKO',
+        url: '/asset/music/KOTOKO - 同じ空の下で.mp3',
+        cover: '/images/article/家族计划/003.png',
+      },
+      {
+        name: '落葉',
+        artist: 'いとうかなこ',
+        url: '/asset/music/いとうかなこ - 落葉.mp3',
+        cover: '/images/article/装甲悪鬼村正/015.jpg',
+      },
+      {
+        name: '獣の正義',
+        artist: '立花泰彦',
+        url: '/asset/music/立花泰彦 - 獣の正義.mp3',
+        cover: '/images/article/装甲悪鬼村正/015.jpg',
+      },
+      {
+        name: 'MURAMASA',
+        artist: '小野正利',
+        url: '/asset/music/小野正利 - MURAMASA.mp3',
+        cover: '/images/article/装甲悪鬼村正/015.jpg',
+      }
+
+
+
+      ]
     });
   });
 </script>
 
-<body>
-  <div id="my-aplayer1"></div>
-</body>
+<div class="nexmoe-widget-wrap">
+  <div id="aplayer" style="height: 300px;margin-top: 0 !important;margin-bottom: 0 !important;"></div>
+</div>
         
             
             <div class="nexmoe-widget-wrap">
@@ -543,7 +588,7 @@
             </li>
         
             <li>
-                <a href="https://dangokanako.github.io/IV-The%Emperor.html" target="_blank" >
+                <a href="https://dangokanako.github.io/IV-The%20Emperor.html" target="_blank" >
                     <img src="/images/base/favicon.ico" alt="BGM格子"></img>
                     <p>BGM格子</p>
                 </a>
@@ -699,7 +744,7 @@
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1696744985086"></script>
+    <script async src="/js/copy-codeblock.js?v=1696750518535"></script>
   
 
   
