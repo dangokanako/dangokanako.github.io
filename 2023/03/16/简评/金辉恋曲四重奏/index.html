@@ -33,13 +33,13 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1696556080776">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1696744985209">
     
-    <link rel="stylesheet" href="/css/style.css?v=1696556080776">
+    <link rel="stylesheet" href="/css/style.css?v=1696744985209">
 
     
         
-            <link rel="stylesheet" href="/custom.css?v=1696556080776">
+            <link rel="stylesheet" href="/custom.css?v=1696744985209">
         
     
 
@@ -48,7 +48,7 @@
 <script src="/lib/fancybox/fancybox.umd.js" async></script>
 
 
-    <script async src="/js/app.js?v=1696556080776"></script>
+    <script async src="/js/app.js?v=1696744985209"></script>
     
      
 
@@ -150,25 +150,36 @@
     <aside id="nexmoe-sidebar">
         
             
-            <div class="nexmoe-widget-wrap">
-    <div class="nexmoe-widget nexmoe-search">
-        
-            <form id="search_form">
-                <label><input class="st-default-search-input" id="search_value" name="q" type="search" placeholder="搜索" style="
-                    font-size: 15px !important;
-                    height: 56px !important;
-                    background-image: none;
-                "></label>
-            </form>
-         
-    </div>
-</div>
+            <link rel="stylesheet" href="/asset/css/APlayer.min.css">
+<script src="/asset/js/APlayer.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const ap = new APlayer({
+      theme: '#FADFA3',
+      container: document.getElementById('my-aplayer1'),
+      audio: [{
+        name: '願い',
+        artist: '飯塚昌明 ',
+        url: '/asset/music/飯塚昌明 - 願い.mp3',
+        cover: '/images/article/MUVLUV/001.jpg',
+      }]
+    });
+    const ap2 = new APlayer({
+      theme: '#FADFA3',
+      container: document.getElementById('my-aplayer2'),
+      audio: [{
+        name: '未来への咆哮',
+        artist: 'JAM Project',
+        url: '/asset/music/JAM Project - 未来への咆哮(GAME size).mp3',
+        cover: '/images/article/MUVLUV/014.jpg',
+      }]
+    });
+  });
+</script>
 
-
-	<script async src="/js/search.js?v=1696556080776"></script>
-
-
-
+<body>
+  <div id="my-aplayer1"></div>
+</body>
         
             
             <div class="nexmoe-widget-wrap">
@@ -496,7 +507,7 @@
           </li>
         
           <li>
-            <a href="/2023/09/01/%E6%9C%88%E5%B8%B8%E5%90%88%E9%9B%86/2023%E8%A1%A5%E7%95%AA%E5%90%88%E9%9B%8609/">2023补番合集09-10</a>
+            <a href="/2023/09/01/%E6%9C%88%E5%B8%B8%E5%90%88%E9%9B%86/2023%E8%A1%A5%E7%95%AA%E5%90%88%E9%9B%8609-10/">2023补番合集09-10</a>
           </li>
         
           <li>
@@ -532,6 +543,13 @@
                 <a href="https://dangokanako.github.io/I-The%20Magician.html" target="_blank" >
                     <img src="/images/base/favicon.ico" alt="从1开始的前端生活（游戏）"></img>
                     <p>从1开始的前端生活（游戏）</p>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://dangokanako.github.io/IV-The%Emperor.html" target="_blank" >
+                    <img src="/images/base/favicon.ico" alt="BGM格子"></img>
+                    <p>BGM格子</p>
                 </a>
             </li>
         
@@ -698,7 +716,7 @@
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1696556080703"></script>
+    <script async src="/js/copy-codeblock.js?v=1696744985087"></script>
   
 
   
