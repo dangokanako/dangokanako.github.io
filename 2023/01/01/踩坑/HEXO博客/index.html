@@ -18,7 +18,7 @@
 <meta property="og:description" content="他妈的，一段时间不调试，都忘记怎么本地调试了。 每次看几个月前自己给自己留下只言片语的注释和教程，总有一种“斯科特回程时候看几个月前自己给自己留下稀少的燃料”的感觉。 互联网调试在website下终端运行生成： HEXO g推送： HEXO d生成和推送：hexo g -d本地调试： hexo s本地默认为：http:&#x2F;&#x2F;localhost:4000&#x2F; 如果有页面需要跳过使用HEXO主题，需要在_">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-12-31T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-10-08T07:30:53.737Z">
+<meta property="article:modified_time" content="2023-10-08T07:38:29.123Z">
 <meta property="article:author" content="坂上河南子">
 <meta name="twitter:card" content="summary">
     
@@ -26,13 +26,13 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1696750518668">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1696871559181">
     
-    <link rel="stylesheet" href="/css/style.css?v=1696750518668">
+    <link rel="stylesheet" href="/css/style.css?v=1696871559181">
 
     
         
-            <link rel="stylesheet" href="/custom.css?v=1696750518668">
+            <link rel="stylesheet" href="/custom.css?v=1696871559181">
         
     
 
@@ -41,7 +41,7 @@
 <script src="/lib/fancybox/fancybox.umd.js" async></script>
 
 
-    <script async src="/js/app.js?v=1696750518668"></script>
+    <script async src="/js/app.js?v=1696871559181"></script>
     
      
 
@@ -218,6 +218,48 @@
 <div class="nexmoe-widget-wrap">
   <div id="aplayer" style="height: 300px;margin-top: 0 !important;margin-bottom: 0 !important;"></div>
 </div>
+        
+            
+            <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-link">
+		<ul>
+        
+            <li>
+                <a href="http://www.zwcsm.com/" target="_blank" >
+                    <img src="/images/base/Mio.png" alt="中午吃什么"></img>
+                    <p>中午吃什么</p>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://dangokanako.github.io/I-The%20Magician.html" target="_blank" >
+                    <img src="/images/base/favicon.ico" alt="从1开始的前端生活（游戏）"></img>
+                    <p>从1开始的前端生活（游戏）</p>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://dangokanako.github.io/IV-The%20Emperor.html" target="_blank" >
+                    <img src="/images/base/favicon.ico" alt="BGM格子"></img>
+                    <p>BGM格子</p>
+                </a>
+            </li>
+        
+		</ul>
+    </div>
+</div>
+<style>
+.nexmoe-widget-wrap .nexmoe-link ul li a {
+    text-align : center;
+}
+.nexmoe-widget-wrap .nexmoe-link ul li a img {
+    max-width : 100%;
+}
+.nexmoe-widget-wrap .nexmoe-link ul li a p {
+    margin: 10px 0;
+}
+</style>
+
         
             
             <div class="nexmoe-widget-wrap">
@@ -565,48 +607,6 @@
   </div>
 
         
-            
-            <div class="nexmoe-widget-wrap">
-    <div class="nexmoe-widget nexmoe-link">
-		<ul>
-        
-            <li>
-                <a href="http://www.zwcsm.com/" target="_blank" >
-                    <img src="/images/base/Mio.png" alt="中午吃什么"></img>
-                    <p>中午吃什么</p>
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://dangokanako.github.io/I-The%20Magician.html" target="_blank" >
-                    <img src="/images/base/favicon.ico" alt="从1开始的前端生活（游戏）"></img>
-                    <p>从1开始的前端生活（游戏）</p>
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://dangokanako.github.io/IV-The%20Emperor.html" target="_blank" >
-                    <img src="/images/base/favicon.ico" alt="BGM格子"></img>
-                    <p>BGM格子</p>
-                </a>
-            </li>
-        
-		</ul>
-    </div>
-</div>
-<style>
-.nexmoe-widget-wrap .nexmoe-link ul li a {
-    text-align : center;
-}
-.nexmoe-widget-wrap .nexmoe-link ul li a img {
-    max-width : 100%;
-}
-.nexmoe-widget-wrap .nexmoe-link ul li a p {
-    margin: 10px 0;
-}
-</style>
-
-        
     </aside>
     <div class="nexmoe-copyright">
         &copy; 2023 坂上河南子
@@ -654,7 +654,7 @@
 <p>其实hexo也有一个自带全局的css可以自定义……</p>
 <h2 id="音乐播放器"><a href="#音乐播放器" class="headerlink" title="音乐播放器"></a>音乐播放器</h2><p>我把APlayer嵌入在侧边栏了。</p>
 <p>具体方法是在_config.nexmoe.yml中的widgets目录下创建一个新的控件，<br>之后在node_modules/hexo-theme-nexmoe/layout/_widget/创建了新的.ejs供读取，写入html代码。<br>（没错，要修改node_modules的文件。）</p>
-<p>但是页面刷新之后……播放重置啊……（头大）  </p>
+<p>但是页面刷新之后……播放重置啊……（头大）<br><a target="_blank" rel="noopener" href="https://github.com/DIYgod/APlayer">https://github.com/DIYgod/APlayer</a></p>
 
     <style>
   .spitem {
@@ -730,7 +730,7 @@
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1696750518541"></script>
+    <script async src="/js/copy-codeblock.js?v=1696871559091"></script>
   
 
   
