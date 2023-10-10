@@ -18,7 +18,7 @@
 <meta property="og:description" content="他妈的，一段时间不调试，都忘记怎么本地调试了。 每次看几个月前自己给自己留下只言片语的注释和教程，总有一种“斯科特回程时候看几个月前自己给自己留下稀少的燃料”的感觉。 互联网调试在website下终端运行生成： HEXO g推送： HEXO d生成和推送：hexo g -d本地调试： hexo s本地默认为：http:&#x2F;&#x2F;localhost:4000&#x2F; 如果有页面需要跳过使用HEXO主题，需要在_">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-12-31T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-10-10T07:29:45.122Z">
+<meta property="article:modified_time" content="2023-10-10T07:40:01.889Z">
 <meta property="article:author" content="坂上河南子">
 <meta name="twitter:card" content="summary">
     
@@ -26,13 +26,13 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1696923350740">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1696923639819">
     
-    <link rel="stylesheet" href="/css/style.css?v=1696923350740">
+    <link rel="stylesheet" href="/css/style.css?v=1696923639819">
 
     
         
-            <link rel="stylesheet" href="/custom.css?v=1696923350740">
+            <link rel="stylesheet" href="/custom.css?v=1696923639819">
         
     
 
@@ -41,7 +41,7 @@
 <script src="/lib/fancybox/fancybox.umd.js" async></script>
 
 
-    <script async src="/js/app.js?v=1696923350740"></script>
+    <script async src="/js/app.js?v=1696923639819"></script>
     
      
 
@@ -270,7 +270,7 @@
 
 <div class="nexmoe-widget-wrap">
   
-      <div><span class="image-container" id="busuanzi_value_site_pv"></span></div>
+      <div><span class="image-container" id="busuanzi_value_page_pv"></span></div>
       
 
 </div>
@@ -722,7 +722,7 @@
 <h2 id="音乐播放器"><a href="#音乐播放器" class="headerlink" title="音乐播放器"></a>音乐播放器</h2><p>我把APlayer嵌入在侧边栏了。</p>
 <p>具体方法是在_config.nexmoe.yml中的widgets目录下创建一个新的控件，<br>之后在node_modules/hexo-theme-nexmoe/layout/_widget/创建了新的.ejs供读取，写入html代码。<br>（没错，要修改node_modules的文件。）</p>
 <p>但是目前架构的话，新页面还是加载html刷新，导致音乐播放重置。<br>如果采用动态页面架构的话就能解决这个问题了……<br>下辈子再做吧<br><a target="_blank" rel="noopener" href="https://github.com/DIYgod/APlayer">https://github.com/DIYgod/APlayer</a></p>
-<h2 id="访客计数"><a href="#访客计数" class="headerlink" title="访客计数"></a>访客计数</h2><p>因为是静态页面，所以只能花里胡哨取巧计数了。<br>这个要注册：<br><a target="_blank" rel="noopener" href="https://letianfeng.github.io/github/2018/05/27/github_pages_and_google_analytics.html">https://letianfeng.github.io/github/2018/05/27/github_pages_and_google_analytics.html</a><br>于是用了这个：<br><a target="_blank" rel="noopener" href="http://busuanzi.ibruce.info/">http://busuanzi.ibruce.info/</a><br>（我还以为叫卜算子这么文艺的名字，点进去一看叫不蒜子）<br>使用方法<br><a target="_blank" rel="noopener" href="https://zyh-ovo.github.io/blog-by-stack/p/hugo%E7%BD%91%E7%AB%99%E5%BC%95%E5%85%A5%E8%AE%BF%E9%97%AE%E8%AE%A1%E6%95%B0%E6%8F%92%E4%BB%B6%E4%B8%8D%E8%92%9C%E5%AD%90busuanzi/">https://zyh-ovo.github.io/blog-by-stack/p/hugo%E7%BD%91%E7%AB%99%E5%BC%95%E5%85%A5%E8%AE%BF%E9%97%AE%E8%AE%A1%E6%95%B0%E6%8F%92%E4%BB%B6%E4%B8%8D%E8%92%9C%E5%AD%90busuanzi/</a></p>
+<h2 id="访客计数"><a href="#访客计数" class="headerlink" title="访客计数"></a>访客计数</h2><p>因为是静态页面，所以只能花里胡哨取巧计数了。<br>这个要注册：<br><a target="_blank" rel="noopener" href="https://letianfeng.github.io/github/2018/05/27/github_pages_and_google_analytics.html">https://letianfeng.github.io/github/2018/05/27/github_pages_and_google_analytics.html</a><br>于是用了这个：<br><a target="_blank" rel="noopener" href="http://busuanzi.ibruce.info/">http://busuanzi.ibruce.info/</a><br>（我还以为叫卜算子这么文艺的名字，点进去一看叫不蒜子）<br>使用方法<br><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1505885">https://cloud.tencent.com/developer/article/1505885</a></p>
 <p>非常好。之后把JS搬下来，改成猫娘图片计数了。<br>（但很明显有一个问题，如果我网站的访问量超过五位数，会显示不全……（真的要担心这种问题吗））</p>
 
     <style>
@@ -799,7 +799,7 @@
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1696923350599"></script>
+    <script async src="/js/copy-codeblock.js?v=1696923639688"></script>
   
 
   
