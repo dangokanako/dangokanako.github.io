@@ -18,7 +18,7 @@
 <meta property="og:description" content="他妈的，一段时间不调试，都忘记怎么本地调试了。 每次看几个月前自己给自己留下只言片语的注释和教程，总有一种“斯科特回程时候看几个月前自己给自己留下稀少的燃料”的感觉。 互联网调试在website下终端运行生成： HEXO g推送： HEXO d生成和推送：hexo g -d本地调试： hexo s本地默认为：http:&#x2F;&#x2F;localhost:4000&#x2F; 如果有页面需要跳过使用HEXO主题，需要在_">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-12-31T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-10-09T18:06:25.553Z">
+<meta property="article:modified_time" content="2023-10-10T05:19:50.021Z">
 <meta property="article:author" content="坂上河南子">
 <meta name="twitter:card" content="summary">
     
@@ -26,13 +26,13 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1696912651572">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1696915889345">
     
-    <link rel="stylesheet" href="/css/style.css?v=1696912651572">
+    <link rel="stylesheet" href="/css/style.css?v=1696915889345">
 
     
         
-            <link rel="stylesheet" href="/custom.css?v=1696912651572">
+            <link rel="stylesheet" href="/custom.css?v=1696915889345">
         
     
 
@@ -41,7 +41,7 @@
 <script src="/lib/fancybox/fancybox.umd.js" async></script>
 
 
-    <script async src="/js/app.js?v=1696912651572"></script>
+    <script async src="/js/app.js?v=1696915889345"></script>
     
      
 
@@ -672,6 +672,7 @@
 <h2 id="音乐播放器"><a href="#音乐播放器" class="headerlink" title="音乐播放器"></a>音乐播放器</h2><p>我把APlayer嵌入在侧边栏了。</p>
 <p>具体方法是在_config.nexmoe.yml中的widgets目录下创建一个新的控件，<br>之后在node_modules/hexo-theme-nexmoe/layout/_widget/创建了新的.ejs供读取，写入html代码。<br>（没错，要修改node_modules的文件。）</p>
 <p>但是目前架构的话，新页面还是加载html刷新，导致音乐播放重置。<br>如果采用动态页面架构的话就能解决这个问题了……<br>下辈子再做吧<br><a target="_blank" rel="noopener" href="https://github.com/DIYgod/APlayer">https://github.com/DIYgod/APlayer</a></p>
+<h2 id="访客计数"><a href="#访客计数" class="headerlink" title="访客计数"></a>访客计数</h2><p>因为是静态页面，所以只能花里胡哨取巧计数了。<br>这个要注册：<br><a target="_blank" rel="noopener" href="https://letianfeng.github.io/github/2018/05/27/github_pages_and_google_analytics.html">https://letianfeng.github.io/github/2018/05/27/github_pages_and_google_analytics.html</a><br>于是用了这个：<br><a target="_blank" rel="noopener" href="http://busuanzi.ibruce.info/">http://busuanzi.ibruce.info/</a><br>（我还以为叫卜算子这么文艺的名字，点进去一看叫不蒜子）</p>
 
     <style>
   .spitem {
@@ -724,6 +725,9 @@
 <div align="center"> <img src="/images/base/signature.gif"/></div>
 <div class="spitem">
 我不愿让那些触动心弦的回忆化作随风飘散的齑粉，<br>我不愿让那些畅快淋漓的旅途成为无可追忆的往昔，<br>于是我提笔写下。</div><br><div class = "spitem" style="text-align:right;">倘若我这些拙劣的文字在哪一天能够，<br>与咫尺天涯的他乡之客产生分毫共鸣，<br>给素未相识的萍水旅者带去些许指引，<br>那便我最好的慰藉。</div>
+测试<span id="busuanzi_value_site_pv"></span>
+测试<span id="busuanzi_value_page_pv"></span>
+测试<span id="busuanzi_value_site_uv"></span>
 
   </article>
 
@@ -747,7 +751,7 @@
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1696912651496"></script>
+    <script async src="/js/copy-codeblock.js?v=1696915889216"></script>
   
 
   
@@ -784,7 +788,7 @@
                                                 <button class="mdui-fab catalog" style="overflow:unset;">
                                                     <i class="nexmoefont icon-i-catalog"></i>
                                                     <div class="nexmoe-toc">
-                                                        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%92%E8%81%94%E7%BD%91%E8%B0%83%E8%AF%95"><span class="toc-number">1.</span> <span class="toc-text">互联网调试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%95HTML%E7%9A%84%E6%9C%AC%E5%9C%B0%E8%B0%83%E8%AF%95"><span class="toc-number">2.</span> <span class="toc-text">单HTML的本地调试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E7%89%87%E5%90%8E%E7%BC%80%E4%BB%96%E5%A6%88%E7%9A%84%E4%B8%8D%E8%A6%81%E5%A4%A7%E5%86%99"><span class="toc-number">3.</span> <span class="toc-text">图片后缀他妈的不要大写</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8HEXO%E5%8A%A0%E5%85%A5-CSS%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-number">4.</span> <span class="toc-text">在HEXO加入.CSS的方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8"><span class="toc-number">5.</span> <span class="toc-text">音乐播放器</span></a></li></ol>
+                                                        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%92%E8%81%94%E7%BD%91%E8%B0%83%E8%AF%95"><span class="toc-number">1.</span> <span class="toc-text">互联网调试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%95HTML%E7%9A%84%E6%9C%AC%E5%9C%B0%E8%B0%83%E8%AF%95"><span class="toc-number">2.</span> <span class="toc-text">单HTML的本地调试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E7%89%87%E5%90%8E%E7%BC%80%E4%BB%96%E5%A6%88%E7%9A%84%E4%B8%8D%E8%A6%81%E5%A4%A7%E5%86%99"><span class="toc-number">3.</span> <span class="toc-text">图片后缀他妈的不要大写</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8HEXO%E5%8A%A0%E5%85%A5-CSS%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-number">4.</span> <span class="toc-text">在HEXO加入.CSS的方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8"><span class="toc-number">5.</span> <span class="toc-text">音乐播放器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BF%E5%AE%A2%E8%AE%A1%E6%95%B0"><span class="toc-number">6.</span> <span class="toc-text">访客计数</span></a></li></ol>
                                                     </div>
                                                 </button>
                                                 
