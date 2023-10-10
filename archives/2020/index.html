@@ -24,13 +24,13 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1696915889394">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1696922728226">
     
-    <link rel="stylesheet" href="/css/style.css?v=1696915889394">
+    <link rel="stylesheet" href="/css/style.css?v=1696922728226">
 
     
         
-            <link rel="stylesheet" href="/custom.css?v=1696915889394">
+            <link rel="stylesheet" href="/custom.css?v=1696922728226">
         
     
 
@@ -39,12 +39,14 @@
 <script src="/lib/fancybox/fancybox.umd.js" async></script>
 
 
-    <script async src="/js/app.js?v=1696915889394"></script>
+    <script async src="/js/app.js?v=1696922728226"></script>
     
      
 
-    <link rel="stylesheet" href="/asset/css/cursor.css">
+    <!-- 鼠标图标，和点击功能 -->
+<link rel="stylesheet" href="/asset/css/cursor.css">
 <script src="/asset/js/cursor.js"></script>
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D4ZJ9G024"></script>
 <script>
@@ -275,6 +277,54 @@
 }
 </style>
 
+        
+            
+            <!-- 访问计数功能 -->
+<script src="/asset/js/busuanzi.pure.mini.js"></script>
+<script>
+
+
+
+  function numberToImageTags(number) {
+    var digitImages = [
+      "/images/num/0.gif",
+      "/images/num/1.gif",
+      "/images/num/2.gif",
+      "/images/num/3.gif",
+      "/images/num/4.gif",
+      "/images/num/5.gif",
+      "/images/num/6.gif",
+      "/images/num/7.gif",
+      "/images/num/8.gif",
+      "/images/num/9.gif"];
+
+
+    var imgTags = '';
+    for (var i = 0; i < number.length; i++) {
+      imgTags += '<img style="height:100px;width:45px;" src="' + digitImages[parseInt(number[i])] + '">';
+    }
+    return imgTags;
+  }
+
+</script>
+
+<div class="nexmoe-widget-wrap">
+  
+      <div><span class="image-container" id="busuanzi_value_site_pv"></span></div>
+      
+
+</div>
+
+<style>
+  .image-container {
+    display: flex;
+    justify-content: center;
+    /* 水平居中 */
+    align-items: center;
+    /* 垂直居中 */
+    flex-wrap: wrap;
+  }
+</style>
         
             
             <div class="nexmoe-widget-wrap">

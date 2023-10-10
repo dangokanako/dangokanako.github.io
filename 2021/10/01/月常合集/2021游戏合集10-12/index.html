@@ -30,13 +30,13 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1696915889376">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1696922728184">
     
-    <link rel="stylesheet" href="/css/style.css?v=1696915889376">
+    <link rel="stylesheet" href="/css/style.css?v=1696922728184">
 
     
         
-            <link rel="stylesheet" href="/custom.css?v=1696915889376">
+            <link rel="stylesheet" href="/custom.css?v=1696922728184">
         
     
 
@@ -45,12 +45,14 @@
 <script src="/lib/fancybox/fancybox.umd.js" async></script>
 
 
-    <script async src="/js/app.js?v=1696915889376"></script>
+    <script async src="/js/app.js?v=1696922728184"></script>
     
      
 
-    <link rel="stylesheet" href="/asset/css/cursor.css">
+    <!-- 鼠标图标，和点击功能 -->
+<link rel="stylesheet" href="/asset/css/cursor.css">
 <script src="/asset/js/cursor.js"></script>
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D4ZJ9G024"></script>
 <script>
@@ -281,6 +283,54 @@
 }
 </style>
 
+        
+            
+            <!-- 访问计数功能 -->
+<script src="/asset/js/busuanzi.pure.mini.js"></script>
+<script>
+
+
+
+  function numberToImageTags(number) {
+    var digitImages = [
+      "/images/num/0.gif",
+      "/images/num/1.gif",
+      "/images/num/2.gif",
+      "/images/num/3.gif",
+      "/images/num/4.gif",
+      "/images/num/5.gif",
+      "/images/num/6.gif",
+      "/images/num/7.gif",
+      "/images/num/8.gif",
+      "/images/num/9.gif"];
+
+
+    var imgTags = '';
+    for (var i = 0; i < number.length; i++) {
+      imgTags += '<img style="height:100px;width:45px;" src="' + digitImages[parseInt(number[i])] + '">';
+    }
+    return imgTags;
+  }
+
+</script>
+
+<div class="nexmoe-widget-wrap">
+  
+      <div><span class="image-container" id="busuanzi_value_site_pv"></span></div>
+      
+
+</div>
+
+<style>
+  .image-container {
+    display: flex;
+    justify-content: center;
+    /* 水平居中 */
+    align-items: center;
+    /* 垂直居中 */
+    flex-wrap: wrap;
+  }
+</style>
         
             
             <div class="nexmoe-widget-wrap">
@@ -796,9 +846,6 @@
 <div align="center"> <img src="/images/base/signature.gif"/></div>
 <div class="spitem">
 我不愿让那些触动心弦的回忆化作随风飘散的齑粉，<br>我不愿让那些畅快淋漓的旅途成为无可追忆的往昔，<br>于是我提笔写下。</div><br><div class = "spitem" style="text-align:right;">倘若我这些拙劣的文字在哪一天能够，<br>与咫尺天涯的他乡之客产生分毫共鸣，<br>给素未相识的萍水旅者带去些许指引，<br>那便我最好的慰藉。</div>
-测试<span id="busuanzi_value_site_pv"></span>
-测试<span id="busuanzi_value_page_pv"></span>
-测试<span id="busuanzi_value_site_uv"></span>
 
   </article>
 
@@ -822,7 +869,7 @@
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1696915889230"></script>
+    <script async src="/js/copy-codeblock.js?v=1696922728033"></script>
   
 
   
