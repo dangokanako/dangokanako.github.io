@@ -60,6 +60,8 @@
             "♪ おお 神の刃は 人類の愛 ♪",
             "♪ さよなら　愛しい　大切な人　どうか“幸せに” ♪",
             "♪ 寄予真实的光斑从木叶间洒落的那一日 ♪",
+            "♪ 届かない恋をしていても <br/>♪ 映しだす日がくるかな ",
+            "♪ おお 神の刃は 人類の愛<br/>♪ 祈りを 込めて つらぬけ",
             "♪ But I need one last time I want to tell you ♪<br/> ♪ how I feel inside for you ♪<br/>♪ I want you to know...♪"
         ];
 
