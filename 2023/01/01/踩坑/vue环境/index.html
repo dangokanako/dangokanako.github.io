@@ -18,7 +18,7 @@
 <meta property="og:description" content="以防出现重新配一遍HEXO环境的窘境，决定记一下 node说实话我也不知道自己什么时候就装了。 创建项目以下均使用vue3： 创建项目：npm init vue@latest进入目录之后安装：npm install运行：npm run dev会在本地5173端口初始化页面 开发环境使用VSC+volar扩展 笔记条件渲染VUE的v-if和v-show，都是判断bool渲染。但v-show始终会被渲">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-12-31T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-09-22T20:23:26.845Z">
+<meta property="article:modified_time" content="2023-11-19T07:34:27.353Z">
 <meta property="article:author" content="坂上河南子">
 <meta name="twitter:card" content="summary">
     
@@ -26,13 +26,13 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1700378690905">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1700469099795">
     
-    <link rel="stylesheet" href="/css/style.css?v=1700378690905">
+    <link rel="stylesheet" href="/css/style.css?v=1700469099795">
 
     
         
-            <link rel="stylesheet" href="/custom.css?v=1700378690905">
+            <link rel="stylesheet" href="/custom.css?v=1700469099795">
         
     
 
@@ -41,7 +41,7 @@
 <script src="/lib/fancybox/fancybox.umd.js" async></script>
 
 
-    <script async src="/js/app.js?v=1700378690905"></script>
+    <script async src="/js/app.js?v=1700469099795"></script>
     
      
 
@@ -723,6 +723,10 @@
 <p>开发环境使用VSC+volar扩展</p>
 <h2 id="笔记"><a href="#笔记" class="headerlink" title="笔记"></a>笔记</h2><h3 id="条件渲染"><a href="#条件渲染" class="headerlink" title="条件渲染"></a>条件渲染</h3><p>VUE的v-if和v-show，都是判断bool渲染。<br>但v-show始终会被渲染，v-if渲染切换时会被销毁重建。</p>
 <p>如果需要频繁切换，使用v-show(但有初始渲染开销)；如果很少改变，使用v-if</p>
+<h2 id="OAuth-2-0"><a href="#OAuth-2-0" class="headerlink" title="OAuth 2.0"></a>OAuth 2.0</h2><p>+———-+<br>| Resource |<br>|   Owner  |<br>|          |<br>+———-+<br>^<br>|<br>(B)<br>+—-|—–+          Client Identifier      +—————+<br>|         -+—-(A)– &amp; Redirection URI —-&gt;|               |<br>|  User-   |                                 | Authorization |<br>|  Agent  -+—-(B)– User authenticates —&gt;|     Server    |<br>|          |                                 |               |<br>|         -+—-(C)– Authorization Code —&lt;|               |<br>+-|—-|—+                                 +—————+<br>|    |                                          ^      v<br>(A)  (C)                                        |      |<br>|    |                                          |      |<br>^    v                                          |      |<br>+———+                                     |      |<br>|         |&gt;—(D)– Authorization Code ——–’      |<br>|  Client |          &amp; Redirection URI                 |<br>|         |                                            |<br>|         |&lt;—(E)—– Access Token ——————‘<br>+———+       (w/ Optional Refresh Token)</p>
+<p>Note: The lines illustrating steps (A), (B), and (C) are broken into<br>two parts as they pass through the user-agent.</p>
+<p>Figure 3: Authorization Code Flow</p>
+<p>我草好复杂。</p>
 
     <style>
   .spitem {
@@ -798,7 +802,7 @@
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1700378690779"></script>
+    <script async src="/js/copy-codeblock.js?v=1700469099651"></script>
   
 
   
@@ -835,7 +839,7 @@
                                                 <button class="mdui-fab catalog" style="overflow:unset;">
                                                     <i class="nexmoefont icon-i-catalog"></i>
                                                     <div class="nexmoe-toc">
-                                                        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#node"><span class="toc-number">1.</span> <span class="toc-text">node</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE"><span class="toc-number">2.</span> <span class="toc-text">创建项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%94%E8%AE%B0"><span class="toc-number">3.</span> <span class="toc-text">笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9D%A1%E4%BB%B6%E6%B8%B2%E6%9F%93"><span class="toc-number">3.1.</span> <span class="toc-text">条件渲染</span></a></li></ol></li></ol>
+                                                        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#node"><span class="toc-number">1.</span> <span class="toc-text">node</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE"><span class="toc-number">2.</span> <span class="toc-text">创建项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%94%E8%AE%B0"><span class="toc-number">3.</span> <span class="toc-text">笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9D%A1%E4%BB%B6%E6%B8%B2%E6%9F%93"><span class="toc-number">3.1.</span> <span class="toc-text">条件渲染</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#OAuth-2-0"><span class="toc-number">4.</span> <span class="toc-text">OAuth 2.0</span></a></li></ol>
                                                     </div>
                                                 </button>
                                                 
