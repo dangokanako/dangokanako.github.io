@@ -4,21 +4,21 @@
 
         <head>
     
-    <title>HEXO博客调试 - 小鸟的风祭森林</title>
+    <title>RPG VX Ace fullscreen脚本报错 - 小鸟的风祭森林</title>
     <meta charset="UTF-8">
     <meta name="keywords" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
     
     <link rel="shortcut icon" href="/images/base/favicon.ico" type="image/x-icon" />
-    <meta name="description" content="他妈的，一段时间不调试，都忘记怎么本地调试了。 每次看几个月前自己给自己留下只言片语的注释和教程，总有一种“斯科特回程时候看几个月前自己给自己留下稀少的燃料”的感觉。 互联网调试在website下终端运行生成： HEXO g推送： HEXO d生成和推送：hexo g -d本地调试： hexo s本地默认为：http:&#x2F;&#x2F;localhost:4000&#x2F; 如果有页面需要跳过使用HEXO主题，需要在_">
+    <meta name="description" content="环境：WIN11 玩某个RPGMAKER VX Ace(也就是rgss3a文件的龙头图标)做的同人黄油一直报错， 首先是字体报错，缺失VL Gothic font，直接去https:&#x2F;&#x2F;vlgothic.dicey.org下一个安装字体就可以了。（但是这个字体真的不好看） 其中一个fullscreen脚本会报错，具体为脚本”fullscreen”第93行，发生NoMethodErrorundefi">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HEXO博客调试">
-<meta property="og:url" content="https://dangokanako.github.io/2023/01/01/%E8%B8%A9%E5%9D%91/HEXO%E5%8D%9A%E5%AE%A2/index.html">
+<meta property="og:title" content="RPG VX Ace fullscreen脚本报错">
+<meta property="og:url" content="https://dangokanako.github.io/2000/01/01/%E8%B8%A9%E5%9D%91/RPG%20VX%20Ace%20fullscreen%E8%84%9A%E6%9C%AC%E6%8A%A5%E9%94%99/index.html">
 <meta property="og:site_name" content="小鸟的风祭森林">
-<meta property="og:description" content="他妈的，一段时间不调试，都忘记怎么本地调试了。 每次看几个月前自己给自己留下只言片语的注释和教程，总有一种“斯科特回程时候看几个月前自己给自己留下稀少的燃料”的感觉。 互联网调试在website下终端运行生成： HEXO g推送： HEXO d生成和推送：hexo g -d本地调试： hexo s本地默认为：http:&#x2F;&#x2F;localhost:4000&#x2F; 如果有页面需要跳过使用HEXO主题，需要在_">
+<meta property="og:description" content="环境：WIN11 玩某个RPGMAKER VX Ace(也就是rgss3a文件的龙头图标)做的同人黄油一直报错， 首先是字体报错，缺失VL Gothic font，直接去https:&#x2F;&#x2F;vlgothic.dicey.org下一个安装字体就可以了。（但是这个字体真的不好看） 其中一个fullscreen脚本会报错，具体为脚本”fullscreen”第93行，发生NoMethodErrorundefi">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-12-31T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-12-12T00:45:16.818Z">
+<meta property="article:published_time" content="1999-12-31T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-06-25T08:54:15.483Z">
 <meta property="article:author" content="坂上河南子">
 <meta name="twitter:card" content="summary">
     
@@ -26,13 +26,13 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1719144338890">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1719305954931">
     
-    <link rel="stylesheet" href="/css/style.css?v=1719144338890">
+    <link rel="stylesheet" href="/css/style.css?v=1719305954931">
 
     
         
-            <link rel="stylesheet" href="/custom.css?v=1719144338890">
+            <link rel="stylesheet" href="/custom.css?v=1719305954931">
         
     
 
@@ -41,7 +41,7 @@
 <script src="/lib/fancybox/fancybox.umd.js" async></script>
 
 
-    <script async src="/js/app.js?v=1719144338890"></script>
+    <script async src="/js/app.js?v=1719305954931"></script>
     
      
 
@@ -649,7 +649,7 @@
   <div class="nexmoe-widget-wrap">
     <h3 class="nexmoe-widget-title">文章归档</h3>
     <div class="nexmoe-widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/">2024</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">45</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a><span class="archive-list-count">31</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/">1970</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1918/">1918</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/">2024</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">40</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a><span class="archive-list-count">30</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2000/">2000</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/">1970</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1918/">1918</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -703,14 +703,14 @@
   <article>
     
         <div class="nexmoe-post-cover absolute" style="padding-top: 41.66666666666667%;"> 
-            <img src="/images/base/RepetitiveError.jpg" alt="HEXO博客调试" loading="lazy">
-            <h1>HEXO博客调试</h1>
+            <img src="/images/base/RepetitiveError.jpg" alt="RPG VX Ace fullscreen脚本报错" loading="lazy">
+            <h1>RPG VX Ace fullscreen脚本报错</h1>
         </div>
     
     
     <div class="nexmoe-post-meta">
     <div class="nexmoe-rainbow">
-        <a class="nexmoefont icon-calendar-fill">2023年01月01日</a>
+        <a class="nexmoefont icon-calendar-fill">2000年01月01日</a>
         
             <a class="nexmoefont icon-appstore-fill -link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a><a class="nexmoefont icon-appstore-fill -link" href="/categories/%E8%B8%A9%E5%9D%91/">踩坑</a>
         
@@ -723,23 +723,15 @@
     
 </div>
 
-    <p>他妈的，一段时间不调试，都忘记怎么本地调试了。</p>
-<p>每次看几个月前自己给自己留下只言片语的注释和教程，总有一种“斯科特回程时候看几个月前自己给自己留下稀少的燃料”的感觉。</p>
-<h2 id="互联网调试"><a href="#互联网调试" class="headerlink" title="互联网调试"></a>互联网调试</h2><p>在website下终端运行<br>生成： HEXO g<br>推送： HEXO d<br>生成和推送：hexo g -d<br>本地调试： hexo s<br>本地默认为：<a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a></p>
-<p>如果有页面需要跳过使用HEXO主题，<br>需要在_config.yml的skip_render中设置</p>
-<p>例如<br>skip_render:<br>“I-The Magician.html”<br>“inky/*”</p>
-<p>个屁啊啊！！<br>写法我确认了八十遍，<br>结果要执行一下hexo clean才行啊啊！！！</p>
-<h2 id="单HTML的本地调试"><a href="#单HTML的本地调试" class="headerlink" title="单HTML的本地调试"></a>单HTML的本地调试</h2><p>VSC的Live Server足以，.html直接右键启动open with server live就起来了127.0.0.1:5500</p>
-<h2 id="图片后缀他妈的不要大写"><a href="#图片后缀他妈的不要大写" class="headerlink" title="图片后缀他妈的不要大写"></a>图片后缀他妈的不要大写</h2><p>本地识别的出来，提交到生产环境识别不出来</p>
-<h2 id="在HEXO加入-CSS的方法"><a href="#在HEXO加入-CSS的方法" class="headerlink" title="在HEXO加入.CSS的方法"></a>在HEXO加入.CSS的方法</h2><p>yml里在这个地方添加即可<br>slotHead: |<br>  <link rel="stylesheet" href="/asset/css/cursor.css"></p>
-<p>其实hexo也有一个自带全局的css可以自定义……</p>
-<h2 id="音乐播放器"><a href="#音乐播放器" class="headerlink" title="音乐播放器"></a>音乐播放器</h2><p>我把APlayer嵌入在侧边栏了。</p>
-<p>具体方法是在_config.nexmoe.yml中的widgets目录下创建一个新的控件，<br>之后在node_modules/hexo-theme-nexmoe/layout/_widget/创建了新的.ejs供读取，写入html代码。<br>（没错，要修改node_modules的文件。）</p>
-<p>但是目前架构的话，新页面还是加载html刷新，导致音乐播放重置。<br>如果采用动态页面架构的话就能解决这个问题了……<br>下辈子再做吧<br><a target="_blank" rel="noopener" href="https://github.com/DIYgod/APlayer">https://github.com/DIYgod/APlayer</a></p>
-<h2 id="访客计数"><a href="#访客计数" class="headerlink" title="访客计数"></a>访客计数</h2><p>因为是静态页面，所以只能花里胡哨取巧计数了。<br>这个要注册：<br><a target="_blank" rel="noopener" href="https://letianfeng.github.io/github/2018/05/27/github_pages_and_google_analytics.html">https://letianfeng.github.io/github/2018/05/27/github_pages_and_google_analytics.html</a><br>于是用了这个：<br><a target="_blank" rel="noopener" href="http://busuanzi.ibruce.info/">http://busuanzi.ibruce.info/</a><br>（我还以为叫卜算子这么文艺的名字，点进去一看叫不蒜子）<br>使用方法<br><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1505885">https://cloud.tencent.com/developer/article/1505885</a></p>
-<p>（busuanzi 的镜像API搭建<br><a target="_blank" rel="noopener" href="https://busuanzi.icodeq.com/%EF%BC%89">https://busuanzi.icodeq.com/）</a></p>
-<p>非常好。之后把JS搬下来，改成猫娘图片计数了。<br>（但很明显有一个问题，如果我网站的访问量超过五位数，会显示不全……（真的要担心这种问题吗））<br>真正要担心的问题是，每个子页面不会分开计数的。<br>打开A页面，浏览计数为1<br>但是打开B页面，浏览计数为2<br>返回主页面，打开C页面，浏览计数为4。</p>
-<h2 id="推送报错"><a href="#推送报错" class="headerlink" title="推送报错"></a>推送报错</h2><p>众所周知的原因。<br>请设置代理。<br>git config –global http.proxy 127.0.0.1:8787<br>git config –global https.proxy 127.0.0.1:8787</p>
+    <p>环境：WIN11</p>
+<p>玩某个RPGMAKER VX Ace(也就是rgss3a文件的龙头图标)做的同人黄油一直报错，</p>
+<p>首先是字体报错，缺失VL Gothic font，直接去<br><a target="_blank" rel="noopener" href="https://vlgothic.dicey.org/">https://vlgothic.dicey.org</a><br>下一个安装字体就可以了。（但是这个字体真的不好看）</p>
+<p>其中一个fullscreen脚本会报错，<br>具体为<br>脚本”fullscreen”第93行，发生NoMethodError<br>undefined method ‘size’ for nil:NilClass</p>
+<p>这位作者的（估计是WIN10或WIN11导致的）（还是葡萄牙语）</p>
+<p>Σ Fullscreen<br>@author  : Gabriel “Gab!” Teles<br>@date    : 2014-09-27<br>@version : 0.9.2</p>
+<p>删掉第107行<br>      mod.(0x195F, “\x90”*5) # ???<br>就可以了</p>
+<p>后记：<br>（我对着93行的报错函数<br>      mod = -&gt;(adr, val){<br>         adr += @@OFF if @@DLLVersion.zero?<br>        DL::CPtr.new(@@DLLHandle + adr)[0, val.size] = val<br>      }<br>看了半天，寻思你一个全屏脚本怎么写了一千行内存操作，ruby竟是如此神奇吗）</p>
+<p>（啊啊啊这游戏我看不懂啊，怎么突然就挂了）</p>
 
     <style>
   .spitem {
@@ -799,7 +791,7 @@
       
     <div class="nexmoe-post-copyright">
         <strong>本文作者：</strong>坂上河南子<br>
-        <strong>本文链接：</strong><a href="https://dangokanako.github.io/2023/01/01/%E8%B8%A9%E5%9D%91/HEXO%E5%8D%9A%E5%AE%A2/" title="https:&#x2F;&#x2F;dangokanako.github.io&#x2F;2023&#x2F;01&#x2F;01&#x2F;%E8%B8%A9%E5%9D%91&#x2F;HEXO%E5%8D%9A%E5%AE%A2&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;dangokanako.github.io&#x2F;2023&#x2F;01&#x2F;01&#x2F;%E8%B8%A9%E5%9D%91&#x2F;HEXO%E5%8D%9A%E5%AE%A2&#x2F;</a><br>
+        <strong>本文链接：</strong><a href="https://dangokanako.github.io/2000/01/01/%E8%B8%A9%E5%9D%91/RPG%20VX%20Ace%20fullscreen%E8%84%9A%E6%9C%AC%E6%8A%A5%E9%94%99/" title="https:&#x2F;&#x2F;dangokanako.github.io&#x2F;2000&#x2F;01&#x2F;01&#x2F;%E8%B8%A9%E5%9D%91&#x2F;RPG%20VX%20Ace%20fullscreen%E8%84%9A%E6%9C%AC%E6%8A%A5%E9%94%99&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;dangokanako.github.io&#x2F;2000&#x2F;01&#x2F;01&#x2F;%E8%B8%A9%E5%9D%91&#x2F;RPG%20VX%20Ace%20fullscreen%E8%84%9A%E6%9C%AC%E6%8A%A5%E9%94%99&#x2F;</a><br>
         
             <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
 
@@ -815,7 +807,7 @@
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1719144338745"></script>
+    <script async src="/js/copy-codeblock.js?v=1719305954756"></script>
   
 
   
@@ -849,13 +841,6 @@
 
                                         
                                             
-                                                <button class="mdui-fab catalog" style="overflow:unset;">
-                                                    <i class="nexmoefont icon-i-catalog"></i>
-                                                    <div class="nexmoe-toc">
-                                                        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%92%E8%81%94%E7%BD%91%E8%B0%83%E8%AF%95"><span class="toc-number">1.</span> <span class="toc-text">互联网调试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%95HTML%E7%9A%84%E6%9C%AC%E5%9C%B0%E8%B0%83%E8%AF%95"><span class="toc-number">2.</span> <span class="toc-text">单HTML的本地调试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E7%89%87%E5%90%8E%E7%BC%80%E4%BB%96%E5%A6%88%E7%9A%84%E4%B8%8D%E8%A6%81%E5%A4%A7%E5%86%99"><span class="toc-number">3.</span> <span class="toc-text">图片后缀他妈的不要大写</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8HEXO%E5%8A%A0%E5%85%A5-CSS%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-number">4.</span> <span class="toc-text">在HEXO加入.CSS的方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8"><span class="toc-number">5.</span> <span class="toc-text">音乐播放器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BF%E5%AE%A2%E8%AE%A1%E6%95%B0"><span class="toc-number">6.</span> <span class="toc-text">访客计数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A8%E9%80%81%E6%8A%A5%E9%94%99"><span class="toc-number">7.</span> <span class="toc-text">推送报错</span></a></li></ol>
-                                                    </div>
-                                                </button>
-                                                
 
                                                     
 
