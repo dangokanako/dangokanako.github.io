@@ -363,7 +363,7 @@ async function DamageToEnemy(type, damage, name) {
 
     toastrBottomRight.success('我方使用' + name + '，造成了' + damage + '点' + type + '伤害');
     if (ChangeEnemyHp(-damage) == true) {
-        await sleep(1000);
+        await sleep(5000);
         End_Battle();
     }
 }
