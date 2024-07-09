@@ -15,7 +15,7 @@ miniAvatar:none;
 miniAvatar:kotarou_1.png;
 瑚太郎:「我可是有着丰富的《星○谷物语》《牧○物语》等游戏的经验，|开荒勘探这种事情就尽管交给我吧！」 -fontSize=default;
  :我一边打趣，一边悄悄用力握住她的手。 -fontSize=default;
-_:希望能让她稍微安心一点。想要成为她的... -fontSize=default;
+ :希望能让她稍微安心一点。想要成为她的... -fontSize=default;
 playEffect:Blow1.m4a;
 miniAvatar:akane_10.png;
 茜:「疼啊！手！」 -fontSize=default;

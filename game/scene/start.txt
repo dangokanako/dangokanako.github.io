@@ -13,7 +13,7 @@ miniAvatar:akane_4.png;
 miniAvatar:kotarou_1.png;
 瑚太郎:「才走了一首ED的时间！」 -fontSize=default;
 miniAvatar:akane_4.png;
-茜:「这首歌有七分钟喔。」 -fontSize=default;
+茜:「这首歌有接近七分钟喔。」 -fontSize=default;
 miniAvatar:kotarou_1.png;
 瑚太郎:「体力值还是远低于正常人平均水平呢。」 -fontSize=default;
 miniAvatar:akane_6.png;
