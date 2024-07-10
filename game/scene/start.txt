@@ -1,4 +1,5 @@
 ; 初始场景，以及特效演示
+intro:（请确保使用VPN（或者其他访问github的方式）以能顺利加载游戏资源，以获得良好的游戏体验） -fontSize=medium -backgroundColor=rgba(0, 0, 0, 1) -fontColor=rgba(255, 255, 255, 1) -animation=fadeIn -delayTime=1500;
 intro:一曲过后，轻风拂过麦田。|在这金黄色的原野之上，我们相依而行。 -fontSize=medium -backgroundColor=rgba(0, 0, 0, 1) -fontColor=rgba(255, 255, 255, 1) -animation=fadeIn -delayTime=1500;
 changeBg:title.jpg -next;
 bgm:偽らない君へ.mp3 -enter=1000;
