@@ -224,4 +224,6 @@ miniAvatar:none;
 瑚太郎:「疼疼疼疼！干什么啦！」
 miniAvatar:CGM_AK20au.png;
 茜:「没什么。」
+miniAvatar:none;
+ :完
 end;
