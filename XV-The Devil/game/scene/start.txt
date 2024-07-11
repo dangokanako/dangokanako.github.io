@@ -1,0 +1,10 @@
+; 初始场景，以及特效演示
+intro:（……） -fontSize=medium -backgroundColor=rgba(0, 0, 0, 1) -fontColor=rgba(255, 255, 255, 1) -animation=fadeIn -delayTime=1500;
+changeBg:20240711001558_1.jpg -next;
+bgm:ShaLaLaEcstasy.mp3 -enter=1000;
+choose:A:sence1.txt|B:选择场景文件|C:选择场景文件;
+miniAvatar:kotarou_1.png;
+瑚太郎:「于是，这里还没有做的内容。」 -fontSize=default;
+miniAvatar:CGM_AK15au.png;
+茜:「……」 -fontSize=default;
+end;
