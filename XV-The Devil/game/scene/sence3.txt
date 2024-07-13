@@ -57,11 +57,12 @@ miniAvatar:CGM_AK17au.png;
 【茜】:「接下来要怎么做？像挤海绵那样把精液挤出来吗？」
 miniAvatar:none;
 【瑚太朗】:「唔唔唔！」
- :拜托了这句话一定要是搞笑噱头。
+ :这句话一定是搞笑用的噱头，一定是吧？
  :……
- :糟了，怎么真的开始用力了！
 miniAvatar:CGM_AK10au.png;
 【茜】:「……（用力）」
+miniAvatar:none;
+ :糟了，怎么真的开始用力了！
 miniAvatar:none;
 【瑚太朗】:「唔唔唔！！！！！」
  :不要啊啊啊啊啊！
@@ -84,7 +85,7 @@ miniAvatar:none;
 miniAvatar:CGM_AK33a.png;
 【茜】:「濒死射精机制呢，身体感觉到快要死亡了，于是想要尽可能留下遗传物质的机制。」
 miniAvatar:none;
- :拜托了，请不要让我再体验这种事情了。话说真的有那个机制吗？
+ :请不要让我再体验这种事情了。话说真的有那个机制吗？
 miniAvatar:CGM_AK20au.png;
 【茜】:「人类真是脆弱呢，你说是吧。」
 miniAvatar:none;
@@ -224,4 +225,4 @@ changeFigure:CGM_KG10h.png -next;
 【篝】:「最后，请不要问作者的性癖到底是什么样子的。」 -fontSize=default;
 changeFigure:CGM_KG18h.png -next;
 【篝】:「那么再见了。」 -fontSize=default;
-end;
+end;nd;
