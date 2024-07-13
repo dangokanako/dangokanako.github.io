@@ -82,7 +82,10 @@ miniAvatar:CGM_AK15au.png;
 【茜】:「……你脑子没问题吧？」
 miniAvatar:none;
  :朱音脸上更疑惑了。
+ :……
+ :…………
 changeBg:20240713114132_1.jpg -next;
+ :饭后。
 miniAvatar:kotarou_1.png;
 【瑚太朗】:「怎么样，好吃吗？」
 miniAvatar:CGM_AK15au.png;
@@ -228,6 +231,6 @@ changeFigure:CGM_KG31.png -next;
 changeFigure:CGM_KG10h.png -next;
 【篝】:「其实我更对那个同人种田游戏有想法喔。」 -fontSize=default;
 changeFigure:CGM_KG34.png -next;
-【篝】:「更过激的就留到下回再说吧……如果还有下回的话。」 -fontSize=default;
+【篝】:「更过激的就留到下下回再说吧……如果还有下下回的话。」 -fontSize=default;
 【篝】:「但我真的是第一次写同人……还是非全年龄向的…………（害羞）」 -fontSize=default;
 end;
