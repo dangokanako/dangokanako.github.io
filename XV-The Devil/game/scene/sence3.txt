@@ -189,7 +189,7 @@ miniAvatar:none;
 miniAvatar:CGM_AK17au.png;
 【茜】:「怎么真的哭了啊。」
 miniAvatar:none;
- :朱音用右手给我解开口球，摸了摸我的脸。
+ :朱音用左手给我解开口球，摸了摸我的脸。
 【瑚太朗】:「呜呜……」
 miniAvatar:CGM_AK17au.png;
 【茜】:「抱歉抱歉。玩过头了。」
@@ -199,10 +199,10 @@ miniAvatar:none;
  :和朱音温柔的眼睛对视，希望能把这份心意传递给她。
 miniAvatar:CGM_AK18au.png;
 【茜】:「怎么了，乖乖喔。」
- :朱音用右手摸了摸我的头。
+ :朱音用左手摸了摸我的头。
 miniAvatar:none;
 【瑚太朗】:「能把另一只手的动作停下来吗？」
- :会长的左手正在握着我的分身激烈地运动，已经进行到最后阶段了。
+ :会长的右手正在握着我的肉棒激烈地撸动，已经进行到最后阶段了。
 miniAvatar:CGM_AK33a.png;
 【茜】:「不行。那是另一码事喔。」
 changeBg:white.jpg;

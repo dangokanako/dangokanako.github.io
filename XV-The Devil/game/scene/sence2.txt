@@ -128,9 +128,25 @@ miniAvatar:CGM_AK15au.png;
 miniAvatar:kotarou_1.png;
 【瑚太朗】:「那当然了，很多游戏一个人都能点出宇宙飞船…」
 miniAvatar:CGM_AK23au.png;
-【茜】:「不要拿那些莫名其妙的传送带游戏举例子了！」
+【茜】:「不要拿那些莫名其妙的传送带游戏举例子……」
+miniAvatar:kotarou_1.png;
+【瑚太朗】:「我还挺期待那个科技的。」
+miniAvatar:CGM_AK23au.png;
+【茜】:「要在这里玩电脑吗。」
+miniAvatar:CGM_AK24au.png;
+【茜】:「要是又回到和以前的生活一样的话，|那之前经历的这一切就好像没有意义了一样呢……」
+miniAvatar:kotarou_1.png;
+【瑚太朗】:「嘛，不要这么说嘛。|同人作品本来就没什么意义。」
+【瑚太朗】:「而且……那个……」
 miniAvatar:none;
- :朱音捡好洗漱用品去卫生间洗浴了。
+ :啊，有点难说出口。
+miniAvatar:kotarou_1.png;
+【瑚太朗】:「我很喜欢会长使用电脑的样子……」
+【瑚太朗】:「非常般配……帅气哦。」
+miniAvatar:CGM_AK26au.png;
+【茜】:「……讨厌……」
+miniAvatar:none;
+ :朱音低声说了一句之后，捡洗漱用品去卫生间洗浴了。
  :趁这个机会准备一下道具吧……
 miniAvatar:kotarou_1.png;
 【瑚太朗】:「嘿嘿……嘿嘿嘿……」
