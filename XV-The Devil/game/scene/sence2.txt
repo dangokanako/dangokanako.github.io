@@ -136,17 +136,21 @@ miniAvatar:CGM_AK23au.png;
 miniAvatar:CGM_AK24au.png;
 【茜】:「要是又回到和以前的生活一样的话，|那之前经历的这一切就好像没有意义了一样呢……」
 miniAvatar:kotarou_1.png;
-【瑚太朗】:「嘛，不要这么说嘛。|同人作品本来就没什么意义。」
+【瑚太朗】:「不要这么说嘛。|而且，很多同人作品本来就没什么意义嘛。」
+miniAvatar:CGM_AK14au.png;
+【茜】:「给我向同人作者道歉！」
 【瑚太朗】:「而且……那个……」
+miniAvatar:CGM_AK11au.png;
+【茜】:「给我向同人作者道歉！」
 miniAvatar:none;
- :啊，有点难说出口。
+ :啊，还真是有点难说出口。
 miniAvatar:kotarou_1.png;
-【瑚太朗】:「我很喜欢会长使用电脑的样子……」
-【瑚太朗】:「非常般配……帅气哦。」
+【瑚太朗】:「我很喜欢朱音使用电脑的样子……」
+【瑚太朗】:「非常…帅气哦。」
 miniAvatar:CGM_AK26au.png;
 【茜】:「……讨厌……」
 miniAvatar:none;
- :朱音低声说了一句之后，捡洗漱用品去卫生间洗浴了。
+ :朱音低着头说了一句之后，捡洗漱用品去卫生间洗浴了。
  :趁这个机会准备一下道具吧……
 miniAvatar:kotarou_1.png;
 【瑚太朗】:「嘿嘿……嘿嘿嘿……」
