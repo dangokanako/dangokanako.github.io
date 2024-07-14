@@ -66,7 +66,7 @@ miniAvatar:none;
 【瑚太朗】:「唔唔唔！！！！！」
  :不要啊啊啊啊啊！
  :开始临死挣扎。
- :虽然绳子并不是最紧，留足了双臂血液循环的冗余，不至于让双臂发麻。但果然还是挣脱不开。
+ :虽然绳子并不是最紧状态，留足了双臂血液循环的冗余，不至于让双臂发麻。但果然还是挣脱不开。
  :都怪我让会长学习的性知识太少了，这就是自食其果吗，我就要死在这里了吗……
  :再见了，我的肉棒……啊……啊……
 changeBg:white.jpg;
@@ -87,6 +87,8 @@ miniAvatar:CGM_AK33a.png;
 miniAvatar:none;
  :朱音一脸洋洋得意的坏笑。
 miniAvatar:none;
+【瑚太朗】:「呜呜呜……」
+miniAvatar:none;
  :请不要让我再体验这种事情了。话说真的有那个机制吗？
 miniAvatar:CGM_AK20au.png;
 【茜】:「人类真是脆弱呢，你说是吧。吶~」
@@ -106,6 +108,7 @@ miniAvatar:CGM_AK34a.png;
 【茜】:「……」
 miniAvatar:none;
 【瑚太朗】:「……唔……」
+ :感觉不说点什么很尴尬。
 miniAvatar:CGM_AK33a.png;
 【茜】:「……变大了呢。」
 miniAvatar:none;
