@@ -6,7 +6,7 @@ miniAvatar:none;
 【篝】:「第四回。」 -fontSize=default;
 【篝】:「更过分的内容。」 -fontSize=default;
 changeFigure:CGM_KG23h.png -next;
-【篝】:「标签是：捆绑，强制高潮，放置play，纯爱凌辱（发明的奇妙词语）。」 -fontSize=default;
+【篝】:「标签是：捆绑，强制高潮，放置play，纯爱凌辱（自己发明的奇妙词语）。」 -fontSize=default;
 【篝】:「如果感到不适，请不要忍耐，立即按下关闭键吧。」 -fontSize=default;
 changeFigure:CGM_KG10h.png -next;
 【篝】:「朝着暴露性癖的大变态的道路大步疾行了呢。」 -fontSize=default;
@@ -172,7 +172,7 @@ miniAvatar:none;
 miniAvatar:CGM_AK14au.png
 【茜】:「必——杀！」
 miniAvatar:kotarou_1.png;
-【瑚太朗】:「请不要对着队友放必杀技！！！」
+【瑚太朗】:「我是你的队友啊！！！」
 miniAvatar:CGM_AK12au.png
 【茜】:「啊~是吗，我还以为旁边这个角色动作这么迟缓是AI呢。是瑚太朗水平太菜了呢。」
 miniAvatar:none;
@@ -196,13 +196,13 @@ miniAvatar:none;
 miniAvatar:kotarou_1.png;
 【瑚太朗】:「……哼哧哼哧哼哧哼哧」
 miniAvatar:none;
- :感觉更奇怪了。
+ :感觉表现得更奇怪了。在路上会被警察叫下来盘问的程度。
 changeBg:20240713065328_1.jpg -next;
 bgm:ShaLaLaEcstasy.mp3 -enter=1000;
 miniAvatar:CGM_AK10au.png
 【茜】:「……」
 miniAvatar:none;
- :朱音正在检查游戏里坦克的正面装甲弱点，正好背对着我。不知道是不是故意的。
+ :朱音正在检查游戏里主战坦克的正面装甲弱点，正好背对着我。不知道是不是故意的。
  :我悄悄地靠近过去。
 miniAvatar:CGM_AK10au.png
 【茜】:「………喔瑚太朗回来了吗……唔！」
@@ -448,7 +448,7 @@ changeFigure:CGM_KG10h.png -next;
 miniAvatar:none;
 【篝】:「次回，续朱音复仇篇之后的，朱音魔王篇。」 -fontSize=default;
 【篝】:「很想写自己在玩的游戏，于是真就写了一千字的空战，但还想再写一万字。当意识到的时候发现不对劲了但又不舍得删。」 -fontSize=default;
-【篝】:「于是就成了这个样子。这下是致敬奈○原一铁了。」 -fontSize=default;
+【篝】:「于是就成了这个样子。这下是空战原一铁了。」 -fontSize=default;
 changeFigure:CGM_KG17h.png -next;
 【篝】:「虽然不太好意思直接点明，但作者性癖………多少有点问题了。抱歉。」 -fontSize=default;
 changeFigure:CGM_KG32.png -next;

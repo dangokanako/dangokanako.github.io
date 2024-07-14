@@ -1,6 +1,6 @@
 ; 初始场景，以及特效演示
 intro:（请确保使用VPN（或者其他访问github的方式）以能顺利加载游戏资源，以获得良好的游戏体验）|请确保至少已经通关《Rewrite》的千里朱音线路。 -fontSize=medium -backgroundColor=rgba(0, 0, 0, 1) -fontColor=rgba(255, 255, 255, 1) -animation=fadeIn -delayTime=1500;
-intro:（……） -fontSize=medium -backgroundColor=rgba(0, 0, 0, 1) -fontColor=rgba(255, 255, 255, 1) -animation=fadeIn -delayTime=1500;
+intro:（最好按照选项顺序游玩。） -fontSize=medium -backgroundColor=rgba(0, 0, 0, 1) -fontColor=rgba(255, 255, 255, 1) -animation=fadeIn -delayTime=1500;
 changeBg:20240711001558_1.jpg -next;
 bgm:ShaLaLaEcstasy.mp3 -enter=1000;
 choose:场景1:sence1.txt|场景2:sence2.txt|场景3:sence3.txt|场景4:sence4.txt|选项:选择场景文件;
