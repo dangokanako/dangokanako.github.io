@@ -3,9 +3,7 @@ intro:（请确保使用VPN（或者其他访问github的方式）以能顺利�
 intro:（……） -fontSize=medium -backgroundColor=rgba(0, 0, 0, 1) -fontColor=rgba(255, 255, 255, 1) -animation=fadeIn -delayTime=1500;
 changeBg:20240711001558_1.jpg -next;
 bgm:ShaLaLaEcstasy.mp3 -enter=1000;
-choose:场景1:sence1.txt|场景2:sence2.txt|场景3:sence3.txt|选项:选择场景文件;
+choose:场景1:sence1.txt|场景2:sence2.txt|场景3:sence3.txt|场景4:sence4.txt|选项:选择场景文件;
 miniAvatar:kotarou_1.png;
-瑚太朗:「……这里预定是ひどい的朱音场景……但还没写」 -fontSize=default;
-miniAvatar:CGM_AK26au.png;
-茜:「……」 -fontSize=default;
+瑚太朗:「还没写。」 -fontSize=default;
 end;

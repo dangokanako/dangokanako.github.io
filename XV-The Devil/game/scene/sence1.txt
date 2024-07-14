@@ -216,7 +216,6 @@ playEffect:none -id=1;
 茜:「……」
  :我怀抱着朱音，两人互相感受着气息，什么也不做，享受着现在的时光。
 changeBg: 20240711190617_1.jpg;
-
 :…… 
 :………… 
 miniAvatar:CGM_AK26au.png;
