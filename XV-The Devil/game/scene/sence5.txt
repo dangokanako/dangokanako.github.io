@@ -1,0 +1,68 @@
+bgm:アンスリウム.mp3 -enter=1000; 
+changeBg:20240713050333_1.jpg -next;
+intro:（……） -fontSize=medium -backgroundColor=rgba(0, 0, 0, 1) -fontColor=rgba(255, 255, 255, 1) -animation=fadeIn -delayTime=1500;
+changeFigure:CGM_KG31.png -next;
+miniAvatar:none;
+【篝】:「第五回。」 -fontSize=default;
+【篝】:「随着整活的相声环节越来越少，本内容朝向纯纯的黄色废料小说的发展路线一去不复返了。」 -fontSize=default;
+changeFigure:CGM_KG23h.png -next;
+【篝】:「说起来本来就是黄色废料吧。」 -fontSize=default;
+changeBg:20240711001558_1.jpg -next;
+bgm:ShaLaLaEcstasy.mp3 -enter=1000;
+miniAvatar:kotarou_1.png;
+【瑚太朗】:「复仇是没有意义的。复仇的尽头是虚无。（正经）」
+miniAvatar:none;
+ :我义正言辞地告诫朱音。
+miniAvatar:kotarou_1.png;
+【瑚太朗】:「复仇只会使仇恨连锁，让这个世界变得更加可憎与痛苦。（正经）」
+miniAvatar:none;
+ :我继续发表演讲。
+miniAvatar:kotarou_1.png;
+【瑚太朗】:「尤其如今各种作品中，最后与复仇对象和解的作品越来越多。以德报怨才是这个时代最好的主题。（正经）」
+ :为什么我要说这些呢。
+ :因为我目前正面临着出生以来最大的贞操危机。
+ :由于第四话中结尾被朱音下了药。目前我被全裸丢在床上，并且浑身由于麻药的作用而动弹不得，简直就像某些作品里任人宰割的女主角。
+ :而且第四话做的事情太过火了，身体能不能完整度过今天都是一个未知数……
+ :不过由于我还能说话。所以接下来我就要用我的伶牙俐齿说服朱音。
+miniAvatar:CGM_AK30a.png;
+【茜】:「……但那样和解的作品往往会被抨击为圣母并且引发玩家的不满呢。（冷淡）」
+miniAvatar:none;
+ :朱音没看过，翻箱倒柜在找东西。
+【茜】:「先试试女装怎么样？」
+miniAvatar:kotarou_1.png;
+【瑚太朗】:「不好吧……你看我其实不是那种瘦弱设定，像是阿虚或者绫崎飒或者直枝理树那些有女装经验的才比较合适吧。本篇里我可是满健壮的喔。」
+miniAvatar:CGM_AK32a.png;
+【茜】:「是吗，那就全裸吧。（冷淡）」
+miniAvatar:none;
+ :虽然很羞耻。但很明显全裸总比女装好……于是我决定退而求其次接受全裸的提议。
+miniAvatar:kotarou_1.png;
+【瑚太朗】:「好吧……」
+miniAvatar:CGM_AK34a.png;
+【茜】:「原来更能接受的是全裸啊。那么就女装吧。这套就不错。你的设定从现在起有女装的设定了。（冷淡）」
+miniAvatar:kotarou_1.png;
+【瑚太朗】:「诶诶诶！不要随便增加设定啊！而且我的意见呢！」
+miniAvatar:CGM_AK33a.png;
+【茜】:「你的意见？从现在起，那种东西已经和你的意志一起不复存在了。」
+miniAvatar:CGM_AK34a.png;
+【茜】:「刚才你有考虑过我的意见吗？到现在为止我的逼里都还在流淫水。」
+miniAvatar:none;
+【瑚太朗】:「那个……年轻女孩子不能说那种词哦……很粗鲁的哦？」
+ :看来相当愤怒的样子呢……
+miniAvatar:CGM_AK34a.png;
+【茜】:「接下来你的鸡巴会被榨干成鱿鱼干，屁眼会被扩张到能通过仙人掌，睾丸被捏碎成鸡蛋清。做好觉悟了吗？」
+miniAvatar:none;
+【瑚太朗】:「能不能换一个没有刺的……仙人掌还是太过分了……」
+ :鱿鱼干也有点过分了……
+miniAvatar:CGM_AK33a.png;
+【茜】:「不好意思，忘记了，不需要你的觉悟。」
+【茜】:「先从你的人际关系开始毁灭吧。」
+【茜】:「明天早上你满脸精液全裸淫乱的照片就会被发送到剩下四个可攻略对象的手机上。」
+miniAvatar:none;
+【瑚太朗】:「不要啊！！！」
+miniAvatar:CGM_AK23au.png
+【茜】:「你哭也是没有用的喔。」
+miniAvatar:CGM_AK20au.png
+【茜】:「先想一下神户同学会怎么回复吧。」
+miniAvatar:none;
+【茜】:「“呆住（颜文字）”」
+end;

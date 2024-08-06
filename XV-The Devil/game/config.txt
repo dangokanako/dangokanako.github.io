@@ -1,0 +1,8 @@
+Game_name:朱音AFTER ~It's a Ero Life~（成人向对象）;
+Game_key:9cbad4a92ddbd;
+Title_img:title.jpg;
+Title_bgm:旅.mp3 -vocal= 偽らない君へ.mp3 -vocal= 偽らない君へ.mp3 -vocal= 偽らない君へ.mp3;
+Textbox_theme:imss;
+Game_Logo:;
+Description:新建文件夹3;
+Package_name:;

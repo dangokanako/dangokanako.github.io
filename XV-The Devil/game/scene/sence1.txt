@@ -1,0 +1,234 @@
+intro:（由于击败了附近的怪物，掉落了热水壶） -fontSize=medium -backgroundColor=rgba(0, 0, 0, 1) -fontColor=rgba(255, 255, 255, 1) -animation=fadeIn -delayTime=1500;
+changeBg:20240711001558_1.jpg -next;
+bgm:ShaLaLaEcstasy.mp3 -enter=1000;
+miniAvatar:CGM_AK15au.png;
+茜:「……为什么附近的怪物会掉落热水壶这种东西？」 -fontSize=default;
+茜:「这个世界果然有问题呢瑚太朗。」 -fontSize=default;
+miniAvatar:none;
+ :桌子上摆着我刚捡回来的热水壶。|虽然是旧式的，但感觉还是很莫名其妙。 -fontSize=default;
+miniAvatar:CGM_AK20au.png;
+茜:「要是热水壶这种东西也能随便从怪物身上获取的话。|希望下次能掉落一台电脑呢。」 -fontSize=default;
+miniAvatar:none;
+ :朱音端详着热水壶发出了莫名其妙的感叹。 -fontSize=default;
+miniAvatar:kotarou_1.png;
+瑚太朗:「就算拾取到了电脑也没有电力喔。」 -fontSize=default;
+miniAvatar:CGM_AK16au.png;
+茜:「那就再掉落一座发电站。」 -fontSize=default;
+miniAvatar:kotarou_1.png;
+瑚太朗:「如果我的背包装得下发电站的话……」 -fontSize=default;
+miniAvatar:none;
+ :我拿起热水壶，抚摸了两下。 -fontSize=default;
+playEffect:Teleport.m4a;
+miniAvatar:kotarou_1.png;
+瑚太朗:「哇啊！」 -fontSize=default;
+miniAvatar:none
+ :从热水壶里蹦出来了什么东西！
+changeFigure:CGM_KG10h.png -next;
+【？？？】:「从广纳恒温之水的容器将吾解放之人啊，|我是家居装潢精灵。」 -fontSize=default;
+【家居装潢精灵】:「作为解放我的奖励，|我可以实现你一个关于家居装潢的愿望。」 -fontSize=default;
+miniAvatar:CGM_AK15au.png;
+茜:「……」 -fontSize=default;
+miniAvatar:kotarou_1.png;
+瑚太朗:「朱音也很罕见的无语了呢。」 -fontSize=default;
+miniAvatar:CGM_AK15au.png;
+茜:「那个热水壶里装的不会是咖啡吧。」 -fontSize=default;
+changeFigure:CGM_KG18h.png -next;
+miniAvatar:none;
+【家居装潢精灵】:「かが……咳，家居装潢精灵不知道你在说什么喔。」 -fontSize=default;
+miniAvatar:CGM_AK14au.png;
+茜:「笑了，刚才绝对笑了！」 -fontSize=default;
+changeFigure:CGM_KG10h.png -next;
+miniAvatar:kotarou_1.png;
+瑚太朗:「但家具装潢这种愿望也太具体了吧？|比如想要一台电脑是可以的吗？」 -fontSize=default;
+miniAvatar:none;
+【家居装潢精灵】:「不行喔，只有家居装潢相关的愿望才可以的。」 -fontSize=default;
+miniAvatar:kotarou_1.png;
+瑚太朗:「负责的领域有点太具体了吧？！」 -fontSize=default;
+miniAvatar:CGM_AK23au.png;
+茜:「顺便一提，阿拉丁神灯是油灯喔，|并不是用来喝水泡茶的壶。」 -fontSize=default;
+miniAvatar:none;
+【家居装潢精灵】:「原来是这样，|是篝酱没有搞明白呢……」 -fontSize=default;
+miniAvatar:kotarou_1.png;
+瑚太朗:「那就把这里变成“不做爱就不能出去的房间”吧。」 -fontSize=default;
+miniAvatar:none;
+playEffect:Saint1.m4a;
+【家居装潢精灵】:「好的，你的愿望已经实现了。|篝酱回去喝咖啡了喔。」 -fontSize=default;
+changeFigure: -next;
+miniAvatar:CGM_AK30a.png;
+茜:「…吶，瑚太朗，我刚才没有听清呢，你许了什么愿望？」 -fontSize=default;
+changeFigure:CGM_KG10h.png -next;
+miniAvatar:none;
+【家居装潢精灵】:「顺便一提为本房间附赠了避孕魔法喔，请尽情享受吧。」 -fontSize=default;
+miniAvatar:CGM_AK14au.png;
+茜:「喂！那不是希露的魔法吗！」 -fontSize=default;
+changeFigure: -next;
+miniAvatar:kotarou_1.png;
+瑚太朗:「好的，我们赶紧检查一下房间吧！|真是令人怦然心动的展开呢！」 -fontSize=default;
+changeBg:20240711001601_1.jpg -next;
+miniAvatar:none;
+ :之后和朱音彻底检查了室内。门和窗户都完全打不开了。|地板和天花板也掀不开。破坏也无济于事。 -fontSize=default;
+miniAvatar:kotarou_1.png;
+瑚太朗:「喔喔！已经彻底成为“不做爱就不能出去的房间”了呢！事已至此，」 -fontSize=default;
+miniAvatar:kotarou_1.png;
+瑚太朗:「也就是说…………」 -fontSize=default;
+miniAvatar:CGM_AK33a.png;
+茜:「是会发生密室杀人案的绝佳地方呢。|我们赶紧来决定一下瑚太朗的死因吧。」 -fontSize=default;
+miniAvatar:kotarou_1.png;
+瑚太朗:「不是！而且我们家没有碰巧正在旅行的侦探！」 -fontSize=default;
+miniAvatar:CGM_AK11au.png;
+茜:「……」 -fontSize=default;
+miniAvatar:kotarou_1.png;
+瑚太朗:「……」 -fontSize=default;
+miniAvatar:none;
+ :气氛陷入了尴尬的沉默。 -fontSize=default;
+ :两人尴尬地坐在床头。 -fontSize=default;
+miniAvatar:CGM_AK26au.png;
+茜:「……随便说点什么啊？」 -fontSize=default;
+miniAvatar:none;
+ :在扭捏地玩弄我的手指。 -fontSize=default;
+miniAvatar:kotarou_1.png;
+瑚太朗:「……我正在回忆galgame里这种情况是怎么做的。」 -fontSize=default;
+miniAvatar:CGM_AK14au.png;
+茜:「……笨蛋吗？」 -fontSize=default;
+miniAvatar:kotarou_1.png;
+瑚太朗:「应该首先切换CG。」 -fontSize=default;
+playEffect:Open1.m4a;
+changeBg:20240711001552_1.jpg -next;
+miniAvatar:CGM_AK14au.png;
+茜:「只是把灯关上了而已……」 -fontSize=default;
+miniAvatar:kotarou_1.png;
+瑚太朗:「我也想切换到人物CG啊！可是真的没有啊！」 -fontSize=default;
+miniAvatar:kotarou_1.png;
+瑚太朗:「作为FanDisc的HaverstFestival虽然有泳装立绘但我端详了一下实在是一言难尽……立绘方面请自己尽力想象吧。」 -fontSize=default;
+miniAvatar:CGM_AK26au.png;
+茜:「那就这样继续吧……」 -fontSize=default;
+miniAvatar:none;
+ :拉住朱音的手，贴近她的脸庞…… 
+ :抱住她的身躯之后，一起顺势倒在床上。 
+ :看见她满脸羞红的样子，可爱极了。
+ :把她压在床下，脸对着脸，两只手十指相扣。
+ :我把脸凑上去，双唇贴住她的双唇。朱音也张开双唇回应了我。 
+ :舌头伸入朱音的领域。 
+playEffect:kiss01_chu_b(vo).ogg;
+茜:「唔…♡！」 
+ :感受到了来自双手的力量。发出抗议的声音也很可爱。 
+ :慢慢用舌头舔舐她的舌头。|交换唾液结束后，我抬起头来看向朱音。
+ :这么简单的动作，就已经开始感受到体内某些激素的分泌了…… 
+茜:「不要看啦，笨蛋。」
+ :由于腾不出双手，朱音侧过头去，挪开目光。  -fontSize=default;
+ :我把右手放在朱音的胸部上。
+瑚太朗:「可以吗？」
+ :黑暗中看到了她的微微点头。
+茜:「先把衣服脱了啦，笨蛋……」
+playEffect:Open2.m4a;
+ :（哼哧哼哧哼哧哼哧哼哧）（脱衣音效）
+瑚太朗:「没找到脱衣服的音效，只找到了脱装备的音效。|感觉差不多就拿来用了。」
+茜:「差不多才有鬼啊！」
+ :总之现在两人只穿着内衣了。
+茜:「……还是好害羞。」
+ :朱音把被子揪过来，裹在身上。|我也趁势钻了进去。
+ :和朱音侧身相依。脸上能够感受到她发热的呼吸。
+ :隔着黑色的内衣双手揉捏巨大的胸部。
+瑚太朗:「黑色内衣很适合呢。」
+茜:「反正我就是性格阴暗适合黑衣服……」
+ :不知道为什么闹别扭了。
+ :直接掀起内衣开始揉捏双峰。
+茜:「唔……一上来就……」
+playEffect:$02_actor002_action-00d.ogg;
+茜:「嗯啊啊……♡」
+茜:「你们男人都喜欢这种的吗？」
+瑚太朗:「是喔。」
+ :不假思索地承认了。
+茜:「只是脂肪块而已喔，那种东西和大叔的啤酒肚手感差不多的。」
+瑚太朗:「不要这种时候说这种话啊啊啊~~~！」
+茜:「噗嗤。」
+ :吐槽完之后我用舌头堵住她的嘴。
+ :被轻轻咬了一下。
+瑚太朗:「疼疼疼呜呜呜」
+ :但是朱音的双手搂住我的头，我们的脸再次贴在一起。
+ :我的右手开始向朱音的私处前进。
+ :在内裤外面摸到了微微的粘液，之后在这里上下而摸索。
+playEffect:kiss02_chuchu_b(vo).ogg;
+茜:「嗯……啊♡!」
+茜:「咳咳，……先说好，只是普通的生理现象而已。」
+ :还没等我说什么，朱音羞红了脸先开口了。
+瑚太朗:「满面潮红地否定没有什么说服力喔。」
+茜:「这个也是生理现象而已。不要大惊小怪……」
+playEffect:$02_actor002_action-078.ogg;
+茜:「嗯♡~~↗！」
+ :随着偷袭水晶塔的成功，朱音发出了奇妙的怪叫。
+茜:「好狡猾。」
+ :糟糕，正当我忙于环绕水晶的时候，我的下路防御塔也正在遭受攻击。
+ :朱音的右手握住了我的肉棒，妖娆地用手掌转了一圈。
+瑚太朗:「噫❤——！」
+茜:「就像这样喔，是普通的身体反应喔。|都会有的所以请不要大惊小怪。」
+ :朱音把肉棒上的前列腺液黏在手上，坏笑着拿到我面前展示。
+ :朱音妩媚地看着我的分身。
+茜:「虽然很失礼，但我还是很好奇。|这个部位能改写吗？」
+瑚太朗:「求你了会长大人表现得正常一点好吗。」
+茜:「咕呶。」
+瑚太朗:「虽然理论上是能的，|但请给我向写设定的人道歉！」
+茜:「咕呶。x2」
+瑚太朗:「……不过还是下次再试试吧，这次先普通的。」
+茜:「嗯……下次吧…」
+ :搂住朱音的身躯，之后翻身朝向天花板。|现在就像朱音压在我身上一样。
+瑚太朗:「要上了喔。」
+茜:「……欸？不是已经要结束了吗。」
+瑚太朗:「还没开始BOSS战呢。」
+ :稍微有点紧张。
+ :调整了一下入射角。前端还在外面就已经感受到了朱音的体液。|开始慢慢向内陆推进。
+茜:「呃，停、停一下喔，还没做好心理准备……」
+ :于是我停了下来，把她抱在怀里。继续互相感受彼此的气息。
+茜:「呃……我来吧……？」
+playEffect:!$02_actor002_breath05.ogg -id=1;
+ :朱音撑起身来，支吾了两下，我点了点头。|朱音调整了下姿势，开始慢慢吞入我的分身。
+茜:「嗯——嗯——啊，好疼啊、、、」
+ :很过分的皱着眉，忍耐浮现在脸上。
+瑚太朗:「没问题吗。」
+茜:「嗯……大概吧。」
+ :朱音把我的分身全部吞入，开始缓缓地上下抽动。|肉璧包裹着我，总有种很奇妙的感觉。
+茜:「嗯，嗯……♡」
+ :面颊翻红，汗珠从脸上滴下，咬着牙闭着眼忍耐着。
+茜:「也、……也就这样嘛。」
+瑚太朗:「已经不疼了吗？」 -fontSize=default;
+ :我抱住她，开始增加进出口频率。
+茜:「嗯？！」
+茜:「啊~♡，稍微有点快了♡！请稍微慢一点——♡」
+ :朱音的双手抓住我的肩头，头倚在我的胸前。
+瑚太朗:「要更快了喔！Breaking！」
+ :想把bgm换成Philosophyz。但遭到了强烈的反对，于是作罢了。
+ :故意加快了速度。
+茜:「啊啊…♡，为什么更快了，选Braking啊……♡」
+茜:「啊…！♡，……！♡，……！♡」
+ :听得出来朱音说话的时候一直忍耐着声音，终于什么都说不出来了。|在我怀中随着节奏缓缓起伏。
+茜:「……………………………………！♡」
+ :传来了朱音的内壁不自然的收缩，于是向BOSS发起最后的终结技。
+茜:「啊啊啊……♡！！！」
+ :朱音控制不住的口水落在我的胸上，双手的指甲刺入我的肩头。
+ :我把温暖注入朱音。
+changeBg:white.jpg;
+changeBg:20240711001552_1.jpg ;
+瑚太朗:「嗯嗯嗯……❤！」 -fontSize=default;
+茜:「瑚太朗的……」
+playEffect:none -id=1;
+ : 高潮过后。
+瑚太朗:「……」
+茜:「……」
+ :我怀抱着朱音，两人互相感受着气息，什么也不做，享受着现在的时光。
+changeBg: 20240711190617_1.jpg;
+:…… 
+:………… 
+miniAvatar:CGM_AK26au.png;
+茜:「……真的做了呢。」
+miniAvatar:none;
+瑚太朗:「ZZZZzzzz」
+miniAvatar:CGM_AK19au.png;
+茜:「……还在睡呢。」
+茜:「（掐）」
+miniAvatar:none;
+瑚太朗:「疼疼疼疼！干什么啦！」
+miniAvatar:CGM_AK20au.png;
+茜:「没什么。」
+miniAvatar:none;
+ :完。
+end;

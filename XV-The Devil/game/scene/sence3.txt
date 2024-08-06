@@ -1,0 +1,234 @@
+bgm:アンスリウム.mp3 -enter=1000; 
+changeBg:20240713050333_1.jpg -next;
+intro:（……） -fontSize=medium -backgroundColor=rgba(0, 0, 0, 1) -fontColor=rgba(255, 255, 255, 1) -animation=fadeIn -delayTime=1500;
+changeFigure:CGM_KG31.png -next;
+miniAvatar:none;
+【篝】:「书接上回。」 -fontSize=default;
+【篝】:「如果没有看上回的话一定要看上回喔，这两回剧情是连续的。」 -fontSize=default;
+changeFigure: -next;
+changeBg:20240711190617_1.jpg -next;
+bgm:ShaLaLaEcstasy.mp3 -enter=1000;
+miniAvatar:none;
+【瑚太朗】:「……（睁眼）天亮了吗……」
+【瑚太朗】:「……」
+【瑚太朗】:「这个BGM感觉不太对……Hsence已经结束了才对啊……」
+【瑚太朗】:「而且为什么我被绑在床上！」
+ :这时候才发现自己在床上全裸被绑成“大”字型。
+miniAvatar:CGM_AK33a.png;
+【茜】:「Hsence可没有结束喔。」
+miniAvatar:none;
+ :朱音放下手里的工作，从桌子前转过来看向我。
+miniAvatar:CGM_AK33a.png;
+【茜】:「昨晚发生很过分的事情了呢，你还记得吗？」
+miniAvatar:none;
+ :怎么办，这个时候应该说记得还是不记得……先随便选一个吧。
+【瑚太朗】:「……不……不记得了……」
+miniAvatar:CGM_AK34a.png;
+【茜】:「是吗，其实我也不记得了。」
+miniAvatar:none;
+【瑚太朗】:「……不不，我刚想起来了！是很过分的事情呢……」
+miniAvatar:CGM_AK33a.png;
+【茜】:「那我帮你忘记吧。」
+【茜】:「瑚太朗。其实这个问题的两个回答都是Dead End喔。」
+miniAvatar:none;
+【瑚太朗】:「我……我今天还要出去上班……不然会扣全勤奖……」
+miniAvatar:CGM_AK30a.png;
+【茜】:「在说什么梦话呢，你以后只能在这张床上作为性奴隶度过余生了呢。」
+miniAvatar:none;
+【瑚太朗】:「好可怕！黑化了！黑化了啊啊啊！」
+ :象征性地挣扎了起来。
+miniAvatar:CGM_AK30a.png;
+【茜】:「不，我一直都有腹黑这个属性喔。」
+miniAvatar:CGM_AK33a.png;
+【茜】:「在床底下除了绳子还找到了口球呢。是你昨天打算对我使用的吧。」
+miniAvatar:none;
+【瑚太朗】:「不不不那个只是准备用来举办第一次风祭杯拔河比赛以及奖品……唔唔唔！」
+miniAvatar:CGM_AK20au.png;
+【茜】:「那我提前先给你颁个奖喔。」
+miniAvatar:none;
+ :被朱音塞上了口球。可恶，明明打算先使用的。
+miniAvatar:CGM_AK33a.png;
+【茜】:「虽然明明是这么说，但下面从刚才起就一直是最大迎战状态呢。」
+miniAvatar:none;
+ :说完之后朱音用手开始在我的肉棒上来回抚摸。过于生疏的刺激让我异常敏感。
+miniAvatar:CGM_AK17au.png;
+【茜】:「接下来要怎么做呢？像挤海绵那样把精液挤出来吗？」
+miniAvatar:none;
+【瑚太朗】:「唔唔唔！」
+ :这句话一定是搞笑用的噱头，一定是吧？
+ :……
+miniAvatar:CGM_AK10au.png;
+【茜】:「……（用力）」
+miniAvatar:none;
+ :糟了，怎么真的开始用力了！
+miniAvatar:none;
+【瑚太朗】:「唔唔唔！！！！！」
+ :不要啊啊啊啊啊！
+ :开始临死挣扎。
+ :虽然绳子并不是最紧状态，留足了双臂血液循环的冗余，不至于让双臂发麻。但果然还是挣脱不开。
+ :都怪我让会长学习的性知识太少了，这就是自食其果吗，我就要死在这里了吗……
+ :再见了，我的肉棒……啊……啊……
+changeBg:white.jpg;
+changeBg:20240711190617_1.jpg ;
+miniAvatar:CGM_AK15au.png;
+【茜】:「好了，不逗你了。|别在那里演有的没的了。」
+miniAvatar:none;
+【瑚太朗】:「呜呜呜……」
+miniAvatar:CGM_AK15au.png;
+【茜】:「至于吗。」
+miniAvatar:CGM_AK15au.png;
+【茜】:「不过好像已经射了呢。」
+miniAvatar:none;
+ :朱音抹了抹手指上的精液，展示给我看。又抹在我脸上。
+ :这时才意识到自己彻底软下去了，不知不觉中已经射精了。怎么会这样。好丢人。虽然只有一个人可以丢了。
+miniAvatar:CGM_AK33a.png;
+【茜】:「濒死射精机制呢，身体感觉到快要死亡了，于是想要尽可能留下遗传物质的机制。」
+miniAvatar:none;
+ :朱音一脸洋洋得意的坏笑。
+miniAvatar:none;
+【瑚太朗】:「呜呜呜……」
+miniAvatar:none;
+ :请不要让我再体验这种事情了。话说真的有那个机制吗？
+miniAvatar:CGM_AK20au.png;
+【茜】:「人类真是脆弱呢，你说是吧。吶~」
+miniAvatar:none;
+ :不要对着我的肉棒说那种话啊！好恐怖！
+miniAvatar:CGM_AK33a.png;
+【茜】:「好了，复仇篇要正式开始了喔。」
+miniAvatar:none;
+ :朱音趴在床边，找了个位置，生疏地吞下了我的分身。
+playEffect:!$02_actor002_Fella05.ogg -id=3;
+ :但那个还没有勃起……
+miniAvatar:CGM_AK34a.png;
+【茜】:「……」
+miniAvatar:none;
+【瑚太朗】:「……」
+miniAvatar:CGM_AK34a.png;
+【茜】:「……」
+miniAvatar:none;
+【瑚太朗】:「……唔……」
+ :感觉不说点什么相当尴尬。
+ :而且这种时候根本没有这种音效吧……
+miniAvatar:CGM_AK33a.png;
+【茜】:「……变大了呢。」
+miniAvatar:none;
+ :朱音抬起头，故意对我说道。
+ :看我干什么。大头又控制不了小头。
+miniAvatar:CGM_AK30a.png;
+【茜】:「说起来海绵体没有骨头，是不是可以一口咬断呢？」
+miniAvatar:none;
+【瑚太朗】:「……」
+ :光速软下去了。
+miniAvatar:CGM_AK13au.png;
+【茜】:「加把劲啊。」
+miniAvatar:none;
+ :朱音摇着我软趴趴的分身。
+ :听了那种话都会吓趴的好吗。
+miniAvatar:CGM_AK26au.png;
+ :朱音又低下头去，把我的分身含入其中。
+miniAvatar:none;
+ :舌尖湿润的触感在冠状沟附近一圈又一圈刺激，没过多久很快就又充血变大了。
+ :拜托了，会长大人，不要再说什么奇怪的话了。
+ :「啾………」
+ :房间里开始缠绵起口交时奇妙的水声，唾液与前列腺液交融的声音。
+miniAvatar:CGM_AK26au.png;
+【茜】:「………」
+miniAvatar:none;
+ :虽然很生疏，但带给我的刺激无限强烈。
+miniAvatar:CGM_AK26au.png;
+【茜】:「……没有什么味道呢。」
+miniAvatar:none;
+ :朱音一边舔舐着最前端的位置一边说道。
+miniAvatar:CGM_AK26au.png;
+【茜】:「……已经够大了吧，为什么还不射精。」
+miniAvatar:none;
+ :……已经有不少感觉了……
+miniAvatar:CGM_AK26au.png;
+【茜】:「……唔……」
+miniAvatar:none;
+ :……不好，
+ :……已经快要到极限了，肉棒已经开始颤抖，马上就要……再来一点……
+ :还差一点点……
+miniAvatar:CGM_AK33a.png;
+【茜】:「……这个时候停下来会怎么样呢？」
+miniAvatar:none;
+ :朱音在最关键的时刻突然抬起头来说。
+【瑚太朗】:「……唔唔唔！！！」
+ :太残忍了啊啊啊！
+ :但是我还没反应过来，朱音又低下头给了最致命的一击！
+changeBg:white.jpg;
+changeBg:20240711190617_1.jpg ;
+【瑚太朗】:「……唔！！！」
+ :预料之外的射精刺激让我更加爽上了天。
+ :源源不断的精液射入了朱音的口中。
+ :似乎全部吞在嘴里了。
+ :朱音皱了一下眉毛，又看向了我。
+miniAvatar:CGM_AK30a.png;
+【茜】:「……」
+playEffect: -id=3;
+miniAvatar:none;
+ :朱音抿着嘴爬到床头，解开了我的口球。
+【瑚太朗】:「……呃，会长大人？」
+ :有着相当不妙的预感。
+miniAvatar:CGM_AK33a.png;
+【茜】:「……」
+miniAvatar:none;
+ :朱音柔软的双唇打开我的嘴巴，与我接吻。
+ :随之一股奇妙粘稠的液体从朱音嘴里灌入我的嘴里。
+ :这是我自己的精液啊！！！
+miniAvatar:CGM_AK33a.png;
+【茜】:「与君共饮。」
+miniAvatar:none;
+【瑚太朗】:「……咕呶。」
+miniAvatar:CGM_AK33a.png;
+【茜】:「那是我的专属台词喔。」
+miniAvatar:none;
+ :说完，朱音又把口球塞了回来。这下连把精液吐出来都做不到了。
+ :精液开始随着重力流入喉咙。呜呜呜。
+miniAvatar:none;
+【瑚太朗】:「唔唔……」
+miniAvatar:CGM_AK30a.png;
+【茜】:「好了，接下来玩什么项目呢，至少把游乐园的项目都玩一遍再走吧？」
+miniAvatar:CGM_AK33a.png;
+【茜】:「现在这里唯一不缺的就是时间呢。」
+miniAvatar:none;
+【瑚太朗】:「呜呜呜…………」
+ :朱音不会真的黑化了吧。不要啊。
+ :泪水和口水不争气地淌在床上。
+miniAvatar:CGM_AK17au.png;
+【茜】:「怎么真的哭了啊。」
+miniAvatar:none;
+ :朱音用左手给我解开口球，摸了摸我的脸。
+【瑚太朗】:「呜呜……」
+miniAvatar:CGM_AK17au.png;
+【茜】:「抱歉抱歉。玩过头了。」
+miniAvatar:none;
+【瑚太朗】:「朱音……」
+ :没想到朱音是这么温柔的人。
+ :和朱音温柔的眼睛对视，希望能把这份心意传递给她。
+miniAvatar:CGM_AK18au.png;
+【茜】:「怎么了，乖乖喔。」
+ :朱音用左手摸了摸我的头。
+miniAvatar:none;
+【瑚太朗】:「能把另一只手的动作停下来吗？」
+ :朱音的右手正在握着我的肉棒激烈地撸动，已经进行到最后阶段了。
+miniAvatar:CGM_AK33a.png;
+【茜】:「不行。那是另一码事喔。」
+changeBg:white.jpg;
+changeBg:20240711190617_1.jpg ;
+miniAvatar:none;
+ :就这样，我又射精了。
+ :……
+ :…………
+bgm:アンスリウム.mp3 -enter=1000; 
+changeBg:20240713050333_1.jpg -next;
+intro:（……） -fontSize=medium -backgroundColor=rgba(0, 0, 0, 1) -fontColor=rgba(255, 255, 255, 1) -animation=fadeIn -delayTime=1500;
+changeFigure:CGM_KG31.png -next;
+miniAvatar:none;
+【篝】:「补充了前两篇会长所缺少的腹黑气质呢。」 -fontSize=default;
+【篝】:「尽管一开始是这么想的，但摸到键盘居然停不下来手了。」 -fontSize=default;
+changeFigure:CGM_KG10h.png -next;
+【篝】:「但还请不要问作者的性癖到底是什么样子的。」 -fontSize=default;
+changeFigure:CGM_KG18h.png -next;
+【篝】:「那么再见了。」 -fontSize=default;
+end;

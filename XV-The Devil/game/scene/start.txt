@@ -1,0 +1,17 @@
+; 初始场景，以及特效演示
+intro:（请确保使用VPN（或者其他访问github的方式）以能顺利加载游戏资源，以获得良好的游戏体验）|请确保至少已经通关《Rewrite》的千里朱音线路。 -fontSize=medium -backgroundColor=rgba(0, 0, 0, 1) -fontColor=rgba(255, 255, 255, 1) -animation=fadeIn -delayTime=1500;
+bgm:アンスリウム.mp3 -enter=1000; 
+changeBg:20240713050333_1.jpg -next;
+changeFigure:CGM_KG31.png -next;
+miniAvatar:none;
+【篝】:「警告。」 -fontSize=default;
+【篝】:「由于作者暴露出来扭曲性癖越来越多（虽然没有R18G的程度）。」 -fontSize=default;
+【篝】:「所以本文适合观看的人数将逐渐下降并最终无限趋近于1（也就是说仅适合作者本人观看）」 -fontSize=default;
+changeFigure:CGM_KG17h.png -next;
+【篝】:「由于已经非常对不起角色了，所以不想继续对不起读者了。」 -fontSize=default;
+changeFigure:CGM_KG23h.png -next;
+【篝】:「这是最后一次警告了。」 -fontSize=default;
+【篝】:「如果还要继续的话，请尽量按照选项顺序观看。」 -fontSize=default;
+changeFigure: -next;
+choose:场景1:sence1.txt|场景2:sence2.txt|场景3:sence3.txt|场景3.5:sence3.5.txt|场景4:sence4.txt;
+end;
