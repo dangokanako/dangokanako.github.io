@@ -1,0 +1,221 @@
+bgm:アンスリウム.mp3 -enter=1000; 
+changeBg:20240713050333_1.jpg -next;
+intro:（……） -fontSize=medium -backgroundColor=rgba(0, 0, 0, 1) -fontColor=rgba(255, 255, 255, 1) -animation=fadeIn -delayTime=1500;
+changeFigure:CGM_KG31.png -next;
+miniAvatar:none;
+【篝】:「R18。」 -fontSize=default;
+【篝】:「顺便一提，是朱音视角。」 -fontSize=default;
+【篝】:「说实话，不擅长啊。」 -fontSize=default;
+【篝】:「说实话，根本没有擅长的东西啊……」 -fontSize=default;
+changeBg:20240711190617_1.jpg -next;
+changeFigure: -next;
+miniAvatar:CGM_AK14au.png;
+【茜】:「瑚太朗——！！」
+【茜】:「用完手柄插回去充电啊！！！」
+miniAvatar:none;
+ :这个笨蛋，昨天晚上又熬夜玩游戏了。今早起来一看手柄就摆在桌子上。
+miniAvatar:CGM_AK14au.png;
+【茜】:「瑚太朗———醒着没有啊——」
+miniAvatar:none;
+ :没有回应。用脚在地板上探到了拖鞋，决定下楼找一下他。
+miniAvatar:CGM_AK15au.png;
+【茜】:「人呢？怎么没回话？鬼鬼祟祟地在干嘛呢？」
+changeBg:BG046_compressed.png -next;
+miniAvatar:none;
+ :下楼梯的时候正好看见瑚太朗在楼梯下面。
+miniAvatar:kotarou_1.png;
+【瑚太朗】:「……欸」
+miniAvatar:none;
+ :很明显地在藏着什么东西。
+miniAvatar:CGM_AK23au.png;
+【茜】:「故意把手背过去简直就是在告诉别人自己藏着不可告人的东西。」
+miniAvatar:kotarou_1.png;
+【瑚太朗】:「说的是呢，那我先走一步——」
+miniAvatar:CGM_AK14au.png;
+【茜】:「喂！不许跑！」
+miniAvatar:none;
+ :赶紧三步并作两步，踩着楼梯下楼。
+miniAvatar:CGM_AK15au.png;
+【茜】:「……啊……」
+miniAvatar:none;
+ :左脚不习惯的大步伐直接踩空了台阶，可爱的拖鞋脱离脚掌的束缚飞了出去。
+ :时间变慢了。
+ :两手悬空，左脚完全失去支点，右脚虽然还在楼梯上，但随着身体跌落只是时间问题……
+miniAvatar:kotarou_1.png;
+【瑚太朗】:「……啊……」
+miniAvatar:none;
+ :看见瑚太朗一帧一帧地回过头来，没说什么，但正呆呆地望着楼梯上的情况。
+ :虽然看见他抛下了可疑物品，但似乎来不及了……
+ :笨蛋（两个人都是），很危险的情况啊，现在已经开始临死前慢镜头回放了！快用超能力做点什么啊！
+miniAvatar:CGM_AK15au.png;
+【茜】:「啊……」
+miniAvatar:none;
+ :不知道是时间太慢了，还是自己太紧张了，喉咙根本没有发出声音。
+miniAvatar:CGM_AK15au.png;
+ :左脚已经彻底失去平衡了，而右脚在身体重心前倾的情况下，不可能再踩到楼梯上了。
+ :这样的话只能像漫画那样，在楼梯上咕噜咕噜地滚下去了。
+miniAvatar:CGM_AK23au.png;
+ :虽然很不是时候，但毕竟走马灯了，还是要讲解一下，楼梯方方正正的边缘会对身体造成不小的冲击伤害。
+ :如果现实中不幸遇到滚下阶梯的这种情况，记得优先保护头部喔。（笑）
+miniAvatar:kotarou_1.png;
+【瑚太朗】:「……」
+miniAvatar:none;
+ :既然这样的话……嗯……闭上眼睛。
+changeBg:black.jpg -next;
+ :右脚用最后的力量蹬地！
+ :直接越过楼梯，腾空跃向一楼地面，双手扑向前方。
+changeBg:BG046_compressed.png -next;
+ :悄悄睁开眼睛看一下……
+ :看见他正默契地张开双臂准备接住我。——安心了。
+ :时间恢复正常了。
+ :就这样扑入他的怀中——
+playEffect:Blow1.m4a;
+changeBg:black.jpg -next;
+ :……！撞到头了，好疼！
+ :…………
+ :………………刚才应该有张CG的。
+changeBg:BG046_compressed.png -next;
+miniAvatar:CGM_AK15au.png;
+bgm:ShaLaLaEcstasy.mp3 -enter=1000;
+【茜（？）】:「……」
+ :一睁眼就看到自己的睡脸贴在自己胸前。这……是不是不太妙吧？
+miniAvatar:CGM_AK15au.png;
+ :是自己已经灵魂出窍了吗……
+miniAvatar:CGM_AK19au.png;
+ :果然自己还是死了吗。嘛，瑚太朗，对不住了。
+ :好傻喔。感觉到了莫名的悲伤。用手摸了摸自己的脸……
+miniAvatar:CGM_AK17au.png
+ :手？
+miniAvatar:CGM_AK15au.png
+ :起身又摸了下自己。大概掌握情况了。
+miniAvatar:CGM_AK14au.png;
+【茜（？）】:「瑚太朗你这个混蛋给我起来！搞得什么鬼导致身体互换了！！！」
+ :摇着自己的身体。好轻。
+miniAvatar:CGM_AK14au.png;
+【茜（？）】:「别装死！」
+miniAvatar:CGM_AK15au.png;
+ :又摇了摇。摸了摸呼吸是在的。看来真的晕过去了。
+ :看了下刚才丢在地上的杂志。《有纪宁的占卜游戏书》。检查了一下，具体内容还是不说了。总之非常两性。
+miniAvatar:CGM_AK14au.png;
+【茜（？）】:「占卜这种东西在各种作品里100%会有用的！你这家伙！」
+miniAvatar:CGM_AK15au.png;
+ :瑚太朗（自己的身体）晕过去了，现在摇也没什么用。
+miniAvatar:CGM_AK33a.png;
+ :嗯……这是？
+ :自己纤细的手腕上还缠着黄色发圈呢…………
+ :先用绳子绑起来然后抱上楼吧。
+changeBg:black.jpg -next;
+miniAvatar:CGM_AK15au.png;
+ :……
+ :…………
+ :唔……
+ :这个就是肉棒？该按什么开关勃起？
+ :揉捏一下………………啊呃呃呃呃…蛋疼……是这样的…………………
+ :接下来检查一下自己吧。
+ :嘛……感觉自己好像变态……
+ :……感觉好怪。
+ :要解说吗？自己脑补吧。
+ :坐在床边，面对面抱着五花大绑的自己。还真是奇妙……
+ :肉棒已经坚挺起来了……看来好像确实不需要开关什么的呢……
+ :注：为了保证呼吸通畅暂时不堵嘴了。
+changeBg:20240711001601_1.jpg -next;
+miniAvatar:CGM_AK12au.png;
+【茜（？）】:「早上了，早上了哦，吃过早餐去上学了哦？」
+miniAvatar:none;
+【瑚（？）】:「……」
+miniAvatar:CGM_AK13au.png;
+【茜（？）】:「（轻轻揉捏朱音的欧派）」
+miniAvatar:none;
+【瑚（？）】:「……」
+miniAvatar:CGM_AK13au.png;
+【茜（？）】:「（抚摸硬起来的乳首）」
+miniAvatar:none;
+【瑚（？）】:「………………」
+miniAvatar:CGM_AK13au.png;
+【茜（？）】:「（小心翼翼地按压裸露的阴蒂）」
+miniAvatar:none;
+【瑚（？）】:「…………………………」
+miniAvatar:CGM_AK13au.png;
+【茜（？）】:「（在湿漉漉的蜜穴的附近爱抚）」
+miniAvatar:none;
+【瑚（？）】:「……………………………………」
+playEffect:Blow1.m4a;
+miniAvatar:CGM_AK20au.png;
+【茜（？）】:「（抱紧身体，然后将坚挺的肉棒直接刺入蜜穴的最深处开始抽插！！！）」
+miniAvatar:none;
+【瑚（？）】:「啊啊啊啊~~♡！别，停，认输♡！哪有这样的！」
+miniAvatar:CGM_AK20au.png;
+【茜（？）】:「你这家伙，早就醒了吧？（继续疯狂把肉棒在蜜穴中搅得乱七八糟！！！）」
+miniAvatar:none;
+【瑚（？）】:「哈啊，对……对不起~~~~♡」
+miniAvatar:CGM_AK20au.png;
+【茜（？）】:「什么时候醒的？（一只手抱住身体，另一只手狠狠地捏住坚挺的乳首！！）」
+miniAvatar:none;
+【瑚（？）】:「哈啊，哈啊，在玩你的~~~~♡不是~~~♡哈啊，我的蛋蛋的时候~~~~~♡」
+miniAvatar:CGM_AK20au.png;
+【茜（？）】:「来，告诉我，高潮了吗？你们男人最喜欢问这种问题了，来啊，告诉我啊！（开始比刚才更加频繁地抽插！！！淫霏的水声一次次回荡在房间。）」
+miniAvatar:none;
+【瑚（？）】:「哈，哈，哈啊……真的要高潮了♡~~~♡求你了♡，停一下吧~~~♡♡♡」
+miniAvatar:CGM_AK20au.png;
+【茜（？）】:「不许用我的身体说出那种丧家犬的话！！（朱音身体的眼神涣散，几乎快要翻出白眼，急促的呼吸让脸上阵阵潮红）」
+miniAvatar:none;
+【瑚（？）】:「对……对不起……♡」
+miniAvatar:CGM_AK20au.png;
+【茜（？）】:「都说了不许道歉！要狠狠地惩罚一下呢！！（朱音的头部自然垂下，朱音身体在自己眼前幅度更大地起伏运动，一次次发出肉体碰撞时淫荡的鼓掌声）」
+miniAvatar:none;
+【瑚（？）】:「呜……♡呜……呜呜……♡真的……要去了……♡（用尽全力组织了几个音节出来）」
+miniAvatar:CGM_AK20au.png;
+【茜（？）】:「怎么？之前要高潮是假的？在戏弄我吗？！（朱音脸上的涎水自然淌下，只剩下急促淫荡的呼吸）」
+miniAvatar:CGM_AK20au.png;
+【茜（？）】:「来啊，说话啊，怎么不说话了？！不是最喜欢在这种节骨眼解说吗？！（肉棒继续无情地在蜜穴内翻弄，刺激每一个褶皱，把快感传入大脑。）」
+miniAvatar:CGM_AK20au.png;
+【茜（？）】:「到选项时间了！快选，射在里面还是射在外面！！（肉棒在临界状态再次隐隐变大，为最后的发射准备再次火上浇油）」
+miniAvatar:none;
+【瑚（？）】:「外…………哈……哈……♡面…………哈……♡（从完全脱力的身体里艰难地崩出来了两个字）」
+miniAvatar:CGM_AK34a.png;
+【茜（？）】:「……」
+miniAvatar:none;
+ :精液泼洒在朱音身体的小腹上。
+ :朱音身体被强制开腿的小穴中也流出了汩汩爱液，顺着大腿根淌在地板上。
+miniAvatar:none;
+【瑚（？）】:「…………♡（朱音的身体浑身被紧缚，双目无神，浑身脱力）」
+miniAvatar:CGM_AK20au.png;
+【茜（？）】:「来，快回答舒不舒服！！现在体验过了，感觉怎么样啊？！啊？（钳住朱音身体的脸颊）」
+miniAvatar:none;
+【瑚（？）】:「………♡（用身体的摇晃，微微点了点头）」
+miniAvatar:CGM_AK20au.png;
+【茜（？）】:「好，开始第二回合吧。」
+miniAvatar:none;
+【瑚（？）】:「呜………♡（用身体的摇晃，微微摇了摇头）」
+miniAvatar:CGM_AK20au.png;
+【茜（？）】:「插播一条完全无关的知识问答，三英战吕布的时候和吕布打了多少回合？」
+miniAvatar:none;
+【瑚（？）】:「呜呜呜………♡（朱音身体的眼神露出了恐惧的神色，身体开始打颤）」
+miniAvatar:CGM_AK20au.png;
+【茜（？）】:「其实我也不知道。」
+miniAvatar:CGM_AK23au.png;
+【茜（？）】:「好了，别装死了，告诉我怎么把身体换回来。」
+miniAvatar:none;
+【瑚（？）】:「不……是真的……不行了啦……（朱音的身体小声说着）」
+ :不过我之前就把那本占卜书看了一下。
+miniAvatar:none;
+【瑚（？）】:「把头伸过来……我告诉你……（朱音的身体把脸凑到了面前）」
+ :所以其实交换身体的规则还是知道的。嘛，所以，果然要那个了啊。坏蛋。
+ :于是我也故作好奇把脸凑了上去。
+playEffect:Blow1.m4a;
+miniAvatar:none;
+【瑚（？）】:「像这样！」
+ :他用额头碰了我的额头。
+ :眼前的笑容从自己变回了他。
+ :不过这样的话……身体真的被自己绑得一动动不了。
+ :完。
+bgm:アンスリウム.mp3 -enter=1000; 
+changeBg:20240713050333_1.jpg -next;
+intro:（……） -fontSize=medium -backgroundColor=rgba(0, 0, 0, 1) -fontColor=rgba(255, 255, 255, 1) -animation=fadeIn -delayTime=1500;
+changeFigure:CGM_KG10h.png -next;
+miniAvatar:none;
+【篝】:「我○，什么性癖啊。」 -fontSize=default;
+【篝】:「真的还要写下集吗？啊？」 -fontSize=default;
+changeFigure:CGM_KG32.png -next;
+【篝】:「……」 -fontSize=default;
+end;

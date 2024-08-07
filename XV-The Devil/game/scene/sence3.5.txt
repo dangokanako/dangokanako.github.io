@@ -47,13 +47,16 @@ miniAvatar:CGM_AK23au.png;
 miniAvatar:kotarou_1.png;
 【瑚太朗】:「可恶，说服判定过不去，只能使用武力了！」
 miniAvatar:none;
- :决定把朱音强行拖出去，于是直接上下其手（不能这么用）。直接把朱音从椅子上抱起来。
+ :决定把朱音强行拖出去，于是直接上下其手（这个成语不能这么用）。直接把朱音从椅子上抱起来。
+playEffect:Blow1.m4a;
 miniAvatar:CGM_AK27au.png;
 【茜】:「欸欸欸！」
+playEffect:Blow1.m4a;
 miniAvatar:none;
  :朱音见情况不妙，开始在我的怀里闹腾。我牢牢地抱着，防止她掉下来。
 miniAvatar:CGM_AK27au.png;
 【茜】:「好啦好啦我会出去的快放我下来！你这家伙！」
+playEffect:Blow1.m4a;
 【茜】:「至少让我把衣服穿好喂！」
 miniAvatar:none;
  :于是朱音拗不过我，还是收拾好准备出门了。
@@ -142,6 +145,7 @@ miniAvatar:kotarou_1.png;
 【瑚太朗】:「嗯？先从什么开始？」
 miniAvatar:CGM_AK16au.png;
 【茜】:「爬不动啦！你这个——————开挂混蛋！」
+playEffect:Blow1.m4a;
 miniAvatar:none;
  :突然从后面砸过来个水壶。回过头来看见朱音气喘吁吁，一脸怒气冲冲地瞪着我。
 miniAvatar:CGM_AK16au.png;
@@ -173,5 +177,5 @@ miniAvatar:none;
  :朱音的脸趴在我的背上，没有回答。
 miniAvatar:CGM_AK15au.png;
 【茜】:「暂时就写到这了，困了，要睡觉了。」
-end;��太朗】:「」
+end;��太朗】:「」
 end;
