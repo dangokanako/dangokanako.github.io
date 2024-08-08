@@ -184,7 +184,7 @@ miniAvatar:none;
 miniAvatar:none;
 【瑚（？）】:「…………♡（朱音的身体浑身被紧缚，双目无神，浑身脱力）」
 miniAvatar:CGM_AK20au.png;
-【茜（？）】:「来，快回答舒不舒服！！现在体验过了，感觉怎么样啊？！啊？（钳住朱音身体的脸颊）」
+【茜（？）】:「来，快回答舒不舒服！！现在体验过了，感觉怎么样啊？！啊？（用一只手钳住朱音身体的脸颊）」
 miniAvatar:none;
 【瑚（？）】:「………♡（用身体的摇晃，微微点了点头）」
 miniAvatar:CGM_AK20au.png;
@@ -192,26 +192,32 @@ miniAvatar:CGM_AK20au.png;
 miniAvatar:none;
 【瑚（？）】:「呜………♡（用身体的摇晃，微微摇了摇头）」
 miniAvatar:CGM_AK20au.png;
-【茜（？）】:「插播一条完全无关的知识问答，三英战吕布的时候和吕布打了多少回合？」
+【茜（？）】:「接下来是持续三天三夜的凌辱地狱剧情喔？不是最喜欢这种剧情的吗？啊？（用手捏了捏脸庞）」
 miniAvatar:none;
 【瑚（？）】:「呜呜呜………♡（朱音身体的眼神露出了恐惧的神色，身体开始打颤）」
 miniAvatar:CGM_AK20au.png;
-【茜（？）】:「其实我也不知道。」
-miniAvatar:CGM_AK23au.png;
-【茜（？）】:「好了，别装死了，告诉我怎么把身体换回来。」
+【茜（？）】:「高兴啊？为什么不高兴？（再一次，把又坚挺的肉棒插入了蜜穴最深处，就这样嵌在里面不动）」
 miniAvatar:none;
-【瑚（？）】:「不……是真的……不行了啦……（朱音的身体小声说着）」
+【瑚（？）】:「呜………♡（翻白眼了）」
+miniAvatar:CGM_AK20au.png;
+【茜（？）】:「别装死了，告诉我怎么把身体换回来。（用手狠狠地掐住乳首）」
+miniAvatar:none;
+【瑚（？）】:「不……是真的……不行了啦……♡（朱音的身体小声说着）」
+miniAvatar:CGM_AK20au.png;
+【茜（？）】:「要我开始以每分钟1800的频率开始抽插吗？快点说出来比较好喔？」
+miniAvatar:none;
+【瑚（？）】:「啊，那个啊……我说，我说……♡（朱音的身体把脸凑到了面前，要说些什么）」
  :不过我之前就把那本占卜书看了一下。
-miniAvatar:none;
-【瑚（？）】:「把头伸过来……我告诉你……（朱音的身体把脸凑到了面前）」
- :所以其实交换身体的规则还是知道的。嘛，所以，果然要那个了啊。坏蛋。
+ :所以其实交换身体的规则还是知道的。嘛，所以，果然想要那么玩啊。坏蛋。
  :于是我也故作好奇把脸凑了上去。
+miniAvatar:CGM_AK23au.png;
+【茜（？）】:「什么呀？（明知故问）」
 playEffect:Blow1.m4a;
 miniAvatar:none;
 【瑚（？）】:「像这样！」
  :他用额头碰了我的额头。
  :眼前的笑容从自己变回了他。
- :不过这样的话……身体真的被自己绑得一动动不了。
+ :不过这样的话，身体真的是被自己绑得一动动不了，而肉棒正深深嵌入在自己的最深处……大危机呢。稍微有点兴奋。
  :完。
 bgm:アンスリウム.mp3 -enter=1000; 
 changeBg:20240713050333_1.jpg -next;
@@ -219,7 +225,7 @@ intro:（……） -fontSize=medium -backgroundColor=rgba(0, 0, 0, 1) -fontColor
 changeFigure:CGM_KG10h.png -next;
 miniAvatar:none;
 【篝】:「我○，什么性癖啊。」 -fontSize=default;
-【篝】:「真的还要写下集吗？啊？」 -fontSize=default;
+【篝】:「真的还要写下集吗？啊？（反问自己）」 -fontSize=default;
 changeFigure:CGM_KG32.png -next;
 【篝】:「……」 -fontSize=default;
 end;
