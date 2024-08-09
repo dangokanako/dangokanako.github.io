@@ -24,7 +24,7 @@ miniAvatar:CGM_AK15au.png;
 changeBg:BG046_compressed.png -next;
 miniAvatar:none;
  :下楼梯的时候正好看见瑚太朗在楼梯下面。
-miniAvatar:kotarou_1.png;
+miniAvatar:kotarou_1.;
 【瑚太朗】:「……欸」
 miniAvatar:none;
  :很明显地在藏着什么东西。

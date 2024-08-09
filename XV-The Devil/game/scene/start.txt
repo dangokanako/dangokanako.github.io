@@ -13,5 +13,5 @@ changeFigure:CGM_KG23h.png -next;
 【篝】:「这是最后一次警告了。」 -fontSize=default;
 【篝】:「如果还要继续的话，请尽量按照选项顺序观看。」 -fontSize=default;
 changeFigure: -next;
-choose:场景1:sence1.txt|场景2:sence2.txt|场景3:sence3.txt|场景3.5:sence3.5.txt|场景4:sence4.txt|场景5:sence5.txt|场景6:sence6.txt;
+choose:场景1:sence1.txt|场景2:sence2.txt|场景3:sence3.txt|场景3.5:sence3.5.txt|场景4:sence4.txt|场景5:sence5.txt|场景6:sence6.txt|下一页:second.txt;
 end;
