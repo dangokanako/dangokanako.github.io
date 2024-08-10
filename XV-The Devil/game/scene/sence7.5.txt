@@ -1,0 +1,353 @@
+bgm:アンスリウム.mp3 -enter=1000; 
+changeBg:20240713050333_1.jpg -next;
+intro:（……） -fontSize=medium -backgroundColor=rgba(0, 0, 0, 1) -fontColor=rgba(255, 255, 255, 1) -animation=fadeIn -delayTime=1500;
+changeFigure:CGM_KG31.png -next;
+miniAvatar:none;
+【篝】:「书接上回。」 -fontSize=default;
+【篝】:「不过说实话，有没有小数点已经无所谓了吧。」 -fontSize=default;
+【篝】:「毕竟只有干巴巴的文本，也没有一些赏心悦目的CG。」 -fontSize=default;
+【篝】:「说起来故事好像开始连载了一样呢……」 -fontSize=default;
+changeFigure: -next;
+changeBg:black.jpg -next;
+【茜】:「……」
+ :头脑一篇模糊。
+ :躺在安心的触感上。
+ :衣物都好好穿着。
+ :身上传来刚洗过澡的沐浴液的味道。
+ :从厨房传来熟悉的饭菜味道。
+ :回想一下发生了什么吧……
+ :……
+changeBg:BG046_compressed.png -next;
+miniAvatar:CGM_AK15au.png;
+【茜】:「……还真是刺激的梦啊……」
+【茜】:「怎么会做这种梦。」
+ :环顾四周。
+bgm:綿帽子.mp3 -enter=500; 
+changeFigure:CGM_KT11ah.png -next;
+miniAvatar:CGM_AK17au.png;
+【茜】:「……」
+miniAvatar:none;
+【鸟】:「瑚太朗~~，会长醒了喔？」
+miniAvatar:CGM_AK14au.png;
+ :以迅雷不及掩耳之势拿起桌子上的水果刀！
+changeFigure:CGM_KT18ah.png -next;
+miniAvatar:none;
+【鸟】:「不、！不好了、！！瑚太朗！！！快过来！！！」
+miniAvatar:CGM_AK14au.png;
+ :以迅雷不及掩耳之势把水果刀拔出来——
+ :身后传来了急促的脚步声。
+miniAvatar:none;
+【鸟】:「咿啊啊啊啊啊！！！！！！！！！」
+miniAvatar:CGM_AK15au.png;
+ :感觉手感不太对劲，仔细一看。
+ :橡胶玩具刀？
+miniAvatar:none;
+ :把玩具刀用力刺入心脏。
+ :橡胶制成的刀刃像我的人生一样，非常搞笑地弯折了下去。
+miniAvatar:CGM_AK15au.png;
+ :完完全全被算计了呢。
+miniAvatar:none;
+ :理解发生了什么之后，就被熟悉的触感从背后重重地按在柔软的沙发上了。
+miniAvatar:kotarou_1.png;
+【瑚】:「快！小鸟！把绳子拿过来！」
+miniAvatar:none;
+【鸟】:「是……」
+ :两个人压在我身上七手八脚地忙活着。我无力地把头陷入沙发。
+changeFigure:CGM_KT25ah.png -next;
+【鸟】:「那个啊，会长，如果真的非常在意的话？」
+【鸟】:「……也可以给你看看我的裸体喔？」
+miniAvatar:CGM_AK23au.png;
+【茜】:「那种成人同人志式的发展只会有一个人高兴，还是算了吧。」
+【茜】:「而且那样的话感觉自己更可悲了。」
+miniAvatar:none;
+ :两个人把我的双臂塞入束缚单手套里。
+changeFigure:CGM_KT20ah.png -next;
+【鸟】:「家里道具种类真多呢，瑚太朗？」
+miniAvatar:kotarou_1.png;
+【瑚】:「有好好征得同意之后才购买的喔。」
+miniAvatar:CGM_AK27au.png;
+【茜】:「够了，让我现在就找个桌角撞死！」
+ :想要从沙发上跳起来。
+changeFigure:CGM_KT18ah.png -next;
+miniAvatar:none;
+【鸟】:「请冷静下来！」
+ :果然又被瑚太朗紧紧抱住了。
+miniAvatar:kotarou_1.png;
+【瑚】:「要好好地和我一起活下去啊！」
+miniAvatar:CGM_AK27au.png;
+【茜】:「还他妈不是因为你？！」
+miniAvatar:none;
+changeFigure: -next;
+changeBg:black.jpg -next;
+ :……
+ :…………
+ :………………
+playEffect:弓を引き絞る1.mp3;
+changeBg:BG046_compressed.png -next;
+ :于是双腿也被牢牢地绑在了一起。手和腿被绳子连在一起。
+ :舒舒服服地躺在沙发的枕头上。
+miniAvatar:kotarou_1.png;
+【瑚】:「嗯……那个……咬舌自尽在理论上是行不通的喔？所以就不给你嘴里塞东西了？」
+miniAvatar:CGM_AK20au.png;
+【茜】:「故意羞辱我这么有意思吗，这也是你性癖的一环吗？」
+【茜】:「在凌辱我的过程中感受到了性愉悦了吗？有让你达到性高潮吗？」
+miniAvatar:kotarou_1.png;
+【瑚】:「嗯。」
+miniAvatar:CGM_AK27au.png;
+【茜】:「神经啊！为什么直接承认了！」
+miniAvatar:CGM_AK21au.png;
+【茜】:「现在就把我杀了。」
+【茜】:「真应该像特工一样在后槽牙准备自杀用的毒药。」
+changeFigure:CGM_KT25ah.png -next;
+miniAvatar:none;
+【鸟】:「人生这么长，看开一点喔？」
+miniAvatar:kotarou_1.png;
+【瑚】:「先让她一个人冷静一下吧……」
+miniAvatar:CGM_AK21au.png;
+【茜】:「就当我死了吧。」
+miniAvatar:none;
+ :说完之后，闭上了眼睛开始装死。
+changeFigure:CGM_KT14ah.png -next;
+【鸟】:「嘛，人都是有各种各样的性癖喔。」
+changeFigure:CGM_KT11ah.png -next;
+【鸟】:「其实瑚太朗早在共通线就有暴露过这个性癖了喔？只不过那时候会长不在。」
+miniAvatar:none;
+ :虽然心情好点了，但被绑成这样心情实在是好不起来。
+ :小鸟走过来，给我盖上了被子。这样至少看不到绳子了。
+miniAvatar:CGM_AK15au.png;
+【茜】:「有点太掩耳盗铃了……」
+miniAvatar:none;
+changeFigure:CGM_KT14ah.png -next;
+【鸟】:「抱歉呢。」
+miniAvatar:kotarou_1.png;
+【瑚】:「不过确实，小鸟来的时候，好凑巧呢。」
+miniAvatar:none;
+【鸟】:「是呢，各种漫画或者小说里常有的发展。」
+miniAvatar:CGM_AK15au.png;
+【茜】:「请务必腰斩。作者和作品一起。」
+miniAvatar:none;
+【鸟】:「因为这里也没有邮局，与其让人寄信，还不如直接过来。」
+【鸟】:「本来还打算在这里搭把手，看看有什么能帮上忙的……」
+miniAvatar:kotarou_1.png;
+【瑚】:「不不，没关系的。在这里待几天吧。」
+changeFigure:CGM_KT11ah.png -next;
+miniAvatar:none;
+【鸟】:「那种没意义的客套话就不用说了喔？很想度过二人世界的吧？」
+miniAvatar:kotarou_1.png;
+【瑚】:「呃……」
+【瑚】:「至少安抚朱音到不再想自杀吧。」
+changeFigure:CGM_KT30a.png -next;
+miniAvatar:none;
+【鸟】:「那种理由的话勉强可以喔。」
+miniAvatar:CGM_AK14au.png;
+【茜】:「我一定会成功的。」
+miniAvatar:none;
+ :其实还是想要小鸟留在这里。
+miniAvatar:kotarou_1.png;
+【瑚】:「请把决心放在更有意义的地方上！」
+changeFigure:CGM_KT11ah.png;
+miniAvatar:none;
+【鸟】:「先吃饭吧。」
+ :两个人看着我。
+miniAvatar:kotarou_1.png;
+【瑚】:「嗯……」
+miniAvatar:none;
+changeFigure:CGM_KT14ah.png -next;
+【鸟】:「嗯……是个问题呢。」
+ :两个人还在看着我。
+miniAvatar:CGM_AK23au.png;
+【茜】:「让我安心去死不就能解决这个问题了吗？」
+changeFigure: -next;
+miniAvatar:none;
+changeBg:black.jpg -next;
+ :……
+ :…………
+ :………………
+changeBg:20240713065328_1.jpg -next;
+ :两个人忙前忙后。
+ :被固定在了凳子上。
+miniAvatar:CGM_AK23au.png;
+【茜】:「折腾够了没，吃饭吧。」
+changeFigure:CGM_KT14ah.png -next;
+miniAvatar:none;
+【鸟】:「难得带来了新鲜的鱼贝呢，不吃就浪费了喔。」
+miniAvatar:kotarou_1.png;
+【瑚】:「唔，很鲜呢这个鱼，张嘴，来一口喔」
+miniAvatar:CGM_AK23au.png;
+【茜】:「啊——」
+【茜】:「（嚼嚼嚼）」
+【茜】:「（嚼嚼嚼嚼嚼）」
+【茜】:「（嚼嚼嚼嚼嚼嚼嚼）」
+miniAvatar:kotarou_1.png;
+【瑚】:「用鱼刺卡在喉咙里自杀也很痛苦喔，所以最好不要做。」
+miniAvatar:CGM_AK11au.png;
+【茜】:「……没有做那种事的打算。」
+miniAvatar:kotarou_1.png;
+【瑚】:「明明刚才那句话有神秘的停顿喔。」
+changeFigure:CGM_KT11ah.png -next;
+miniAvatar:none;
+【鸟】:「来，会长，吃这个西红柿炒鸡蛋喔。张嘴~」
+miniAvatar:CGM_AK10au.png;
+【茜】:「啊——」
+【茜】:「（嚼嚼嚼）」
+【茜】:「（嚼嚼嚼嚼嚼）」
+【茜】:「是甜咸口味的呢。瑚太朗居然不喜欢加糖呢，明明加糖才好吃。」
+miniAvatar:none;
+【鸟】:「说的是呢~」
+changeFigure:CGM_KT30a.png -next;
+【鸟】:「恰米饭喔。」
+【茜】:「（嚼嚼嚼）」
+miniAvatar:kotarou_1.png;
+【瑚】:「城市里其他人怎么样了？」
+miniAvatar:none;
+changeFigure:CGM_KT14ah.png -next;
+【鸟】:「距离你们离开也没有过去多久，大家还是老样子喔？」
+【鸟】:「而且感觉在这里说具体角色的情况话，会引入新角色登门拜访的事件喔？就是那个，伏笔啦。」
+miniAvatar:kotarou_1.png;
+【瑚】:「契诃夫之枪喔。」
+changeFigure:CGM_KT11ah.png -next;
+miniAvatar:none;
+【鸟】:「露出事件一定会重蹈覆辙的喔？」
+miniAvatar:CGM_AK27au.png;
+【茜】:「不会再有那种事了！不会！！！」
+ :顺势把饭粒都喷到了瑚太朗脸上。
+miniAvatar:kotarou_1.png;
+【瑚】:「嘎呜！」
+miniAvatar:CGM_AK33a.png;
+【茜】:「当然，下一次露出的是瑚太朗也说不定呢。」
+miniAvatar:none;
+【鸟】:「要抱着这个人生目标好好活下去喔。」
+changeFigure:CGM_KT14ah.png -next;
+【鸟】:「虽然人生目标稍微有点扭曲了呢。」
+miniAvatar:kotarou_1.png;
+【瑚】:「真是让人感到微妙的关系呢……」
+miniAvatar:CGM_AK33a.png;
+【茜】:「下个角色进门的时候就可以看到双目失神的瑚太朗躺在精液里了。」
+changeFigure:CGM_KT18ah.png -next;
+miniAvatar:none;
+【鸟】:「稍……稍微有点想看呢。」
+miniAvatar:kotarou_1.png;
+【瑚】:「别看啊！！！」
+miniAvatar:CGM_AK33a.png;
+【茜】:「嚯，你也知道那种样子不想让人看到啊？」
+【茜】:「神户，把绳子解开，我们一起让瑚太朗感受一下绝望的滋味。」
+miniAvatar:none;
+【鸟】:「不过瑚太朗很强的喔，我们两个真的可以吗。」
+miniAvatar:CGM_AK33a.png;
+【茜】:「没关系，我有藏起来的电击器。」
+miniAvatar:kotarou_1.png;
+【瑚】:「有那种东西吗？！」
+miniAvatar:CGM_AK33a.png;
+【茜】:「反正你也背着我买了不少两性用品不是吗。」
+miniAvatar:kotarou_1.png;
+【瑚】:「咕！」
+miniAvatar:kotarou_1.png;
+【瑚】:「小鸟啊！千万不要被蛊惑了！」
+miniAvatar:none;
+【鸟】:「唔哦哦哦哦~~~（混乱中）」
+miniAvatar:CGM_AK33a.png;
+【茜】:「再披露一点独家消息，瑚太朗的那个，相当微妙呢。」
+miniAvatar:none;
+【鸟】:「哦哦哦~~~到底是怎么个微妙法让人更加好奇了呢！」
+miniAvatar:kotarou_1.png;
+【瑚】:「本作品的伦理道德会大危机的！」
+miniAvatar:CGM_AK33a.png;
+【茜】:「也没有太过分到哪里去吧？毕竟下限已经被狠狠地突破了。」
+miniAvatar:none;
+【鸟】:「哦哦哦哦~~~（混乱中）」
+changeFigure: -next;
+bgm:アンスリウム.mp3 -enter=500; 
+miniAvatar:none;
+ :就这样在两人的喂食中度过了晚饭时间。
+changeBg:20240713114132_1.jpg -next;
+changeFigure:CGM_KT14ah.png -next;
+【鸟】:「要是有闪一下灯就能消除记忆的方便道具就好了呢。」
+miniAvatar:CGM_AK15au.png;
+【茜】:「请先对我使用，双重意义上。」
+changeFigure:CGM_KT11ah.png -next;
+miniAvatar:none;
+【鸟】:「这里晚上外面还真是黑呢。」
+miniAvatar:kotarou_1.png;
+【瑚】:「又是一个特别适合夜晚露出的天气呢。」
+changeFigure:CGM_KT18ah.png -next;
+miniAvatar:none;
+【鸟】:「wow！原来你们平时就玩得那么大吗？！」
+miniAvatar:CGM_AK27au.png;
+【茜】:「没有！！今天是第一次！！」
+【茜】:「瑚太朗你这个傻○不要把话题往那种方向上拐！！」
+【茜】:「我们只是正常在客厅叙旧！！！不要哪壶不开提哪壶！！！」
+miniAvatar:kotarou_1.png;
+【瑚】:「嘛，澄清一下，平时确实没有这么激烈的。」
+miniAvatar:none;
+【鸟】:「喔！果然还是每天都在做的吗。」
+miniAvatar:CGM_AK23au.png;
+【茜】:「对这个全是黄段子的无聊世界绝望了。」
+miniAvatar:kotarou_1.png;
+【瑚】:「我去洗碗喔，你们先聊。」
+bgm:ShaLaLaEcstasy.mp3 -enter=1000;
+【瑚】:「顺便帮你们换一首BGM。」
+changeFigure:CGM_KT25ah.png -next;
+miniAvatar:none;
+ :瑚太朗把餐具端到厨房去了，客厅里只剩下我和小鸟。
+miniAvatar:CGM_AK15au.png;
+【茜】:「………………」
+【茜】:「欸……我和神户？要做吗？真的假的。」
+miniAvatar:none;
+【鸟】:「诶诶？？？」
+miniAvatar:CGM_AK23au.png;
+【茜】:「想对我做什么就做什么吧。」
+miniAvatar:none;
+ :故意把拘束具弄出点一点声音，示意小鸟我完全无法反抗。
+miniAvatar:none;
+changeFigure:CGM_KT18ah.png -next;
+【鸟】:「心动心动。」
+miniAvatar:CGM_AK23au.png;
+【茜】:「虽然今天次数有点多，但还是没问题的。」
+changeFigure:CGM_KT11ah.png -next;
+miniAvatar:none;
+【鸟】:「失礼啦。」
+ :小鸟蹑手蹑脚地走了过来。
+playEffect:ペタッ.mp3;
+changeFigure:CGM_KT19ah.png -next;
+miniAvatar:none;
+ :胸被轻轻摸了一下。
+changeFigure:CGM_KT11ah.png -next;
+miniAvatar:none;
+【鸟】:「结束啦。」
+bgm:ニリンソウ.mp3 -enter=500; 
+【鸟】:「顺便把BGM也换回来了喔。」
+【鸟】:「那个BGM太让人想入非非了喔。」
+miniAvatar:CGM_AK13au.png;
+【茜】:「……」
+miniAvatar:none;
+【鸟】:「给你解开了哟，要和瑚太朗好好过日子喔。」
+miniAvatar:CGM_AK13au.png;
+【茜】:「……更想死了。」
+changeFigure:CGM_KT18ah.png -next;
+miniAvatar:none;
+【鸟】:「诶诶。」
+miniAvatar:CGM_AK23au.png;
+【茜】:「不过放心吧。」
+miniAvatar:kotarou_1.png;
+【瑚】:「什么情况，BGM怎么这么凝重。换一个吧。」
+bgm:綿帽子.mp3 -enter=500; 
+miniAvatar:CGM_AK10au.png;
+【茜】:「有人的期待落空了呢。」
+miniAvatar:kotarou_1.png;
+【瑚】:「（心虚）」
+miniAvatar:CGM_AK20au.png;
+【茜】:「接下来是电击器PLAY喔。（掏出）」
+miniAvatar:kotarou_1.png;
+【瑚】:「真的有啊！不要过来啊！」
+miniAvatar:none;
+【鸟】:「喔喔喔。」
+ :完。
+changeBg:20240713050333_1.jpg -next;
+bgm:アンスリウム.mp3 -enter=1000; 
+miniAvatar:none;
+changeFigure:CGM_KG31.png -next;
+【篝】:「……」 -fontSize=default;
+changeFigure:CGM_KG10h.png -next;
+【篝】:「………………」 -fontSize=default;
+【篝】:「…………………………被自己吓到无语了。」 -fontSize=default;
+end;
