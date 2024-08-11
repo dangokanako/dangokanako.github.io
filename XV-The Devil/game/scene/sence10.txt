@@ -276,6 +276,7 @@ changeBg:shower.png -next;
  :那可真是BE中的BE……甚至让满是欲火焚身的身体掀起了一阵恶寒。
 playEffect:satoko_18.ogg;
 【茜】:「呜呜呜……♡」
+ :触手似乎感觉到些许机会，再一次猛烈地灌入媚药。
  :自己可能比自己想象得更坚强，毕竟现在都没有疯掉嘛。
 playEffect:satoko_49.ogg;
 【茜】:「呜……♡」
@@ -384,5 +385,5 @@ miniAvatar:none;
 【篝】:「……本来想着不会写出更过分的东西吧」 -fontSize=default;
 【篝】:「结果更过分了。」 -fontSize=default;
 【篝】:「自己原来是这么没底线的人吗。」 -fontSize=default;
-【篝】:「如同势如破竹突破防线一样在突破底线了。」 -fontSize=default;
+【篝】:「势如破竹突破防线一样在突破底线了。」 -fontSize=default;
 end;
