@@ -4,7 +4,7 @@ intro:（……） -fontSize=medium -backgroundColor=rgba(0, 0, 0, 1) -fontColor
 changeFigure:CGM_KG31.png -next;
 miniAvatar:none;
 【篝】:「书接上回。」 -fontSize=default;
-【篝】:「不过说实话，有没有小数点已经无所谓了吧。」 -fontSize=default;
+【篝】:「不过也不是什么令人可堪入目的作品……」 -fontSize=default;
 【篝】:「毕竟只有干巴巴的文本，也没有一些赏心悦目的CG。」 -fontSize=default;
 【篝】:「说起来故事好像开始连载了一样呢……」 -fontSize=default;
 changeFigure: -next;
@@ -42,7 +42,7 @@ miniAvatar:CGM_AK15au.png;
  :感觉手感不太对劲，仔细一看。
  :橡胶玩具刀？
 miniAvatar:none;
- :把玩具刀用力刺入心脏。
+ :试图把玩具刀刺入心脏。
  :橡胶制成的刀刃像我的人生一样，非常搞笑地弯折了下去。
 miniAvatar:CGM_AK15au.png;
  :完完全全被算计了呢。
@@ -321,6 +321,7 @@ miniAvatar:CGM_AK13au.png;
 【茜】:「……」
 miniAvatar:none;
 【鸟】:「给你解开了哟，要和瑚太朗好好过日子喔。」
+ :久违地获得了自由，舒展了下身体。
 miniAvatar:CGM_AK13au.png;
 【茜】:「……更想死了。」
 changeFigure:CGM_KT18ah.png -next;
@@ -336,9 +337,9 @@ miniAvatar:CGM_AK10au.png;
 miniAvatar:kotarou_1.png;
 【瑚】:「（心虚）」
 miniAvatar:CGM_AK20au.png;
-【茜】:「接下来是电击器PLAY喔。（掏出）」
+【茜】:「猜猜一会儿醒来会在哪里呢？（掏出电击器）」
 miniAvatar:kotarou_1.png;
-【瑚】:「真的有啊！不要过来啊！」
+【瑚】:「真的有啊！藏在哪里了啊？！不要过来啊！！」
 miniAvatar:none;
 【鸟】:「喔喔喔。」
  :完。

@@ -1,0 +1,13 @@
+bgm:アンスリウム.mp3 -enter=1000; 
+changeBg:20240713050333_1.jpg -next;
+intro:（……） -fontSize=medium -backgroundColor=rgba(0, 0, 0, 1) -fontColor=rgba(255, 255, 255, 1) -animation=fadeIn -delayTime=1500;
+changeFigure:CGM_KG31.png -next;
+miniAvatar:none;
+【篝】:「很神秘，怎么就搞成军备竞赛了。」 -fontSize=default;
+【篝】:「一定是荷尔蒙上头了。」 -fontSize=default;
+changeFigure: -next;
+bgm:DIS is a pain.mp3 -enter=1000; 
+changeBg:20240713065328_1.jpg -next;
+miniAvatar:CGM_AK20au.png;
+【茜】:「花了200,000科研点终于把计算机科技点出来了。」
+miniAvatar:CGM_AK15au.png;

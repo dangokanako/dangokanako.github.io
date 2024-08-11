@@ -1,0 +1,151 @@
+bgm:アンスリウム.mp3 -enter=1000; 
+changeBg:20240713050333_1.jpg -next;
+intro:（……） -fontSize=medium -backgroundColor=rgba(0, 0, 0, 1) -fontColor=rgba(255, 255, 255, 1) -animation=fadeIn -delayTime=1500;
+changeFigure:CGM_KG31.png -next;
+miniAvatar:none;
+【篝】:「为什么朱音不用半身绘呢。」 -fontSize=default;
+【篝】:「没什么特别的理由。一开始做CG的时候，考虑到有CG就不放半身绘了。」 -fontSize=default;
+【篝】:「后面就忘了这事儿了。」 -fontSize=default;
+changeFigure: -next;
+changeBg:BG046_compressed.png -next;
+ :早饭时间。
+ :虽然说是早饭但已经快十二点了。
+ :因为经常熬夜的缘故，总是起得很晚，所以把早饭和午饭放在一起吃了。
+ :不过今天开始饭桌上有三个人了。
+changeFigure:CGM_KT11ah.png -next;
+miniAvatar:CGM_AK11au.png;
+【茜】:「呃……那个……」
+ :好不习惯。
+【茜】:「神……户？帮我拿一下糖。」
+miniAvatar:none;
+【鸟】:「给喔。（递）」
+changeFigure:CGM_KT30a.png -next;
+miniAvatar:none;
+【鸟】:「叫我小鸟就可以了喔？」
+miniAvatar:CGM_AK13au.png;
+【茜】:「嘛……主要是，稍微有点不习惯呢，我们现在算是什么关系呢？」
+miniAvatar:none;
+changeFigure:CGM_KT18ah.png -next;
+【鸟】:「出现了！在爆炸性的地雷问题排行榜名列前茅的问题！」
+miniAvatar:kotarou_1.png;
+【瑚】:「（嚼嚼嚼嚼嚼）」
+【瑚】:「后宫关系？」
+changeFigure:CGM_KT25ah.png -next;
+miniAvatar:CGM_AK14au.png;
+playEffect:Blow1.m4a;
+【茜】:「喝啊！」
+miniAvatar:kotarou_1.png;
+【瑚】:「噗————！」
+miniAvatar:CGM_AK14au.png;
+【茜】:「不许对神户出手！」
+miniAvatar:none;
+ :一拳把正在吃饭的瑚太朗打倒在地。
+changeFigure:CGM_KT11ah.png -next;
+【鸟】:「就目前来说，小鸟正在扮演“在两人如胶似漆地颠鸾倒凤时，突然不小心打开房门以构成喜剧效果”的角色哦？」
+playEffect:Blow1.m4a;
+miniAvatar:CGM_AK14au.png;
+【茜】:「喝啊！」
+miniAvatar:kotarou_1.png;
+【瑚】:「噗————！」
+miniAvatar:CGM_AK14au.png;
+【茜】:「那种噱头一次就够了！第二次就没有意思了！！！」
+miniAvatar:none;
+ :一拳把刚刚爬起来的瑚太朗再度打翻在地。
+miniAvatar:kotarou_1.png;
+【瑚】:「为什么还是打我……」
+changeFigure:CGM_KT25ah.png -next;
+miniAvatar:none;
+【鸟】:「不过仔细想想，小鸟小姐的定位还真是微妙呢。」
+【鸟】:「明明前不久还是青梅竹马来着？！为什么跑到前辈家里？！」
+changeFigure:CGM_KT18ah.png -next;
+【鸟】:「侍奉荒郊野岭宅邸里神秘的恩爱夫妇？原来是主仆关系？这样感觉很不健全呢？！」
+miniAvatar:kotarou_1.png;
+【瑚】:「没关系，本来这个作品就和健全两个字八竿子打不着边。」
+【瑚】:「主要是除了做爱也没什么正事……」
+playEffect:Blow1.m4a;
+miniAvatar:CGM_AK14au.png;
+【茜】:「喝啊！」
+miniAvatar:kotarou_1.png;
+【瑚】:「噗————！」
+miniAvatar:CGM_AK14au.png;
+【茜】:「那就想办法健全一点！」
+miniAvatar:kotarou_1.png;
+【瑚】:「尽管已经试图加入各种对话使得这里变得像游戏的主线剧情了……（倒地）」
+changeFigure:CGM_KT20ah.png -next;
+miniAvatar:none;
+【鸟】:「吼吼~说到这里，随着游戏内容推进，小鸟这里可以提供各种更加方便的道具喔？」
+miniAvatar:CGM_AK15au.png;
+【茜】:「感觉到了相当数量压迫力的黄段子所以请停下来。」
+miniAvatar:none;
+【鸟】:「比如这个只对瑚太朗有效果的麻痹药。」
+playEffect:Shop2.ogg;
+miniAvatar:CGM_AK11au.png;
+【茜】:「抱歉，请继续说。」
+miniAvatar:kotarou_1.png;
+【瑚】:「喂！！！（躺在地上大声抗议）」
+miniAvatar:none;
+【鸟】:「五百马力全自动榨精机器。」
+playEffect:Shop2.ogg;
+miniAvatar:kotarou_1.png;
+【瑚】:「那个功率单位是不是特别不妙啊？！」
+miniAvatar:none;
+【鸟】:「家用触手。泡进水里就可以变大。不会插入的所以请放心。」
+playEffect:Shop2.ogg;
+miniAvatar:kotarou_1.png;
+【瑚】:「谁家会用到这种东西啊！难道还有不是家用的？！」
+miniAvatar:none;
+【鸟】:「吃了之后可以长出欧○○的神奇蘑菇。」
+playEffect:Shop2.ogg;
+miniAvatar:kotarou_1.png;
+【瑚】:「这个世界终于向奇幻作品迈出了第一步吗……」
+miniAvatar:none;
+【鸟】:「普通的道具也有喔。」
+【鸟】:「这种像精灵逑一样方便的自动束缚道具。产品还根据细分了甜蜜逑、超级逑、大师逑之类的喔。」
+playEffect:Shop2.ogg;
+miniAvatar:kotarou_1.png;
+【瑚】:「这东西一点都不普通好吗？！」
+miniAvatar:none;
+【鸟】:「速攻魔法卡「敌人操纵器」」
+playEffect:Shop2.ogg;
+miniAvatar:kotarou_1.png;
+【瑚】:「就算没玩过游戏王也隐隐感觉到这个是怎么使用的了。」
+miniAvatar:none;
+【鸟】:「Sex Note。写上名字的人就会按上面的方式做爱。」
+playEffect:Shop2.ogg;
+miniAvatar:kotarou_1.png;
+【瑚】:「……」
+miniAvatar:none;
+changeFigure:CGM_KT30a.png -next;
+【鸟】:「…………………做过限制了，只能写你们两位的名字。」
+changeFigure:CGM_KT20ah.png -next;
+【鸟】:「想要找漏洞的话可没那么容易喔？」
+miniAvatar:none;
+【鸟】:「然后这个是瞬间在原地制造一个综艺闯关游戏的便利机器。」
+playEffect:Shop2.ogg;
+miniAvatar:none;
+【鸟】:「还有这种像刀剑神域本子设定一样的全体感RPG游戏，是战斗拘束特化版喔。方便写一些不太妙的剧情呢，可以随意发挥了呢。」
+playEffect:Shop2.ogg;
+miniAvatar:kotarou_1.png;
+【瑚】:「我建议这个道具店改名未来科技研究所。」
+playEffect:Shop2.ogg;
+miniAvatar:CGM_AK10au.png;
+【茜】:「……」
+miniAvatar:kotarou_1.png;
+【瑚】:「别买啦！！！」
+miniAvatar:none;
+changeFigure:CGM_KT11ah.png -next;
+【鸟】:「为了游戏性当然要收取游戏货币的喔。」
+【鸟】:「不过最主要的原因还是和瑚太朗的关系并不是家人呢。」
+changeFigure:CGM_KT20ah.png -next;
+【鸟】:「这是小鸟的日程表。」
+【鸟】:「因为设定的原因，所以一般默认小鸟出去做结界玩森林塔防游戏了。这里非常隔音，请两位好好享受喔。」
+【鸟】:「注：因为自动化拘束道具比较多，如果玩脱了我也不会提前回来的，请加油坚持到那个时候吧。」
+miniAvatar:kotarou_1.png;
+【瑚】:「这个是那个，伏笔啊！不妙的伏笔！之后绝对会发生的！」
+miniAvatar:CGM_AK10au.png;
+【茜】:「真是一堆灵感满溢的甜蜜道具呢。」
+miniAvatar:kotarou_1.png;
+【瑚】:「这一段购物剧情写注释的话可以写一页。」
+miniAvatar:CGM_AK10au.png;
+【茜】:「好了，先玩哪一个呢？」
+end;

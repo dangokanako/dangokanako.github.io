@@ -177,5 +177,4 @@ miniAvatar:none;
  :朱音的脸趴在我的背上，没有回答。
 miniAvatar:CGM_AK15au.png;
 【茜】:「暂时就写到这了，困了，要睡觉了。」
-end;��太朗】:「」
 end;

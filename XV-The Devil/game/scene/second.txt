@@ -8,5 +8,5 @@ miniAvatar:none;
 changeFigure:CGM_KG17h.png -next;
 【篝】:「把小鸟加进来已经够虐鸟了。」 -fontSize=default;
 changeFigure: -next;
-choose:场景7:sence7.txt|场景8:sence7.5.txt;
+choose:场景7:sence7.txt|场景8:sence7.5.txt|场景9:sence9.txt|场景4（重置版）:sence4.txt|场景5（重置版）（还没写）:sence5.txt|场景10:选择场景文件;
 end;
