@@ -120,7 +120,9 @@ changeFigure:CGM_KT30a.png -next;
 changeFigure:CGM_KT20ah.png -next;
 【鸟】:「想要找漏洞的话可没那么容易喔？」
 miniAvatar:none;
-【鸟】:「然后这个是瞬间在原地制造一个综艺闯关游戏的便利机器。」
+【鸟】:「然后这个是瞬间在原地制造一个密室逃脱游戏（R18）的便利机器。」
+miniAvatar:kotarou_1.png;
+【瑚】:「什么神奇妙妙屋。」
 playEffect:Shop2.ogg;
 miniAvatar:none;
 【鸟】:「还有这种像刀剑神域本子设定一样的全体感RPG游戏，是战斗拘束特化版喔。方便写一些不太妙的剧情呢，可以随意发挥了呢。」
@@ -148,4 +150,5 @@ miniAvatar:kotarou_1.png;
 【瑚】:「这一段购物剧情写注释的话可以写一页。」
 miniAvatar:CGM_AK10au.png;
 【茜】:「好了，先玩哪一个呢？」
+ :未完待续。
 end;
