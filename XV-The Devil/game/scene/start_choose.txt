@@ -1,0 +1,3 @@
+changeBg:20240713050333_1.jpg -next;
+choose:场景1:sence1.txt|场景2:sence2.txt|场景3:sence3.txt|场景3.5:sence3.5.txt|场景6:sence6.txt|下一页:second.txt;
+end;
