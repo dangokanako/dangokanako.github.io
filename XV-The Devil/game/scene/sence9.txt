@@ -146,9 +146,48 @@ miniAvatar:kotarou_1.png;
 【瑚】:「这个是那个，伏笔啊！不妙的伏笔！之后绝对会发生的！」
 miniAvatar:CGM_AK10au.png;
 【茜】:「真是一堆灵感满溢的甜蜜道具呢。」
+miniAvatar:CGM_AK15au.png;
+【茜】:「这种每天全都是恩爱的做爱剧情没问题吗？」
+changeFigure:CGM_KT30a.png -next;
 miniAvatar:kotarou_1.png;
-【瑚】:「这一段购物剧情写注释的话可以写一页。」
-miniAvatar:CGM_AK10au.png;
-【茜】:「好了，先玩哪一个呢？」
- :未完待续。
+【瑚】:「挺好的喔。」
+【瑚】:「比起每天奔波于世界和地球的命运之间最后什么也没有，这种简单日常生活要更好呢。」
+【瑚】:「Just to walk a day♪, go all the way♪,Seems like nothing's been achieved♪」
+miniAvatar:CGM_AK24au.png;
+【茜】:「是吗。」
+【茜】:「可是那些……」
+miniAvatar:kotarou_1.png;
+【瑚】:「这里很像本篇那个私奔逃避结局的续写，很不错吧。」
+miniAvatar:CGM_AK23au.png;
+【茜】:「私奔结局一般都算Bad End喔，就算不End最后也回去了喔。」
+miniAvatar:kotarou_1.png;
+【瑚】:「咦？！」
+【瑚】:「还有这种事？」
+miniAvatar:CGM_AK23au.png;
+【茜】:「比如像棗铃的BadEnd1，龙与虎的私奔剧情回去了，乐园的杏剧情也回去了。」
+【茜】:「要不要再给你举几十个例子？」
+miniAvatar:kotarou_1.png;
+【瑚】:「咳咳。」
+【瑚】:「嘛，私奔有什么不好嘛。至少对我们都很好吧？不是很幸福吗。」
+miniAvatar:CGM_AK24au.png;
+【茜】:「……」
+【茜】:「有点太过幸福了呢。」
+ :喃喃自语道。
+ :太过幸福以至于像LB里某个三马尾金发傲娇的剧情线呢。
+miniAvatar:none;
+changeFigure:CGM_KT11ah.png -next;
+【鸟】:「好了！」
+ :小鸟拍了下手。
+【鸟】:「沉重的话题就到这里结束了！」
+【鸟】:「快点试用一下各种道具吧！」
+ :完。
+bgm:アンスリウム.mp3 -enter=1000; 
+changeBg:20240713050333_1.jpg -next;
+intro:（……） -fontSize=medium -backgroundColor=rgba(0, 0, 0, 1) -fontColor=rgba(255, 255, 255, 1) -animation=fadeIn -delayTime=1500;
+changeFigure:CGM_KG10h.png -next;
+miniAvatar:none;
+【篝】:「因为作者性欲上头所以，」 -fontSize=default;
+【篝】:「下周休刊！」 -fontSize=default;
+【篝】:「这辈子一定的台词TOP1000里的“下周休刊！”。」 -fontSize=default;
+【篝】:「听上去超酷的。」 -fontSize=default;
 end;

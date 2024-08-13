@@ -459,7 +459,7 @@ miniAvatar:kotarou_1.png;
 miniAvatar:none;
 【鸟】:「……？」
 miniAvatar:kotarou_1.png;
-【瑚】:「虽然把初中时写的中二语录烧掉了，但总有初中同学记得呢。」
+【瑚】:「比如虽然把初中时写的中二语录烧掉了，但总有初中同学记得呢。」
 miniAvatar:none;
 【鸟】:「（咽口水）」
 miniAvatar:kotarou_1.png;
@@ -505,8 +505,10 @@ changeFigure:CGM_KT11ah.png -next;
 changeFigure:CGM_KT20ah.png -next;
 【鸟】:「不过还是让我小小的报复一下吧。」
  :小鸟拿出了SexNote。
+【鸟】:「这是那个SexNote。写上文本之后，就会按照上面的方式进行做爱。」
+【鸟】:「嘛，虽然设定和原作差不多，那种做不到的事情还是做不到啦。但大部分还是没问题的喔。」
 miniAvatar:kotarou_1.png;
-【瑚】:「那个不是限定只能写我和朱音的名字吗？」
+【瑚】:「那个SexNote不是限定只能写我和朱音的名字吗？」
 changeFigure:CGM_KT11ah.png -next;
 miniAvatar:none;
 【鸟】:「但是没限定谁来写喔？」
@@ -516,7 +518,7 @@ miniAvatar:none;
 changeFigure:CGM_KT30a.png -next;
 【鸟】:「总之先给会长道个歉了。抱歉。」
 miniAvatar:CGM_AK17au.png;
-【茜】:「诶诶诶？！」
+【茜】:「诶诶诶？！什么意思啊。」
 miniAvatar:none;
 changeFigure:CGM_KT30a.png -next;
 【鸟】:「虽然说会长承受能力很强呢，不过以防万一，今天的早饭里还是加了蓬莱之药（24小时免费试用版）。」
@@ -524,7 +526,7 @@ miniAvatar:kotarou_1.png;
 【瑚】:「那个不老不死愈合伤口的药怎么会有免费试用版……」
 miniAvatar:none;
 changeFigure:CGM_KT11ah.png -next;
-【鸟】:「近些年来各种宅物层出不穷，导致永远亭财政赤字？」
+【鸟】:「近些年来各种宅物娱乐方式层出不穷，导致永远亭财政赤字？不得不靠保密配方盈利？」
 【鸟】:「嘛，所以不管怎么说，会长肯定会活下来的喔，放心好了。」
 miniAvatar:CGM_AK17au.png;
 【茜】:「诶？！」
@@ -533,13 +535,14 @@ miniAvatar:none;
 【鸟】:「我会回来准备晚饭的。嘛，毕竟晚上等我回来的时候，嗯……」
  :小鸟露出了意味深长的坏笑。
 changeFigure:CGM_KT11ah.png -next;
-【鸟】:「两人行动不能状态？」
+【鸟】:「行动不能状态？濒死状态？」
 miniAvatar:CGM_AK17au.png;
 【茜】:「那个啊……小鸟，至少不会变得像R18G作品那样吧？……」
 changeFigure:CGM_KT11ah.png -next;
 miniAvatar:none;
-【鸟】:「保~密~」
-【鸟】:「我先出门了喔？」
+【鸟】:「嘛，这个世界可是无限制的喔？」
+【鸟】:「其他的就先，保~~~密~~~」
+【鸟】:「那么，我先出门了喔？」
 playEffect:ドアを開ける3.mp3;
 changeFigure: -next;
 miniAvatar:kotarou_1.png;
@@ -556,9 +559,7 @@ miniAvatar:CGM_AK11au.png;
 【茜】:「是这个吧，Sence11……」
 miniAvatar:none;
  :然而，还没等我打开sence11的文本。
- :熟悉的触感用不熟悉的力道从后面掐住了我的脖子，就这样活生生地被拎了起来。
- :下意识地用手去抓住自己脖子上的东西，然而那双大手纹丝不动。
- :就这样一点点失去了意识。
+ :熟悉的触感用不熟悉的力道从后面掐住了我的脖子。
  :完。
 bgm:アンスリウム.mp3 -enter=1000; 
 changeBg:20240713050333_1.jpg -next;
@@ -567,7 +568,8 @@ changeFigure:CGM_KG10h.png -next;
 miniAvatar:none;
 【篝】:「……上一篇的时候想着非常过分了，不会写出更过分的东西吧」 -fontSize=default;
 【篝】:「结果更过分了。」 -fontSize=default;
-【篝】:「结果下一篇好像更更过分。。」 -fontSize=default;
+【篝】:「结果下一篇好像更更过分。」 -fontSize=default;
+【篝】:「本来全年龄的，写着写着变成R15，再写着写着变成R18，再写着写着变成R18G。」 -fontSize=default;
 【篝】:「自己原来是这么没底线的人吗。」 -fontSize=default;
 【篝】:「正在像巴格拉季昂行动突破防线一样在突破底线了。」 -fontSize=default;
 end;
