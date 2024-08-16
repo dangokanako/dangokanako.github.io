@@ -1,0 +1,353 @@
+bgm:アンスリウム.mp3 -enter=1000; 
+changeBg:20240713050333_1.jpg -next;
+intro:（……） -fontSize=medium -backgroundColor=rgba(0, 0, 0, 1) -fontColor=rgba(255, 255, 255, 1) -animation=fadeIn -delayTime=1500;
+changeFigure:CGM_KG31.png -next;
+miniAvatar:none;
+【篝】:「先直接摊牌了。迷宫都致敬LBEX的。」 -fontSize=default;
+【篝】:「致敬传奇抖M朱鹭户沙耶。」 -fontSize=default;
+【篝】:「不，明明是抖M却好像没什么像样的R18的CG呢……」 -fontSize=default;
+【篝】:「话是这么说，但迷宫的死法都到R18G级别了……」 -fontSize=default;
+【篝】:「所以，我来做R18的。」 -fontSize=default;
+changeFigure: -next;
+changeBg:BG046_compressed.png -next;
+changeFigure:CGM_KT11ah.png -next;
+【鸟】:「酱酱！今天的饭后游戏是！“沙耶迷宫”。」
+ :小鸟从一大堆稀奇古怪的道具里掏出了一个方形盒子。
+changeFigure:CGM_KT20ah.png -next;
+【鸟】:「据说某传奇金发三马尾抖M也探索过的神秘迷宫呢，只有通过了这道试炼，才能踏上抖M之路。」
+miniAvatar:CGM_AK14au.png;
+【茜】:「谁会踏上那种鬼道路啊！有没有正常一点的游戏啊？！」
+miniAvatar:none;
+changeFigure:CGM_KT19ah.png -next;
+【鸟】:「没有喔。」
+changeFigure:CGM_KT20ah.png -next;
+【鸟】:「就连UNO也都是R18版本的喔？」
+miniAvatar:kotarou_1.png;
+【瑚】:「倒是令人更好奇R18的UNO是什么样子了……」
+【瑚】:「不过今天就玩这个吧。」
+miniAvatar:none;
+ :瑚太朗拿起了游戏本体盒子。
+miniAvatar:kotarou_1.png;
+【瑚】:「需要一名玩家扮演守密人？」
+changeFigure:CGM_KT10a.png -next;
+miniAvatar:none;
+【鸟】:「DND里的那个喔。简单来说就是游戏管理员，控制迷宫和玩家互动什么的。」
+miniAvatar:CGM_AK15au.png;
+【茜】:「……不祥的预感加重了。」
+miniAvatar:none;
+changeFigure:CGM_KT10a.png -next;
+【鸟】:「我来当守密人就可以了，你们两个进去玩吧。」
+miniAvatar:CGM_AK11au.png;
+【茜】:「原来是多人探索游戏的吗？」
+miniAvatar:none;
+ :朱音稍微有些安心了。
+changeFigure:CGM_KT20ah.png -next;
+【鸟】:「单人也可以玩喔，不过我会对会长做很多奇怪的报复喔。那样的话就太对不起瑚太朗了。」
+changeFigure:CGM_KT10a.png -next;
+miniAvatar:CGM_AK15au.png;
+【茜】:「喂。你这个罪孽深重的男人给点反应啊？」
+miniAvatar:none;
+ :朱音故意掐了掐瑚太朗的脸。
+miniAvatar:kotarou_1.png;
+【瑚】:「咕」
+【瑚】:「罪孽再重也没有你重。（掐了回去）」
+miniAvatar:CGM_AK16au.png;
+【茜】:「咕」
+【茜】:「那还真是般配啊↘，啊↗？」
+miniAvatar:none;
+ :朱音更加使劲掐了回去
+playEffect:激しい格闘シーン.mp3;
+ :在沙发上扭打成一团。
+changeFigure:CGM_KT20ah.png -next;
+【鸟】:「嘛，不过会长还是要小心点喔，各种意义上的。」
+changeFigure:CGM_KT21ah.png -next;
+【鸟】:「有没有在听喂！」
+ :朱音在沙发上以奇怪的姿势压制住了瑚太朗。
+miniAvatar:kotarou_1.png;
+【瑚】:「咕咕咕咕咕」
+miniAvatar:CGM_AK16au.png;
+【茜】:「怎么，你不服气？」
+changeFigure:CGM_KT21ah.png -next;
+miniAvatar:none;
+【鸟】:「游戏启动了喔！」
+changeFigure: -next;
+miniAvatar:none;
+playEffect:魔法陣を展開.mp3;
+ :小鸟启动了游戏。
+changeBg:white.jpg -next;
+ :一道光芒笼罩了屋内。
+miniAvatar:kotarou_1.png;
+【瑚】:「诶怎么回事？」
+ :之后场景一变，两人来到了奇妙的迷宫。
+miniAvatar:CGM_AK17au.png;
+【茜】:「？」
+changeBg:BG030n1.png -next;
+miniAvatar:none;
+ :虽然两人还维持着刚才的姿势。
+miniAvatar:CGM_AK15au.png;
+【茜】:「………还真是单调的景色呢。」
+【茜】:「有种像三十年前JRPG迷宫前后左右探索一样的无趣感。」
+【茜】:「你说是吧，瑚太朗。」
+miniAvatar:kotarou_1.png;
+【瑚】:「先把我放开…………（咕）」
+miniAvatar:CGM_AK15au.png;
+【茜】:「……（松手）」
+playEffect:倒れる.mp3;
+miniAvatar:kotarou_1.png;
+【瑚】:「（倒地）」
+miniAvatar:none;
+miniAvatar:CGM_KT10a.png;
+【小鸟的声音】:「咳咳，那么游戏开始了喔，两位请加油喔。」
+【小鸟的声音】:「如果遇到卡关之类的问题，请呼叫守密人，也就是我。」
+miniAvatar:CGM_KT11ah.png;
+【小鸟的声音】:「在敏感的时候就不要呼叫我了。把我当做不在就可以了。」
+miniAvatar:CGM_AK15au.png;
+【茜】:「……那是什么时候啊？」
+miniAvatar:CGM_KT10a.png;
+【小鸟的声音】:「当然，本游戏可能含有过激、残酷、激烈的性爱表现。玩家在启动游戏时视为全部玩家已同意存在的各种潜在风险。」
+【小鸟的声音】:「具体可能导致的不良现象请到官网下载PDF观看。」
+miniAvatar:CGM_KT20ah.png;
+【小鸟的声音】:「管理员也许会保证玩家的安全。具体由管理员自己决定。」
+miniAvatar:CGM_AK15au.png;
+【茜】:「喂……不是刚才还在玩守密人的梗吗。」
+miniAvatar:CGM_KT10a.png;
+【小鸟的声音】:「好了，开始吧。」
+miniAvatar:CGM_AK23au.png;
+【茜】:「瑚太朗，别装死了，快走吧。（拖动）」
+miniAvatar:kotarou_1.png;
+【瑚】:「好好……」
+changeBg:black.jpg -next;
+miniAvatar:none;
+ :……
+ :…………
+changeBg:BG030n1.png -next;
+ :两人进入了一个空荡荡的房间。
+ :房门正如迷宫设定那样，不出所料地自动关上了。
+miniAvatar:kotarou_1.png;
+【瑚】:「嗯，凭借我人生中三十多年的JRPG经验，这个一定就是解密房间了呢。」
+miniAvatar:CGM_AK15au.png;
+【茜】:「我相信没有玩过一丝一毫JRPG房间的人也能看得出来。」
+miniAvatar:none;
+ :空荡荡的房间上面垂着五根绳子。
+ :并不是很高的高度，踮脚伸手便能够到。
+miniAvatar:CGM_KT10a.png;
+【小鸟的声音】:「玩过LBEX应该就懂的这是个什么结构。应该很简单吧。」
+miniAvatar:CGM_AK15au.png;
+【茜】:「我相信我猜得到这些绳子是干嘛用的。」
+miniAvatar:CGM_KT10a.png;
+【小鸟的声音】:「哦对了，有倒计时，五分钟。」
+miniAvatar:kotarou_1.png;
+【瑚】:「倒计时到了会怎么样？」
+miniAvatar:CGM_KT11ah.png;
+【小鸟的声音】:「会从房间里出来几百只触手把两个人的每个洞都填得满满当当。」
+【小鸟的声音】:「最后神志不清……或许都没有神志了呢。」
+【小鸟的声音】:「不过请放心，最后我会把你们抬出来的。」
+miniAvatar:kotarou_1.png;
+【瑚】:「诶诶？！我也要吗？！」
+miniAvatar:CGM_KT30a.png;
+【小鸟的声音】:「当然咯，如果只有会长在高潮的话很不公平吧？」
+【小鸟的声音】:「并不是只有女孩子才有那种倒霉待遇喔？」
+miniAvatar:CGM_AK20au.png;
+【茜】:「哼~哼~（冷笑）」
+miniAvatar:kotarou_1.png;
+【瑚】:「我们是合作关系……当然对吧？」
+miniAvatar:CGM_AK20au.png;
+【茜】:「有些关系复杂到不能单凭两个字来概括呢。」
+miniAvatar:CGM_KT10a.png;
+【小鸟的声音】:「还有四分钟。」
+miniAvatar:kotarou_1.png;
+【瑚】:「不妙不妙不妙。」
+【瑚】:「总之先拉一下绳子试试吧？既然这么设计的话，一定是让人拉下去的。」
+miniAvatar:none;
+ :瑚太朗跳起来拉下了最右边的一根绳子。
+playEffect:弓を引き絞る1.mp3.mp3;
+miniAvatar:none;
+ :拉下来的绳子像魔法一样，自动牢牢拘束住了朱音的双臂。
+miniAvatar:kotarou_1.png;
+【瑚】:「欸？为什么？！」
+miniAvatar:CGM_AK23au.png;
+【茜】:「你看我有表现出一丝一毫的惊讶吗。」
+【茜】:「愣着干什么，快给我解开。」
+miniAvatar:none;
+ :瑚太朗过来检查绳结，并且开始解绳结。
+miniAvatar:kotarou_1.png;
+【瑚】:「这个，绑得相当复杂呢……」
+【瑚】:「……」
+【瑚】:「…………」
+miniAvatar:CGM_KT10a.png;
+【小鸟的声音】:「还有三分钟。」
+miniAvatar:kotarou_1.png;
+【瑚】:「………………」
+【瑚】:「………那个啊」
+miniAvatar:CGM_AK15au.png;
+【茜】:「不用说了，我又不是那么不通情达理的人。」
+miniAvatar:none;
+ :瑚太朗又拉下了一根绳子。
+playEffect:弓を引き絞る1.mp3.mp3;
+ :拉下来的绳子像魔法一样，穿过朱音的裆部，在恰当的位置也有绳结。牢牢地摩擦着朱音的阴部。
+miniAvatar:CGM_KT10a.png;
+【小鸟的声音】:「嘛，毕竟是R18游戏喔？」
+miniAvatar:CGM_AK15au.png;
+【茜】:「……咕」
+miniAvatar:none;
+ :瑚太朗又拉下了一根绳子。
+playEffect:弓を引き絞る1.mp3.mp3;
+ :拉下来的绳子自动绑住了………………瑚太朗的双腿。
+miniAvatar:kotarou_1.png;
+【瑚】:「………为什么是我？」
+miniAvatar:CGM_AK15au.png;
+【茜】:「倒不如说一直不是你才奇怪吧？」
+【茜】:「还有两根绳子了，快点解决吧。」
+miniAvatar:kotarou_1.png;
+【瑚】:「稍微有点羞耻呢……」
+miniAvatar:CGM_KT10a.png;
+【小鸟的声音】:「还有两分钟。」
+miniAvatar:none;
+ :瑚太朗用绑住的双腿蹦跶起来，够到了其中一根绳子，并拉了下来。
+ :拉下来的绳子像魔法一样，自动牢牢拘束住了瑚太朗的双臂。
+miniAvatar:kotarou_1.png;
+【瑚】:「喂，为什么又是我！」
+miniAvatar:none;
+playEffect:倒れる.mp3;
+ :瑚太朗在地上滑稽地蹦来蹦去，因为双手被绑在后面，所以控制不好平衡，倒在了地上。
+miniAvatar:CGM_AK15au.png;
+【茜】:「傻吗你，刚才直接两个一起拉不就好了。」
+miniAvatar:kotarou_1.png;
+【瑚】:「现在说这个也没有用了……」
+miniAvatar:kotarou_1.png;
+【瑚】:「这个真的好紧啊……………那么紧急事态……」
+miniAvatar:CGM_KT10a.png;
+【小鸟的声音】:「对了，那种作弊的能力是被禁用了的喔。」
+miniAvatar:kotarou_1.png;
+【瑚】:「诶诶诶诶？！不是吧！」
+miniAvatar:CGM_AK15au.png;
+【茜】:「作弊还用上瘾了是吧。」
+miniAvatar:kotarou_1.png;
+【瑚】:「快想想办法啊~」
+miniAvatar:CGM_AK15au.png;
+【茜】:「我不知道喔，不如一起来享受天伦之乐吧，亲~爱~的~？」
+miniAvatar:none;
+ :朱音坐在地上，一副事不关己的态度。
+miniAvatar:CGM_KT10a.png;
+【小鸟的声音】:「还有一分钟。」
+miniAvatar:kotarou_1.png;
+【瑚】:「嘛，那总结一下情况。我的手脚都被拘束了，朱音只有手被拘束了，那么该怎么办呢。」
+【瑚】:「还有弹跳力的是谁呢？」
+miniAvatar:CGM_AK13au.png;
+【茜】:「我不要。」
+miniAvatar:none;
+ :虽然朱音嘴上这么说着，但还是站起来，走向瑚太朗蹲着的位置。
+miniAvatar:CGM_AK26au.png;
+【茜】:「……不是……这个♡……讨厌啦……」
+miniAvatar:none;
+ :因为股绳的作用，朱音走得扭扭捏捏。
+miniAvatar:kotarou_1.png;
+【瑚】:「加油啊。」
+miniAvatar:none;
+ :瑚太朗蹲在最后一根绳子正下方，等着朱音过来。
+miniAvatar:CGM_AK26au.png;
+【茜】:「……这个时候加油是要怎么加油啊…」
+miniAvatar:none;
+ :绳子紧紧压迫着裙摆和内裤，每一步都让绳子重新在蜜穴四周摩擦。
+miniAvatar:CGM_KT10a.png;
+【小鸟的声音】:「还有三十秒。」
+miniAvatar:kotarou_1.png;
+【瑚】:「咳……」
+miniAvatar:CGM_AK26au.png;
+【茜】:「别急嘛，爬上来了。可以起了。」
+miniAvatar:none;
+ :朱音艰难地跨上了瑚太朗的肩膀，瑚太朗摇摇晃晃起身。
+miniAvatar:CGM_AK26au.png;
+【茜】:「别晃啊笨蛋，咬不到了。」
+miniAvatar:CGM_KT20ah.png;
+【小鸟的声音】:「还有十秒。」
+miniAvatar:kotarou_1.png;
+【瑚】:「也不是我想晃啊，真的很难保持平衡……」
+miniAvatar:none;
+ :两个人摇摇晃晃，朱音正在试图用嘴咬住绳子……
+miniAvatar:CGM_KT20ah.png;
+【小鸟的声音】:「五。」
+miniAvatar:kotarou_1.png;
+【瑚】:「不要倒计时了！很紧张的！」
+miniAvatar:none;
+ :说完反而更加摇晃了起来，两个人马上就要倒向地面。要是现在再咬不到，就要失败了。眼看着是最后的机会，朱音……
+miniAvatar:CGM_AK27au.png;
+【茜】:「（就是现在！）」
+choose:失败了！:选择场景文件|成功了！:选择场景文件;
+miniAvatar:CGM_KT20ah.png;
+【小鸟的声音】:「（刚才选的什么，可以告诉我吗？）」
+miniAvatar:none;
+ :朱音在最后关头拽住了绳子，绳子被拉了下来，之后紧紧束缚住了朱音的腿部，并把双脚和身躯拉在了一起。
+miniAvatar:CGM_AK15au.png;
+【茜】:「这种最后一秒才能解决问题的俗套场景拜托不要再来了。」
+miniAvatar:CGM_KT10a.png;
+【小鸟的声音】:「真遗憾没有失败呢，那么下一关喔？」
+miniAvatar:kotarou_1.png;
+【瑚】:「不会在盼着我们失败吧……」
+miniAvatar:CGM_KT30a.png;
+【小鸟的声音】:「是怎样呢？」
+playEffect:魔法陣を展開.mp3;
+changeBg:black.jpg -next;
+miniAvatar:none;
+ :……
+ :…………
+changeBg:BG030n1.png -next;
+miniAvatar:CGM_AK15au.png;
+【茜】:「为什么第二关了，异常状态没有重置……」
+miniAvatar:none;
+ :朱音在地上被绑成一团，一动也不能动。维持着上一关末尾的状态。
+miniAvatar:CGM_KT10a.png;
+【小鸟的声音】:「没有人在R18同人本里讲规律，对吧？」
+miniAvatar:CGM_AK12au.png;
+【茜】:「有喔，最后都做爱了。」
+miniAvatar:CGM_KT10a.png;
+【小鸟的声音】:「当然，最后都做爱了的规律也适应这里。」
+miniAvatar:CGM_AK11au.png;
+【茜】:「……」
+miniAvatar:CGM_AK11au.png;
+【茜】:「对了，瑚太朗呢？」
+miniAvatar:none;
+ :朱音巡视着四周。
+miniAvatar:CGM_KT25ah.png;
+【小鸟的声音】:「…………………………本关是两人分开的。」
+miniAvatar:CGM_AK15au.png;
+【茜】:「那个意味深长的停顿是什么意思，没有隐瞒什么吧。」
+miniAvatar:CGM_KT25ah.png;
+【小鸟的声音】:「…没、没有喔？（目移）」
+miniAvatar:CGM_AK15au.png;
+【茜】:「太明显了喔？」
+miniAvatar:CGM_KT25ah.png;
+【小鸟的声音】:「咳、咳、」
+miniAvatar:CGM_KT11ah.png;
+【小鸟的声音】:「本关是逃脱关。三十分钟内拿到钥匙打开门就可以了。」
+【小鸟的声音】:「如果没有成功的话，三十分钟后这个房间就会被无数触手填满。」
+miniAvatar:CGM_AK15au.png;
+【茜】:「嘛，这个时间这个程度，应该没问题吧……」
+miniAvatar:none;
+ :朱音一边解着绳结一边琢磨着。
+miniAvatar:CGM_KT19ah.png;
+【小鸟的声音】:「光是解绳子很无聊，所以准备了一些小玩具。那么三十分钟后见。好好享受吧。」（之后开始有音效注意）
+miniAvatar:none;
+ :话音未落，不知道从什么地方飞出来的口塞嵌入了口腔，眼罩蒙住了双眼，乳夹钳住了乳头，振动棒插入了小穴，刺激着蜜穴和阴蒂。
+changeBg:black.jpg -next;
+playEffect:satoko_62.ogg;
+【茜】:「呜呜……♡呜呜……♡」
+ :耳机堵住了自己的耳朵，一遍遍播放着自己淫荡的呻吟声。
+【茜】:「（是什么时候录的……♡）」
+ :胶带缠住了手掌，被蜷缩得伸不开手指……
+【茜】:「（这种情况要怎么三十分钟解开……♡）」
+【茜】:「（小鸟你这个……♡）」
+playEffect:satoko_105.ogg;
+【茜】:「（啊啊……♡已经去了………………♡）」
+【茜】:「（不行啊……♡这样三十分钟肯定不行的……♡）」
+playEffect:satoko_54.ogg;
+【茜】:「（身体根本使不上劲……♡）」
+【茜】:「（得赶紧……想办法才行……♡）」
+ :……
+ :…………
+ :………………
+choose:放弃，等待到时间结束:选择场景文件|不放弃:选择场景文件;
+miniAvatar:CGM_KT20ah.png;
+【小鸟的声音】:「（刚才又选的什么，可以告诉我吗？）」
+【小鸟的声音】:「后面没有了喔。」
+end;
