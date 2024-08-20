@@ -320,7 +320,7 @@ miniAvatar:CGM_KT25ah.png;
 【小鸟的声音】:「咳、咳、」
 miniAvatar:CGM_KT11ah.png;
 【小鸟的声音】:「本关是逃脱关。三十分钟内拿到钥匙打开门就可以了。」
-【小鸟的声音】:「如果没有成功的话，三十分钟后这个房间就会被无数触手填满。」
+【小鸟的声音】:「如果没有成功的话，三十分钟后这个房间就会被无数触手填满喔。」
 miniAvatar:CGM_AK15au.png;
 【茜】:「嘛，这个时间这个程度，应该没问题吧……」
 miniAvatar:none;
@@ -336,7 +336,7 @@ playEffect:satoko_62.ogg;
 【茜】:「（是什么时候录的……♡）」
  :胶带缠住了手掌，被蜷缩得伸不开手指……
 【茜】:「（这种情况要怎么三十分钟解开……♡）」
-【茜】:「（小鸟你这个……♡）」
+【茜】:「（不可能的……♡）」
 playEffect:satoko_105.ogg;
 【茜】:「（啊啊……♡已经去了………………♡）」
 【茜】:「（不行啊……♡这样三十分钟肯定不行的……♡）」
@@ -346,8 +346,41 @@ playEffect:satoko_54.ogg;
  :……
  :…………
  :………………
-choose:放弃，等待到时间结束:选择场景文件|不放弃:选择场景文件;
-miniAvatar:CGM_KT20ah.png;
-【小鸟的声音】:「（刚才又选的什么，可以告诉我吗？）」
-【小鸟的声音】:「后面没有了喔。」
+changeBg:BG034.png -next;
+ :控制室里。
+changeFigure:CGM_KT10a.png -next;
+【鸟】:「会长很痛苦呢。」
+【鸟】:「吶，瑚太朗，跟我做的话，就放过会长喔？」
+miniAvatar:kotarou_1.png;
+【瑚】:「……」
+miniAvatar:none;
+changeFigure:CGM_KT19ah.png -next;
+【鸟】:「嘛，当然是开玩笑的了。」
+miniAvatar:kotarou_1.png;
+【瑚】:「……不要把关系搞得那么复杂！」
+changeFigure:CGM_KT11ah.png -next;
+miniAvatar:none;
+【鸟】:「感觉这种场合，说出这句台词非常帅喔。」
+【鸟】:「让主人公面临极其两难的抉择！」
+miniAvatar:kotarou_1.png;
+【瑚】:「那本关是什么样的内容。」
+changeFigure:CGM_KT11ah.png -next;
+miniAvatar:none;
+【鸟】:「很普通的打石像。」
+【鸟】:「因为沙耶3F就是打石像嘛。」
+【鸟】:「打败石像就可以去隔壁救会长了。」
+【鸟】:「如果三十分钟也没有击败石像的话，会长就会超级Happy End喔？」
+miniAvatar:none;
+ :之后，瑚太朗的房间里出现了一个两米多高的巨型石像。
+miniAvatar:kotarou_1.png;
+【瑚】:「沙耶有枪我可没有喂！」
+miniAvatar:none;
+【鸟】:「那就要靠爱的力量了喔。」
+【鸟】:「顺便一提，如果战败的话，瑚太朗会被石像疯狂侵犯喔。」
+miniAvatar:kotarou_1.png;
+【瑚】:「喂！」
+miniAvatar:none;
+【鸟】:「那种CG谁都不想看，所以请不要出现那种情况。」
+
+
 end;
