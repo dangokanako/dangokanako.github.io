@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>从1开始的前端生活</title>
+    <link rel="icon" href="/images/base/favicon.ico" type="image/x-icon">
+    <!-- jQuery！引入！ -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!--  Toastr！引入！  -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.min.js"></script>
+
+
+</head>
+
+<style>
+    @font-face {
+        font-family: "lolita";
+        src: url('/asset/game/font/lolita.ttf') format('truetype');
+    }
+
+    #progress-bar {
+        width: 845px;
+        height: 30px;
+        background-color: #f3f3f3;
+        position: relative;
+        border-radius: 15px;
+        box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+    }
+
+    #progress-bar-inner {
+        width: 0;
+        height: 100%;
+        background-color: #4caf50;
+        position: absolute;
+        transition: width 0.3s ease-in-out;
+    }
+
+    body {
+        background-color: #707070;
+        height: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        position: relative;
+        width: 1200px;
+        height: 675px;
+        background-color: #cce6ff;
+        border-radius: 10px;
+    }
+
+    .character-portrait {
+        position: absolute;
+        bottom: 0;
+        width: 144px;
+        height: 144px;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 10px;
+        /* 透明度可根据需求调整 */
+    }
+
+    .character-head-left {
+        left: 0;
+    }
+
+    .character-head-right {
+        left: 700px;
+    }
+
+    .text-display {
+        border-radius: 10px;
+        position: absolute;
+        left: 150px;
+        bottom: 0;
+        width: 544px;
+        height: 144px;
+        font-family: "lolita", sans-serif;
+        background-color: #E0F5FF;
+    }
+
+    .control-plane {
+        padding-left: 15px;
+        padding-top: 15px;
+        position: absolute;
+        right: 5px;
+        width: 330px;
+        height: 650px;
+        top: 5px;
+        background-color: #F0FFF0;
+        border-radius: 10px;
+    }
+
+
+    .stats-container {
+        width: 300px;
+    }
+
+    .bar-container {
+        display: flex;
+        margin-bottom: 5px;
+        width: 320px;
+    }
+
+    .bar {
+        height: 20px;
+    }
+
+    .health-bar {
+        height: 5px;
+        right: 5px;
+        border-radius: 5px;
+        background-color: red;
+        transition: width 0.3s ease-in-out;
+    }
+
+    .bar-text {
+        position: absolute;
+        top: 7px;
+        color: #000000;
+        text-align: center;
+        width: 100%;
+    }
+
+    .equip {
+        width: 320px;
+        height: 250px;
+    }
+
+    .grid-skill {
+        display: grid;
+        grid-template-columns: repeat(8, 54px);
+        /* 定义列数和每列的宽度 */
+        grid-template-rows: repeat(1, 54px);
+        /* 定义行数和每行的高度 */
+        gap: 4px;
+        padding: 4px;
+    }
+
+    .grid-enemy-skill {
+        display: grid;
+        grid-template-columns: repeat(5, 54px);
+        /* 定义列数和每列的宽度 */
+        grid-template-rows: repeat(1, 54px);
+        /* 定义行数和每行的高度 */
+        gap: 4px;
+        padding: 4px;
+    }
+
+    .grid-equip {
+        display: grid;
+        grid-template-columns: repeat(5, 54px);
+        /* 定义列数和每列的宽度 */
+        grid-template-rows: repeat(1, 54px);
+        /* 定义行数和每行的高度 */
+        gap: 4px;
+        padding: 4px;
+    }
+
+    .grid-item {
+        display: grid;
+        /* 将 display 属性设置为 grid */
+        grid-template-columns: repeat(5, 54px);
+        /* 定义列数和每列的宽度 */
+        grid-template-rows: repeat(2, 54px);
+        /* 定义行数和每行的高度 */
+        gap: 4px;
+        /* 设置网格项目之间的间隔 */
+        padding: 4px;
+    }
+
+
+
+    .skillslot {
+        position: relative;
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        padding: 0px;
+        border-radius: 5px;
+        background-color: white;
+        border: 2px solid black;
+        box-shadow: 4px 4px 4px #ddd;
+    }
+
+    .skillslot::before {
+        position: absolute;
+        background-image: url("path/to/your/image");
+        opacity: 0.5;
+        z-index: -1;
+        /* 将伪元素置于目标元素的内容之下 */
+    }
+
+    .startturn {
+        font-size: 30px;
+        border-radius: 5px;
+        border: 2px solid black;
+    }
+
+    .equipment {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        padding: 0px;
+        border-radius: 5px;
+        background-color: white;
+        border: 2px solid black;
+        box-shadow: 4px 4px 4px #ddd;
+    }
+
+    .bag {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        padding: 0px;
+        border-radius: 5px;
+        background-color: white;
+        border: 2px solid black;
+        box-shadow: 4px 4px 4px #ddd;
+    }
+
+    .item {
+        width: 50px;
+        height: 50px;
+        position: relative;
+        cursor: move;
+        /* 其他样式 */
+    }
+
+    .tooltip {
+        position: absolute;
+        display: none;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        left: 100%;
+        margin-left: 5px;
+        white-space: nowrap;
+        z-index: 11;
+    }
+
+    .item:hover .tooltip {
+        display: block;
+    }
+
+    .skill {
+        position: relative;
+        width: 50px;
+        height: 50px;
+    }
+
+    .skill:hover .tooltip {
+        display: block;
+    }
+
+
+    .map {
+        position: absolute;
+        width: 845px;
+        height: 500px;
+        border-radius: 10px;
+    }
+
+    #battle-container {
+        position: absolute;
+        width: 845px;
+        height: 500px;
+        border-radius: 10px;
+        z-index: 10;
+        background-color: #f4f4f4;
+    }
+
+    #shop-panel {
+        position: absolute;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        width: 845px;
+        height: 500px;
+        border-radius: 10px;
+        z-index: 12;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    #grid-shop {
+        display: grid;
+        place-items: center;
+        /* 将 display 属性设置为 grid */
+        grid-template-columns: repeat(5, 54px);
+        /* 定义列数和每列的宽度 */
+        grid-template-rows: repeat(2, 54px);
+        /* 定义行数和每行的高度 */
+        gap: 4px;
+        /* 设置网格项目之间的间隔 */
+        padding: 4px;
+    }
+
+    #force-input {
+        position: absolute;
+        width: 845px;
+        height: 500px;
+        border-radius: 10px;
+        z-index: 20;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+
+    #game-panel {
+        position: relative;
+    }
+
+    #enemy-container {
+        padding: 20px;
+        width: 340px;
+        height: 500px;
+        border-radius: 10px;
+    }
+
+    #skill-container {
+        padding-left: 10px;
+        position: absolute;
+        left: 345px;
+        top: 0px;
+        width: 500px;
+        height: 500px;
+        border-radius: 10px;
+        background-color: #e2d0f2;
+
+    }
+
+    #shop-quit {
+        width: 85px;
+        height: 94px;
+        background-image: url(/asset/game/image/buyaole.png);
+    }
+</style>
+
+
+<script src="/asset/js/TextManager.js"></script>
+<script src="/asset/js/ItemManager.js"></script>
+<script src="/asset/js/StatManager.js"></script>
+<script src="/asset/js/MapManager.js"></script>
+<script src="/asset/js/BattleManager.js"></script>
+<script src="/asset/js/SaveManager.js"></script>
+<script src="/asset/js/AudioManager.js"></script>
+<script src="/asset/js/chapter00.js"></script>
+<script src="/asset/js/SkillData.js"></script>
+<script src="/asset/js/EnemyData.js"></script>
+
+<script>
+    // 测试用
+    $(document).ready(function () {
+        $("#testButton").click(function () {
+            createItem(ItemData_Haoshangyao, "bag");
+        });
+    });
+
+
+
+    //全局禁用右键菜单
+    document.addEventListener('contextmenu', function (event) {
+        event.preventDefault();
+    });
+
+    // 检查本地环境
+    function isLocalhost() {
+        const { protocol, hostname } = window.location;
+        return (
+            (protocol === "http:" || protocol === "https:") &&
+            (hostname === "localhost" || hostname === "127.0.0.1")
+        );
+    }
+
+
+    //页面加载初始化
+    window.onload = function () {
+        if (!isLocalhost()) {
+            //禁止F12  
+            document.addEventListener('keydown', (event) => {
+                if ((event.keyCode === 123 /* F12 */) || (event.ctrlKey && event.shiftKey && event.keyCode === 73 /* Ctrl + Shift + I */) || (event.ctrlKey && event.keyCode === 85 /* Ctrl + U */)) {
+                    event.preventDefault();
+                }
+            });
+        }
+
+        // CTRL加速文本
+        document.addEventListener('keydown', (event) => {
+            if (event.ctrlKey) {
+                OnClickAll();
+            }
+        });
+
+        //全局禁止拖动
+        ['dragstart', 'dragover', 'dragend', 'drop'].forEach(function (eventName) {
+            document.addEventListener(eventName, function (event) {
+                event.preventDefault();
+            });
+        });
+        console.log("开始");
+        // 资源初始化
+        Promise.all([
+            preloadImages(LoadAssets)
+        ])
+            .then(function () {
+                console.log("所有图像已加载。");
+                let element = document.getElementById("progress-bar");
+                element.style.display = "none";
+                console.log("清除加载框");
+            })
+            .catch(function (event) {
+                console.error("加载图像时发生错误：", event);
+                if (event.target && event.target.src) {
+                    console.error("无法加载图像：", event.target.src);
+                }
+            });
+        console.log("结束");
+        // 文本初始化
+        Init_Chapter00();
+        // 技能表初始化
+        Init_SkillData()
+        // 道具栏、背包初始化
+        item_init();
+        // 属性初始化
+        Stat_Init();
+        CalStats();
+        // 地图创建初始化
+        // Init_Map();
+        General_Map_Create("Aldor");
+        // 战斗模块初始化
+        Init_Battle_Panel();
+
+
+        // 读取游戏数据
+        loadGame();
+        if (chapter == 0 && paragraph == 0) {
+            // 我帮你按第一下
+            OnClickAll();
+        }
+
+        //测试20230606
+    };
+</script>
+
+
+<body style="font-family:lolita,sans-serif; user-select: none;">
+    <!-- 加載進度條 -->
+    <div id="progress-bar">
+        <div id="progress-bar-inner"></div>
+        <span>加载中：如果进度条纹丝不动，请考虑科学上网。最好使用火狐或者谷歌浏览器。</span>
+    </div>
+    <div class="container" onclick="OnClickAll()">
+        <div id="game-panel" style="display: block;">
+        </div>
+        <div id="battle-container" style="display: none;">
+            <div id="enemy-container">
+                <div class="grid-enemy-skill">
+                    <li class="skillslot" id="enemyskill1"></li>
+                    <li class="skillslot" id="enemyskill2"></li>
+                    <li class="skillslot" id="enemyskill3"></li>
+                    <li class="skillslot" id="enemyskill4"></li>
+                    <li class="skillslot" id="enemyskill5"></li>
+                    <li class="skillslot" id="enemyskill6"></li>
+                    <li class="skillslot" id="enemyskill7"></li>
+                    <li class="skillslot" id="enemyskill8"></li>
+                    <li class="skillslot" id="enemyskill9"></li>
+                    <li class="skillslot" id="enemyskill10"></li>
+                </div>
+                <div style="position: absolute;bottom:30px;" id="enemy-stat">攻击力：20 防御力：5</div>
+                <div class="bar-container" style="position: absolute;bottom:20px;">
+                    <div id="enemy-health-text" class="bar-text">50/50</div>
+                    <div id="enemy-health-bar" style="width: 340px;" class="health-bar"></div>
+                </div>
+            </div>
+
+            <div id="skill-container">
+                <div class="grid-skill">
+                    <p class="equiptext">亚特姆</p>
+                    <li class="skillslot" id="persononeskill1"></li>
+                    <li class="skillslot" id="persononeskill2"></li>
+                    <li class="skillslot" id="persononeskill3"></li>
+                    <li class="skillslot" id="persononeskill4"></li>
+                    <li class="skillslot" id="persononeskill5"></li>
+                    <li class="skillslot" id="persononeskill6"></li>
+                    <li class="skillslot" id="persononeskill7"></li>
+                </div>
+                <div class="grid-skill">
+                    <p class="equiptext">露娜</p>
+                    <li class="skillslot" id="persontwoskill1"></li>
+                    <li class="skillslot" id="persontwoskill2"></li>
+                    <li class="skillslot" id="persontwoskill3"></li>
+                    <li class="skillslot" id="persontwoskill4"></li>
+                    <li class="skillslot" id="persontwoskill5"></li>
+                    <li class="skillslot" id="persontwoskill6"></li>
+                    <li class="skillslot" id="persontwoskill7"></li>
+                </div>
+                <div class="grid-skill">
+                    <p class="equiptext">被动</p>
+                    <li class="skillslot" id="personzeroskill1"></li>
+                    <li class="skillslot" id="personzeroskill2"></li>
+                    <li class="skillslot" id="personzeroskill3"></li>
+                    <li class="skillslot" id="personzeroskill4"></li>
+                    <li class="skillslot" id="personzeroskill5"></li>
+                    <li class="skillslot" id="personzeroskill6"></li>
+                    <li class="skillslot" id="personzeroskill7"></li>
+                </div>
+
+                <div class="grid-skill-queue" style="bottom: 0;position: absolute;">
+                    <!-- 我觉得这里做成雀魂风格的回合开始比较帅气 -->
+                    <p class="startturn" id="startturn" onclick="StartTurn()">回合开始！</p>
+                    <span id="CurrentMana_Battle">可用锑能：0</span>
+                    <br>
+                    <span>肾上腺素：10</span><br>
+                </div>
+            </div>
+        </div>
+        <!-- 20230608 TODO  写这个-->
+        <div id="shop-panel">
+            <div id="shop-quit" onclick="QuitShop()"></div>
+            <div id="grid-shop">
+                <li class=" bag" id="shop1" onmouseup="ShopBuy(event)" ondragstart="dragstart(event)"
+                    style="display: none;">
+                </li>
+                <li class=" bag" id="shop2" onmouseup="ShopBuy(event)" ondragstart="dragstart(event)"
+                    style="display: none;">
+                </li>
+                <li class=" bag" id="shop3" onmouseup="ShopBuy(event)" ondragstart="dragstart(event)"
+                    style="display: none;">
+                </li>
+                <li class=" bag" id="shop4" onmouseup="ShopBuy(event)" ondragstart="dragstart(event)"
+                    style="display: none;">
+                </li>
+                <li class=" bag" id="shop5" onmouseup="ShopBuy(event)" ondragstart="dragstart(event)"
+                    style="display: none;">
+                </li>
+                <li class=" bag" id="shop6" onmouseup="ShopBuy(event)" ondragstart="dragstart(event)"
+                    style="display: none;">
+                </li>
+                <li class=" bag" id="shop7" onmouseup="ShopBuy(event)" ondragstart="dragstart(event)"
+                    style="display: none;">
+                </li>
+                <li class=" bag" id="shop8" onmouseup="ShopBuy(event)" ondragstart="dragstart(event)"
+                    style="display: none;">
+                </li>
+                <li class=" bag" id="shop9" onmouseup="ShopBuy(event)" ondragstart="dragstart(event)"
+                    style="display: none;">
+                </li>
+                <li class=" bag" id="shop10" onmouseup="ShopBuy(event)" ondragstart="dragstart(event)"
+                    style="display: none;">
+                </li>
+
+            </div>
+
+        </div>
+        <div id="force-input" style="display: none;">
+        </div>
+
+
+        <div class="character-portrait character-head-left" id="character-head-left"></div>
+        <div id="character-head-right" class="character-portrait character-head-right"></div>
+        <div class="text-display" id="text-display"></div>
+
+        <div class="control-plane">
+            <div class="display-plane">
+                <div class="bar-container">
+                    <div id="health-bar" class="health-bar"></div>
+                    <div id="health-text" class="bar-text"></div>
+                </div>
+
+                <div class="stats-container">
+                    <span id="attack" class="stat"></span><br>
+                    <span id="defense" class="stat"></span><br>
+                    <span id="initpower" class="stat"></span><br>
+                    <span id="increasepower" class="stat"></span><br>
+                    <span id="maxpower" class="stat"></span><br>
+                    <span id="critrate" class="stat"></span><br>
+                    <span id="money" class="stat"></span>
+                </div>
+            </div>
+
+
+            <hr align="center" right=10px width=330px color=#987cb9 size=1>
+            <div class="equip">
+                <div class="grid-equip">
+                    <p class="equiptext">亚特姆</p>
+
+                    <li class="equipment" allowperson="one" allowitem="weapon" id="persononeweapon"
+                        ondragstart="dragstart(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </li>
+                    <li class="equipment" allowperson="one" allowitem="armor" id="persononearmor"
+                        ondragstart="dragstart(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </li>
+                    <li class="equipment" allowperson="one" allowitem="jewelry" id="persononejewelry"
+                        ondragstart="dragstart(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </li>
+                    <li class="equipment" allowperson="one" allowitem="jewelry2" id="persononejewelry2"
+                        ondragstart="dragstart(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </li>
+                </div>
+                <div class="grid-equip">
+                    <p class="equiptext">露娜</p>
+                    <li class="equipment" allowperson="two" allowitem="weapon" id="persontwoweapon"
+                        ondragstart="dragstart(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </li>
+                    <li class="equipment" allowperson="two" allowitem="armor" id="persontwoarmor"
+                        ondragstart="dragstart(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </li>
+                    <li class="equipment" allowperson="two" allowitem="jewelry" id="persontwojewelry"
+                        ondragstart="dragstart(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </li>
+                    <li class="equipment" allowperson="two" allowitem="jewelry2" id="persontwojewelry2"
+                        ondragstart="dragstart(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </li>
+                </div>
+                <div class="grid-equip" style="display: none;">
+                    <p class="equiptext">预留</p>
+                    <li class="equipment" ondragstart="dragstart(event)" ondrop="drop(event)"
+                        ondragover="allowDrop(event)">
+                    </li>
+                    <li class="equipment" ondragstart="dragstart(event)" ondrop="drop(event)"
+                        ondragover="allowDrop(event)">
+                    </li>
+                    <li class="equipment" ondragstart="dragstart(event)" ondrop="drop(event)"
+                        ondragover="allowDrop(event)">
+                    </li>
+                    <li class="equipment" ondragstart="dragstart(event)" ondrop="drop(event)"
+                        ondragover="allowDrop(event)">
+                    </li>
+                </div>
+                <div class="grid-equip" style="display: none;">
+                    <p class="equiptext">预留2</p>
+                    <li class="equipment" ondragstart="dragstart(event)" ondrop="drop(event)"
+                        ondragover="allowDrop(event)">
+                    </li>
+                    <li class="equipment" ondragstart="dragstart(event)" ondrop="drop(event)"
+                        ondragover="allowDrop(event)">
+                    </li>
+                    <li class="equipment" ondragstart="dragstart(event)" ondrop="drop(event)"
+                        ondragover="allowDrop(event)">
+                    </li>
+                    <li class="equipment" ondragstart="dragstart(event)" ondrop="drop(event)"
+                        ondragover="allowDrop(event)">
+                    </li>
+                </div>
+            </div>
+            <hr align="center" right=10px width=330px color=#987cb9 size=1>
+            <div class="grid-item">
+                <li class="bag" id="bag1" ondragstart="dragstart(event)" ondrop="drop(event)"
+                    ondragover="allowDrop(event)">
+                </li>
+                <li class="bag" id="bag2" ondragstart="dragstart(event)" ondrop="drop(event)"
+                    ondragover="allowDrop(event)">
+                </li>
+                <li class="bag" id="bag3" ondragstart="dragstart(event)" ondrop="drop(event)"
+                    ondragover="allowDrop(event)">
+                </li>
+                <li class="bag" id="bag4" ondragstart="dragstart(event)" ondrop="drop(event)"
+                    ondragover="allowDrop(event)">
+                </li>
+                <li class="bag" id="bag5" ondragstart="dragstart(event)" ondrop="drop(event)"
+                    ondragover="allowDrop(event)">
+                </li>
+                <li class="bag" id="bag6" ondragstart="dragstart(event)" ondrop="drop(event)"
+                    ondragover="allowDrop(event)">
+                </li>
+                <li class="bag" id="bag7" ondragstart="dragstart(event)" ondrop="drop(event)"
+                    ondragover="allowDrop(event)">
+                </li>
+                <li class="bag" id="bag8" ondragstart="dragstart(event)" ondrop="drop(event)"
+                    ondragover="allowDrop(event)">
+                </li>
+                <li class="bag" id="bag9" ondragstart="dragstart(event)" ondrop="drop(event)"
+                    ondragover="allowDrop(event)">
+                </li>
+                <li class="bag" id="bag10" ondragstart="dragstart(event)" ondrop="drop(event)"
+                    ondragover="allowDrop(event)">
+                </li>
+                <button id="testButton">按钮</button>
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>
