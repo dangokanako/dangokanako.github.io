@@ -47,12 +47,16 @@
                 "「晚安，诗音」",
                 "「晚安，太一」",
                 "「晚安，兰斯」",
+
+
                 "我们的情人，不过是随便借个名字，用幻想吹出来的肥皂泡。",
                 "愿得我心如明月，<br/>独映暗夜迷途人。",
                 "梦里不觉秋已深，<br/>余情岂是为他人。",
                 "晨意微寒秋渐深，<br/>侧伴无事俏佳人。",
                 "月入层云光黯淡，<br/>今宵月明正宜死。",
                 "长夜伴浪破晓梦，<br/>梦晓破浪伴夜长。",
+                "祝你远离冰冷的屏幕与房间，<br/>早日创造出生命的逃逸之线。",
+
                 "異議あり！！",
                 "堕落的准备，OK？",
                 "「只要抓住这只手，我就带领你前往更加深邃的世界。<br/>那是个可恶的世界哦。最差最烂最最凶险的<br/>‘我们’的世界哦。<br/>我有带领你一同前行的觉悟。<br/>只要你愿意，我便去做与你携手领略的准备。<br/>在最差劲的地方欣赏最棒的景色。」",
@@ -60,6 +64,9 @@
                 // 诗词
                 "世间甲子须臾事，<br/>逢着仙人莫看棋。",
                 "人世几回伤往事，<br/>山形依旧枕寒流。",
+                "直道相思了无益，<br/>未妨惆怅是清狂。",
+                "莫道秋江离别难，<br/>舟船明日是长安。",
+                "莫笑贱贫夸富贵，<br/>共成枯骨两如何？",
                 "梦里不知身是客，<br/>一晌贪欢。",
                 "世事漫随流水，<br/>算来一梦浮生。",
                 "愿得一人心，<br/>白首不相离。",
@@ -72,6 +79,7 @@
                 "梅须逊雪三分白，<br/>雪却输梅一段香。",
                 "欲买桂花同载酒，<br/>终不似，少年游",
                 "偷得浮生半日闲。",
+                "鹪鹩巢林，不过一枝；<br/>偃鼠饮河，不过满腹。",
                 "憎者唯见其恶，爱者止见其善。<br/>爱憎之间，所宜详慎。",
                 "向之所欣，俯仰之间，已为陈迹，<br/>犹不能不以之兴怀。",
                 "何不树之于无何有之乡，广漠之野。<br/>彷徨乎无为其侧，逍遥乎寝卧其下。<br/>不夭斤斧，物无害者。无所可用，安所困苦哉？",
@@ -92,7 +100,12 @@
                 "♪ 寄予真实的光斑从木叶间洒落的那一日 ♪",
                 "♪ 届かない恋をしていても <br/>♪ 映しだす日がくるかな ",
                 "♪ おお 神の刃は 人類の愛<br/>♪ 祈りを 込めて つらぬけ",
-                "♪ But I need one last time I want to tell you ♪<br/> ♪ how I feel inside for you ♪<br/>♪ I want you to know...♪"
+                "♪ Oh Sing a song of Balduran ♪<br/>♪ Who founded Baldur's Gate ♪<br/>♪ Empire golden built on trade ♪<br/>♪ Could not avert his fate ♪",
+                "♪ But I need one last time I want to tell you ♪<br/> ♪ how I feel inside for you ♪<br/>♪ I want you to know...♪",
+                "♪ I can't be a superstar ♪<br/>♪ Not happy like in the silver screen ♪<br/>♪ But we can get everything here ♪",
+                "♪ きみを忘れても ♪<br/>♪ ぼくは連れてくよ ♪<br/>♪ 孤独の果て　虚数の海 ♪<br/>♪ 時が止まってしまっても ♪",
+                "♪ きみが笑うなら ♪<br/>♪ ぼくも笑うだろう ♪<br/>♪ 終わりのない冬が来ても ♪<br/>♪ 生き残ってみせようか ♪",
+                "♪ Una volta che avrà ♪<br/>♪ spiccato il volo,deciderà ♪<br/>♪ sguardo verso il ciel saprà: ♪<br/>♪ Lì a casa il cuore sentirà ♪<br/>♪ Gloria! Gloria! ♪"
             ];
 
             var text = texts[Math.floor(Math.random() * texts.length)]; // 随机选择一段文本
