@@ -1,3 +1,13 @@
+/* Sidebar avatar */
+#nexmoe-header .nexmoe-avatar img {
+    transform-origin: center center;
+    transition: transform 2.8s cubic-bezier(.2, .8, .2, 1.15);
+}
+
+#nexmoe-header .nexmoe-avatar:hover img {
+    transform: rotate(360deg) scale(1.06);
+}
+
 /* Sidebar friend links */
 #nexmoe-sidebar>.nexmoe-widget-wrap:nth-of-type(4)::before {
     content: "友情链接！";
@@ -20,15 +30,15 @@
     line-height: 1.6;
 } */
 
-#nexmoe-sidebar>.nexmoe-widget-wrap:nth-of-type(4) .nexmoe-link ul {
+#nexmoe-sidebar .nexmoe-link ul {
     padding: 6px 12px 14px;
 }
 
-#nexmoe-sidebar>.nexmoe-widget-wrap:nth-of-type(4) .nexmoe-link ul li {
+#nexmoe-sidebar .nexmoe-link ul li {
     padding: 10px 6px;
 }
 
-#nexmoe-sidebar>.nexmoe-widget-wrap:nth-of-type(4) .nexmoe-link ul li a {
+#nexmoe-sidebar .nexmoe-link ul li a {
     display: block;
     overflow: hidden;
     border-radius: 10px;
@@ -36,15 +46,25 @@
     transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease;
 }
 
-#nexmoe-sidebar>.nexmoe-widget-wrap:nth-of-type(4) .nexmoe-link ul li a:hover {
+#nexmoe-sidebar .nexmoe-link ul li a:hover {
     transform: translateY(-2px);
     background: #fff;
     box-shadow: 0 8px 22px rgba(161, 177, 204, .28);
 }
 
-#nexmoe-sidebar>.nexmoe-widget-wrap:nth-of-type(4) .nexmoe-link ul li a img {
+#nexmoe-sidebar .nexmoe-link ul li a img {
     display: block;
     width: 100%;
-    max-height: 150px;
-    object-fit: cover;
+    height: auto;
+    max-height: none;
+}
+
+/* Sidebar music player */
+#nexmoe-sidebar #aplayer {
+    height: auto !important;
+}
+
+#nexmoe-sidebar #aplayer .aplayer-list ol {
+    max-height: 360px !important;
+    overflow-y: auto;
 }
