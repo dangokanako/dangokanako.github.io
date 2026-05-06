@@ -1,4 +1,45 @@
 (function () {
+    var CURSOR_TEXT_STORAGE_KEY = "cursorTextEnabled";
+
+    function getCursorTextEnabled() {
+        try {
+            return window.localStorage.getItem(CURSOR_TEXT_STORAGE_KEY) !== "false";
+        } catch (error) {
+            return true;
+        }
+    }
+
+    function setCursorTextEnabled(enabled) {
+        try {
+            window.localStorage.setItem(CURSOR_TEXT_STORAGE_KEY, enabled ? "true" : "false");
+        } catch (error) {
+            // Ignore storage errors so the cursor effect still works normally.
+        }
+    }
+
+    function initCursorTextToggle() {
+        var toggle = document.getElementById("cursor-text-toggle");
+        if (!toggle) {
+            return;
+        }
+
+        toggle.checked = getCursorTextEnabled();
+        toggle.addEventListener("change", function () {
+            setCursorTextEnabled(toggle.checked);
+        });
+    }
+
+    function isCursorToggleClick(event) {
+        var target = event.target;
+        return target && target.closest && target.closest(".cursor-toggle-widget");
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initCursorTextToggle);
+    } else {
+        initCursorTextToggle();
+    }
+
     // 检查是否是特殊页面
     function isSpecialPage() {
         const { protocol, hostname, pathname } = window.location;
@@ -13,6 +54,10 @@
     // 如果不是特殊页面，才添加点击事件
     if (!isSpecialPage()) {
         window.onclick = function (event) {
+            if (!getCursorTextEnabled() || isCursorToggleClick(event)) {
+                return;
+            }
+
             // 检查本地环境
             function isLocalhost() {
                 const { protocol, hostname } = window.location;
